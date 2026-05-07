@@ -1,0 +1,14 @@
+[project]
+name = "motif-failure-prediction"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "igraph==0.11.8",
+    "joblib==1.5.3",
+    "loguru==0.7.3",
+    "numpy==2.0.2",
+    "scikit-learn==1.6.1",
+    "scipy==1.14.1",
+    "texttable==1.7.0",
+    "threadpoolctl==3.6.0",
+]

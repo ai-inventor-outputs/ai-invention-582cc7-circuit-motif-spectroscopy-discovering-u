@@ -1,0 +1,6267 @@
+{
+  "graphs": [
+    {
+      "slug": "m3-country_capital-000-demo",
+      "domain": "country_capital",
+      "prompt": "The capital of Japan is",
+      "nodes": [
+        {
+          "node_id": "0_100_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "0_101_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "0_102_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 6210
+        },
+        {
+          "node_id": "0_103_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 6900
+        },
+        {
+          "node_id": "0_104_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 6440
+        },
+        {
+          "node_id": "1_100_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "1_101_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "1_102_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 7620
+        },
+        {
+          "node_id": "1_103_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "2_100_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "2_101_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 8382
+        },
+        {
+          "node_id": "2_102_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 7874
+        },
+        {
+          "node_id": "2_103_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 7874
+        },
+        {
+          "node_id": "2_104_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 5354
+        },
+        {
+          "node_id": "3_100_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 8382
+        },
+        {
+          "node_id": "3_101_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 5354
+        },
+        {
+          "node_id": "3_102_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 8126
+        },
+        {
+          "node_id": "4_100_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 6440
+        },
+        {
+          "node_id": "4_101_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "4_102_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "4_103_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 6434
+        },
+        {
+          "node_id": "5_100_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "5_101_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "5_102_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 6434
+        },
+        {
+          "node_id": "5_103_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "5_104_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "6_100_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "6_101_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 6900
+        },
+        {
+          "node_id": "6_102_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "6_103_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "7_100_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "7_101_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "7_102_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 7620
+        },
+        {
+          "node_id": "8_100_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "8_101_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "8_102_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 7868
+        },
+        {
+          "node_id": "8_103_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 6668
+        },
+        {
+          "node_id": "8_104_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 7868
+        },
+        {
+          "node_id": "9_100_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 7614
+        },
+        {
+          "node_id": "9_101_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "9_102_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "9_103_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 7376
+        }
+      ],
+      "links": [
+        {
+          "source": "0_100_1",
+          "target": "1_103_1",
+          "weight": -3.4002
+        },
+        {
+          "source": "0_102_1",
+          "target": "1_101_1",
+          "weight": 0.5323
+        },
+        {
+          "source": "0_103_1",
+          "target": "1_100_1",
+          "weight": 3.8479
+        },
+        {
+          "source": "0_103_1",
+          "target": "1_103_1",
+          "weight": -2.065
+        },
+        {
+          "source": "0_104_1",
+          "target": "1_100_1",
+          "weight": -4.9675
+        },
+        {
+          "source": "0_100_1",
+          "target": "2_102_1",
+          "weight": 1.253
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_100_1",
+          "weight": -1.2609
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_101_1",
+          "weight": 4.535
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_101_1",
+          "weight": -1.3702
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_104_1",
+          "weight": -2.5913
+        },
+        {
+          "source": "0_103_1",
+          "target": "2_101_1",
+          "weight": 2.3191
+        },
+        {
+          "source": "0_104_1",
+          "target": "2_100_1",
+          "weight": 1.5975
+        },
+        {
+          "source": "0_104_1",
+          "target": "2_102_1",
+          "weight": 2.9109
+        },
+        {
+          "source": "0_102_1",
+          "target": "3_101_1",
+          "weight": -4.3597
+        },
+        {
+          "source": "0_102_1",
+          "target": "3_102_1",
+          "weight": 0.5392
+        },
+        {
+          "source": "0_103_1",
+          "target": "3_101_1",
+          "weight": 2.0784
+        },
+        {
+          "source": "0_103_1",
+          "target": "3_102_1",
+          "weight": -4.326
+        },
+        {
+          "source": "0_104_1",
+          "target": "3_100_1",
+          "weight": -1.6957
+        },
+        {
+          "source": "0_104_1",
+          "target": "3_102_1",
+          "weight": -2.3084
+        },
+        {
+          "source": "1_100_1",
+          "target": "2_102_1",
+          "weight": 0.976
+        },
+        {
+          "source": "1_100_1",
+          "target": "2_103_1",
+          "weight": -0.6895
+        },
+        {
+          "source": "1_101_1",
+          "target": "2_104_1",
+          "weight": -0.9738
+        },
+        {
+          "source": "1_102_1",
+          "target": "2_100_1",
+          "weight": 3.6167
+        },
+        {
+          "source": "1_102_1",
+          "target": "2_101_1",
+          "weight": -3.0979
+        },
+        {
+          "source": "1_102_1",
+          "target": "2_104_1",
+          "weight": -2.5019
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_104_1",
+          "weight": 4.9928
+        },
+        {
+          "source": "1_101_1",
+          "target": "3_101_1",
+          "weight": -2.6616
+        },
+        {
+          "source": "1_102_1",
+          "target": "3_100_1",
+          "weight": -4.9784
+        },
+        {
+          "source": "1_103_1",
+          "target": "3_101_1",
+          "weight": 1.9659
+        },
+        {
+          "source": "1_100_1",
+          "target": "4_103_1",
+          "weight": -2.823
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_100_1",
+          "weight": 2.3574
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_101_1",
+          "weight": -1.864
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_102_1",
+          "weight": -0.6422
+        },
+        {
+          "source": "1_102_1",
+          "target": "4_101_1",
+          "weight": -4.3204
+        },
+        {
+          "source": "1_103_1",
+          "target": "4_103_1",
+          "weight": -4.1802
+        },
+        {
+          "source": "2_100_1",
+          "target": "3_102_1",
+          "weight": -2.3923
+        },
+        {
+          "source": "2_101_1",
+          "target": "3_101_1",
+          "weight": -2.3439
+        },
+        {
+          "source": "2_101_1",
+          "target": "3_102_1",
+          "weight": 1.455
+        },
+        {
+          "source": "2_103_1",
+          "target": "3_100_1",
+          "weight": 1.2116
+        },
+        {
+          "source": "2_103_1",
+          "target": "3_102_1",
+          "weight": 0.3763
+        },
+        {
+          "source": "2_104_1",
+          "target": "3_101_1",
+          "weight": -1.5099
+        },
+        {
+          "source": "2_104_1",
+          "target": "3_102_1",
+          "weight": -2.5572
+        },
+        {
+          "source": "2_100_1",
+          "target": "4_100_1",
+          "weight": -0.6182
+        },
+        {
+          "source": "2_100_1",
+          "target": "4_102_1",
+          "weight": 4.8385
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_100_1",
+          "weight": 3.7813
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_101_1",
+          "weight": 3.8971
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_103_1",
+          "weight": -2.1824
+        },
+        {
+          "source": "2_103_1",
+          "target": "4_100_1",
+          "weight": -1.5712
+        },
+        {
+          "source": "2_104_1",
+          "target": "4_100_1",
+          "weight": 4.0816
+        },
+        {
+          "source": "2_104_1",
+          "target": "4_101_1",
+          "weight": 1.3428
+        },
+        {
+          "source": "2_104_1",
+          "target": "4_103_1",
+          "weight": -1.6644
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_100_1",
+          "weight": 4.798
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_101_1",
+          "weight": -0.5816
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_104_1",
+          "weight": 4.4505
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_101_1",
+          "weight": -4.6397
+        },
+        {
+          "source": "2_102_1",
+          "target": "5_100_1",
+          "weight": -1.3535
+        },
+        {
+          "source": "2_102_1",
+          "target": "5_103_1",
+          "weight": -1.4219
+        },
+        {
+          "source": "2_104_1",
+          "target": "5_102_1",
+          "weight": -3.375
+        },
+        {
+          "source": "2_104_1",
+          "target": "5_104_1",
+          "weight": -0.8771
+        },
+        {
+          "source": "3_100_1",
+          "target": "4_100_1",
+          "weight": 4.2449
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_101_1",
+          "weight": -3.408
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_100_1",
+          "weight": -2.5415
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_102_1",
+          "weight": 2.9535
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_103_1",
+          "weight": -4.7634
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_100_1",
+          "weight": -1.7174
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_103_1",
+          "weight": 1.4148
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_103_1",
+          "weight": 4.704
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_104_1",
+          "weight": 4.6253
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_100_1",
+          "weight": -3.916
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_103_1",
+          "weight": 1.0621
+        },
+        {
+          "source": "3_100_1",
+          "target": "6_102_1",
+          "weight": 2.0879
+        },
+        {
+          "source": "3_100_1",
+          "target": "6_103_1",
+          "weight": 4.2558
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_101_1",
+          "weight": 1.6424
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_102_1",
+          "weight": -1.8608
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_101_1",
+          "weight": -1.9072
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_104_1",
+          "weight": -3.7271
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_100_1",
+          "weight": 0.4794
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_101_1",
+          "weight": -2.1309
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_102_1",
+          "weight": -2.1471
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_103_1",
+          "weight": 1.6385
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_100_1",
+          "weight": 4.52
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_101_1",
+          "weight": -1.8958
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_103_1",
+          "weight": -4.5379
+        },
+        {
+          "source": "4_103_1",
+          "target": "6_101_1",
+          "weight": 1.8762
+        },
+        {
+          "source": "4_100_1",
+          "target": "7_102_1",
+          "weight": 3.0411
+        },
+        {
+          "source": "4_102_1",
+          "target": "7_101_1",
+          "weight": -3.6666
+        },
+        {
+          "source": "4_103_1",
+          "target": "7_102_1",
+          "weight": 2.5525
+        },
+        {
+          "source": "5_101_1",
+          "target": "6_102_1",
+          "weight": 3.6149
+        },
+        {
+          "source": "5_102_1",
+          "target": "6_102_1",
+          "weight": 2.7767
+        },
+        {
+          "source": "5_103_1",
+          "target": "6_100_1",
+          "weight": -0.6013
+        },
+        {
+          "source": "5_103_1",
+          "target": "6_102_1",
+          "weight": -1.6415
+        },
+        {
+          "source": "5_104_1",
+          "target": "6_100_1",
+          "weight": -3.4917
+        },
+        {
+          "source": "5_104_1",
+          "target": "6_102_1",
+          "weight": -2.8605
+        },
+        {
+          "source": "5_100_1",
+          "target": "7_100_1",
+          "weight": -0.3408
+        },
+        {
+          "source": "5_100_1",
+          "target": "7_101_1",
+          "weight": 3.3289
+        },
+        {
+          "source": "5_101_1",
+          "target": "7_102_1",
+          "weight": 3.8066
+        },
+        {
+          "source": "5_103_1",
+          "target": "7_100_1",
+          "weight": -1.1001
+        },
+        {
+          "source": "5_100_1",
+          "target": "8_102_1",
+          "weight": 1.3403
+        },
+        {
+          "source": "5_101_1",
+          "target": "8_100_1",
+          "weight": -0.3261
+        },
+        {
+          "source": "5_101_1",
+          "target": "8_101_1",
+          "weight": 1.2226
+        },
+        {
+          "source": "5_101_1",
+          "target": "8_102_1",
+          "weight": -1.0598
+        },
+        {
+          "source": "5_101_1",
+          "target": "8_104_1",
+          "weight": 1.4275
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_100_1",
+          "weight": -0.383
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_101_1",
+          "weight": -1.209
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_102_1",
+          "weight": -1.7315
+        },
+        {
+          "source": "5_103_1",
+          "target": "8_102_1",
+          "weight": -4.1809
+        },
+        {
+          "source": "5_103_1",
+          "target": "8_103_1",
+          "weight": 0.3942
+        },
+        {
+          "source": "5_104_1",
+          "target": "8_100_1",
+          "weight": 1.5014
+        },
+        {
+          "source": "6_100_1",
+          "target": "7_100_1",
+          "weight": -4.7962
+        },
+        {
+          "source": "6_100_1",
+          "target": "7_101_1",
+          "weight": -3.7378
+        },
+        {
+          "source": "6_101_1",
+          "target": "7_101_1",
+          "weight": 1.9946
+        },
+        {
+          "source": "6_102_1",
+          "target": "7_100_1",
+          "weight": 1.0725
+        },
+        {
+          "source": "6_102_1",
+          "target": "7_102_1",
+          "weight": 3.193
+        },
+        {
+          "source": "6_103_1",
+          "target": "7_101_1",
+          "weight": -4.7432
+        },
+        {
+          "source": "6_103_1",
+          "target": "7_102_1",
+          "weight": 1.7735
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_103_1",
+          "weight": 1.9061
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_100_1",
+          "weight": 2.7248
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_103_1",
+          "weight": 4.8384
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_100_1",
+          "weight": -0.7162
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_103_1",
+          "weight": 3.4958
+        },
+        {
+          "source": "6_103_1",
+          "target": "8_100_1",
+          "weight": 4.6079
+        },
+        {
+          "source": "6_100_1",
+          "target": "9_102_1",
+          "weight": 3.082
+        },
+        {
+          "source": "6_101_1",
+          "target": "9_103_1",
+          "weight": 3.5171
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_101_1",
+          "weight": 3.8163
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_102_1",
+          "weight": -0.3529
+        },
+        {
+          "source": "6_103_1",
+          "target": "9_101_1",
+          "weight": 3.5095
+        },
+        {
+          "source": "6_103_1",
+          "target": "9_102_1",
+          "weight": -2.8788
+        },
+        {
+          "source": "7_100_1",
+          "target": "8_100_1",
+          "weight": 3.8032
+        },
+        {
+          "source": "7_100_1",
+          "target": "8_102_1",
+          "weight": -4.8985
+        },
+        {
+          "source": "7_100_1",
+          "target": "8_104_1",
+          "weight": 2.2007
+        },
+        {
+          "source": "7_102_1",
+          "target": "8_101_1",
+          "weight": -2.784
+        },
+        {
+          "source": "7_102_1",
+          "target": "8_103_1",
+          "weight": 0.8156
+        },
+        {
+          "source": "7_100_1",
+          "target": "9_103_1",
+          "weight": 2.0285
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_100_1",
+          "weight": -2.486
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_101_1",
+          "weight": -3.0742
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_102_1",
+          "weight": 0.3586
+        },
+        {
+          "source": "7_102_1",
+          "target": "9_100_1",
+          "weight": -2.8362
+        },
+        {
+          "source": "8_100_1",
+          "target": "9_101_1",
+          "weight": -3.9947
+        },
+        {
+          "source": "8_100_1",
+          "target": "9_102_1",
+          "weight": -2.7252
+        },
+        {
+          "source": "8_100_1",
+          "target": "9_103_1",
+          "weight": -4.8585
+        },
+        {
+          "source": "8_101_1",
+          "target": "9_101_1",
+          "weight": 4.7429
+        },
+        {
+          "source": "8_102_1",
+          "target": "9_100_1",
+          "weight": 3.6846
+        },
+        {
+          "source": "8_103_1",
+          "target": "9_102_1",
+          "weight": -4.4862
+        },
+        {
+          "source": "8_104_1",
+          "target": "9_103_1",
+          "weight": 1.2945
+        }
+      ]
+    },
+    {
+      "slug": "m3-arithmetic-000-demo",
+      "domain": "arithmetic",
+      "prompt": "3 + 5 =",
+      "nodes": [
+        {
+          "node_id": "0_100_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "0_101_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 8126
+        },
+        {
+          "node_id": "0_102_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 7868
+        },
+        {
+          "node_id": "1_100_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "1_101_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "1_102_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 5774
+        },
+        {
+          "node_id": "1_103_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 7620
+        },
+        {
+          "node_id": "2_100_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "2_101_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "2_102_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 8126
+        },
+        {
+          "node_id": "2_103_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "3_100_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 7874
+        },
+        {
+          "node_id": "3_101_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 7376
+        },
+        {
+          "node_id": "3_102_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 6440
+        },
+        {
+          "node_id": "4_100_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 6900
+        },
+        {
+          "node_id": "4_101_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "4_102_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 8642
+        },
+        {
+          "node_id": "4_103_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 7868
+        },
+        {
+          "node_id": "5_100_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "5_101_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7868
+        },
+        {
+          "node_id": "5_102_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "5_103_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 5354
+        },
+        {
+          "node_id": "6_100_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 7874
+        },
+        {
+          "node_id": "6_101_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 6434
+        },
+        {
+          "node_id": "6_102_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "7_100_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "7_101_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 8636
+        },
+        {
+          "node_id": "7_102_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "8_100_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "8_101_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 6210
+        },
+        {
+          "node_id": "8_102_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 7620
+        },
+        {
+          "node_id": "9_100_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 6210
+        },
+        {
+          "node_id": "9_101_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 5150
+        },
+        {
+          "node_id": "9_102_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 6668
+        }
+      ],
+      "links": [
+        {
+          "source": "0_100_1",
+          "target": "1_102_1",
+          "weight": -2.6852
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_101_1",
+          "weight": -3.3408
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_102_1",
+          "weight": 2.4896
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_100_1",
+          "weight": -3.7565
+        },
+        {
+          "source": "0_100_1",
+          "target": "3_102_1",
+          "weight": -4.6014
+        },
+        {
+          "source": "0_101_1",
+          "target": "3_101_1",
+          "weight": -2.4963
+        },
+        {
+          "source": "0_101_1",
+          "target": "3_102_1",
+          "weight": 4.6191
+        },
+        {
+          "source": "1_100_1",
+          "target": "2_102_1",
+          "weight": -4.5977
+        },
+        {
+          "source": "1_101_1",
+          "target": "2_103_1",
+          "weight": 0.8533
+        },
+        {
+          "source": "1_102_1",
+          "target": "2_102_1",
+          "weight": -1.5204
+        },
+        {
+          "source": "1_102_1",
+          "target": "2_103_1",
+          "weight": 1.7013
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_101_1",
+          "weight": 1.9367
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_102_1",
+          "weight": 4.4519
+        },
+        {
+          "source": "1_100_1",
+          "target": "3_102_1",
+          "weight": -1.7673
+        },
+        {
+          "source": "1_103_1",
+          "target": "3_101_1",
+          "weight": -1.3822
+        },
+        {
+          "source": "1_100_1",
+          "target": "4_102_1",
+          "weight": 0.4922
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_102_1",
+          "weight": 4.7315
+        },
+        {
+          "source": "1_102_1",
+          "target": "4_100_1",
+          "weight": -3.4162
+        },
+        {
+          "source": "1_102_1",
+          "target": "4_103_1",
+          "weight": 4.9226
+        },
+        {
+          "source": "1_103_1",
+          "target": "4_102_1",
+          "weight": 3.3214
+        },
+        {
+          "source": "2_100_1",
+          "target": "3_102_1",
+          "weight": 3.3472
+        },
+        {
+          "source": "2_101_1",
+          "target": "3_101_1",
+          "weight": 0.5127
+        },
+        {
+          "source": "2_103_1",
+          "target": "3_101_1",
+          "weight": 2.9001
+        },
+        {
+          "source": "2_100_1",
+          "target": "4_103_1",
+          "weight": -2.0144
+        },
+        {
+          "source": "2_101_1",
+          "target": "4_103_1",
+          "weight": 0.3858
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_100_1",
+          "weight": 0.5192
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_103_1",
+          "weight": -3.1135
+        },
+        {
+          "source": "2_103_1",
+          "target": "4_102_1",
+          "weight": 2.7554
+        },
+        {
+          "source": "2_103_1",
+          "target": "4_103_1",
+          "weight": 2.4471
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_103_1",
+          "weight": 2.6743
+        },
+        {
+          "source": "2_103_1",
+          "target": "5_103_1",
+          "weight": -0.3051
+        },
+        {
+          "source": "3_100_1",
+          "target": "4_101_1",
+          "weight": 1.927
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_103_1",
+          "weight": 2.1872
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_102_1",
+          "weight": -4.3158
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_100_1",
+          "weight": 1.3375
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_101_1",
+          "weight": 2.9614
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_102_1",
+          "weight": -1.2516
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_103_1",
+          "weight": 0.3117
+        },
+        {
+          "source": "3_100_1",
+          "target": "6_102_1",
+          "weight": -4.2103
+        },
+        {
+          "source": "3_101_1",
+          "target": "6_102_1",
+          "weight": 4.1283
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_100_1",
+          "weight": -0.3885
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_101_1",
+          "weight": -2.4467
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_102_1",
+          "weight": 3.0463
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_102_1",
+          "weight": -0.5827
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_103_1",
+          "weight": 0.8757
+        },
+        {
+          "source": "4_101_1",
+          "target": "5_102_1",
+          "weight": 3.453
+        },
+        {
+          "source": "4_101_1",
+          "target": "5_103_1",
+          "weight": -1.1531
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_101_1",
+          "weight": 0.7192
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_100_1",
+          "weight": 4.7794
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_102_1",
+          "weight": 0.6593
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_101_1",
+          "weight": 1.0641
+        },
+        {
+          "source": "4_101_1",
+          "target": "6_101_1",
+          "weight": 2.9886
+        },
+        {
+          "source": "4_101_1",
+          "target": "7_101_1",
+          "weight": -0.5918
+        },
+        {
+          "source": "4_102_1",
+          "target": "7_101_1",
+          "weight": -2.0489
+        },
+        {
+          "source": "4_103_1",
+          "target": "7_100_1",
+          "weight": -3.6784
+        },
+        {
+          "source": "5_101_1",
+          "target": "6_100_1",
+          "weight": 3.2469
+        },
+        {
+          "source": "5_102_1",
+          "target": "6_101_1",
+          "weight": -3.8483
+        },
+        {
+          "source": "5_103_1",
+          "target": "6_100_1",
+          "weight": 4.665
+        },
+        {
+          "source": "5_101_1",
+          "target": "7_102_1",
+          "weight": 0.3657
+        },
+        {
+          "source": "5_100_1",
+          "target": "8_100_1",
+          "weight": -2.6618
+        },
+        {
+          "source": "5_100_1",
+          "target": "8_101_1",
+          "weight": 3.8423
+        },
+        {
+          "source": "5_101_1",
+          "target": "8_101_1",
+          "weight": -4.3678
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_101_1",
+          "weight": -0.917
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_102_1",
+          "weight": 4.4626
+        },
+        {
+          "source": "5_103_1",
+          "target": "8_100_1",
+          "weight": -1.087
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_102_1",
+          "weight": 1.9028
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_100_1",
+          "weight": -0.553
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_101_1",
+          "weight": -1.3731
+        },
+        {
+          "source": "6_100_1",
+          "target": "9_100_1",
+          "weight": -2.2412
+        },
+        {
+          "source": "6_101_1",
+          "target": "9_101_1",
+          "weight": -2.8789
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_101_1",
+          "weight": -1.6649
+        },
+        {
+          "source": "7_100_1",
+          "target": "8_101_1",
+          "weight": 3.2982
+        },
+        {
+          "source": "7_101_1",
+          "target": "8_102_1",
+          "weight": 2.7437
+        },
+        {
+          "source": "7_102_1",
+          "target": "8_102_1",
+          "weight": 4.8403
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_100_1",
+          "weight": 3.6645
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_101_1",
+          "weight": -1.4176
+        },
+        {
+          "source": "7_102_1",
+          "target": "9_101_1",
+          "weight": -2.3463
+        },
+        {
+          "source": "7_102_1",
+          "target": "9_102_1",
+          "weight": -0.7904
+        },
+        {
+          "source": "8_100_1",
+          "target": "9_100_1",
+          "weight": -4.3644
+        },
+        {
+          "source": "8_101_1",
+          "target": "9_102_1",
+          "weight": 1.1511
+        }
+      ]
+    },
+    {
+      "slug": "m3-antonym-000-demo",
+      "domain": "antonym",
+      "prompt": "The opposite of happy is",
+      "nodes": [
+        {
+          "node_id": "0_100_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "0_101_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 5150
+        },
+        {
+          "node_id": "0_102_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 5354
+        },
+        {
+          "node_id": "0_103_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "0_104_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 8642
+        },
+        {
+          "node_id": "0_105_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 6440
+        },
+        {
+          "node_id": "1_100_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8636
+        },
+        {
+          "node_id": "1_101_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 5774
+        },
+        {
+          "node_id": "1_102_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "1_103_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "1_104_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 6900
+        },
+        {
+          "node_id": "1_105_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "2_100_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "2_101_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "2_102_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "3_100_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "3_101_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "3_102_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "4_100_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 6440
+        },
+        {
+          "node_id": "4_101_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "4_102_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 7376
+        },
+        {
+          "node_id": "4_103_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "4_104_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 6900
+        },
+        {
+          "node_id": "5_100_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 5774
+        },
+        {
+          "node_id": "5_101_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 8126
+        },
+        {
+          "node_id": "5_102_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "5_103_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 5774
+        },
+        {
+          "node_id": "5_104_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 8642
+        },
+        {
+          "node_id": "5_105_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "6_100_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 6668
+        },
+        {
+          "node_id": "6_101_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 6900
+        },
+        {
+          "node_id": "6_102_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "6_103_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 6668
+        },
+        {
+          "node_id": "7_100_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 8382
+        },
+        {
+          "node_id": "7_101_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6900
+        },
+        {
+          "node_id": "7_102_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6440
+        },
+        {
+          "node_id": "7_103_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6668
+        },
+        {
+          "node_id": "7_104_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "8_100_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "8_101_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 6668
+        },
+        {
+          "node_id": "8_102_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "9_100_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 7614
+        },
+        {
+          "node_id": "9_101_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "9_102_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 8636
+        },
+        {
+          "node_id": "9_103_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "9_104_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        }
+      ],
+      "links": [
+        {
+          "source": "0_100_1",
+          "target": "1_100_1",
+          "weight": -4.1464
+        },
+        {
+          "source": "0_100_1",
+          "target": "1_104_1",
+          "weight": -4.4002
+        },
+        {
+          "source": "0_102_1",
+          "target": "1_101_1",
+          "weight": -2.1237
+        },
+        {
+          "source": "0_102_1",
+          "target": "1_102_1",
+          "weight": -3.964
+        },
+        {
+          "source": "0_102_1",
+          "target": "1_104_1",
+          "weight": -1.3753
+        },
+        {
+          "source": "0_103_1",
+          "target": "1_100_1",
+          "weight": -2.2143
+        },
+        {
+          "source": "0_103_1",
+          "target": "1_101_1",
+          "weight": -0.7089
+        },
+        {
+          "source": "0_104_1",
+          "target": "1_104_1",
+          "weight": -2.2673
+        },
+        {
+          "source": "0_105_1",
+          "target": "1_102_1",
+          "weight": -3.5675
+        },
+        {
+          "source": "0_105_1",
+          "target": "1_104_1",
+          "weight": 2.4097
+        },
+        {
+          "source": "0_100_1",
+          "target": "2_100_1",
+          "weight": 0.3048
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_100_1",
+          "weight": -1.8836
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_101_1",
+          "weight": 4.4141
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_101_1",
+          "weight": 2.5444
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_102_1",
+          "weight": -4.1842
+        },
+        {
+          "source": "0_104_1",
+          "target": "2_101_1",
+          "weight": 1.5748
+        },
+        {
+          "source": "0_104_1",
+          "target": "2_102_1",
+          "weight": 1.7849
+        },
+        {
+          "source": "0_105_1",
+          "target": "2_102_1",
+          "weight": -1.0474
+        },
+        {
+          "source": "0_100_1",
+          "target": "3_101_1",
+          "weight": -1.9858
+        },
+        {
+          "source": "0_100_1",
+          "target": "3_102_1",
+          "weight": -3.6277
+        },
+        {
+          "source": "0_101_1",
+          "target": "3_100_1",
+          "weight": -1.7188
+        },
+        {
+          "source": "0_101_1",
+          "target": "3_101_1",
+          "weight": 2.4701
+        },
+        {
+          "source": "0_101_1",
+          "target": "3_102_1",
+          "weight": -1.1979
+        },
+        {
+          "source": "0_103_1",
+          "target": "3_101_1",
+          "weight": 3.6176
+        },
+        {
+          "source": "0_103_1",
+          "target": "3_102_1",
+          "weight": -4.8126
+        },
+        {
+          "source": "1_100_1",
+          "target": "2_100_1",
+          "weight": -4.7914
+        },
+        {
+          "source": "1_100_1",
+          "target": "2_101_1",
+          "weight": 3.0132
+        },
+        {
+          "source": "1_101_1",
+          "target": "2_102_1",
+          "weight": 3.4448
+        },
+        {
+          "source": "1_102_1",
+          "target": "2_100_1",
+          "weight": 0.8887
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_100_1",
+          "weight": -1.6049
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_101_1",
+          "weight": -3.3187
+        },
+        {
+          "source": "1_104_1",
+          "target": "2_100_1",
+          "weight": 1.3777
+        },
+        {
+          "source": "1_105_1",
+          "target": "2_100_1",
+          "weight": -3.972
+        },
+        {
+          "source": "1_105_1",
+          "target": "2_101_1",
+          "weight": -3.265
+        },
+        {
+          "source": "1_105_1",
+          "target": "2_102_1",
+          "weight": 2.5915
+        },
+        {
+          "source": "1_100_1",
+          "target": "3_100_1",
+          "weight": 4.5129
+        },
+        {
+          "source": "1_103_1",
+          "target": "3_100_1",
+          "weight": 4.7097
+        },
+        {
+          "source": "1_103_1",
+          "target": "3_101_1",
+          "weight": -0.6024
+        },
+        {
+          "source": "1_105_1",
+          "target": "3_101_1",
+          "weight": -0.3826
+        },
+        {
+          "source": "1_105_1",
+          "target": "3_102_1",
+          "weight": -1.3126
+        },
+        {
+          "source": "1_100_1",
+          "target": "4_100_1",
+          "weight": 1.4467
+        },
+        {
+          "source": "1_100_1",
+          "target": "4_102_1",
+          "weight": 0.9408
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_102_1",
+          "weight": 4.0905
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_104_1",
+          "weight": 1.0501
+        },
+        {
+          "source": "1_103_1",
+          "target": "4_101_1",
+          "weight": 1.4613
+        },
+        {
+          "source": "1_103_1",
+          "target": "4_102_1",
+          "weight": 2.0762
+        },
+        {
+          "source": "1_105_1",
+          "target": "4_101_1",
+          "weight": 1.3089
+        },
+        {
+          "source": "1_105_1",
+          "target": "4_102_1",
+          "weight": -1.7031
+        },
+        {
+          "source": "2_100_1",
+          "target": "3_100_1",
+          "weight": 3.5157
+        },
+        {
+          "source": "2_101_1",
+          "target": "3_100_1",
+          "weight": -4.185
+        },
+        {
+          "source": "2_102_1",
+          "target": "3_100_1",
+          "weight": 1.5605
+        },
+        {
+          "source": "2_102_1",
+          "target": "3_102_1",
+          "weight": 2.0883
+        },
+        {
+          "source": "2_100_1",
+          "target": "4_100_1",
+          "weight": 0.5892
+        },
+        {
+          "source": "2_100_1",
+          "target": "4_102_1",
+          "weight": -3.7221
+        },
+        {
+          "source": "2_101_1",
+          "target": "4_102_1",
+          "weight": 1.7046
+        },
+        {
+          "source": "2_101_1",
+          "target": "4_104_1",
+          "weight": -1.9113
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_101_1",
+          "weight": 2.6616
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_102_1",
+          "weight": 4.9998
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_103_1",
+          "weight": -2.0421
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_102_1",
+          "weight": -3.1915
+        },
+        {
+          "source": "2_102_1",
+          "target": "5_101_1",
+          "weight": -1.357
+        },
+        {
+          "source": "3_100_1",
+          "target": "4_101_1",
+          "weight": -2.6083
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_100_1",
+          "weight": 1.7831
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_102_1",
+          "weight": -3.003
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_100_1",
+          "weight": 1.8864
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_101_1",
+          "weight": 3.4589
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_103_1",
+          "weight": 2.6312
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_104_1",
+          "weight": 4.0531
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_105_1",
+          "weight": -0.6253
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_101_1",
+          "weight": -0.4887
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_102_1",
+          "weight": -4.7333
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_103_1",
+          "weight": -1.4654
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_104_1",
+          "weight": -2.7546
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_105_1",
+          "weight": -4.0092
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_101_1",
+          "weight": -3.5395
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_102_1",
+          "weight": 4.174
+        },
+        {
+          "source": "3_100_1",
+          "target": "6_103_1",
+          "weight": -2.8435
+        },
+        {
+          "source": "3_101_1",
+          "target": "6_100_1",
+          "weight": 4.4023
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_100_1",
+          "weight": -3.7815
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_101_1",
+          "weight": 1.3895
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_103_1",
+          "weight": 3.3669
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_105_1",
+          "weight": -4.9844
+        },
+        {
+          "source": "4_101_1",
+          "target": "5_102_1",
+          "weight": 1.6821
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_103_1",
+          "weight": 3.7333
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_104_1",
+          "weight": -1.1312
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_102_1",
+          "weight": -2.5887
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_104_1",
+          "weight": 0.819
+        },
+        {
+          "source": "4_104_1",
+          "target": "5_100_1",
+          "weight": -1.477
+        },
+        {
+          "source": "4_104_1",
+          "target": "5_101_1",
+          "weight": 1.428
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_100_1",
+          "weight": -3.6515
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_103_1",
+          "weight": -2.9841
+        },
+        {
+          "source": "4_101_1",
+          "target": "6_102_1",
+          "weight": -1.8992
+        },
+        {
+          "source": "4_102_1",
+          "target": "6_102_1",
+          "weight": 1.469
+        },
+        {
+          "source": "4_102_1",
+          "target": "6_103_1",
+          "weight": 3.6214
+        },
+        {
+          "source": "4_103_1",
+          "target": "6_100_1",
+          "weight": 1.5573
+        },
+        {
+          "source": "4_103_1",
+          "target": "6_101_1",
+          "weight": 2.9934
+        },
+        {
+          "source": "4_104_1",
+          "target": "6_102_1",
+          "weight": -3.1318
+        },
+        {
+          "source": "4_100_1",
+          "target": "7_102_1",
+          "weight": -4.1739
+        },
+        {
+          "source": "4_101_1",
+          "target": "7_101_1",
+          "weight": -2.0623
+        },
+        {
+          "source": "4_101_1",
+          "target": "7_102_1",
+          "weight": -1.7208
+        },
+        {
+          "source": "4_101_1",
+          "target": "7_103_1",
+          "weight": -0.5408
+        },
+        {
+          "source": "4_102_1",
+          "target": "7_100_1",
+          "weight": -0.5609
+        },
+        {
+          "source": "4_103_1",
+          "target": "7_103_1",
+          "weight": 1.7118
+        },
+        {
+          "source": "4_104_1",
+          "target": "7_102_1",
+          "weight": -4.6886
+        },
+        {
+          "source": "5_100_1",
+          "target": "6_101_1",
+          "weight": -2.64
+        },
+        {
+          "source": "5_101_1",
+          "target": "6_101_1",
+          "weight": -3.4656
+        },
+        {
+          "source": "5_102_1",
+          "target": "6_101_1",
+          "weight": -3.623
+        },
+        {
+          "source": "5_102_1",
+          "target": "6_103_1",
+          "weight": -2.2131
+        },
+        {
+          "source": "5_103_1",
+          "target": "6_101_1",
+          "weight": -3.1395
+        },
+        {
+          "source": "5_104_1",
+          "target": "6_100_1",
+          "weight": 2.7496
+        },
+        {
+          "source": "5_104_1",
+          "target": "6_102_1",
+          "weight": 1.1188
+        },
+        {
+          "source": "5_105_1",
+          "target": "6_101_1",
+          "weight": -3.6427
+        },
+        {
+          "source": "5_105_1",
+          "target": "6_102_1",
+          "weight": -3.2734
+        },
+        {
+          "source": "5_101_1",
+          "target": "7_102_1",
+          "weight": -2.0004
+        },
+        {
+          "source": "5_101_1",
+          "target": "7_103_1",
+          "weight": 2.0956
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_100_1",
+          "weight": -1.3851
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_101_1",
+          "weight": 4.8513
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_103_1",
+          "weight": 1.8851
+        },
+        {
+          "source": "5_103_1",
+          "target": "7_103_1",
+          "weight": -1.9071
+        },
+        {
+          "source": "5_104_1",
+          "target": "7_104_1",
+          "weight": 4.7238
+        },
+        {
+          "source": "5_105_1",
+          "target": "7_103_1",
+          "weight": 3.7796
+        },
+        {
+          "source": "5_100_1",
+          "target": "8_101_1",
+          "weight": 4.6626
+        },
+        {
+          "source": "5_101_1",
+          "target": "8_101_1",
+          "weight": -3.7584
+        },
+        {
+          "source": "5_101_1",
+          "target": "8_102_1",
+          "weight": -3.3534
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_100_1",
+          "weight": 2.0933
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_101_1",
+          "weight": 4.409
+        },
+        {
+          "source": "5_103_1",
+          "target": "8_101_1",
+          "weight": 1.3506
+        },
+        {
+          "source": "5_104_1",
+          "target": "8_100_1",
+          "weight": -1.9718
+        },
+        {
+          "source": "5_105_1",
+          "target": "8_100_1",
+          "weight": 4.4161
+        },
+        {
+          "source": "5_105_1",
+          "target": "8_101_1",
+          "weight": 1.5873
+        },
+        {
+          "source": "6_100_1",
+          "target": "7_104_1",
+          "weight": -4.5454
+        },
+        {
+          "source": "6_102_1",
+          "target": "7_103_1",
+          "weight": 4.5665
+        },
+        {
+          "source": "6_103_1",
+          "target": "7_102_1",
+          "weight": -4.2703
+        },
+        {
+          "source": "6_103_1",
+          "target": "7_103_1",
+          "weight": -0.6039
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_100_1",
+          "weight": 1.0666
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_101_1",
+          "weight": 2.1836
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_102_1",
+          "weight": -1.2946
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_101_1",
+          "weight": -0.3353
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_102_1",
+          "weight": -2.5208
+        },
+        {
+          "source": "6_103_1",
+          "target": "8_100_1",
+          "weight": -2.0979
+        },
+        {
+          "source": "6_100_1",
+          "target": "9_100_1",
+          "weight": 3.6531
+        },
+        {
+          "source": "6_100_1",
+          "target": "9_101_1",
+          "weight": -1.7256
+        },
+        {
+          "source": "6_100_1",
+          "target": "9_103_1",
+          "weight": 2.6312
+        },
+        {
+          "source": "6_101_1",
+          "target": "9_102_1",
+          "weight": -4.7682
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_101_1",
+          "weight": -1.471
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_102_1",
+          "weight": 1.2144
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_103_1",
+          "weight": -3.925
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_104_1",
+          "weight": -2.3553
+        },
+        {
+          "source": "6_103_1",
+          "target": "9_102_1",
+          "weight": -4.4884
+        },
+        {
+          "source": "7_100_1",
+          "target": "8_100_1",
+          "weight": -1.1365
+        },
+        {
+          "source": "7_102_1",
+          "target": "8_100_1",
+          "weight": -4.0332
+        },
+        {
+          "source": "7_103_1",
+          "target": "8_102_1",
+          "weight": 1.0246
+        },
+        {
+          "source": "7_104_1",
+          "target": "8_101_1",
+          "weight": -4.6109
+        },
+        {
+          "source": "7_100_1",
+          "target": "9_102_1",
+          "weight": 3.9313
+        },
+        {
+          "source": "7_100_1",
+          "target": "9_103_1",
+          "weight": 4.3137
+        },
+        {
+          "source": "7_100_1",
+          "target": "9_104_1",
+          "weight": -1.0705
+        },
+        {
+          "source": "7_102_1",
+          "target": "9_103_1",
+          "weight": -1.6876
+        },
+        {
+          "source": "7_102_1",
+          "target": "9_104_1",
+          "weight": -0.8346
+        },
+        {
+          "source": "7_103_1",
+          "target": "9_100_1",
+          "weight": 3.9877
+        },
+        {
+          "source": "7_103_1",
+          "target": "9_104_1",
+          "weight": 1.5559
+        },
+        {
+          "source": "7_104_1",
+          "target": "9_102_1",
+          "weight": -4.4864
+        },
+        {
+          "source": "8_100_1",
+          "target": "9_104_1",
+          "weight": 0.7257
+        },
+        {
+          "source": "8_101_1",
+          "target": "9_101_1",
+          "weight": -0.5896
+        },
+        {
+          "source": "8_101_1",
+          "target": "9_104_1",
+          "weight": 2.682
+        },
+        {
+          "source": "8_102_1",
+          "target": "9_101_1",
+          "weight": -3.6192
+        },
+        {
+          "source": "8_102_1",
+          "target": "9_102_1",
+          "weight": -1.7495
+        }
+      ]
+    },
+    {
+      "slug": "m3-translation-000-demo",
+      "domain": "translation",
+      "prompt": "The French word for cat is",
+      "nodes": [
+        {
+          "node_id": "0_100_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 6900
+        },
+        {
+          "node_id": "0_101_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 7620
+        },
+        {
+          "node_id": "0_102_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "0_103_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 7620
+        },
+        {
+          "node_id": "1_100_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8636
+        },
+        {
+          "node_id": "1_101_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 7874
+        },
+        {
+          "node_id": "1_102_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8642
+        },
+        {
+          "node_id": "1_103_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "1_104_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8636
+        },
+        {
+          "node_id": "2_100_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "2_101_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "2_102_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 6434
+        },
+        {
+          "node_id": "2_103_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "2_104_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "3_100_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "3_101_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "3_102_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 7874
+        },
+        {
+          "node_id": "3_103_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "3_104_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "4_100_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "4_101_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "4_102_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "4_103_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "5_100_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7614
+        },
+        {
+          "node_id": "5_101_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7620
+        },
+        {
+          "node_id": "5_102_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 8126
+        },
+        {
+          "node_id": "5_103_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "5_104_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "5_105_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "6_100_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 7868
+        },
+        {
+          "node_id": "6_101_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 8636
+        },
+        {
+          "node_id": "6_102_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 7620
+        },
+        {
+          "node_id": "7_100_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6440
+        },
+        {
+          "node_id": "7_101_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 8382
+        },
+        {
+          "node_id": "7_102_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 7614
+        },
+        {
+          "node_id": "7_103_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 7874
+        },
+        {
+          "node_id": "7_104_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 8126
+        },
+        {
+          "node_id": "7_105_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "8_100_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 5354
+        },
+        {
+          "node_id": "8_101_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "8_102_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "8_103_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "8_104_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 7614
+        },
+        {
+          "node_id": "9_100_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "9_101_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "9_102_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "9_103_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "9_104_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 6434
+        },
+        {
+          "node_id": "9_105_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 6434
+        }
+      ],
+      "links": [
+        {
+          "source": "0_100_1",
+          "target": "1_101_1",
+          "weight": 0.6202
+        },
+        {
+          "source": "0_100_1",
+          "target": "1_102_1",
+          "weight": -3.9077
+        },
+        {
+          "source": "0_100_1",
+          "target": "1_104_1",
+          "weight": -4.4923
+        },
+        {
+          "source": "0_101_1",
+          "target": "1_101_1",
+          "weight": -2.6716
+        },
+        {
+          "source": "0_101_1",
+          "target": "1_102_1",
+          "weight": -1.6971
+        },
+        {
+          "source": "0_102_1",
+          "target": "1_100_1",
+          "weight": 4.6452
+        },
+        {
+          "source": "0_102_1",
+          "target": "1_102_1",
+          "weight": 1.5289
+        },
+        {
+          "source": "0_103_1",
+          "target": "1_102_1",
+          "weight": -2.1458
+        },
+        {
+          "source": "0_103_1",
+          "target": "1_103_1",
+          "weight": 2.6872
+        },
+        {
+          "source": "0_100_1",
+          "target": "2_100_1",
+          "weight": 2.3869
+        },
+        {
+          "source": "0_100_1",
+          "target": "2_102_1",
+          "weight": 4.2147
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_101_1",
+          "weight": 3.362
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_103_1",
+          "weight": 2.49
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_100_1",
+          "weight": -4.6253
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_101_1",
+          "weight": 1.0278
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_103_1",
+          "weight": -0.4565
+        },
+        {
+          "source": "0_103_1",
+          "target": "2_102_1",
+          "weight": 0.982
+        },
+        {
+          "source": "0_103_1",
+          "target": "2_103_1",
+          "weight": -3.3751
+        },
+        {
+          "source": "0_100_1",
+          "target": "3_100_1",
+          "weight": -3.138
+        },
+        {
+          "source": "0_101_1",
+          "target": "3_100_1",
+          "weight": 3.5615
+        },
+        {
+          "source": "0_101_1",
+          "target": "3_104_1",
+          "weight": 1.6926
+        },
+        {
+          "source": "0_102_1",
+          "target": "3_100_1",
+          "weight": -3.5939
+        },
+        {
+          "source": "0_102_1",
+          "target": "3_101_1",
+          "weight": -2.5195
+        },
+        {
+          "source": "0_102_1",
+          "target": "3_102_1",
+          "weight": -2.6448
+        },
+        {
+          "source": "0_103_1",
+          "target": "3_100_1",
+          "weight": 2.2288
+        },
+        {
+          "source": "0_103_1",
+          "target": "3_101_1",
+          "weight": 1.5368
+        },
+        {
+          "source": "0_103_1",
+          "target": "3_103_1",
+          "weight": -3.8178
+        },
+        {
+          "source": "0_103_1",
+          "target": "3_104_1",
+          "weight": -0.9458
+        },
+        {
+          "source": "1_100_1",
+          "target": "2_103_1",
+          "weight": -3.8258
+        },
+        {
+          "source": "1_101_1",
+          "target": "2_100_1",
+          "weight": 1.1463
+        },
+        {
+          "source": "1_101_1",
+          "target": "2_101_1",
+          "weight": -3.6643
+        },
+        {
+          "source": "1_101_1",
+          "target": "2_102_1",
+          "weight": 2.4773
+        },
+        {
+          "source": "1_102_1",
+          "target": "2_104_1",
+          "weight": -2.5253
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_102_1",
+          "weight": -0.5325
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_104_1",
+          "weight": 0.6417
+        },
+        {
+          "source": "1_104_1",
+          "target": "2_100_1",
+          "weight": 0.4765
+        },
+        {
+          "source": "1_104_1",
+          "target": "2_103_1",
+          "weight": -1.7188
+        },
+        {
+          "source": "1_100_1",
+          "target": "3_100_1",
+          "weight": -2.946
+        },
+        {
+          "source": "1_100_1",
+          "target": "3_102_1",
+          "weight": -1.6336
+        },
+        {
+          "source": "1_101_1",
+          "target": "3_100_1",
+          "weight": -0.3762
+        },
+        {
+          "source": "1_102_1",
+          "target": "3_102_1",
+          "weight": -1.5547
+        },
+        {
+          "source": "1_102_1",
+          "target": "3_103_1",
+          "weight": 4.9412
+        },
+        {
+          "source": "1_103_1",
+          "target": "3_100_1",
+          "weight": 4.3378
+        },
+        {
+          "source": "1_103_1",
+          "target": "3_101_1",
+          "weight": -0.9113
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_102_1",
+          "weight": -3.2153
+        },
+        {
+          "source": "1_102_1",
+          "target": "4_102_1",
+          "weight": -4.9653
+        },
+        {
+          "source": "1_102_1",
+          "target": "4_103_1",
+          "weight": -2.0164
+        },
+        {
+          "source": "1_104_1",
+          "target": "4_100_1",
+          "weight": -1.5384
+        },
+        {
+          "source": "1_104_1",
+          "target": "4_101_1",
+          "weight": 4.3741
+        },
+        {
+          "source": "1_104_1",
+          "target": "4_103_1",
+          "weight": 3.0948
+        },
+        {
+          "source": "2_100_1",
+          "target": "3_103_1",
+          "weight": -2.9392
+        },
+        {
+          "source": "2_100_1",
+          "target": "3_104_1",
+          "weight": -4.6642
+        },
+        {
+          "source": "2_101_1",
+          "target": "3_102_1",
+          "weight": 2.4054
+        },
+        {
+          "source": "2_101_1",
+          "target": "3_104_1",
+          "weight": -2.8273
+        },
+        {
+          "source": "2_102_1",
+          "target": "3_101_1",
+          "weight": 1.0854
+        },
+        {
+          "source": "2_103_1",
+          "target": "3_102_1",
+          "weight": 3.7626
+        },
+        {
+          "source": "2_104_1",
+          "target": "3_101_1",
+          "weight": 0.5672
+        },
+        {
+          "source": "2_104_1",
+          "target": "3_104_1",
+          "weight": 1.7875
+        },
+        {
+          "source": "2_100_1",
+          "target": "4_101_1",
+          "weight": -1.5559
+        },
+        {
+          "source": "2_101_1",
+          "target": "4_103_1",
+          "weight": -3.1612
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_101_1",
+          "weight": -2.7466
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_103_1",
+          "weight": -0.3697
+        },
+        {
+          "source": "2_103_1",
+          "target": "4_100_1",
+          "weight": -0.8732
+        },
+        {
+          "source": "2_104_1",
+          "target": "4_100_1",
+          "weight": -1.6974
+        },
+        {
+          "source": "2_104_1",
+          "target": "4_101_1",
+          "weight": -0.5021
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_101_1",
+          "weight": -1.2283
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_103_1",
+          "weight": -4.2722
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_101_1",
+          "weight": -2.9111
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_103_1",
+          "weight": 4.0899
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_104_1",
+          "weight": -3.0998
+        },
+        {
+          "source": "2_103_1",
+          "target": "5_100_1",
+          "weight": -1.7838
+        },
+        {
+          "source": "2_103_1",
+          "target": "5_101_1",
+          "weight": -0.3375
+        },
+        {
+          "source": "2_103_1",
+          "target": "5_103_1",
+          "weight": -1.4036
+        },
+        {
+          "source": "2_104_1",
+          "target": "5_103_1",
+          "weight": -2.9687
+        },
+        {
+          "source": "2_104_1",
+          "target": "5_104_1",
+          "weight": -4.5428
+        },
+        {
+          "source": "3_100_1",
+          "target": "4_101_1",
+          "weight": 0.5331
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_100_1",
+          "weight": -3.0381
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_101_1",
+          "weight": 0.6979
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_102_1",
+          "weight": 0.5064
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_100_1",
+          "weight": 2.6336
+        },
+        {
+          "source": "3_103_1",
+          "target": "4_103_1",
+          "weight": 0.4655
+        },
+        {
+          "source": "3_104_1",
+          "target": "4_100_1",
+          "weight": 3.8936
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_101_1",
+          "weight": 3.18
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_102_1",
+          "weight": -4.9362
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_103_1",
+          "weight": 1.307
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_104_1",
+          "weight": -3.4897
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_105_1",
+          "weight": -0.4399
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_100_1",
+          "weight": 1.3773
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_104_1",
+          "weight": 0.3221
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_100_1",
+          "weight": 2.2219
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_102_1",
+          "weight": 2.5154
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_104_1",
+          "weight": -4.0369
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_105_1",
+          "weight": -3.0807
+        },
+        {
+          "source": "3_103_1",
+          "target": "5_102_1",
+          "weight": -1.031
+        },
+        {
+          "source": "3_104_1",
+          "target": "5_101_1",
+          "weight": 1.8404
+        },
+        {
+          "source": "3_100_1",
+          "target": "6_100_1",
+          "weight": -1.2074
+        },
+        {
+          "source": "3_100_1",
+          "target": "6_102_1",
+          "weight": -4.9055
+        },
+        {
+          "source": "3_101_1",
+          "target": "6_100_1",
+          "weight": 2.1123
+        },
+        {
+          "source": "3_101_1",
+          "target": "6_101_1",
+          "weight": 4.7733
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_102_1",
+          "weight": 4.0127
+        },
+        {
+          "source": "3_103_1",
+          "target": "6_102_1",
+          "weight": 4.2416
+        },
+        {
+          "source": "3_104_1",
+          "target": "6_101_1",
+          "weight": 0.4303
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_100_1",
+          "weight": 3.5043
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_101_1",
+          "weight": -2.9284
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_102_1",
+          "weight": 3.2069
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_105_1",
+          "weight": 0.6396
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_102_1",
+          "weight": 2.4546
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_103_1",
+          "weight": -4.0231
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_104_1",
+          "weight": -4.2398
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_103_1",
+          "weight": 1.3412
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_100_1",
+          "weight": 0.5304
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_102_1",
+          "weight": 0.8588
+        },
+        {
+          "source": "4_101_1",
+          "target": "6_102_1",
+          "weight": -2.5355
+        },
+        {
+          "source": "4_102_1",
+          "target": "6_100_1",
+          "weight": -2.3203
+        },
+        {
+          "source": "4_103_1",
+          "target": "6_100_1",
+          "weight": -1.1038
+        },
+        {
+          "source": "4_103_1",
+          "target": "6_102_1",
+          "weight": 4.4296
+        },
+        {
+          "source": "4_100_1",
+          "target": "7_102_1",
+          "weight": -4.127
+        },
+        {
+          "source": "4_101_1",
+          "target": "7_100_1",
+          "weight": -4.1038
+        },
+        {
+          "source": "4_101_1",
+          "target": "7_105_1",
+          "weight": -0.8619
+        },
+        {
+          "source": "4_102_1",
+          "target": "7_104_1",
+          "weight": 0.9238
+        },
+        {
+          "source": "4_102_1",
+          "target": "7_105_1",
+          "weight": -2.3159
+        },
+        {
+          "source": "4_103_1",
+          "target": "7_100_1",
+          "weight": -3.3279
+        },
+        {
+          "source": "4_103_1",
+          "target": "7_101_1",
+          "weight": -2.0025
+        },
+        {
+          "source": "5_101_1",
+          "target": "6_100_1",
+          "weight": -4.9323
+        },
+        {
+          "source": "5_104_1",
+          "target": "6_101_1",
+          "weight": 1.0321
+        },
+        {
+          "source": "5_105_1",
+          "target": "6_101_1",
+          "weight": -1.0176
+        },
+        {
+          "source": "5_105_1",
+          "target": "6_102_1",
+          "weight": 2.3487
+        },
+        {
+          "source": "5_100_1",
+          "target": "7_103_1",
+          "weight": -2.197
+        },
+        {
+          "source": "5_101_1",
+          "target": "7_101_1",
+          "weight": 4.9726
+        },
+        {
+          "source": "5_101_1",
+          "target": "7_102_1",
+          "weight": 2.6762
+        },
+        {
+          "source": "5_101_1",
+          "target": "7_103_1",
+          "weight": 2.2721
+        },
+        {
+          "source": "5_101_1",
+          "target": "7_105_1",
+          "weight": 2.9769
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_101_1",
+          "weight": 3.4779
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_104_1",
+          "weight": -1.9717
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_105_1",
+          "weight": -3.4586
+        },
+        {
+          "source": "5_104_1",
+          "target": "7_103_1",
+          "weight": 4.6843
+        },
+        {
+          "source": "5_105_1",
+          "target": "7_102_1",
+          "weight": -2.5177
+        },
+        {
+          "source": "5_105_1",
+          "target": "7_104_1",
+          "weight": 1.1268
+        },
+        {
+          "source": "5_100_1",
+          "target": "8_103_1",
+          "weight": 2.9623
+        },
+        {
+          "source": "5_100_1",
+          "target": "8_104_1",
+          "weight": -4.0139
+        },
+        {
+          "source": "5_101_1",
+          "target": "8_100_1",
+          "weight": 2.4685
+        },
+        {
+          "source": "5_101_1",
+          "target": "8_103_1",
+          "weight": -1.2588
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_102_1",
+          "weight": 4.977
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_104_1",
+          "weight": 4.2055
+        },
+        {
+          "source": "5_103_1",
+          "target": "8_100_1",
+          "weight": 3.3132
+        },
+        {
+          "source": "5_103_1",
+          "target": "8_102_1",
+          "weight": -1.5693
+        },
+        {
+          "source": "5_104_1",
+          "target": "8_100_1",
+          "weight": -4.0238
+        },
+        {
+          "source": "5_104_1",
+          "target": "8_103_1",
+          "weight": -4.5532
+        },
+        {
+          "source": "5_105_1",
+          "target": "8_100_1",
+          "weight": -1.5692
+        },
+        {
+          "source": "5_105_1",
+          "target": "8_101_1",
+          "weight": 3.0005
+        },
+        {
+          "source": "6_100_1",
+          "target": "7_101_1",
+          "weight": -0.7363
+        },
+        {
+          "source": "6_100_1",
+          "target": "7_105_1",
+          "weight": 1.5731
+        },
+        {
+          "source": "6_101_1",
+          "target": "7_105_1",
+          "weight": -2.852
+        },
+        {
+          "source": "6_102_1",
+          "target": "7_100_1",
+          "weight": 2.0376
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_100_1",
+          "weight": -3.8605
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_104_1",
+          "weight": -1.1136
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_101_1",
+          "weight": -1.4802
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_103_1",
+          "weight": 1.7359
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_103_1",
+          "weight": -2.6143
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_104_1",
+          "weight": -1.2669
+        },
+        {
+          "source": "6_100_1",
+          "target": "9_100_1",
+          "weight": -1.1154
+        },
+        {
+          "source": "6_101_1",
+          "target": "9_102_1",
+          "weight": -3.3313
+        },
+        {
+          "source": "6_101_1",
+          "target": "9_103_1",
+          "weight": -3.129
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_103_1",
+          "weight": -1.1606
+        },
+        {
+          "source": "7_100_1",
+          "target": "8_104_1",
+          "weight": 0.654
+        },
+        {
+          "source": "7_101_1",
+          "target": "8_101_1",
+          "weight": -4.673
+        },
+        {
+          "source": "7_101_1",
+          "target": "8_102_1",
+          "weight": -2.1133
+        },
+        {
+          "source": "7_102_1",
+          "target": "8_104_1",
+          "weight": 0.4311
+        },
+        {
+          "source": "7_104_1",
+          "target": "8_100_1",
+          "weight": -0.7485
+        },
+        {
+          "source": "7_104_1",
+          "target": "8_103_1",
+          "weight": 3.7481
+        },
+        {
+          "source": "7_104_1",
+          "target": "8_104_1",
+          "weight": -2.3718
+        },
+        {
+          "source": "7_105_1",
+          "target": "8_101_1",
+          "weight": 3.6529
+        },
+        {
+          "source": "7_105_1",
+          "target": "8_102_1",
+          "weight": 3.1189
+        },
+        {
+          "source": "7_105_1",
+          "target": "8_103_1",
+          "weight": 2.3761
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_104_1",
+          "weight": 4.79
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_105_1",
+          "weight": 0.7274
+        },
+        {
+          "source": "7_102_1",
+          "target": "9_104_1",
+          "weight": 2.5009
+        },
+        {
+          "source": "7_103_1",
+          "target": "9_100_1",
+          "weight": -2.2268
+        },
+        {
+          "source": "7_103_1",
+          "target": "9_103_1",
+          "weight": -3.5376
+        },
+        {
+          "source": "7_103_1",
+          "target": "9_104_1",
+          "weight": -2.5245
+        },
+        {
+          "source": "7_104_1",
+          "target": "9_101_1",
+          "weight": 1.324
+        },
+        {
+          "source": "7_104_1",
+          "target": "9_104_1",
+          "weight": 2.946
+        },
+        {
+          "source": "8_100_1",
+          "target": "9_103_1",
+          "weight": 4.7215
+        },
+        {
+          "source": "8_102_1",
+          "target": "9_100_1",
+          "weight": -2.1641
+        },
+        {
+          "source": "8_102_1",
+          "target": "9_102_1",
+          "weight": 3.5242
+        },
+        {
+          "source": "8_103_1",
+          "target": "9_100_1",
+          "weight": 1.2618
+        },
+        {
+          "source": "8_103_1",
+          "target": "9_102_1",
+          "weight": 4.2943
+        },
+        {
+          "source": "8_103_1",
+          "target": "9_103_1",
+          "weight": -0.4348
+        },
+        {
+          "source": "8_104_1",
+          "target": "9_103_1",
+          "weight": 3.7442
+        },
+        {
+          "source": "8_104_1",
+          "target": "9_105_1",
+          "weight": -1.3956
+        }
+      ]
+    },
+    {
+      "slug": "m3-code_completion-000-demo",
+      "domain": "code_completion",
+      "prompt": "def add(a, b):\n    return",
+      "nodes": [
+        {
+          "node_id": "0_100_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 8636
+        },
+        {
+          "node_id": "0_101_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "0_102_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 6210
+        },
+        {
+          "node_id": "0_103_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 5354
+        },
+        {
+          "node_id": "1_100_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "1_101_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "1_102_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "1_103_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "2_100_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 6668
+        },
+        {
+          "node_id": "2_101_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "2_102_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "3_100_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 5150
+        },
+        {
+          "node_id": "3_101_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 6434
+        },
+        {
+          "node_id": "3_102_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "4_100_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "4_101_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 7868
+        },
+        {
+          "node_id": "4_102_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "5_100_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 5150
+        },
+        {
+          "node_id": "5_101_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 5150
+        },
+        {
+          "node_id": "5_102_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "5_103_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "6_100_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 8642
+        },
+        {
+          "node_id": "6_101_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 6668
+        },
+        {
+          "node_id": "6_102_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "7_100_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "7_101_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "7_102_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "8_100_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "8_101_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "8_102_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 8126
+        },
+        {
+          "node_id": "8_103_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 5774
+        },
+        {
+          "node_id": "9_100_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "9_101_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 7614
+        },
+        {
+          "node_id": "9_102_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        }
+      ],
+      "links": [
+        {
+          "source": "0_100_1",
+          "target": "1_100_1",
+          "weight": 2.7346
+        },
+        {
+          "source": "0_100_1",
+          "target": "1_102_1",
+          "weight": 4.9294
+        },
+        {
+          "source": "0_100_1",
+          "target": "1_103_1",
+          "weight": 0.3051
+        },
+        {
+          "source": "0_101_1",
+          "target": "1_100_1",
+          "weight": 1.5002
+        },
+        {
+          "source": "0_102_1",
+          "target": "1_100_1",
+          "weight": -0.8829
+        },
+        {
+          "source": "0_102_1",
+          "target": "1_103_1",
+          "weight": -3.9953
+        },
+        {
+          "source": "0_100_1",
+          "target": "2_100_1",
+          "weight": -3.6017
+        },
+        {
+          "source": "0_100_1",
+          "target": "2_101_1",
+          "weight": -4.1575
+        },
+        {
+          "source": "0_103_1",
+          "target": "2_100_1",
+          "weight": -2.3696
+        },
+        {
+          "source": "0_103_1",
+          "target": "2_101_1",
+          "weight": -4.4543
+        },
+        {
+          "source": "0_100_1",
+          "target": "3_102_1",
+          "weight": -1.8207
+        },
+        {
+          "source": "0_102_1",
+          "target": "3_100_1",
+          "weight": 3.6081
+        },
+        {
+          "source": "1_100_1",
+          "target": "2_101_1",
+          "weight": -4.3247
+        },
+        {
+          "source": "1_100_1",
+          "target": "2_102_1",
+          "weight": -4.6017
+        },
+        {
+          "source": "1_101_1",
+          "target": "2_100_1",
+          "weight": 2.8929
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_100_1",
+          "weight": 0.3656
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_102_1",
+          "weight": -1.9009
+        },
+        {
+          "source": "1_100_1",
+          "target": "3_101_1",
+          "weight": 3.0806
+        },
+        {
+          "source": "1_102_1",
+          "target": "3_101_1",
+          "weight": 1.9868
+        },
+        {
+          "source": "1_103_1",
+          "target": "3_101_1",
+          "weight": -4.1379
+        },
+        {
+          "source": "1_100_1",
+          "target": "4_102_1",
+          "weight": 2.4169
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_101_1",
+          "weight": 2.079
+        },
+        {
+          "source": "1_102_1",
+          "target": "4_100_1",
+          "weight": 4.5302
+        },
+        {
+          "source": "1_103_1",
+          "target": "4_101_1",
+          "weight": -3.7307
+        },
+        {
+          "source": "2_100_1",
+          "target": "3_100_1",
+          "weight": 3.8641
+        },
+        {
+          "source": "2_100_1",
+          "target": "3_102_1",
+          "weight": 3.0711
+        },
+        {
+          "source": "2_101_1",
+          "target": "3_100_1",
+          "weight": -4.3613
+        },
+        {
+          "source": "2_102_1",
+          "target": "3_100_1",
+          "weight": -0.448
+        },
+        {
+          "source": "2_100_1",
+          "target": "4_102_1",
+          "weight": -3.971
+        },
+        {
+          "source": "2_101_1",
+          "target": "4_102_1",
+          "weight": -2.6467
+        },
+        {
+          "source": "2_102_1",
+          "target": "4_100_1",
+          "weight": -4.5402
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_100_1",
+          "weight": 4.6034
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_101_1",
+          "weight": 3.0312
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_100_1",
+          "weight": -2.5174
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_102_1",
+          "weight": 3.26
+        },
+        {
+          "source": "2_102_1",
+          "target": "5_100_1",
+          "weight": 1.7333
+        },
+        {
+          "source": "2_102_1",
+          "target": "5_101_1",
+          "weight": -2.7681
+        },
+        {
+          "source": "2_102_1",
+          "target": "5_103_1",
+          "weight": -0.9908
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_100_1",
+          "weight": -4.1361
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_100_1",
+          "weight": 2.8451
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_102_1",
+          "weight": -1.3173
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_102_1",
+          "weight": 4.324
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_103_1",
+          "weight": 0.4155
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_102_1",
+          "weight": -1.6498
+        },
+        {
+          "source": "3_100_1",
+          "target": "6_102_1",
+          "weight": -2.9481
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_101_1",
+          "weight": -2.2017
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_102_1",
+          "weight": -2.6853
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_102_1",
+          "weight": 1.6244
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_103_1",
+          "weight": -2.0832
+        },
+        {
+          "source": "4_101_1",
+          "target": "6_101_1",
+          "weight": -0.4724
+        },
+        {
+          "source": "4_101_1",
+          "target": "6_102_1",
+          "weight": 4.4355
+        },
+        {
+          "source": "4_102_1",
+          "target": "6_100_1",
+          "weight": 2.7015
+        },
+        {
+          "source": "4_102_1",
+          "target": "6_101_1",
+          "weight": -3.9434
+        },
+        {
+          "source": "4_100_1",
+          "target": "7_100_1",
+          "weight": -3.7926
+        },
+        {
+          "source": "4_102_1",
+          "target": "7_100_1",
+          "weight": 3.076
+        },
+        {
+          "source": "4_102_1",
+          "target": "7_101_1",
+          "weight": 2.047
+        },
+        {
+          "source": "5_100_1",
+          "target": "6_100_1",
+          "weight": 3.5657
+        },
+        {
+          "source": "5_100_1",
+          "target": "6_101_1",
+          "weight": 2.1116
+        },
+        {
+          "source": "5_101_1",
+          "target": "6_101_1",
+          "weight": -2.0116
+        },
+        {
+          "source": "5_102_1",
+          "target": "6_100_1",
+          "weight": 4.521
+        },
+        {
+          "source": "5_103_1",
+          "target": "6_101_1",
+          "weight": -3.9809
+        },
+        {
+          "source": "5_100_1",
+          "target": "7_100_1",
+          "weight": -4.3833
+        },
+        {
+          "source": "5_100_1",
+          "target": "7_102_1",
+          "weight": -3.0187
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_100_1",
+          "weight": 0.8612
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_102_1",
+          "weight": 4.9716
+        },
+        {
+          "source": "5_103_1",
+          "target": "7_100_1",
+          "weight": 1.4599
+        },
+        {
+          "source": "5_103_1",
+          "target": "7_102_1",
+          "weight": 3.4728
+        },
+        {
+          "source": "5_100_1",
+          "target": "8_101_1",
+          "weight": 4.4228
+        },
+        {
+          "source": "5_100_1",
+          "target": "8_102_1",
+          "weight": 4.2413
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_102_1",
+          "weight": -0.5399
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_103_1",
+          "weight": 1.1411
+        },
+        {
+          "source": "6_100_1",
+          "target": "7_101_1",
+          "weight": -1.1698
+        },
+        {
+          "source": "6_101_1",
+          "target": "7_102_1",
+          "weight": 4.9409
+        },
+        {
+          "source": "6_102_1",
+          "target": "7_101_1",
+          "weight": -1.175
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_102_1",
+          "weight": 0.6565
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_103_1",
+          "weight": -2.2956
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_100_1",
+          "weight": 0.9712
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_101_1",
+          "weight": 3.1069
+        },
+        {
+          "source": "6_101_1",
+          "target": "8_102_1",
+          "weight": 3.0865
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_102_1",
+          "weight": -3.4038
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_103_1",
+          "weight": -2.5885
+        },
+        {
+          "source": "7_100_1",
+          "target": "8_101_1",
+          "weight": -2.6345
+        },
+        {
+          "source": "7_100_1",
+          "target": "8_102_1",
+          "weight": 2.3811
+        },
+        {
+          "source": "7_102_1",
+          "target": "8_100_1",
+          "weight": 4.4837
+        },
+        {
+          "source": "7_100_1",
+          "target": "9_101_1",
+          "weight": -4.6204
+        },
+        {
+          "source": "7_100_1",
+          "target": "9_102_1",
+          "weight": 1.0166
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_100_1",
+          "weight": 2.7947
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_101_1",
+          "weight": -3.6951
+        },
+        {
+          "source": "7_102_1",
+          "target": "9_102_1",
+          "weight": -4.7809
+        },
+        {
+          "source": "8_103_1",
+          "target": "9_100_1",
+          "weight": -1.9823
+        },
+        {
+          "source": "8_103_1",
+          "target": "9_101_1",
+          "weight": -3.425
+        }
+      ]
+    },
+    {
+      "slug": "m3-sentiment-000-demo",
+      "domain": "sentiment",
+      "prompt": "This movie was terrible. The sentiment is",
+      "nodes": [
+        {
+          "node_id": "0_100_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 6210
+        },
+        {
+          "node_id": "0_101_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "0_102_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 7620
+        },
+        {
+          "node_id": "0_103_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "0_104_1",
+          "layer": "0",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "1_100_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "1_101_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8636
+        },
+        {
+          "node_id": "1_102_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 7868
+        },
+        {
+          "node_id": "1_103_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 8382
+        },
+        {
+          "node_id": "1_104_1",
+          "layer": "1",
+          "feature_type": "cross layer transcoder",
+          "feature": 6210
+        },
+        {
+          "node_id": "2_100_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "2_101_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "2_102_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "2_103_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 7130
+        },
+        {
+          "node_id": "2_104_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "2_105_1",
+          "layer": "2",
+          "feature_type": "cross layer transcoder",
+          "feature": 6210
+        },
+        {
+          "node_id": "3_100_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 8900
+        },
+        {
+          "node_id": "3_101_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 7868
+        },
+        {
+          "node_id": "3_102_1",
+          "layer": "3",
+          "feature_type": "cross layer transcoder",
+          "feature": 6440
+        },
+        {
+          "node_id": "4_100_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 5354
+        },
+        {
+          "node_id": "4_101_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 6210
+        },
+        {
+          "node_id": "4_102_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "4_103_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "4_104_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 8126
+        },
+        {
+          "node_id": "4_105_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 8120
+        },
+        {
+          "node_id": "4_106_1",
+          "layer": "4",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "5_100_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 5774
+        },
+        {
+          "node_id": "5_101_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7136
+        },
+        {
+          "node_id": "5_102_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 5990
+        },
+        {
+          "node_id": "5_103_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "5_104_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "5_105_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "5_106_1",
+          "layer": "5",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "6_100_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 7370
+        },
+        {
+          "node_id": "6_101_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 6210
+        },
+        {
+          "node_id": "6_102_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 8376
+        },
+        {
+          "node_id": "6_103_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 5562
+        },
+        {
+          "node_id": "6_104_1",
+          "layer": "6",
+          "feature_type": "cross layer transcoder",
+          "feature": 8382
+        },
+        {
+          "node_id": "7_100_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6900
+        },
+        {
+          "node_id": "7_101_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 5150
+        },
+        {
+          "node_id": "7_102_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "7_103_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6434
+        },
+        {
+          "node_id": "7_104_1",
+          "layer": "7",
+          "feature_type": "cross layer transcoder",
+          "feature": 6662
+        },
+        {
+          "node_id": "8_100_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 7614
+        },
+        {
+          "node_id": "8_101_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 6894
+        },
+        {
+          "node_id": "8_102_1",
+          "layer": "8",
+          "feature_type": "cross layer transcoder",
+          "feature": 8126
+        },
+        {
+          "node_id": "9_100_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 9168
+        },
+        {
+          "node_id": "9_101_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 5150
+        },
+        {
+          "node_id": "9_102_1",
+          "layer": "9",
+          "feature_type": "cross layer transcoder",
+          "feature": 5354
+        }
+      ],
+      "links": [
+        {
+          "source": "0_101_1",
+          "target": "1_102_1",
+          "weight": -0.9066
+        },
+        {
+          "source": "0_101_1",
+          "target": "1_103_1",
+          "weight": 3.4576
+        },
+        {
+          "source": "0_101_1",
+          "target": "1_104_1",
+          "weight": -1.8128
+        },
+        {
+          "source": "0_102_1",
+          "target": "1_101_1",
+          "weight": -3.2989
+        },
+        {
+          "source": "0_103_1",
+          "target": "1_101_1",
+          "weight": 0.9403
+        },
+        {
+          "source": "0_103_1",
+          "target": "1_104_1",
+          "weight": 4.4244
+        },
+        {
+          "source": "0_104_1",
+          "target": "1_100_1",
+          "weight": 3.8975
+        },
+        {
+          "source": "0_104_1",
+          "target": "1_101_1",
+          "weight": -3.9874
+        },
+        {
+          "source": "0_104_1",
+          "target": "1_102_1",
+          "weight": -3.1002
+        },
+        {
+          "source": "0_100_1",
+          "target": "2_101_1",
+          "weight": -2.1848
+        },
+        {
+          "source": "0_100_1",
+          "target": "2_102_1",
+          "weight": -4.5036
+        },
+        {
+          "source": "0_100_1",
+          "target": "2_105_1",
+          "weight": -1.3917
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_101_1",
+          "weight": 1.6202
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_103_1",
+          "weight": -4.7426
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_104_1",
+          "weight": -2.0819
+        },
+        {
+          "source": "0_101_1",
+          "target": "2_105_1",
+          "weight": 3.4377
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_100_1",
+          "weight": -1.0253
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_103_1",
+          "weight": 0.4413
+        },
+        {
+          "source": "0_102_1",
+          "target": "2_104_1",
+          "weight": 3.8549
+        },
+        {
+          "source": "0_103_1",
+          "target": "2_101_1",
+          "weight": -0.3494
+        },
+        {
+          "source": "0_103_1",
+          "target": "2_102_1",
+          "weight": -2.3144
+        },
+        {
+          "source": "0_103_1",
+          "target": "2_103_1",
+          "weight": 2.5224
+        },
+        {
+          "source": "0_103_1",
+          "target": "2_105_1",
+          "weight": -1.5621
+        },
+        {
+          "source": "0_102_1",
+          "target": "3_100_1",
+          "weight": 4.0278
+        },
+        {
+          "source": "0_104_1",
+          "target": "3_101_1",
+          "weight": 2.5719
+        },
+        {
+          "source": "0_104_1",
+          "target": "3_102_1",
+          "weight": 4.8437
+        },
+        {
+          "source": "1_100_1",
+          "target": "2_102_1",
+          "weight": -0.7663
+        },
+        {
+          "source": "1_101_1",
+          "target": "2_102_1",
+          "weight": 4.108
+        },
+        {
+          "source": "1_101_1",
+          "target": "2_104_1",
+          "weight": -1.119
+        },
+        {
+          "source": "1_102_1",
+          "target": "2_100_1",
+          "weight": -2.238
+        },
+        {
+          "source": "1_103_1",
+          "target": "2_102_1",
+          "weight": 0.8793
+        },
+        {
+          "source": "1_104_1",
+          "target": "2_101_1",
+          "weight": -2.1391
+        },
+        {
+          "source": "1_104_1",
+          "target": "2_103_1",
+          "weight": -0.8911
+        },
+        {
+          "source": "1_100_1",
+          "target": "3_101_1",
+          "weight": -2.2459
+        },
+        {
+          "source": "1_100_1",
+          "target": "3_102_1",
+          "weight": 1.0866
+        },
+        {
+          "source": "1_101_1",
+          "target": "3_101_1",
+          "weight": 3.8957
+        },
+        {
+          "source": "1_101_1",
+          "target": "3_102_1",
+          "weight": -2.6242
+        },
+        {
+          "source": "1_103_1",
+          "target": "3_100_1",
+          "weight": 3.1739
+        },
+        {
+          "source": "1_103_1",
+          "target": "3_101_1",
+          "weight": -2.1965
+        },
+        {
+          "source": "1_104_1",
+          "target": "3_101_1",
+          "weight": 3.689
+        },
+        {
+          "source": "1_104_1",
+          "target": "3_102_1",
+          "weight": 4.7422
+        },
+        {
+          "source": "1_100_1",
+          "target": "4_102_1",
+          "weight": -0.8323
+        },
+        {
+          "source": "1_100_1",
+          "target": "4_104_1",
+          "weight": -2.8861
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_104_1",
+          "weight": -1.8888
+        },
+        {
+          "source": "1_101_1",
+          "target": "4_106_1",
+          "weight": 3.513
+        },
+        {
+          "source": "1_102_1",
+          "target": "4_101_1",
+          "weight": -3.0724
+        },
+        {
+          "source": "1_102_1",
+          "target": "4_104_1",
+          "weight": -0.4355
+        },
+        {
+          "source": "1_103_1",
+          "target": "4_100_1",
+          "weight": 3.2351
+        },
+        {
+          "source": "1_103_1",
+          "target": "4_103_1",
+          "weight": -4.6944
+        },
+        {
+          "source": "1_103_1",
+          "target": "4_106_1",
+          "weight": 3.7048
+        },
+        {
+          "source": "1_104_1",
+          "target": "4_101_1",
+          "weight": -3.3649
+        },
+        {
+          "source": "1_104_1",
+          "target": "4_105_1",
+          "weight": -1.1343
+        },
+        {
+          "source": "1_104_1",
+          "target": "4_106_1",
+          "weight": 0.7226
+        },
+        {
+          "source": "2_101_1",
+          "target": "3_101_1",
+          "weight": -0.9049
+        },
+        {
+          "source": "2_101_1",
+          "target": "3_102_1",
+          "weight": 2.803
+        },
+        {
+          "source": "2_102_1",
+          "target": "3_101_1",
+          "weight": 4.1152
+        },
+        {
+          "source": "2_103_1",
+          "target": "3_101_1",
+          "weight": -2.4761
+        },
+        {
+          "source": "2_104_1",
+          "target": "3_100_1",
+          "weight": 4.6702
+        },
+        {
+          "source": "2_105_1",
+          "target": "3_101_1",
+          "weight": -2.48
+        },
+        {
+          "source": "2_100_1",
+          "target": "4_103_1",
+          "weight": 1.9036
+        },
+        {
+          "source": "2_100_1",
+          "target": "4_105_1",
+          "weight": 1.8441
+        },
+        {
+          "source": "2_101_1",
+          "target": "4_100_1",
+          "weight": -2.2352
+        },
+        {
+          "source": "2_101_1",
+          "target": "4_101_1",
+          "weight": -2.2312
+        },
+        {
+          "source": "2_101_1",
+          "target": "4_105_1",
+          "weight": -2.7492
+        },
+        {
+          "source": "2_103_1",
+          "target": "4_100_1",
+          "weight": -0.8143
+        },
+        {
+          "source": "2_103_1",
+          "target": "4_102_1",
+          "weight": 2.0807
+        },
+        {
+          "source": "2_103_1",
+          "target": "4_104_1",
+          "weight": 2.2655
+        },
+        {
+          "source": "2_103_1",
+          "target": "4_105_1",
+          "weight": 0.3464
+        },
+        {
+          "source": "2_104_1",
+          "target": "4_106_1",
+          "weight": -4.024
+        },
+        {
+          "source": "2_105_1",
+          "target": "4_100_1",
+          "weight": -2.4135
+        },
+        {
+          "source": "2_105_1",
+          "target": "4_103_1",
+          "weight": 1.7971
+        },
+        {
+          "source": "2_105_1",
+          "target": "4_104_1",
+          "weight": -4.107
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_100_1",
+          "weight": 2.8809
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_101_1",
+          "weight": -2.3944
+        },
+        {
+          "source": "2_100_1",
+          "target": "5_102_1",
+          "weight": 3.5121
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_100_1",
+          "weight": 3.8943
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_104_1",
+          "weight": -4.4594
+        },
+        {
+          "source": "2_101_1",
+          "target": "5_106_1",
+          "weight": -2.997
+        },
+        {
+          "source": "2_102_1",
+          "target": "5_104_1",
+          "weight": 2.1567
+        },
+        {
+          "source": "2_103_1",
+          "target": "5_101_1",
+          "weight": 1.345
+        },
+        {
+          "source": "2_103_1",
+          "target": "5_102_1",
+          "weight": -2.2647
+        },
+        {
+          "source": "2_103_1",
+          "target": "5_104_1",
+          "weight": 2.6448
+        },
+        {
+          "source": "2_104_1",
+          "target": "5_100_1",
+          "weight": 1.1448
+        },
+        {
+          "source": "2_104_1",
+          "target": "5_105_1",
+          "weight": -3.0059
+        },
+        {
+          "source": "2_105_1",
+          "target": "5_100_1",
+          "weight": -1.7779
+        },
+        {
+          "source": "2_105_1",
+          "target": "5_102_1",
+          "weight": 1.7675
+        },
+        {
+          "source": "2_105_1",
+          "target": "5_104_1",
+          "weight": 1.9352
+        },
+        {
+          "source": "2_105_1",
+          "target": "5_105_1",
+          "weight": -3.7107
+        },
+        {
+          "source": "3_100_1",
+          "target": "4_101_1",
+          "weight": 3.2384
+        },
+        {
+          "source": "3_100_1",
+          "target": "4_102_1",
+          "weight": -2.0917
+        },
+        {
+          "source": "3_100_1",
+          "target": "4_105_1",
+          "weight": 3.8797
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_100_1",
+          "weight": 4.0138
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_102_1",
+          "weight": 4.4808
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_105_1",
+          "weight": 2.2717
+        },
+        {
+          "source": "3_101_1",
+          "target": "4_106_1",
+          "weight": 2.3408
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_101_1",
+          "weight": -1.3341
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_103_1",
+          "weight": 3.7654
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_104_1",
+          "weight": 0.3473
+        },
+        {
+          "source": "3_102_1",
+          "target": "4_105_1",
+          "weight": 4.9468
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_101_1",
+          "weight": 1.8975
+        },
+        {
+          "source": "3_100_1",
+          "target": "5_106_1",
+          "weight": 1.9519
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_101_1",
+          "weight": 1.6166
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_103_1",
+          "weight": 1.0563
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_104_1",
+          "weight": 3.3065
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_105_1",
+          "weight": 2.1877
+        },
+        {
+          "source": "3_101_1",
+          "target": "5_106_1",
+          "weight": -3.8599
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_100_1",
+          "weight": -3.0135
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_101_1",
+          "weight": -2.3701
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_103_1",
+          "weight": 2.0344
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_104_1",
+          "weight": -4.6059
+        },
+        {
+          "source": "3_102_1",
+          "target": "5_106_1",
+          "weight": 4.3312
+        },
+        {
+          "source": "3_100_1",
+          "target": "6_100_1",
+          "weight": -4.9726
+        },
+        {
+          "source": "3_101_1",
+          "target": "6_100_1",
+          "weight": -4.0992
+        },
+        {
+          "source": "3_101_1",
+          "target": "6_103_1",
+          "weight": -2.4411
+        },
+        {
+          "source": "3_101_1",
+          "target": "6_104_1",
+          "weight": 4.8867
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_100_1",
+          "weight": -0.3572
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_101_1",
+          "weight": -3.253
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_102_1",
+          "weight": -2.0943
+        },
+        {
+          "source": "3_102_1",
+          "target": "6_104_1",
+          "weight": 2.3854
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_100_1",
+          "weight": 2.582
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_101_1",
+          "weight": 3.52
+        },
+        {
+          "source": "4_100_1",
+          "target": "5_103_1",
+          "weight": -1.4247
+        },
+        {
+          "source": "4_101_1",
+          "target": "5_100_1",
+          "weight": 3.1496
+        },
+        {
+          "source": "4_101_1",
+          "target": "5_101_1",
+          "weight": -0.9922
+        },
+        {
+          "source": "4_101_1",
+          "target": "5_103_1",
+          "weight": -1.1428
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_101_1",
+          "weight": 1.9617
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_102_1",
+          "weight": 4.4247
+        },
+        {
+          "source": "4_102_1",
+          "target": "5_103_1",
+          "weight": -0.8397
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_100_1",
+          "weight": -1.2025
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_102_1",
+          "weight": 1.8446
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_105_1",
+          "weight": 4.204
+        },
+        {
+          "source": "4_103_1",
+          "target": "5_106_1",
+          "weight": -0.8872
+        },
+        {
+          "source": "4_104_1",
+          "target": "5_100_1",
+          "weight": -2.3839
+        },
+        {
+          "source": "4_104_1",
+          "target": "5_101_1",
+          "weight": 2.0457
+        },
+        {
+          "source": "4_105_1",
+          "target": "5_101_1",
+          "weight": -1.5821
+        },
+        {
+          "source": "4_105_1",
+          "target": "5_106_1",
+          "weight": 3.2644
+        },
+        {
+          "source": "4_106_1",
+          "target": "5_102_1",
+          "weight": 4.3437
+        },
+        {
+          "source": "4_106_1",
+          "target": "5_106_1",
+          "weight": 2.5143
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_100_1",
+          "weight": -1.6911
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_101_1",
+          "weight": 1.5082
+        },
+        {
+          "source": "4_100_1",
+          "target": "6_102_1",
+          "weight": -0.4091
+        },
+        {
+          "source": "4_101_1",
+          "target": "6_102_1",
+          "weight": -0.7566
+        },
+        {
+          "source": "4_102_1",
+          "target": "6_100_1",
+          "weight": -4.091
+        },
+        {
+          "source": "4_102_1",
+          "target": "6_103_1",
+          "weight": -2.1365
+        },
+        {
+          "source": "4_103_1",
+          "target": "6_100_1",
+          "weight": 3.2531
+        },
+        {
+          "source": "4_103_1",
+          "target": "6_103_1",
+          "weight": 2.6742
+        },
+        {
+          "source": "4_104_1",
+          "target": "6_103_1",
+          "weight": 1.5891
+        },
+        {
+          "source": "4_104_1",
+          "target": "6_104_1",
+          "weight": -1.4486
+        },
+        {
+          "source": "4_105_1",
+          "target": "6_104_1",
+          "weight": 3.9688
+        },
+        {
+          "source": "4_106_1",
+          "target": "6_104_1",
+          "weight": -3.0408
+        },
+        {
+          "source": "4_100_1",
+          "target": "7_100_1",
+          "weight": 3.5219
+        },
+        {
+          "source": "4_100_1",
+          "target": "7_101_1",
+          "weight": 3.2455
+        },
+        {
+          "source": "4_100_1",
+          "target": "7_102_1",
+          "weight": -1.6207
+        },
+        {
+          "source": "4_100_1",
+          "target": "7_104_1",
+          "weight": 1.3324
+        },
+        {
+          "source": "4_101_1",
+          "target": "7_101_1",
+          "weight": 3.9175
+        },
+        {
+          "source": "4_102_1",
+          "target": "7_101_1",
+          "weight": 2.3621
+        },
+        {
+          "source": "4_103_1",
+          "target": "7_104_1",
+          "weight": 3.1524
+        },
+        {
+          "source": "4_104_1",
+          "target": "7_100_1",
+          "weight": 1.5752
+        },
+        {
+          "source": "4_104_1",
+          "target": "7_102_1",
+          "weight": 3.8139
+        },
+        {
+          "source": "4_105_1",
+          "target": "7_101_1",
+          "weight": -1.0213
+        },
+        {
+          "source": "4_105_1",
+          "target": "7_102_1",
+          "weight": -2.0583
+        },
+        {
+          "source": "4_105_1",
+          "target": "7_104_1",
+          "weight": 1.0252
+        },
+        {
+          "source": "4_106_1",
+          "target": "7_104_1",
+          "weight": 2.3682
+        },
+        {
+          "source": "5_100_1",
+          "target": "6_101_1",
+          "weight": -2.9029
+        },
+        {
+          "source": "5_101_1",
+          "target": "6_100_1",
+          "weight": 2.104
+        },
+        {
+          "source": "5_101_1",
+          "target": "6_102_1",
+          "weight": 0.4249
+        },
+        {
+          "source": "5_104_1",
+          "target": "6_100_1",
+          "weight": -3.9353
+        },
+        {
+          "source": "5_104_1",
+          "target": "6_102_1",
+          "weight": -4.434
+        },
+        {
+          "source": "5_104_1",
+          "target": "6_103_1",
+          "weight": 2.8553
+        },
+        {
+          "source": "5_105_1",
+          "target": "6_101_1",
+          "weight": -4.3797
+        },
+        {
+          "source": "5_105_1",
+          "target": "6_103_1",
+          "weight": 0.4117
+        },
+        {
+          "source": "5_106_1",
+          "target": "6_104_1",
+          "weight": 1.4712
+        },
+        {
+          "source": "5_101_1",
+          "target": "7_100_1",
+          "weight": -1.1842
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_100_1",
+          "weight": 2.4367
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_101_1",
+          "weight": 3.6885
+        },
+        {
+          "source": "5_102_1",
+          "target": "7_104_1",
+          "weight": 1.3379
+        },
+        {
+          "source": "5_103_1",
+          "target": "7_104_1",
+          "weight": 2.2491
+        },
+        {
+          "source": "5_104_1",
+          "target": "7_100_1",
+          "weight": -0.5119
+        },
+        {
+          "source": "5_104_1",
+          "target": "7_102_1",
+          "weight": 4.6248
+        },
+        {
+          "source": "5_104_1",
+          "target": "7_104_1",
+          "weight": -4.5937
+        },
+        {
+          "source": "5_105_1",
+          "target": "7_100_1",
+          "weight": -2.3576
+        },
+        {
+          "source": "5_105_1",
+          "target": "7_101_1",
+          "weight": 3.4601
+        },
+        {
+          "source": "5_105_1",
+          "target": "7_102_1",
+          "weight": -0.3367
+        },
+        {
+          "source": "5_105_1",
+          "target": "7_104_1",
+          "weight": 4.2863
+        },
+        {
+          "source": "5_106_1",
+          "target": "7_104_1",
+          "weight": 2.8991
+        },
+        {
+          "source": "5_100_1",
+          "target": "8_101_1",
+          "weight": 2.0768
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_100_1",
+          "weight": 0.4308
+        },
+        {
+          "source": "5_102_1",
+          "target": "8_102_1",
+          "weight": 3.834
+        },
+        {
+          "source": "5_103_1",
+          "target": "8_101_1",
+          "weight": -2.0643
+        },
+        {
+          "source": "5_105_1",
+          "target": "8_102_1",
+          "weight": -1.5399
+        },
+        {
+          "source": "5_106_1",
+          "target": "8_100_1",
+          "weight": 1.4226
+        },
+        {
+          "source": "5_106_1",
+          "target": "8_102_1",
+          "weight": -4.6012
+        },
+        {
+          "source": "6_100_1",
+          "target": "7_103_1",
+          "weight": -2.4341
+        },
+        {
+          "source": "6_101_1",
+          "target": "7_100_1",
+          "weight": 1.7858
+        },
+        {
+          "source": "6_101_1",
+          "target": "7_103_1",
+          "weight": 1.5153
+        },
+        {
+          "source": "6_101_1",
+          "target": "7_104_1",
+          "weight": -4.1765
+        },
+        {
+          "source": "6_102_1",
+          "target": "7_100_1",
+          "weight": 4.7163
+        },
+        {
+          "source": "6_102_1",
+          "target": "7_104_1",
+          "weight": 1.2951
+        },
+        {
+          "source": "6_103_1",
+          "target": "7_100_1",
+          "weight": 1.8541
+        },
+        {
+          "source": "6_103_1",
+          "target": "7_102_1",
+          "weight": 3.2875
+        },
+        {
+          "source": "6_104_1",
+          "target": "7_102_1",
+          "weight": 1.8604
+        },
+        {
+          "source": "6_104_1",
+          "target": "7_103_1",
+          "weight": 2.1687
+        },
+        {
+          "source": "6_104_1",
+          "target": "7_104_1",
+          "weight": -4.2675
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_100_1",
+          "weight": -2.4809
+        },
+        {
+          "source": "6_100_1",
+          "target": "8_101_1",
+          "weight": 3.2162
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_100_1",
+          "weight": -1.105
+        },
+        {
+          "source": "6_102_1",
+          "target": "8_101_1",
+          "weight": -4.941
+        },
+        {
+          "source": "6_103_1",
+          "target": "8_100_1",
+          "weight": 2.4595
+        },
+        {
+          "source": "6_103_1",
+          "target": "8_101_1",
+          "weight": 3.4825
+        },
+        {
+          "source": "6_104_1",
+          "target": "8_101_1",
+          "weight": 1.8588
+        },
+        {
+          "source": "6_100_1",
+          "target": "9_100_1",
+          "weight": 4.2669
+        },
+        {
+          "source": "6_101_1",
+          "target": "9_100_1",
+          "weight": -3.4368
+        },
+        {
+          "source": "6_101_1",
+          "target": "9_101_1",
+          "weight": 2.4675
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_101_1",
+          "weight": 1.3405
+        },
+        {
+          "source": "6_102_1",
+          "target": "9_102_1",
+          "weight": 3.8698
+        },
+        {
+          "source": "6_104_1",
+          "target": "9_101_1",
+          "weight": 3.7477
+        },
+        {
+          "source": "6_104_1",
+          "target": "9_102_1",
+          "weight": -4.5823
+        },
+        {
+          "source": "7_101_1",
+          "target": "8_100_1",
+          "weight": -2.8995
+        },
+        {
+          "source": "7_102_1",
+          "target": "8_100_1",
+          "weight": 4.0563
+        },
+        {
+          "source": "7_102_1",
+          "target": "8_102_1",
+          "weight": -3.1601
+        },
+        {
+          "source": "7_103_1",
+          "target": "8_101_1",
+          "weight": -3.8538
+        },
+        {
+          "source": "7_104_1",
+          "target": "8_101_1",
+          "weight": 2.5104
+        },
+        {
+          "source": "7_100_1",
+          "target": "9_102_1",
+          "weight": 1.7169
+        },
+        {
+          "source": "7_101_1",
+          "target": "9_100_1",
+          "weight": -3.0258
+        },
+        {
+          "source": "7_102_1",
+          "target": "9_102_1",
+          "weight": -2.1486
+        },
+        {
+          "source": "7_103_1",
+          "target": "9_100_1",
+          "weight": -3.065
+        },
+        {
+          "source": "7_103_1",
+          "target": "9_102_1",
+          "weight": 1.5942
+        },
+        {
+          "source": "7_104_1",
+          "target": "9_101_1",
+          "weight": 0.6686
+        },
+        {
+          "source": "8_100_1",
+          "target": "9_101_1",
+          "weight": -1.8679
+        },
+        {
+          "source": "8_101_1",
+          "target": "9_102_1",
+          "weight": -1.4051
+        },
+        {
+          "source": "8_102_1",
+          "target": "9_101_1",
+          "weight": 1.3969
+        },
+        {
+          "source": "8_102_1",
+          "target": "9_102_1",
+          "weight": 0.5167
+        }
+      ]
+    }
+  ],
+  "explanations": {
+    "0_100": {
+      "explanation": "occurrences of the word \"the\"",
+      "source_domains": [],
+      "frac_nonzero": 0.0643,
+      "max_activation": 1.48
+    },
+    "1_101": {
+      "explanation": "the letter \"a\" at word beginnings",
+      "source_domains": [],
+      "frac_nonzero": 0.0282,
+      "max_activation": 5.24
+    },
+    "2_102": {
+      "explanation": "punctuation marks and sentence endings",
+      "source_domains": [],
+      "frac_nonzero": 0.0739,
+      "max_activation": 13.86
+    },
+    "3_103": {
+      "explanation": "digit characters in numeric expressions",
+      "source_domains": [],
+      "frac_nonzero": 0.0893,
+      "max_activation": 2.65
+    },
+    "4_104": {
+      "explanation": "word boundaries and spacing patterns",
+      "source_domains": [],
+      "frac_nonzero": 0.0428,
+      "max_activation": 1.57
+    },
+    "5_105": {
+      "explanation": "occurrences of common English words",
+      "source_domains": [],
+      "frac_nonzero": 0.0226,
+      "max_activation": 10.6
+    },
+    "6_106": {
+      "explanation": "the word \"is\" in declarative sentences",
+      "source_domains": [],
+      "frac_nonzero": 0.0036,
+      "max_activation": 4.78
+    },
+    "7_107": {
+      "explanation": "letter patterns at word endings",
+      "source_domains": [],
+      "frac_nonzero": 0.0653,
+      "max_activation": 11.35
+    },
+    "8_108": {
+      "explanation": "country names and geographical concepts",
+      "source_domains": [],
+      "frac_nonzero": 0.0228,
+      "max_activation": 12.2
+    },
+    "9_109": {
+      "explanation": "abstract category relationships",
+      "source_domains": [],
+      "frac_nonzero": 0.0811,
+      "max_activation": 1.12
+    },
+    "10_110": {
+      "explanation": "semantic similarity between concepts",
+      "source_domains": [],
+      "frac_nonzero": 0.0808,
+      "max_activation": 14.26
+    },
+    "11_111": {
+      "explanation": "topic-related contextual associations",
+      "source_domains": [],
+      "frac_nonzero": 0.0347,
+      "max_activation": 3.95
+    },
+    "0_112": {
+      "explanation": "language and translation concepts",
+      "source_domains": [],
+      "frac_nonzero": 0.0958,
+      "max_activation": 7.4
+    },
+    "1_113": {
+      "explanation": "conceptual type hierarchies",
+      "source_domains": [],
+      "frac_nonzero": 0.0102,
+      "max_activation": 2.84
+    },
+    "2_114": {
+      "explanation": "question-answer pairs and import statements",
+      "source_domains": [],
+      "frac_nonzero": 0.0849,
+      "max_activation": 12.47
+    },
+    "3_115": {
+      "explanation": "next token prediction for completions",
+      "source_domains": [],
+      "frac_nonzero": 0.0809,
+      "max_activation": 14.86
+    },
+    "4_116": {
+      "explanation": "output generation for responses",
+      "source_domains": [],
+      "frac_nonzero": 0.0541,
+      "max_activation": 19.49
+    },
+    "5_117": {
+      "explanation": "result production in answers",
+      "source_domains": [],
+      "frac_nonzero": 0.0385,
+      "max_activation": 11.49
+    },
+    "6_118": {
+      "explanation": "code snippets and programming terms",
+      "source_domains": [],
+      "frac_nonzero": 0.0831,
+      "max_activation": 12.75
+    },
+    "7_119": {
+      "explanation": "arithmetic operations and numbers",
+      "source_domains": [],
+      "frac_nonzero": 0.0863,
+      "max_activation": 11.97
+    },
+    "8_120": {
+      "explanation": "capital city knowledge",
+      "source_domains": [],
+      "frac_nonzero": 0.0708,
+      "max_activation": 1.87
+    },
+    "9_121": {
+      "explanation": "sentiment and emotion words",
+      "source_domains": [],
+      "frac_nonzero": 0.0236,
+      "max_activation": 6.5
+    },
+    "10_122": {
+      "explanation": "rhyming word patterns",
+      "source_domains": [],
+      "frac_nonzero": 0.0089,
+      "max_activation": 5.42
+    },
+    "11_123": {
+      "explanation": "antonym and opposite relationships",
+      "source_domains": [],
+      "frac_nonzero": 0.011,
+      "max_activation": 6.28
+    },
+    "0_124": {
+      "explanation": "sentence structure and grammar",
+      "source_domains": [],
+      "frac_nonzero": 0.0639,
+      "max_activation": 7.93
+    },
+    "1_125": {
+      "explanation": "verb tense and endings",
+      "source_domains": [],
+      "frac_nonzero": 0.0376,
+      "max_activation": 4.98
+    },
+    "2_126": {
+      "explanation": "prefix patterns in words",
+      "source_domains": [],
+      "frac_nonzero": 0.0274,
+      "max_activation": 18.8
+    },
+    "3_127": {
+      "explanation": "plural forms and suffixes",
+      "source_domains": [],
+      "frac_nonzero": 0.0652,
+      "max_activation": 12.57
+    }
+  }
+}

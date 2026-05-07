@@ -1,0 +1,2413 @@
+{
+  "metadata": {
+    "method_name": "weighted_motif_intensity_sign_coherence",
+    "description": "Weighted motif features (Onnela intensity, sign coherence, path dominance, weight asymmetry) for FFL and other 3-node DAG motifs across attribution graphs, with spectral clustering comparison against ...",
+    "parameters": {
+      "prune_percentile": 75,
+      "min_nodes": 30,
+      "seed": 42,
+      "n_permutations": 1000,
+      "cluster_k_values": [
+        2,
+        4,
+        6
+      ]
+    },
+    "n_graphs_processed": 200,
+    "n_domains": 8,
+    "domain_counts": {
+      "antonym": 26,
+      "arithmetic": 26,
+      "sentiment": 24,
+      "translation": 26,
+      "code_completion": 24,
+      "country_capital": 26,
+      "multi_hop_reasoning": 24,
+      "rhyme": 24
+    },
+    "total_runtime_seconds": 1330.2,
+    "processing_time_seconds": 656.1,
+    "clustering_comparison": {
+      "weighted_motif_only": {
+        "results_by_k": {
+          "2": {
+            "nmi": 0.3000736380359902,
+            "ari": 0.07140448647479164
+          },
+          "4": {
+            "nmi": 0.6932675072462275,
+            "ari": 0.4249011236890127
+          },
+          "6": {
+            "nmi": 0.661917219671546,
+            "ari": 0.3998460056007552
+          },
+          "8": {
+            "nmi": 0.7050227135242816,
+            "ari": 0.516189243075944
+          }
+        },
+        "best_k": 8,
+        "best_nmi": 0.7050227135242816,
+        "best_ari": 0.516189243075944,
+        "n_features": 19,
+        "n_graphs": 200
+      },
+      "binary_motif_only": {
+        "results_by_k": {
+          "2": {
+            "nmi": 0.013139282412636198,
+            "ari": -1.879635704157123e-05
+          },
+          "4": {
+            "nmi": 0.05614629480598032,
+            "ari": 0.003934190465452361
+          },
+          "6": {
+            "nmi": 0.09942713749319715,
+            "ari": 0.024439220223992007
+          },
+          "8": {
+            "nmi": 0.10143462312188314,
+            "ari": 0.007551220110021284
+          }
+        },
+        "best_k": 8,
+        "best_nmi": 0.10143462312188314,
+        "best_ari": 0.007551220110021284,
+        "n_features": 4,
+        "n_graphs": 200
+      },
+      "graph_stats_only": {
+        "results_by_k": {
+          "2": {
+            "nmi": 0.298400059225433,
+            "ari": 0.09006849252817616
+          },
+          "4": {
+            "nmi": 0.676995132008612,
+            "ari": 0.37166643072930333
+          },
+          "6": {
+            "nmi": 0.6751801837622173,
+            "ari": 0.36580089242404445
+          },
+          "8": {
+            "nmi": 0.6506364264421706,
+            "ari": 0.36891339759306624
+          }
+        },
+        "best_k": 4,
+        "best_nmi": 0.676995132008612,
+        "best_ari": 0.37166643072930333,
+        "n_features": 8,
+        "n_graphs": 200
+      },
+      "weighted_plus_binary": {
+        "results_by_k": {
+          "2": {
+            "nmi": 0.3000736380359902,
+            "ari": 0.07140448647479164
+          },
+          "4": {
+            "nmi": 0.6932675072462275,
+            "ari": 0.4249011236890127
+          },
+          "6": {
+            "nmi": 0.661917219671546,
+            "ari": 0.3998460056007552
+          },
+          "8": {
+            "nmi": 0.7050227135242816,
+            "ari": 0.516189243075944
+          }
+        },
+        "best_k": 8,
+        "best_nmi": 0.7050227135242816,
+        "best_ari": 0.516189243075944,
+        "n_features": 23,
+        "n_graphs": 200
+      },
+      "all_combined": {
+        "results_by_k": {
+          "2": {
+            "nmi": 0.3629488939221185,
+            "ari": 0.12191612006189642
+          },
+          "4": {
+            "nmi": 0.6303446773238294,
+            "ari": 0.258549264734582
+          },
+          "6": {
+            "nmi": 0.8321605065933293,
+            "ari": 0.6118619951697588
+          },
+          "8": {
+            "nmi": 0.844476706076278,
+            "ari": 0.6875377717995316
+          }
+        },
+        "best_k": 8,
+        "best_nmi": 0.844476706076278,
+        "best_ari": 0.6875377717995316,
+        "n_features": 31,
+        "n_graphs": 200
+      }
+    },
+    "permutation_tests": {
+      "weighted_vs_binary": {
+        "nmi_X1": 0.7050227135242816,
+        "nmi_X2": 0.10430550204400416,
+        "observed_diff": 0.6007172114802775,
+        "p_value": 0.000999000999000999,
+        "n_permutations": 1000
+      },
+      "weighted_vs_graph_stats": {
+        "nmi_X1": 0.7050227135242816,
+        "nmi_X2": 0.6506364264421706,
+        "observed_diff": 0.05438628708211102,
+        "p_value": 0.000999000999000999,
+        "n_permutations": 1000
+      },
+      "combined_vs_best_single": {
+        "nmi_X1": 0.844476706076278,
+        "nmi_X2": 0.7050227135242816,
+        "observed_diff": 0.13945399255199642,
+        "p_value": 0.000999000999000999,
+        "n_permutations": 1000
+      },
+      "weighted_plus_binary_vs_binary": {
+        "nmi_X1": 0.7050227135242816,
+        "nmi_X2": 0.08614142966328696,
+        "observed_diff": 0.6188812838609946,
+        "p_value": 0.000999000999000999,
+        "n_permutations": 1000
+      }
+    },
+    "discriminative_features": {
+      "all_features": {
+        "ffl_intensity_mean": {
+          "F_statistic": 117.19105367955841,
+          "p_value": 8.197322995060066e-66,
+          "eta_squared": 0.8103399078232743,
+          "per_domain_means": {
+            "antonym": 3.0337079486894942,
+            "arithmetic": 3.1178217083767423,
+            "code_completion": 2.2804684833067,
+            "country_capital": 2.2059988366740613,
+            "multi_hop_reasoning": 2.6428970705173778,
+            "rhyme": 2.0193674492932208,
+            "sentiment": 1.1930972630648364,
+            "translation": 2.5871773286497306
+          }
+        },
+        "ffl_intensity_median": {
+          "F_statistic": 124.2948936882013,
+          "p_value": 8.435394096964043e-68,
+          "eta_squared": 0.8192199775594283,
+          "per_domain_means": {
+            "antonym": 2.224697585019381,
+            "arithmetic": 2.477559746532902,
+            "code_completion": 1.79369700133919,
+            "country_capital": 1.6513538029331427,
+            "multi_hop_reasoning": 1.981995966451428,
+            "rhyme": 1.4660050546591712,
+            "sentiment": 0.9090716337852885,
+            "translation": 2.013210837257991
+          }
+        },
+        "ffl_intensity_std": {
+          "F_statistic": 83.15059617310988,
+          "p_value": 1.0537409757751301e-54,
+          "eta_squared": 0.7519553454465105,
+          "per_domain_means": {
+            "antonym": 2.4030175230318465,
+            "arithmetic": 2.144800717586645,
+            "code_completion": 1.5665878818060575,
+            "country_capital": 1.7463966077948867,
+            "multi_hop_reasoning": 2.0190328515486713,
+            "rhyme": 1.7064618687928572,
+            "sentiment": 1.0073078779323439,
+            "translation": 1.875308549056273
+          }
+        },
+        "ffl_intensity_q25": {
+          "F_statistic": 138.87622057238772,
+          "p_value": 1.3208674217280398e-71,
+          "eta_squared": 0.8350704685141404,
+          "per_domain_means": {
+            "antonym": 1.5824173155641281,
+            "arithmetic": 1.7924219459562616,
+            "code_completion": 1.3133272801743627,
+            "country_capital": 1.1947495341563703,
+            "multi_hop_reasoning": 1.4406244423160937,
+            "rhyme": 1.0627941606852997,
+            "sentiment": 0.6892210041696107,
+            "translation": 1.4647429795212543
+          }
+        },
+        "ffl_intensity_q75": {
+          "F_statistic": 110.28224984639303,
+          "p_value": 8.747658366773577e-64,
+          "eta_squared": 0.8008248649261528,
+          "per_domain_means": {
+            "antonym": 3.581074160298567,
+            "arithmetic": 3.705339782260182,
+            "code_completion": 2.6913642735017405,
+            "country_capital": 2.541057257034452,
+            "multi_hop_reasoning": 3.0333910781699864,
+            "rhyme": 2.2911746791613647,
+            "sentiment": 1.301193477050697,
+            "translation": 3.0164905799340263
+          }
+        },
+        "ffl_coherent_frac": {
+          "F_statistic": 46.52410983231498,
+          "p_value": 4.0275297778257816e-38,
+          "eta_squared": 0.6291064642834213,
+          "per_domain_means": {
+            "antonym": 0.5860693174416834,
+            "arithmetic": 0.5501072697433869,
+            "code_completion": 0.5986663346811119,
+            "country_capital": 0.5824742812896736,
+            "multi_hop_reasoning": 0.5711348547666758,
+            "rhyme": 0.5871424066929766,
+            "sentiment": 0.5772899632317486,
+            "translation": 0.6026221406464949
+          }
+        },
+        "ffl_path_dom_mean": {
+          "F_statistic": 302.94868898165896,
+          "p_value": 4.0099019936815417e-100,
+          "eta_squared": 0.9169780287102292,
+          "per_domain_means": {
+            "antonym": 0.877386884376125,
+            "arithmetic": 0.7199363028674176,
+            "code_completion": 0.9664709464472053,
+            "country_capital": 1.1782942007961807,
+            "multi_hop_reasoning": 0.9683199885463366,
+            "rhyme": 1.2748369874022054,
+            "sentiment": 1.9883321085711072,
+            "translation": 0.8554263226659296
+          }
+        },
+        "ffl_path_dom_std": {
+          "F_statistic": 211.51940330536377,
+          "p_value": 1.1834340244289388e-86,
+          "eta_squared": 0.885211115686949,
+          "per_domain_means": {
+            "antonym": 1.581322336534195,
+            "arithmetic": 1.2075670972146144,
+            "code_completion": 1.4303511674959246,
+            "country_capital": 2.360855560050621,
+            "multi_hop_reasoning": 1.5869824345790977,
+            "rhyme": 2.3714636055286396,
+            "sentiment": 3.3320476689269696,
+            "translation": 1.5621831345641257
+          }
+        },
+        "ffl_asymmetry_mean": {
+          "F_statistic": 39.775672469129304,
+          "p_value": 3.383740373925709e-34,
+          "eta_squared": 0.5918625098985763,
+          "per_domain_means": {
+            "antonym": 0.37329268212300043,
+            "arithmetic": 0.360459698833851,
+            "code_completion": 0.3678394268696981,
+            "country_capital": 0.3629192294433144,
+            "multi_hop_reasoning": 0.3768067901351772,
+            "rhyme": 0.3711399565320838,
+            "sentiment": 0.3457865520082441,
+            "translation": 0.3556194299978912
+          }
+        },
+        "ffl_coherence_onnela_mean": {
+          "F_statistic": 43.86103020577466,
+          "p_value": 1.2892125273381843e-36,
+          "eta_squared": 0.6152514420089467,
+          "per_domain_means": {
+            "antonym": 0.8515262994794041,
+            "arithmetic": 0.8657581912898373,
+            "code_completion": 0.860567907180001,
+            "country_capital": 0.8562732158039233,
+            "multi_hop_reasoning": 0.84989926305939,
+            "rhyme": 0.8514951099441963,
+            "sentiment": 0.867837089827808,
+            "translation": 0.866193365903897
+          }
+        },
+        "ffl_coherence_onnela_std": {
+          "F_statistic": 81.10593933214959,
+          "p_value": 6.225632443975139e-54,
+          "eta_squared": 0.7472824888938642,
+          "per_domain_means": {
+            "antonym": 0.1524705515876693,
+            "arithmetic": 0.13112730489717073,
+            "code_completion": 0.1396968423244372,
+            "country_capital": 0.1476161158345154,
+            "multi_hop_reasoning": 0.1495982406463191,
+            "rhyme": 0.15429118936513783,
+            "sentiment": 0.14456072795602573,
+            "translation": 0.1352318241278974
+          }
+        },
+        "chain_intensity_mean": {
+          "F_statistic": 123.03078715364047,
+          "p_value": 1.874720022299757e-67,
+          "eta_squared": 0.8177011274869666,
+          "per_domain_means": {
+            "antonym": 1.8932063061208488,
+            "arithmetic": 2.0784984066875833,
+            "code_completion": 1.6222962612696248,
+            "country_capital": 1.4354713879856849,
+            "multi_hop_reasoning": 1.688167741475872,
+            "rhyme": 1.2800694990299564,
+            "sentiment": 0.8012338961605776,
+            "translation": 1.7861431905978995
+          }
+        },
+        "chain_sign_agree_frac": {
+          "F_statistic": 53.25454676702053,
+          "p_value": 1.0586863632568546e-41,
+          "eta_squared": 0.6600457190799314,
+          "per_domain_means": {
+            "antonym": 0.5698846903236908,
+            "arithmetic": 0.5633761914657742,
+            "code_completion": 0.5837614417461975,
+            "country_capital": 0.5525660182522263,
+            "multi_hop_reasoning": 0.5405747893878509,
+            "rhyme": 0.573781217382051,
+            "sentiment": 0.5936161718817333,
+            "translation": 0.5683186390962389
+          }
+        },
+        "fanout_intensity_mean": {
+          "F_statistic": 127.22681980029431,
+          "p_value": 1.3570604757367458e-68,
+          "eta_squared": 0.8226471692281233,
+          "per_domain_means": {
+            "antonym": 3.5564016583776454,
+            "arithmetic": 3.444548155239408,
+            "code_completion": 2.804415608363609,
+            "country_capital": 2.653906621569477,
+            "multi_hop_reasoning": 2.9914574120302504,
+            "rhyme": 2.3760049039767455,
+            "sentiment": 1.7853160970023787,
+            "translation": 3.011078075005208
+          }
+        },
+        "fanout_sign_agree_frac": {
+          "F_statistic": 61.4604262263642,
+          "p_value": 1.0868199035646722e-45,
+          "eta_squared": 0.6914289490016722,
+          "per_domain_means": {
+            "antonym": 0.6326119742926569,
+            "arithmetic": 0.6121097380492059,
+            "code_completion": 0.631879513065,
+            "country_capital": 0.6007638764017394,
+            "multi_hop_reasoning": 0.6089615236656712,
+            "rhyme": 0.5859985330637499,
+            "sentiment": 0.5835766353907602,
+            "translation": 0.6187577725967343
+          }
+        },
+        "fanin_intensity_mean": {
+          "F_statistic": 146.67522106855202,
+          "p_value": 1.6579526717005406e-73,
+          "eta_squared": 0.8424585068758653,
+          "per_domain_means": {
+            "antonym": 1.992641475405493,
+            "arithmetic": 2.2511156518009643,
+            "code_completion": 1.6476771749260317,
+            "country_capital": 1.5596395412443185,
+            "multi_hop_reasoning": 1.786916838113207,
+            "rhyme": 1.3778190861627515,
+            "sentiment": 0.9249411411141777,
+            "translation": 1.8549677479376283
+          }
+        },
+        "fanin_sign_agree_frac": {
+          "F_statistic": 84.89066071313388,
+          "p_value": 2.3836073211984827e-55,
+          "eta_squared": 0.7557980863511712,
+          "per_domain_means": {
+            "antonym": 0.5325326572898681,
+            "arithmetic": 0.543230290550201,
+            "code_completion": 0.5441212857792418,
+            "country_capital": 0.5436026254197471,
+            "multi_hop_reasoning": 0.5203864307847592,
+            "rhyme": 0.5449695189439662,
+            "sentiment": 0.5585784642972684,
+            "translation": 0.5382785955903668
+          }
+        },
+        "neg_edge_frac": {
+          "F_statistic": 52.35015666409148,
+          "p_value": 3.0795244234474936e-41,
+          "eta_squared": 0.656191918769209,
+          "per_domain_means": {
+            "antonym": 0.32705884738004476,
+            "arithmetic": 0.3283746332833013,
+            "code_completion": 0.3109089180822451,
+            "country_capital": 0.337758012888885,
+            "multi_hop_reasoning": 0.35381625336181877,
+            "rhyme": 0.3432217831337805,
+            "sentiment": 0.33371181608780653,
+            "translation": 0.32976110740663944
+          }
+        },
+        "edge_weight_kurtosis": {
+          "F_statistic": 66.19482890299882,
+          "p_value": 7.880164625769094e-48,
+          "eta_squared": 0.7070329497600782,
+          "per_domain_means": {
+            "antonym": 37.686430794380115,
+            "arithmetic": 30.128235680980904,
+            "code_completion": 32.48426132734,
+            "country_capital": 61.67693032427762,
+            "multi_hop_reasoning": 35.545565418109646,
+            "rhyme": 60.86141707336336,
+            "sentiment": 82.73893442546752,
+            "translation": 41.54863075730229
+          }
+        },
+        "n_nodes": {
+          "F_statistic": 350.3191592323745,
+          "p_value": 1.068684797722051e-105,
+          "eta_squared": 0.9273891827739651,
+          "per_domain_means": {
+            "antonym": 967.6153846153846,
+            "arithmetic": 980.3461538461538,
+            "code_completion": 1323.75,
+            "country_capital": 1060.8846153846155,
+            "multi_hop_reasoning": 1644.7083333333333,
+            "rhyme": 1438.75,
+            "sentiment": 1572.0416666666667,
+            "translation": 1188.5384615384614
+          }
+        },
+        "n_edges": {
+          "F_statistic": 136.42872835537213,
+          "p_value": 5.442924200389473e-71,
+          "eta_squared": 0.8326069606618821,
+          "per_domain_means": {
+            "antonym": 8116.461538461538,
+            "arithmetic": 9467.307692307691,
+            "code_completion": 12878.125,
+            "country_capital": 12283.76923076923,
+            "multi_hop_reasoning": 12900.5,
+            "rhyme": 16810.583333333332,
+            "sentiment": 24282.166666666668,
+            "translation": 13466.423076923076
+          }
+        },
+        "density": {
+          "F_statistic": 164.00565386556698,
+          "p_value": 1.9111184073610732e-77,
+          "eta_squared": 0.8567206496830575,
+          "per_domain_means": {
+            "antonym": 0.016981701743523307,
+            "arithmetic": 0.019825753726902356,
+            "code_completion": 0.014627654927503593,
+            "country_capital": 0.021827262329366562,
+            "multi_hop_reasoning": 0.00949851426689091,
+            "rhyme": 0.016047818720213956,
+            "sentiment": 0.019605725241442995,
+            "translation": 0.019058215896544443
+          }
+        },
+        "mean_degree": {
+          "F_statistic": 100.87435195146688,
+          "p_value": 7.454078988256272e-61,
+          "eta_squared": 0.7862202145828984,
+          "per_domain_means": {
+            "antonym": 16.54454574264981,
+            "arithmetic": 19.272274085942673,
+            "code_completion": 19.37522539403488,
+            "country_capital": 23.131593498186156,
+            "multi_hop_reasoning": 15.633370415113006,
+            "rhyme": 23.179158141500437,
+            "sentiment": 30.83525595138683,
+            "translation": 22.636724316979105
+          }
+        },
+        "max_degree": {
+          "F_statistic": 208.6996838632743,
+          "p_value": 3.684674221583013e-86,
+          "eta_squared": 0.8838403671992968,
+          "per_domain_means": {
+            "antonym": 504.0,
+            "arithmetic": 580.2307692307693,
+            "code_completion": 820.8333333333334,
+            "country_capital": 644.6923076923077,
+            "multi_hop_reasoning": 790.0,
+            "rhyme": 931.0833333333334,
+            "sentiment": 1071.7083333333333,
+            "translation": 629.1153846153846
+          }
+        },
+        "diameter_approx": {
+          "F_statistic": 4.059592817606489,
+          "p_value": 0.0003559883464997457,
+          "eta_squared": 0.12892440428943852,
+          "per_domain_means": {
+            "antonym": 6.653846153846154,
+            "arithmetic": 7.538461538461538,
+            "code_completion": 6.791666666666667,
+            "country_capital": 6.384615384615385,
+            "multi_hop_reasoning": 7.333333333333333,
+            "rhyme": 6.458333333333333,
+            "sentiment": 6.583333333333333,
+            "translation": 5.923076923076923
+          }
+        },
+        "edge_weight_mean": {
+          "F_statistic": 120.19593028037944,
+          "p_value": 1.1517818502800436e-66,
+          "eta_squared": 0.8142004131356988,
+          "per_domain_means": {
+            "antonym": 2.9072442789978243,
+            "arithmetic": 3.006337870336419,
+            "code_completion": 2.2841740649584694,
+            "country_capital": 2.1938948481088127,
+            "multi_hop_reasoning": 2.683752806679965,
+            "rhyme": 2.0069326095156033,
+            "sentiment": 1.3566146429377888,
+            "translation": 2.583233058786813
+          }
+        }
+      },
+      "top_5": {
+        "n_nodes": {
+          "F_statistic": 350.3191592323745,
+          "p_value": 1.068684797722051e-105,
+          "eta_squared": 0.9273891827739651,
+          "per_domain_means": {
+            "antonym": 967.6153846153846,
+            "arithmetic": 980.3461538461538,
+            "code_completion": 1323.75,
+            "country_capital": 1060.8846153846155,
+            "multi_hop_reasoning": 1644.7083333333333,
+            "rhyme": 1438.75,
+            "sentiment": 1572.0416666666667,
+            "translation": 1188.5384615384614
+          }
+        },
+        "ffl_path_dom_mean": {
+          "F_statistic": 302.94868898165896,
+          "p_value": 4.0099019936815417e-100,
+          "eta_squared": 0.9169780287102292,
+          "per_domain_means": {
+            "antonym": 0.877386884376125,
+            "arithmetic": 0.7199363028674176,
+            "code_completion": 0.9664709464472053,
+            "country_capital": 1.1782942007961807,
+            "multi_hop_reasoning": 0.9683199885463366,
+            "rhyme": 1.2748369874022054,
+            "sentiment": 1.9883321085711072,
+            "translation": 0.8554263226659296
+          }
+        },
+        "ffl_path_dom_std": {
+          "F_statistic": 211.51940330536377,
+          "p_value": 1.1834340244289388e-86,
+          "eta_squared": 0.885211115686949,
+          "per_domain_means": {
+            "antonym": 1.581322336534195,
+            "arithmetic": 1.2075670972146144,
+            "code_completion": 1.4303511674959246,
+            "country_capital": 2.360855560050621,
+            "multi_hop_reasoning": 1.5869824345790977,
+            "rhyme": 2.3714636055286396,
+            "sentiment": 3.3320476689269696,
+            "translation": 1.5621831345641257
+          }
+        },
+        "max_degree": {
+          "F_statistic": 208.6996838632743,
+          "p_value": 3.684674221583013e-86,
+          "eta_squared": 0.8838403671992968,
+          "per_domain_means": {
+            "antonym": 504.0,
+            "arithmetic": 580.2307692307693,
+            "code_completion": 820.8333333333334,
+            "country_capital": 644.6923076923077,
+            "multi_hop_reasoning": 790.0,
+            "rhyme": 931.0833333333334,
+            "sentiment": 1071.7083333333333,
+            "translation": 629.1153846153846
+          }
+        },
+        "density": {
+          "F_statistic": 164.00565386556698,
+          "p_value": 1.9111184073610732e-77,
+          "eta_squared": 0.8567206496830575,
+          "per_domain_means": {
+            "antonym": 0.016981701743523307,
+            "arithmetic": 0.019825753726902356,
+            "code_completion": 0.014627654927503593,
+            "country_capital": 0.021827262329366562,
+            "multi_hop_reasoning": 0.00949851426689091,
+            "rhyme": 0.016047818720213956,
+            "sentiment": 0.019605725241442995,
+            "translation": 0.019058215896544443
+          }
+        }
+      }
+    },
+    "weight_topology_interaction": {
+      "antonym": {
+        "pearson_r": -0.910271363577303,
+        "p_value": 1.1299520514800798e-10,
+        "n": 26,
+        "interpretation": "anticorrelated"
+      },
+      "arithmetic": {
+        "pearson_r": -0.8862772805402858,
+        "p_value": 1.708908249750918e-09,
+        "n": 26,
+        "interpretation": "anticorrelated"
+      },
+      "code_completion": {
+        "pearson_r": -0.8957455788387301,
+        "p_value": 3.3409709677750916e-09,
+        "n": 24,
+        "interpretation": "anticorrelated"
+      },
+      "country_capital": {
+        "pearson_r": -0.8703019543848536,
+        "p_value": 7.595871020145096e-09,
+        "n": 26,
+        "interpretation": "anticorrelated"
+      },
+      "multi_hop_reasoning": {
+        "pearson_r": -0.8398532245836539,
+        "p_value": 2.8617177904003196e-07,
+        "n": 24,
+        "interpretation": "anticorrelated"
+      },
+      "rhyme": {
+        "pearson_r": -0.8864066704378823,
+        "p_value": 8.207642504767662e-09,
+        "n": 24,
+        "interpretation": "anticorrelated"
+      },
+      "sentiment": {
+        "pearson_r": -0.9629881713707559,
+        "p_value": 5.1833128538834985e-14,
+        "n": 24,
+        "interpretation": "anticorrelated"
+      },
+      "translation": {
+        "pearson_r": -0.6855526326401008,
+        "p_value": 0.00011104765616566446,
+        "n": 26,
+        "interpretation": "anticorrelated"
+      },
+      "overall": {
+        "pearson_r": -0.8583541503199147,
+        "p_value": 2.7009804560305678e-59
+      }
+    },
+    "sign_coherence_analysis": {
+      "antonym": {
+        "coherent_frac_mean": 0.5860693174416834,
+        "coherent_frac_std": 0.013756060802066986,
+        "sign_pattern_distribution": {
+          "(1, 1, 1)": 0.38131463275750266,
+          "(1, 1, -1)": 0.15924110342498604,
+          "(-1, -1, 1)": 0.11898624580790834,
+          "(1, -1, 1)": 0.11142745772880693,
+          "(-1, 1, 1)": 0.0894821834982028,
+          "(-1, -1, -1)": 0.05750103735744194,
+          "(1, -1, -1)": 0.050888894078170946,
+          "(-1, 1, -1)": 0.031158445346980347
+        },
+        "n_ffls_total": 556703,
+        "n_graphs": 26
+      },
+      "arithmetic": {
+        "coherent_frac_mean": 0.5501072697433869,
+        "coherent_frac_std": 0.011036158589460564,
+        "sign_pattern_distribution": {
+          "(1, 1, 1)": 0.374651397301099,
+          "(1, 1, -1)": 0.18259138175768982,
+          "(1, -1, 1)": 0.11364672785545914,
+          "(-1, -1, 1)": 0.08823389619314934,
+          "(-1, 1, 1)": 0.07912751376105541,
+          "(-1, -1, -1)": 0.07479976620657319,
+          "(1, -1, -1)": 0.05226824584278034,
+          "(-1, 1, -1)": 0.0346810710821938
+        },
+        "n_ffls_total": 778465,
+        "n_graphs": 26
+      },
+      "code_completion": {
+        "coherent_frac_mean": 0.5986663346811119,
+        "coherent_frac_std": 0.011981033703298609,
+        "sign_pattern_distribution": {
+          "(1, 1, 1)": 0.39685417062227063,
+          "(1, 1, -1)": 0.15143650880892184,
+          "(1, -1, 1)": 0.11225654298534012,
+          "(-1, -1, 1)": 0.10657246499915059,
+          "(-1, 1, 1)": 0.08831306398584976,
+          "(1, -1, -1)": 0.058274790394627705,
+          "(-1, -1, -1)": 0.05220597787526607,
+          "(-1, 1, -1)": 0.03408648032857328
+        },
+        "n_ffls_total": 1000690,
+        "n_graphs": 24
+      },
+      "country_capital": {
+        "coherent_frac_mean": 0.5824742812896736,
+        "coherent_frac_std": 0.008307122811345241,
+        "sign_pattern_distribution": {
+          "(1, 1, 1)": 0.3762300986475092,
+          "(1, 1, -1)": 0.1488323890908165,
+          "(-1, -1, 1)": 0.1174747016388336,
+          "(1, -1, 1)": 0.10696822522842282,
+          "(-1, 1, 1)": 0.10026268063037361,
+          "(-1, -1, -1)": 0.06110095232960579,
+          "(1, -1, -1)": 0.052636465882219034,
+          "(-1, 1, -1)": 0.03649448655221938
+        },
+        "n_ffls_total": 1335462,
+        "n_graphs": 26
+      },
+      "multi_hop_reasoning": {
+        "coherent_frac_mean": 0.5711348547666758,
+        "coherent_frac_std": 0.014934413930395643,
+        "sign_pattern_distribution": {
+          "(1, 1, 1)": 0.34173727929206493,
+          "(1, 1, -1)": 0.16481056337048322,
+          "(-1, -1, 1)": 0.14178736903618985,
+          "(1, -1, 1)": 0.1059885071864869,
+          "(-1, 1, 1)": 0.09907055697012704,
+          "(-1, -1, -1)": 0.06041657970530534,
+          "(1, -1, -1)": 0.05032627902770241,
+          "(-1, 1, -1)": 0.0358628654116403
+        },
+        "n_ffls_total": 718710,
+        "n_graphs": 24
+      },
+      "rhyme": {
+        "coherent_frac_mean": 0.5871424066929766,
+        "coherent_frac_std": 0.01810985260387139,
+        "sign_pattern_distribution": {
+          "(1, 1, 1)": 0.38059315532973437,
+          "(1, 1, -1)": 0.1353263023964537,
+          "(-1, -1, 1)": 0.12487675731070551,
+          "(1, -1, 1)": 0.11645230859192125,
+          "(-1, 1, 1)": 0.10202372119080688,
+          "(-1, -1, -1)": 0.059203725172838714,
+          "(1, -1, -1)": 0.048415767171914356,
+          "(-1, 1, -1)": 0.03310826283562519
+        },
+        "n_ffls_total": 1672513,
+        "n_graphs": 24
+      },
+      "sentiment": {
+        "coherent_frac_mean": 0.5772899632317486,
+        "coherent_frac_std": 0.005069293038326521,
+        "sign_pattern_distribution": {
+          "(1, 1, 1)": 0.38065422361266466,
+          "(1, 1, -1)": 0.12774785706686295,
+          "(1, -1, 1)": 0.12518783912402126,
+          "(-1, 1, 1)": 0.12041832125162823,
+          "(-1, -1, 1)": 0.1043220970121143,
+          "(1, -1, -1)": 0.05230165827512932,
+          "(-1, -1, -1)": 0.049221757995922606,
+          "(-1, 1, -1)": 0.040146245661656664
+        },
+        "n_ffls_total": 3477710,
+        "n_graphs": 24
+      },
+      "translation": {
+        "coherent_frac_mean": 0.6026221406464949,
+        "coherent_frac_std": 0.007563262742964632,
+        "sign_pattern_distribution": {
+          "(1, 1, 1)": 0.3937546782544715,
+          "(1, 1, -1)": 0.14953659100718836,
+          "(-1, -1, 1)": 0.13174207420978856,
+          "(1, -1, 1)": 0.10336081551726545,
+          "(-1, 1, 1)": 0.08798244831230737,
+          "(-1, -1, -1)": 0.05695617359609871,
+          "(1, -1, -1)": 0.04487299734284252,
+          "(-1, 1, -1)": 0.031794221760037496
+        },
+        "n_ffls_total": 1647249,
+        "n_graphs": 26
+      }
+    },
+    "per_domain_aggregated": {
+      "antonym": {
+        "ffl_intensity_mean": {
+          "mean": 3.0337079486894942,
+          "std": 0.5514274759895214,
+          "min": 2.032436930608466,
+          "max": 4.002867825594748
+        },
+        "ffl_intensity_median": {
+          "mean": 2.224697585019381,
+          "std": 0.4189097700565946,
+          "min": 1.454119590363333,
+          "max": 2.9654012605237074
+        },
+        "ffl_intensity_std": {
+          "mean": 2.4030175230318465,
+          "std": 0.45375328154294936,
+          "min": 1.6572222652310342,
+          "max": 3.3235572880351736
+        },
+        "ffl_intensity_q25": {
+          "mean": 1.5824173155641281,
+          "std": 0.2719691110745614,
+          "min": 1.074926356783897,
+          "max": 2.042272748582775
+        },
+        "ffl_intensity_q75": {
+          "mean": 3.581074160298567,
+          "std": 0.7080044365651453,
+          "min": 2.2818969369165645,
+          "max": 4.860420507272156
+        },
+        "ffl_coherent_frac": {
+          "mean": 0.5860693174416834,
+          "std": 0.013756060802066986,
+          "min": 0.5554064531520249,
+          "max": 0.6103488827910624
+        },
+        "ffl_path_dom_mean": {
+          "mean": 0.877386884376125,
+          "std": 0.18650989020882255,
+          "min": 0.6129393509993594,
+          "max": 1.3325118979887745
+        },
+        "ffl_path_dom_std": {
+          "mean": 1.581322336534195,
+          "std": 0.3794288017481588,
+          "min": 0.990995122187594,
+          "max": 2.371287859327717
+        },
+        "ffl_asymmetry_mean": {
+          "mean": 0.37329268212300043,
+          "std": 0.010195673424982107,
+          "min": 0.3542217724000615,
+          "max": 0.3919066137309737
+        },
+        "ffl_coherence_onnela_mean": {
+          "mean": 0.8515262994794041,
+          "std": 0.005918227851898084,
+          "min": 0.8382570860603993,
+          "max": 0.859807356002505
+        },
+        "ffl_coherence_onnela_std": {
+          "mean": 0.1524705515876693,
+          "std": 0.004390716449030803,
+          "min": 0.14400621348968123,
+          "max": 0.16192798065072156
+        },
+        "chain_intensity_mean": {
+          "mean": 1.8932063061208488,
+          "std": 0.35169362575339513,
+          "min": 1.267074604242262,
+          "max": 2.5299197520821535
+        },
+        "chain_sign_agree_frac": {
+          "mean": 0.5698846903236908,
+          "std": 0.009824436613205438,
+          "min": 0.5518494055482166,
+          "max": 0.5884510235380409
+        },
+        "fanout_intensity_mean": {
+          "mean": 3.5564016583776454,
+          "std": 0.5022796527342468,
+          "min": 2.6075285970154534,
+          "max": 4.535754568134625
+        },
+        "fanout_sign_agree_frac": {
+          "mean": 0.6326119742926569,
+          "std": 0.015624238835544249,
+          "min": 0.6075687827295353,
+          "max": 0.6658057949810756
+        },
+        "fanin_intensity_mean": {
+          "mean": 1.992641475405493,
+          "std": 0.3050640199337673,
+          "min": 1.418704312450655,
+          "max": 2.4804386819221134
+        },
+        "fanin_sign_agree_frac": {
+          "mean": 0.5325326572898681,
+          "std": 0.00405617730891068,
+          "min": 0.5232328042762483,
+          "max": 0.5416150351094589
+        },
+        "neg_edge_frac": {
+          "mean": 0.32705884738004476,
+          "std": 0.01246241530078428,
+          "min": 0.29710909474572694,
+          "max": 0.34970566593083147
+        },
+        "edge_weight_kurtosis": {
+          "mean": 37.686430794380115,
+          "std": 6.762006612526708,
+          "min": 25.035765586844107,
+          "max": 51.2534523395145
+        },
+        "ratio_030T": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021D": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021U": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ratio_021C": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "n_nodes": {
+          "mean": 967.6153846153846,
+          "std": 76.18756052465667,
+          "min": 839.0,
+          "max": 1098.0
+        },
+        "n_edges": {
+          "mean": 8116.461538461538,
+          "std": 2143.180871629996,
+          "min": 4739.0,
+          "max": 12920.0
+        },
+        "density": {
+          "mean": 0.016981701743523307,
+          "std": 0.00204354691135532,
+          "min": 0.013227048043295626,
+          "max": 0.022010746423253708
+        },
+        "mean_degree": {
+          "mean": 16.54454574264981,
+          "std": 3.150982110065541,
+          "min": 11.190082644628099,
+          "max": 23.837638376383765
+        },
+        "max_degree": {
+          "mean": 504.0,
+          "std": 83.50172729673598,
+          "min": 369.0,
+          "max": 650.0
+        },
+        "diameter_approx": {
+          "mean": 6.653846153846154,
+          "std": 1.0721046049820273,
+          "min": 5.0,
+          "max": 9.0
+        },
+        "n_layers": {
+          "mean": 27.0,
+          "std": 0.0,
+          "min": 27.0,
+          "max": 27.0
+        },
+        "edge_weight_mean": {
+          "mean": 2.9072442789978243,
+          "std": 0.4771098884739548,
+          "min": 2.057268370097451,
+          "max": 3.756126230088536
+        }
+      },
+      "arithmetic": {
+        "ffl_intensity_mean": {
+          "mean": 3.1178217083767423,
+          "std": 0.1785166899570824,
+          "min": 2.7706777763860138,
+          "max": 3.655255950455292
+        },
+        "ffl_intensity_median": {
+          "mean": 2.477559746532902,
+          "std": 0.16099748178604856,
+          "min": 2.169508507984684,
+          "max": 2.9898676676780176
+        },
+        "ffl_intensity_std": {
+          "mean": 2.144800717586645,
+          "std": 0.12596738022010046,
+          "min": 1.9319601747753252,
+          "max": 2.3811550019086636
+        },
+        "ffl_intensity_q25": {
+          "mean": 1.7924219459562616,
+          "std": 0.11927290388582525,
+          "min": 1.561950926794512,
+          "max": 2.1505509229432924
+        },
+        "ffl_intensity_q75": {
+          "mean": 3.705339782260182,
+          "std": 0.22469809225774234,
+          "min": 3.2813370881267963,
+          "max": 4.371327751759054
+        },
+        "ffl_coherent_frac": {
+          "mean": 0.5501072697433869,
+          "std": 0.011036158589460564,
+          "min": 0.5304557405784399,
+          "max": 0.5723646490294045
+        },
+        "ffl_path_dom_mean": {
+          "mean": 0.7199363028674176,
+          "std": 0.05939947681458477,
+          "min": 0.5730498490371806,
+          "max": 0.8400836558840786
+        },
+        "ffl_path_dom_std": {
+          "mean": 1.2075670972146144,
+          "std": 0.15052542648766132,
+          "min": 0.9146286778472289,
+          "max": 1.444549858154368
+        },
+        "ffl_asymmetry_mean": {
+          "mean": 0.360459698833851,
+          "std": 0.005294025630698672,
+          "min": 0.351629618439763,
+          "max": 0.3688272429173535
+        },
+        "ffl_coherence_onnela_mean": {
+          "mean": 0.8657581912898373,
+          "std": 0.0044943770811755115,
+          "min": 0.8583967722890552,
+          "max": 0.8731605976273685
+        },
+        "ffl_coherence_onnela_std": {
+          "mean": 0.13112730489717073,
+          "std": 0.005174538200064631,
+          "min": 0.12185426733436788,
+          "max": 0.13915027045182313
+        },
+        "chain_intensity_mean": {
+          "mean": 2.0784984066875833,
+          "std": 0.13799855500231314,
+          "min": 1.8430291385433681,
+          "max": 2.5037856001935497
+        },
+        "chain_sign_agree_frac": {
+          "mean": 0.5633761914657742,
+          "std": 0.007944242412124288,
+          "min": 0.5490639786052253,
+          "max": 0.5817961899002116
+        },
+        "fanout_intensity_mean": {
+          "mean": 3.444548155239408,
+          "std": 0.1582134201800103,
+          "min": 3.1930006204472394,
+          "max": 3.9736731136092094
+        },
+        "fanout_sign_agree_frac": {
+          "mean": 0.6121097380492059,
+          "std": 0.011695898744220194,
+          "min": 0.5900448977329417,
+          "max": 0.6321652456777596
+        },
+        "fanin_intensity_mean": {
+          "mean": 2.2511156518009643,
+          "std": 0.1359384300955171,
+          "min": 1.974736962617394,
+          "max": 2.619085074518661
+        },
+        "fanin_sign_agree_frac": {
+          "mean": 0.543230290550201,
+          "std": 0.005197876030519853,
+          "min": 0.5314258615238697,
+          "max": 0.5572836987931328
+        },
+        "neg_edge_frac": {
+          "mean": 0.3283746332833013,
+          "std": 0.009969893718186587,
+          "min": 0.3087551652892562,
+          "max": 0.34305590478585196
+        },
+        "edge_weight_kurtosis": {
+          "mean": 30.128235680980904,
+          "std": 4.3603740655404115,
+          "min": 23.00033177319569,
+          "max": 37.61824020600477
+        },
+        "ratio_030T": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021D": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021U": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ratio_021C": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "n_nodes": {
+          "mean": 980.3461538461538,
+          "std": 96.64007064586548,
+          "min": 830.0,
+          "max": 1217.0
+        },
+        "n_edges": {
+          "mean": 9467.307692307691,
+          "std": 1228.747604089714,
+          "min": 7595.0,
+          "max": 12090.0
+        },
+        "density": {
+          "mean": 0.019825753726902356,
+          "std": 0.001771071632344453,
+          "min": 0.016339250962245384,
+          "max": 0.022996499932208155
+        },
+        "mean_degree": {
+          "mean": 19.272274085942673,
+          "std": 0.9722190108120119,
+          "min": 16.372093023255815,
+          "max": 20.58843830888697
+        },
+        "max_degree": {
+          "mean": 580.2307692307693,
+          "std": 68.59710001288332,
+          "min": 476.0,
+          "max": 741.0
+        },
+        "diameter_approx": {
+          "mean": 7.538461538461538,
+          "std": 1.598816130063579,
+          "min": 5.0,
+          "max": 11.0
+        },
+        "n_layers": {
+          "mean": 27.0,
+          "std": 0.0,
+          "min": 27.0,
+          "max": 27.0
+        },
+        "edge_weight_mean": {
+          "mean": 3.006337870336419,
+          "std": 0.14146723548442466,
+          "min": 2.725754196275656,
+          "max": 3.4454533989764444
+        }
+      },
+      "code_completion": {
+        "ffl_intensity_mean": {
+          "mean": 2.2804684833067,
+          "std": 0.2324471322079305,
+          "min": 1.774022080295578,
+          "max": 2.7199112813790243
+        },
+        "ffl_intensity_median": {
+          "mean": 1.79369700133919,
+          "std": 0.18407383046868878,
+          "min": 1.4269876545278373,
+          "max": 2.1381909855009558
+        },
+        "ffl_intensity_std": {
+          "mean": 1.5665878818060575,
+          "std": 0.18152496155293946,
+          "min": 1.1372827842507844,
+          "max": 2.045856109476944
+        },
+        "ffl_intensity_q25": {
+          "mean": 1.3133272801743627,
+          "std": 0.12576667602766936,
+          "min": 1.0714374858271594,
+          "max": 1.541632260028487
+        },
+        "ffl_intensity_q75": {
+          "mean": 2.6913642735017405,
+          "std": 0.29005136932897924,
+          "min": 2.0639099449987475,
+          "max": 3.2456514899425444
+        },
+        "ffl_coherent_frac": {
+          "mean": 0.5986663346811119,
+          "std": 0.011981033703298609,
+          "min": 0.5713323286942646,
+          "max": 0.6173703056041302
+        },
+        "ffl_path_dom_mean": {
+          "mean": 0.9664709464472053,
+          "std": 0.09009238396034124,
+          "min": 0.8012226354445997,
+          "max": 1.1503924066031412
+        },
+        "ffl_path_dom_std": {
+          "mean": 1.4303511674959246,
+          "std": 0.15149551515861098,
+          "min": 1.1518962966597397,
+          "max": 1.749611521502762
+        },
+        "ffl_asymmetry_mean": {
+          "mean": 0.3678394268696981,
+          "std": 0.007389056629720359,
+          "min": 0.3504654104862464,
+          "max": 0.3810089269400824
+        },
+        "ffl_coherence_onnela_mean": {
+          "mean": 0.860567907180001,
+          "std": 0.004956653802686689,
+          "min": 0.8485461599041403,
+          "max": 0.8688564397195931
+        },
+        "ffl_coherence_onnela_std": {
+          "mean": 0.1396968423244372,
+          "std": 0.003984887884861665,
+          "min": 0.13290730775471352,
+          "max": 0.14891672355482785
+        },
+        "chain_intensity_mean": {
+          "mean": 1.6222962612696248,
+          "std": 0.14744723293218098,
+          "min": 1.326806081440818,
+          "max": 1.8805767149059023
+        },
+        "chain_sign_agree_frac": {
+          "mean": 0.5837614417461975,
+          "std": 0.015092565551151408,
+          "min": 0.5511459270629334,
+          "max": 0.605148318697794
+        },
+        "fanout_intensity_mean": {
+          "mean": 2.804415608363609,
+          "std": 0.219922947975582,
+          "min": 2.3226751590706627,
+          "max": 3.2170171230533704
+        },
+        "fanout_sign_agree_frac": {
+          "mean": 0.631879513065,
+          "std": 0.011392744988097413,
+          "min": 0.6150914339126962,
+          "max": 0.6628010643550777
+        },
+        "fanin_intensity_mean": {
+          "mean": 1.6476771749260317,
+          "std": 0.16117350469312447,
+          "min": 1.3292818063773233,
+          "max": 1.9718097746022734
+        },
+        "fanin_sign_agree_frac": {
+          "mean": 0.5441212857792418,
+          "std": 0.008674388271951041,
+          "min": 0.5278971849304499,
+          "max": 0.5621833051826829
+        },
+        "neg_edge_frac": {
+          "mean": 0.3109089180822451,
+          "std": 0.010679386726483093,
+          "min": 0.2921212121212121,
+          "max": 0.3310789221429332
+        },
+        "edge_weight_kurtosis": {
+          "mean": 32.48426132734,
+          "std": 5.446050532103111,
+          "min": 23.691536182562196,
+          "max": 43.11605553513727
+        },
+        "ratio_030T": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021D": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021U": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ratio_021C": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "n_nodes": {
+          "mean": 1323.75,
+          "std": 70.52496602858687,
+          "min": 1179.0,
+          "max": 1494.0
+        },
+        "n_edges": {
+          "mean": 12878.125,
+          "std": 2308.1148208097593,
+          "min": 9588.0,
+          "max": 18778.0
+        },
+        "density": {
+          "mean": 0.014627654927503593,
+          "std": 0.001781844660142953,
+          "min": 0.011688987910752806,
+          "max": 0.018349082545872707
+        },
+        "mean_degree": {
+          "mean": 19.37522539403488,
+          "std": 2.7756903741313392,
+          "min": 15.2073732718894,
+          "max": 25.137884872824632
+        },
+        "max_degree": {
+          "mean": 820.8333333333334,
+          "std": 52.92263745842185,
+          "min": 726.0,
+          "max": 928.0
+        },
+        "diameter_approx": {
+          "mean": 6.791666666666667,
+          "std": 1.039998664529057,
+          "min": 5.0,
+          "max": 9.0
+        },
+        "n_layers": {
+          "mean": 27.0,
+          "std": 0.0,
+          "min": 27.0,
+          "max": 27.0
+        },
+        "edge_weight_mean": {
+          "mean": 2.2841740649584694,
+          "std": 0.21338327257756265,
+          "min": 1.8216796062830374,
+          "max": 2.6682109683192565
+        }
+      },
+      "country_capital": {
+        "ffl_intensity_mean": {
+          "mean": 2.2059988366740613,
+          "std": 0.17166067856714265,
+          "min": 1.8966682993868145,
+          "max": 2.6504870576949973
+        },
+        "ffl_intensity_median": {
+          "mean": 1.6513538029331427,
+          "std": 0.12187994122372812,
+          "min": 1.4217449480337137,
+          "max": 1.9444579574758192
+        },
+        "ffl_intensity_std": {
+          "mean": 1.7463966077948867,
+          "std": 0.15570758632153536,
+          "min": 1.5058472044182802,
+          "max": 2.182748547343303
+        },
+        "ffl_intensity_q25": {
+          "mean": 1.1947495341563703,
+          "std": 0.07944801408357077,
+          "min": 1.0440303160610425,
+          "max": 1.382517919047176
+        },
+        "ffl_intensity_q75": {
+          "mean": 2.541057257034452,
+          "std": 0.21521692979222354,
+          "min": 2.142590693474557,
+          "max": 3.1045585539738045
+        },
+        "ffl_coherent_frac": {
+          "mean": 0.5824742812896736,
+          "std": 0.008307122811345241,
+          "min": 0.5713654161930024,
+          "max": 0.5988315295469783
+        },
+        "ffl_path_dom_mean": {
+          "mean": 1.1782942007961807,
+          "std": 0.08255883853176323,
+          "min": 0.9831094921683914,
+          "max": 1.3422935002931053
+        },
+        "ffl_path_dom_std": {
+          "mean": 2.360855560050621,
+          "std": 0.2445662028822046,
+          "min": 1.81673040485141,
+          "max": 2.8295981839593685
+        },
+        "ffl_asymmetry_mean": {
+          "mean": 0.3629192294433144,
+          "std": 0.004844370041000486,
+          "min": 0.3540009187877691,
+          "max": 0.3729771801632271
+        },
+        "ffl_coherence_onnela_mean": {
+          "mean": 0.8562732158039233,
+          "std": 0.0036642071579168598,
+          "min": 0.8493812292892184,
+          "max": 0.8619666394647332
+        },
+        "ffl_coherence_onnela_std": {
+          "mean": 0.1476161158345154,
+          "std": 0.0030399319939945794,
+          "min": 0.14307241952005065,
+          "max": 0.15397468319315025
+        },
+        "chain_intensity_mean": {
+          "mean": 1.4354713879856849,
+          "std": 0.11580710451051429,
+          "min": 1.2183164045003683,
+          "max": 1.7070634951744648
+        },
+        "chain_sign_agree_frac": {
+          "mean": 0.5525660182522263,
+          "std": 0.010605380375769333,
+          "min": 0.5339456970065032,
+          "max": 0.5750118417086509
+        },
+        "fanout_intensity_mean": {
+          "mean": 2.653906621569477,
+          "std": 0.15019205148858364,
+          "min": 2.4133090475889944,
+          "max": 3.044717416460407
+        },
+        "fanout_sign_agree_frac": {
+          "mean": 0.6007638764017394,
+          "std": 0.004388147432037492,
+          "min": 0.5892211579556025,
+          "max": 0.6082641534525091
+        },
+        "fanin_intensity_mean": {
+          "mean": 1.5596395412443185,
+          "std": 0.10028631174363589,
+          "min": 1.3493537845993522,
+          "max": 1.7891576367979594
+        },
+        "fanin_sign_agree_frac": {
+          "mean": 0.5436026254197471,
+          "std": 0.004685595833583767,
+          "min": 0.5364973910068147,
+          "max": 0.5536180821999612
+        },
+        "neg_edge_frac": {
+          "mean": 0.337758012888885,
+          "std": 0.005879195419169151,
+          "min": 0.3260076297893515,
+          "max": 0.3474454649827784
+        },
+        "edge_weight_kurtosis": {
+          "mean": 61.67693032427762,
+          "std": 18.558463383269334,
+          "min": 37.116305996734425,
+          "max": 123.07474962404423
+        },
+        "ratio_030T": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021D": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021U": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ratio_021C": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "n_nodes": {
+          "mean": 1060.8846153846155,
+          "std": 38.39303514869584,
+          "min": 1003.0,
+          "max": 1175.0
+        },
+        "n_edges": {
+          "mean": 12283.76923076923,
+          "std": 1055.3298903730497,
+          "min": 10142.0,
+          "max": 14758.0
+        },
+        "density": {
+          "mean": 0.021827262329366562,
+          "std": 0.0011588036967037853,
+          "min": 0.01877384221724419,
+          "max": 0.024327001851146706
+        },
+        "mean_degree": {
+          "mean": 23.131593498186156,
+          "std": 1.4458160834635234,
+          "min": 20.21272365805169,
+          "max": 26.78402903811252
+        },
+        "max_degree": {
+          "mean": 644.6923076923077,
+          "std": 35.0974130437966,
+          "min": 561.0,
+          "max": 713.0
+        },
+        "diameter_approx": {
+          "mean": 6.384615384615385,
+          "std": 1.3323467750529825,
+          "min": 4.0,
+          "max": 9.0
+        },
+        "n_layers": {
+          "mean": 27.0,
+          "std": 0.0,
+          "min": 27.0,
+          "max": 27.0
+        },
+        "edge_weight_mean": {
+          "mean": 2.1938948481088127,
+          "std": 0.14584672385604602,
+          "min": 1.9169201205773216,
+          "max": 2.546182237440631
+        }
+      },
+      "multi_hop_reasoning": {
+        "ffl_intensity_mean": {
+          "mean": 2.6428970705173778,
+          "std": 0.21877162616938592,
+          "min": 2.2880808917780047,
+          "max": 3.04254019201356
+        },
+        "ffl_intensity_median": {
+          "mean": 1.981995966451428,
+          "std": 0.16859685927044774,
+          "min": 1.6836014313962695,
+          "max": 2.2823279413651436
+        },
+        "ffl_intensity_std": {
+          "mean": 2.0190328515486713,
+          "std": 0.17103319380136559,
+          "min": 1.746949595364516,
+          "max": 2.4320958524901086
+        },
+        "ffl_intensity_q25": {
+          "mean": 1.4406244423160937,
+          "std": 0.11369340954336343,
+          "min": 1.2387538663125428,
+          "max": 1.6686570279785429
+        },
+        "ffl_intensity_q75": {
+          "mean": 3.0333910781699864,
+          "std": 0.2819666550207837,
+          "min": 2.57416986235786,
+          "max": 3.5929561557754184
+        },
+        "ffl_coherent_frac": {
+          "mean": 0.5711348547666758,
+          "std": 0.014934413930395643,
+          "min": 0.547804031504472,
+          "max": 0.6113691835288559
+        },
+        "ffl_path_dom_mean": {
+          "mean": 0.9683199885463366,
+          "std": 0.09620898409781879,
+          "min": 0.7781080606257953,
+          "max": 1.1546063101773687
+        },
+        "ffl_path_dom_std": {
+          "mean": 1.5869824345790977,
+          "std": 0.18677720856235577,
+          "min": 1.2460784216441112,
+          "max": 1.8983250641802347
+        },
+        "ffl_asymmetry_mean": {
+          "mean": 0.3768067901351772,
+          "std": 0.009398450413358655,
+          "min": 0.36137856282677067,
+          "max": 0.4051192046650035
+        },
+        "ffl_coherence_onnela_mean": {
+          "mean": 0.84989926305939,
+          "std": 0.006741199737627242,
+          "min": 0.8257667801869438,
+          "max": 0.8591681862330115
+        },
+        "ffl_coherence_onnela_std": {
+          "mean": 0.1495982406463191,
+          "std": 0.00489876256104418,
+          "min": 0.14181371180154054,
+          "max": 0.16282512059644302
+        },
+        "chain_intensity_mean": {
+          "mean": 1.688167741475872,
+          "std": 0.14284593652589822,
+          "min": 1.4655007745841093,
+          "max": 2.034099472198242
+        },
+        "chain_sign_agree_frac": {
+          "mean": 0.5405747893878509,
+          "std": 0.01054112723552446,
+          "min": 0.5153460785442819,
+          "max": 0.5632581979378996
+        },
+        "fanout_intensity_mean": {
+          "mean": 2.9914574120302504,
+          "std": 0.19443047618656245,
+          "min": 2.6447211260576826,
+          "max": 3.3039835922275462
+        },
+        "fanout_sign_agree_frac": {
+          "mean": 0.6089615236656712,
+          "std": 0.018037709047286455,
+          "min": 0.57644965320037,
+          "max": 0.6439350686222206
+        },
+        "fanin_intensity_mean": {
+          "mean": 1.786916838113207,
+          "std": 0.13257410598375421,
+          "min": 1.567404236495357,
+          "max": 2.0564992358733547
+        },
+        "fanin_sign_agree_frac": {
+          "mean": 0.5203864307847592,
+          "std": 0.0037207597836345575,
+          "min": 0.5144690060287526,
+          "max": 0.5277187542747709
+        },
+        "neg_edge_frac": {
+          "mean": 0.35381625336181877,
+          "std": 0.007864033350134088,
+          "min": 0.3408171687990095,
+          "max": 0.3708759954493743
+        },
+        "edge_weight_kurtosis": {
+          "mean": 35.545565418109646,
+          "std": 9.60444101669129,
+          "min": 21.856276063613983,
+          "max": 61.97901768806936
+        },
+        "ratio_030T": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021D": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021U": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ratio_021C": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "n_nodes": {
+          "mean": 1644.7083333333333,
+          "std": 75.54054053214664,
+          "min": 1538.0,
+          "max": 1823.0
+        },
+        "n_edges": {
+          "mean": 12900.5,
+          "std": 1912.3282493686415,
+          "min": 9942.0,
+          "max": 17540.0
+        },
+        "density": {
+          "mean": 0.00949851426689091,
+          "std": 0.0008305610403625883,
+          "min": 0.008265947888589397,
+          "max": 0.010828161846363324
+        },
+        "mean_degree": {
+          "mean": 15.633370415113006,
+          "std": 1.7431480341575762,
+          "min": 12.928478543563068,
+          "max": 19.243006034009873
+        },
+        "max_degree": {
+          "mean": 790.0,
+          "std": 76.60069625445102,
+          "min": 598.0,
+          "max": 967.0
+        },
+        "diameter_approx": {
+          "mean": 7.333333333333333,
+          "std": 1.674979270186815,
+          "min": 4.0,
+          "max": 10.0
+        },
+        "n_layers": {
+          "mean": 27.0,
+          "std": 0.0,
+          "min": 27.0,
+          "max": 27.0
+        },
+        "edge_weight_mean": {
+          "mean": 2.683752806679965,
+          "std": 0.18935805694719537,
+          "min": 2.3984108686807697,
+          "max": 3.0483720534117835
+        }
+      },
+      "rhyme": {
+        "ffl_intensity_mean": {
+          "mean": 2.0193674492932208,
+          "std": 0.32827143918394364,
+          "min": 1.551217260873748,
+          "max": 2.8523877671831444
+        },
+        "ffl_intensity_median": {
+          "mean": 1.4660050546591712,
+          "std": 0.24126840448361622,
+          "min": 1.156100499641947,
+          "max": 2.113235922781808
+        },
+        "ffl_intensity_std": {
+          "mean": 1.7064618687928572,
+          "std": 0.23653674016374063,
+          "min": 1.3350892121637912,
+          "max": 2.2238966084608007
+        },
+        "ffl_intensity_q25": {
+          "mean": 1.0627941606852997,
+          "std": 0.15557222560675626,
+          "min": 0.8550909603658092,
+          "max": 1.4872671166144382
+        },
+        "ffl_intensity_q75": {
+          "mean": 2.2911746791613647,
+          "std": 0.43896496383479505,
+          "min": 1.7146720506530095,
+          "max": 3.437272420891958
+        },
+        "ffl_coherent_frac": {
+          "mean": 0.5871424066929766,
+          "std": 0.01810985260387139,
+          "min": 0.5465978089414205,
+          "max": 0.6088119420247948
+        },
+        "ffl_path_dom_mean": {
+          "mean": 1.2748369874022054,
+          "std": 0.1690722121139013,
+          "min": 0.873473629952093,
+          "max": 1.5340473482681012
+        },
+        "ffl_path_dom_std": {
+          "mean": 2.3714636055286396,
+          "std": 0.29324560188458726,
+          "min": 1.5962572559451607,
+          "max": 2.8359353328316894
+        },
+        "ffl_asymmetry_mean": {
+          "mean": 0.3711399565320838,
+          "std": 0.010971814966390277,
+          "min": 0.35277226444964527,
+          "max": 0.3924829470459781
+        },
+        "ffl_coherence_onnela_mean": {
+          "mean": 0.8514951099441963,
+          "std": 0.006667692927797067,
+          "min": 0.8376951803009168,
+          "max": 0.8621208942832926
+        },
+        "ffl_coherence_onnela_std": {
+          "mean": 0.15429118936513783,
+          "std": 0.004579665462589487,
+          "min": 0.14653355515749467,
+          "max": 0.16363357164893078
+        },
+        "chain_intensity_mean": {
+          "mean": 1.2800694990299564,
+          "std": 0.17728910245215077,
+          "min": 1.0495234463202276,
+          "max": 1.75516754158242
+        },
+        "chain_sign_agree_frac": {
+          "mean": 0.573781217382051,
+          "std": 0.01707789191935259,
+          "min": 0.5419617759338137,
+          "max": 0.622713314116694
+        },
+        "fanout_intensity_mean": {
+          "mean": 2.3760049039767455,
+          "std": 0.2712233819197978,
+          "min": 1.92748388658486,
+          "max": 3.114181407561565
+        },
+        "fanout_sign_agree_frac": {
+          "mean": 0.5859985330637499,
+          "std": 0.012441108535815662,
+          "min": 0.5616723075328486,
+          "max": 0.6197753800754576
+        },
+        "fanin_intensity_mean": {
+          "mean": 1.3778190861627515,
+          "std": 0.1751858180790028,
+          "min": 1.1171840249875997,
+          "max": 1.7928126519402527
+        },
+        "fanin_sign_agree_frac": {
+          "mean": 0.5449695189439662,
+          "std": 0.009929586609249214,
+          "min": 0.5276035458637018,
+          "max": 0.5750244353592786
+        },
+        "neg_edge_frac": {
+          "mean": 0.3432217831337805,
+          "std": 0.007418410729103803,
+          "min": 0.320565991705294,
+          "max": 0.35574969524583505
+        },
+        "edge_weight_kurtosis": {
+          "mean": 60.86141707336336,
+          "std": 16.479500360526103,
+          "min": 36.206290098360476,
+          "max": 103.03445916137375
+        },
+        "ratio_030T": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021D": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021U": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ratio_021C": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "n_nodes": {
+          "mean": 1438.75,
+          "std": 88.18978115405434,
+          "min": 1229.0,
+          "max": 1570.0
+        },
+        "n_edges": {
+          "mean": 16810.583333333332,
+          "std": 3395.3030291451487,
+          "min": 10134.0,
+          "max": 22144.0
+        },
+        "density": {
+          "mean": 0.016047818720213956,
+          "std": 0.0016523562965254192,
+          "min": 0.01342952481162355,
+          "max": 0.019055978658405404
+        },
+        "mean_degree": {
+          "mean": 23.179158141500437,
+          "std": 3.5010701171127847,
+          "min": 16.491456468673718,
+          "max": 29.041311475409834
+        },
+        "max_degree": {
+          "mean": 931.0833333333334,
+          "std": 91.7032881392786,
+          "min": 755.0,
+          "max": 1064.0
+        },
+        "diameter_approx": {
+          "mean": 6.458333333333333,
+          "std": 1.0793194872490515,
+          "min": 5.0,
+          "max": 9.0
+        },
+        "n_layers": {
+          "mean": 27.0,
+          "std": 0.0,
+          "min": 27.0,
+          "max": 27.0
+        },
+        "edge_weight_mean": {
+          "mean": 2.0069326095156033,
+          "std": 0.27683171774293974,
+          "min": 1.6267545104415708,
+          "max": 2.7315453883045073
+        }
+      },
+      "sentiment": {
+        "ffl_intensity_mean": {
+          "mean": 1.1930972630648364,
+          "std": 0.09738746819537603,
+          "min": 1.079201678171255,
+          "max": 1.4199806888316238
+        },
+        "ffl_intensity_median": {
+          "mean": 0.9090716337852885,
+          "std": 0.054376164071882664,
+          "min": 0.8358659708022053,
+          "max": 1.0351509665409673
+        },
+        "ffl_intensity_std": {
+          "mean": 1.0073078779323439,
+          "std": 0.11924279881906338,
+          "min": 0.853580708630363,
+          "max": 1.2847659156771796
+        },
+        "ffl_intensity_q25": {
+          "mean": 0.6892210041696107,
+          "std": 0.0352181112033151,
+          "min": 0.6375718051883896,
+          "max": 0.7703767104143386
+        },
+        "ffl_intensity_q75": {
+          "mean": 1.301193477050697,
+          "std": 0.09693972693014151,
+          "min": 1.1868305499429457,
+          "max": 1.530719815163772
+        },
+        "ffl_coherent_frac": {
+          "mean": 0.5772899632317486,
+          "std": 0.005069293038326521,
+          "min": 0.563489663112091,
+          "max": 0.5847782382144175
+        },
+        "ffl_path_dom_mean": {
+          "mean": 1.9883321085711072,
+          "std": 0.061088754233919726,
+          "min": 1.8966138457313086,
+          "max": 2.110737625066974
+        },
+        "ffl_path_dom_std": {
+          "mean": 3.3320476689269696,
+          "std": 0.2330284785101608,
+          "min": 2.978106778281454,
+          "max": 3.79694941352316
+        },
+        "ffl_asymmetry_mean": {
+          "mean": 0.3457865520082441,
+          "std": 0.007939384110806065,
+          "min": 0.337047156112555,
+          "max": 0.36267094904268554
+        },
+        "ffl_coherence_onnela_mean": {
+          "mean": 0.867837089827808,
+          "std": 0.007055676302912299,
+          "min": 0.8540297669692773,
+          "max": 0.8770228950605999
+        },
+        "ffl_coherence_onnela_std": {
+          "mean": 0.14456072795602573,
+          "std": 0.006650257896594789,
+          "min": 0.1350018477207412,
+          "max": 0.1566296056006934
+        },
+        "chain_intensity_mean": {
+          "mean": 0.8012338961605776,
+          "std": 0.04244873279922799,
+          "min": 0.7424822630068741,
+          "max": 0.907849862217456
+        },
+        "chain_sign_agree_frac": {
+          "mean": 0.5936161718817333,
+          "std": 0.007186280314198785,
+          "min": 0.5765617056530826,
+          "max": 0.6096177659800092
+        },
+        "fanout_intensity_mean": {
+          "mean": 1.7853160970023787,
+          "std": 0.09869714866619105,
+          "min": 1.644490133231054,
+          "max": 2.011104517759809
+        },
+        "fanout_sign_agree_frac": {
+          "mean": 0.5835766353907602,
+          "std": 0.004855674605964465,
+          "min": 0.5732023618767101,
+          "max": 0.5935651368785867
+        },
+        "fanin_intensity_mean": {
+          "mean": 0.9249411411141777,
+          "std": 0.05119774326902712,
+          "min": 0.8525556438840762,
+          "max": 1.0429323971728364
+        },
+        "fanin_sign_agree_frac": {
+          "mean": 0.5585784642972684,
+          "std": 0.0025605926359860997,
+          "min": 0.5523754909716488,
+          "max": 0.5620800940378192
+        },
+        "neg_edge_frac": {
+          "mean": 0.33371181608780653,
+          "std": 0.004560468608013666,
+          "min": 0.3256675469483568,
+          "max": 0.34295449014358725
+        },
+        "edge_weight_kurtosis": {
+          "mean": 82.73893442546752,
+          "std": 10.738323035216979,
+          "min": 65.30309797813527,
+          "max": 101.05435800072365
+        },
+        "ratio_030T": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021D": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021U": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ratio_021C": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "n_nodes": {
+          "mean": 1572.0416666666667,
+          "std": 43.6658516145308,
+          "min": 1495.0,
+          "max": 1652.0
+        },
+        "n_edges": {
+          "mean": 24282.166666666668,
+          "std": 2546.8691509816954,
+          "min": 19961.0,
+          "max": 27737.0
+        },
+        "density": {
+          "mean": 0.019605725241442995,
+          "std": 0.0012101603137586773,
+          "min": 0.01726974168097756,
+          "max": 0.021746204942667356
+        },
+        "mean_degree": {
+          "mean": 30.83525595138683,
+          "std": 2.519968679389656,
+          "min": 26.6299416720674,
+          "max": 34.42424242424242
+        },
+        "max_degree": {
+          "mean": 1071.7083333333333,
+          "std": 49.86271082237262,
+          "min": 992.0,
+          "max": 1164.0
+        },
+        "diameter_approx": {
+          "mean": 6.583333333333333,
+          "std": 1.1873172373979173,
+          "min": 4.0,
+          "max": 9.0
+        },
+        "n_layers": {
+          "mean": 27.0,
+          "std": 0.0,
+          "min": 27.0,
+          "max": 27.0
+        },
+        "edge_weight_mean": {
+          "mean": 1.3566146429377888,
+          "std": 0.0912727886625333,
+          "min": 1.2430688018031577,
+          "max": 1.5699257419326251
+        }
+      },
+      "translation": {
+        "ffl_intensity_mean": {
+          "mean": 2.5871773286497306,
+          "std": 0.1604282995406229,
+          "min": 2.1705790245096455,
+          "max": 2.9918839041179703
+        },
+        "ffl_intensity_median": {
+          "mean": 2.013210837257991,
+          "std": 0.12576643068800863,
+          "min": 1.6766041690271511,
+          "max": 2.310820042558052
+        },
+        "ffl_intensity_std": {
+          "mean": 1.875308549056273,
+          "std": 0.13477275289632587,
+          "min": 1.6220485078080955,
+          "max": 2.273911658515539
+        },
+        "ffl_intensity_q25": {
+          "mean": 1.4647429795212543,
+          "std": 0.08724606229608986,
+          "min": 1.2461861635032012,
+          "max": 1.6729417645997915
+        },
+        "ffl_intensity_q75": {
+          "mean": 3.0164905799340263,
+          "std": 0.19584902061881562,
+          "min": 2.4650513485364174,
+          "max": 3.501336812010356
+        },
+        "ffl_coherent_frac": {
+          "mean": 0.6026221406464949,
+          "std": 0.007563262742964632,
+          "min": 0.5876980677943437,
+          "max": 0.6167654098167693
+        },
+        "ffl_path_dom_mean": {
+          "mean": 0.8554263226659296,
+          "std": 0.06301214786500302,
+          "min": 0.7380131788225556,
+          "max": 1.0416559969313093
+        },
+        "ffl_path_dom_std": {
+          "mean": 1.5621831345641257,
+          "std": 0.13492100858084802,
+          "min": 1.3603943838082517,
+          "max": 1.995158476586728
+        },
+        "ffl_asymmetry_mean": {
+          "mean": 0.3556194299978912,
+          "std": 0.004236716557727282,
+          "min": 0.35016598511610897,
+          "max": 0.3643918360892509
+        },
+        "ffl_coherence_onnela_mean": {
+          "mean": 0.866193365903897,
+          "std": 0.0025951996174058455,
+          "min": 0.8601820661566164,
+          "max": 0.8705614319007928
+        },
+        "ffl_coherence_onnela_std": {
+          "mean": 0.1352318241278974,
+          "std": 0.0026530669872396463,
+          "min": 0.13071195705910293,
+          "max": 0.1413157354637943
+        },
+        "chain_intensity_mean": {
+          "mean": 1.7861431905978995,
+          "std": 0.10847265595235495,
+          "min": 1.5534330530786626,
+          "max": 2.0470926896752535
+        },
+        "chain_sign_agree_frac": {
+          "mean": 0.5683186390962389,
+          "std": 0.006107629808811238,
+          "min": 0.5577459215425292,
+          "max": 0.5789495566850645
+        },
+        "fanout_intensity_mean": {
+          "mean": 3.011078075005208,
+          "std": 0.12619963444806684,
+          "min": 2.7068097412373833,
+          "max": 3.3044896235783843
+        },
+        "fanout_sign_agree_frac": {
+          "mean": 0.6187577725967343,
+          "std": 0.006289858674191131,
+          "min": 0.6063005545431901,
+          "max": 0.6352994504110852
+        },
+        "fanin_intensity_mean": {
+          "mean": 1.8549677479376283,
+          "std": 0.10704568302642917,
+          "min": 1.5964320194069628,
+          "max": 2.1065772177251234
+        },
+        "fanin_sign_agree_frac": {
+          "mean": 0.5382785955903668,
+          "std": 0.0032922885803796315,
+          "min": 0.5277161514472886,
+          "max": 0.5426217422763451
+        },
+        "neg_edge_frac": {
+          "mean": 0.32976110740663944,
+          "std": 0.0046687022010229165,
+          "min": 0.32295289282326906,
+          "max": 0.3410327890614629
+        },
+        "edge_weight_kurtosis": {
+          "mean": 41.54863075730229,
+          "std": 8.258189380704286,
+          "min": 32.34264086014193,
+          "max": 62.165286508373896
+        },
+        "ratio_030T": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021D": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "ratio_021U": {
+          "mean": 1.0,
+          "std": 0.0,
+          "min": 1.0,
+          "max": 1.0
+        },
+        "ratio_021C": {
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "n_nodes": {
+          "mean": 1188.5384615384614,
+          "std": 35.15157373567611,
+          "min": 1096.0,
+          "max": 1241.0
+        },
+        "n_edges": {
+          "mean": 13466.423076923076,
+          "std": 981.6994751284406,
+          "min": 10668.0,
+          "max": 15066.0
+        },
+        "density": {
+          "mean": 0.019058215896544443,
+          "std": 0.0007026148933958085,
+          "min": 0.01734670379730903,
+          "max": 0.020473045194178748
+        },
+        "mean_degree": {
+          "mean": 22.636724316979105,
+          "std": 1.1418045254642613,
+          "min": 19.467153284671532,
+          "max": 24.280419016921837
+        },
+        "max_degree": {
+          "mean": 629.1153846153846,
+          "std": 37.27272350070173,
+          "min": 522.0,
+          "max": 691.0
+        },
+        "diameter_approx": {
+          "mean": 5.923076923076923,
+          "std": 1.0348941574672084,
+          "min": 3.0,
+          "max": 8.0
+        },
+        "n_layers": {
+          "mean": 27.0,
+          "std": 0.0,
+          "min": 27.0,
+          "max": 27.0
+        },
+        "edge_weight_mean": {
+          "mean": 2.583233058786813,
+          "std": 0.1376561148254573,
+          "min": 2.2355849253344817,
+          "max": 2.889851279041984
+        }
+      }
+    },
+    "feature_set_definitions": {
+      "weighted_motif_only": [
+        "ffl_intensity_mean",
+        "ffl_intensity_median",
+        "ffl_intensity_std"
+      ],
+      "binary_motif_only": [
+        "ratio_030T",
+        "ratio_021D",
+        "ratio_021U"
+      ],
+      "graph_stats_only": [
+        "n_nodes",
+        "n_edges",
+        "density"
+      ],
+      "weighted_plus_binary": [
+        "ffl_intensity_mean",
+        "ffl_intensity_median",
+        "ffl_intensity_std"
+      ],
+      "all_combined": [
+        "ffl_intensity_mean",
+        "ffl_intensity_median",
+        "ffl_intensity_std"
+      ]
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_v3",
+      "examples": [
+        {
+          "input": "The opposite of bright is",
+          "output": "{\"per_graph_features\": {\"ffl_count\": 24523, \"ffl_intensity_mean\": 2.6403852901887626, \"ffl_intensity_median\": 1.9162847470608304, \"ffl_intensity_std\": 2.0834834343489237, \"ffl_intensity_q25\": 1.411163...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m5-antonym-019-a39bd921",
+          "metadata_model_correct": "false",
+          "predict_weighted_motif": "cluster_5",
+          "predict_binary_baseline": "cluster_0",
+          "predict_all_combined": "cluster_0"
+        },
+        {
+          "input": "The opposite of clean is",
+          "output": "{\"per_graph_features\": {\"ffl_count\": 21799, \"ffl_intensity_mean\": 2.6522218601654015, \"ffl_intensity_median\": 1.9311534487511577, \"ffl_intensity_std\": 2.080664482427105, \"ffl_intensity_q25\": 1.4199853...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-013-db7d1359",
+          "metadata_model_correct": "true",
+          "predict_weighted_motif": "cluster_2",
+          "predict_binary_baseline": "cluster_0",
+          "predict_all_combined": "cluster_0"
+        },
+        {
+          "input": "The opposite of cold is",
+          "output": "{\"per_graph_features\": {\"ffl_count\": 19359, \"ffl_intensity_mean\": 3.1229090577259115, \"ffl_intensity_median\": 2.3038951004668733, \"ffl_intensity_std\": 2.410463682339951, \"ffl_intensity_q25\": 1.6273946...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-004-beb14eca",
+          "metadata_model_correct": "true",
+          "predict_weighted_motif": "cluster_5",
+          "predict_binary_baseline": "cluster_5",
+          "predict_all_combined": "cluster_6"
+        }
+      ]
+    }
+  ]
+}

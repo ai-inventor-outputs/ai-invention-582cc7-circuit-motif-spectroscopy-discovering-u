@@ -1,0 +1,13 @@
+{
+  "id": "exp_id3_it4__opus",
+  "type": "code",
+  "title": "Deconfounded Failure Prediction from Motif Spectra on 176 Verified Attribution Graphs",
+  "summary": "Demo notebook for deconfounded failure prediction on 28 verified attribution graphs (14 correct, 14 incorrect across 7 domains). Computes motif census, graph statistics, and domain indicators, then runs a hierarchical classifier battery (5 feature sets x 2 classifiers) with stratified 5-fold CV, bootstrap AUC comparisons, within-domain LOO analysis, and motif deviation features. Uses compact graphs (top-150 edges by weight) from the Neuronpedia corpus. Full original parameters (N_NULL=30, N_BOOTSTRAP=1000) run in ~5.4 seconds. Includes visualization of AUC comparison and feature importance.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_4/gen_art/exp_id3_it4__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id3_it4__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id3_it4__opus/method_code_demo.ipynb"
+}

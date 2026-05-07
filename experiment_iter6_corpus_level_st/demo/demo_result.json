@@ -1,0 +1,13 @@
+{
+  "id": "exp_id1_it6__opus",
+  "type": "code",
+  "title": "Corpus-Level Statistical Significance for Motif Z-Scores: Recomputation with Adequate Nulls, Mixed-Effects, and BH-FDR Resolution",
+  "summary": "Demo notebook for corpus-level statistical significance testing of 3-node motif Z-scores across 24 LLM attribution graphs (8 task domains). Demonstrates: isoclass mapping, synthetic graph motif census with null model Z-scores, corpus-level t-test/Wilcoxon/sign test (p=7.1e-15, Cohen's d=3.61), mixed-effects model (ICC=0.587), and biological benchmark comparison showing FFL overrepresentation 3.6-5.4x stronger than biological networks. Uses pre-computed per-graph Z-scores from mini_demo_data.json.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/exp_id1_it6__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it6__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it6__opus/method_code_demo.ipynb"
+}

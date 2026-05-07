@@ -1,0 +1,13 @@
+[project]
+name = "corpus-level-motif-significance"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "igraph==1.0.0",
+    "numpy==2.4.3",
+    "pandas==3.0.1",
+    "scipy==1.17.1",
+    "statsmodels==0.14.6",
+    "scikit-learn==1.8.0",
+    "loguru==0.7.3",
+]

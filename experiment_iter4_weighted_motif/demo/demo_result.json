@@ -1,0 +1,13 @@
+{
+  "id": "exp_id1_it4__opus",
+  "type": "code",
+  "title": "Weighted Motif Intensity & Sign-Coherence Features for Capability Clustering",
+  "summary": "Demo notebook for weighted motif intensity & sign-coherence features on Neuronpedia attribution graphs. Loads pre-computed per-graph features (24 examples across 8 capability domains), compares 5 feature sets via spectral clustering NMI/ARI, runs permutation tests, ANOVA discriminative analysis, weight-topology interactions, and sign-coherence patterns. Includes 4-panel visualization of clustering quality, NMI vs K, top discriminative features, and sign coherence by domain. Weighted motif features achieve NMI=0.777, significantly beating binary baseline NMI=0.529 (p=0.02).",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_4/gen_art/exp_id1_it4__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it4__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it4__opus/method_code_demo.ipynb"
+}

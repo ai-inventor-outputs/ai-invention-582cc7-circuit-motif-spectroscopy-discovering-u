@@ -1,0 +1,16 @@
+[project]
+name = "exp-id1-it3-4node-motif-census"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+description = "4-Node Motif Census on Full 174-Graph Corpus with 24D Capability Clustering"
+dependencies = [
+    "igraph==1.0.0",
+    "loguru==0.7.3",
+    "numpy==2.4.3",
+    "python-igraph==1.0.0",
+    "scikit-learn==1.8.0",
+    "scipy==1.17.1",
+    "texttable==1.7.0",
+    "threadpoolctl==3.6.0",
+    "joblib==1.5.3",
+]

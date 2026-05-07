@@ -1,0 +1,13 @@
+{
+  "id": "exp_id1_it5__opus",
+  "type": "code",
+  "title": "Motif vs. Graph-Stats Unique Information Decomposition",
+  "summary": "Demo notebook for Unique Information Decomposition of motif-level vs graph-level features across 64 Neuronpedia attribution graphs (8 per domain, 8 domains). Runs McFadden R\u00b2 variance decomposition with 1000 bootstraps, residualized clustering with 1000 permutation tests, domain-normalized intensity analysis, conditional mutual information, and canonical correlation analysis. Produces a 4-panel visualization showing variance decomposition, per-feature MI retention, canonical correlations, and clustering NMI by K. Full original parameters fit within the 5-minute runtime limit (~123s processing).",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it5__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it5__opus/method_code_demo.ipynb"
+}

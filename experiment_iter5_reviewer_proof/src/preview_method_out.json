@@ -1,0 +1,506 @@
+{
+  "metadata": {
+    "title": "Statistical Fortification of Motif Z-Scores",
+    "summary": "Analyzed 200 graphs across 8 domains. Phase A: 50 null models/graph (3-node). Phase B: 20 nulls (4-node). BH-FDR correction applied. Pruning sensitivity and layer-preserving validation completed.",
+    "phase_a": {
+      "n_graphs": 200,
+      "n_nulls": 50,
+      "prune_pct": 75,
+      "per_motif": {
+        "2": {
+          "label": "021U",
+          "median_z": -47.208,
+          "mean_z": -46.2066,
+          "std_z": 11.9994,
+          "frac_z_gt_2": 0.0,
+          "per_domain_median_z": {
+            "antonym": -26.2773,
+            "arithmetic": -55.3803,
+            "code_completion": -44.9965,
+            "country_capital": -47.0661,
+            "multi_hop_reasoning": -36.3839,
+            "rhyme": -45.5278,
+            "sentiment": -59.3607,
+            "translation": -50.8267
+          },
+          "n_domains_median_gt_2": 0
+        },
+        "4": {
+          "label": "021C",
+          "median_z": -47.208,
+          "mean_z": -46.2066,
+          "std_z": 11.9994,
+          "frac_z_gt_2": 0.0,
+          "per_domain_median_z": {
+            "antonym": -26.2773,
+            "arithmetic": -55.3803,
+            "code_completion": -44.9965,
+            "country_capital": -47.0661,
+            "multi_hop_reasoning": -36.3839,
+            "rhyme": -45.5278,
+            "sentiment": -59.3607,
+            "translation": -50.8267
+          },
+          "n_domains_median_gt_2": 0
+        },
+        "6": {
+          "label": "021D",
+          "median_z": -47.208,
+          "mean_z": -46.2066,
+          "std_z": 11.9994,
+          "frac_z_gt_2": 0.0,
+          "per_domain_median_z": {
+            "antonym": -26.2773,
+            "arithmetic": -55.3803,
+            "code_completion": -44.9965,
+            "country_capital": -47.0661,
+            "multi_hop_reasoning": -36.3839,
+            "rhyme": -45.5278,
+            "sentiment": -59.3607,
+            "translation": -50.8267
+          },
+          "n_domains_median_gt_2": 0
+        },
+        "7": {
+          "label": "030T",
+          "median_z": 47.208,
+          "mean_z": 46.2066,
+          "std_z": 11.9994,
+          "frac_z_gt_2": 1.0,
+          "per_domain_median_z": {
+            "antonym": 26.2773,
+            "arithmetic": 55.3803,
+            "code_completion": 44.9965,
+            "country_capital": 47.0661,
+            "multi_hop_reasoning": 36.3839,
+            "rhyme": 45.5278,
+            "sentiment": 59.3607,
+            "translation": 50.8267
+          },
+          "n_domains_median_gt_2": 8
+        }
+      }
+    },
+    "phase_b": {
+      "n_graphs": 150,
+      "n_nulls": 20,
+      "prune_pct": 99
+    },
+    "phase_c": {
+      "method": "Benjamini-Hochberg",
+      "alpha": 0.05,
+      "3node": {
+        "n_tests": 800,
+        "n_rejected_pre_fdr": 200,
+        "n_rejected_post_fdr": 0,
+        "per_motif_universality_pre_fdr": {
+          "2": 0,
+          "4": 0,
+          "6": 0,
+          "7": 8
+        },
+        "per_motif_universality_post_fdr": {
+          "2": 0,
+          "4": 0,
+          "6": 0,
+          "7": 0
+        }
+      },
+      "4node": {
+        "n_tests": 3600,
+        "n_rejected_pre_fdr": 1140,
+        "n_rejected_post_fdr": 0
+      },
+      "combined": {
+        "n_tests": 4400,
+        "n_rejected_pre_fdr": 1340,
+        "n_rejected_post_fdr": 0
+      }
+    },
+    "phase_d": {
+      "thresholds": [
+        60,
+        75,
+        90
+      ],
+      "stability": {
+        "2": {
+          "label": "021U",
+          "spearman_rho_matrix": [
+            [
+              1.0,
+              0.499,
+              0.2884
+            ],
+            [
+              0.499,
+              1.0,
+              0.4012
+            ],
+            [
+              0.2884,
+              0.4012,
+              1.0
+            ]
+          ],
+          "thresholds": [
+            60,
+            75,
+            90
+          ]
+        },
+        "4": {
+          "label": "021C",
+          "spearman_rho_matrix": [
+            [
+              1.0,
+              0.499,
+              0.2884
+            ],
+            [
+              0.499,
+              1.0,
+              0.4012
+            ],
+            [
+              0.2884,
+              0.4012,
+              1.0
+            ]
+          ],
+          "thresholds": [
+            60,
+            75,
+            90
+          ]
+        },
+        "6": {
+          "label": "021D",
+          "spearman_rho_matrix": [
+            [
+              1.0,
+              0.499,
+              0.2884
+            ],
+            [
+              0.499,
+              1.0,
+              0.4012
+            ],
+            [
+              0.2884,
+              0.4012,
+              1.0
+            ]
+          ],
+          "thresholds": [
+            60,
+            75,
+            90
+          ]
+        },
+        "7": {
+          "label": "030T",
+          "spearman_rho_matrix": [
+            [
+              1.0,
+              0.499,
+              0.2884
+            ],
+            [
+              0.499,
+              1.0,
+              0.4012
+            ],
+            [
+              0.2884,
+              0.4012,
+              1.0
+            ]
+          ],
+          "thresholds": [
+            60,
+            75,
+            90
+          ]
+        }
+      }
+    },
+    "phase_e": {
+      "summary": {
+        "n_graphs": 20,
+        "checkpoints": [
+          5,
+          10,
+          20
+        ],
+        "n_nulls_total": 50,
+        "median_convergence_n": 30.0,
+        "frac_converged_by_5": 0.1,
+        "frac_converged_by_10": 0.15,
+        "frac_converged_by_20": 0.45,
+        "frac_converged_by_30": 0.7,
+        "frac_converged_by_40": 0.85,
+        "frac_converged_by_50": 1.0
+      },
+      "per_graph": [
+        {
+          "idx": 0,
+          "slug": "m5-antonym-019-a39bd921",
+          "motif_2_z_at_checkpoints": [
+            -40.289,
+            -25.1347,
+            -25.6297
+          ],
+          "motif_2_rel_errors": [
+            0.5185,
+            0.0527,
+            0.034
+          ],
+          "motif_4_z_at_checkpoints": [
+            -40.289,
+            -25.1347,
+            -25.6297
+          ],
+          "motif_4_rel_errors": [
+            0.5185,
+            0.0527,
+            0.034
+          ],
+          "motif_6_z_at_checkpoints": [
+            -40.289,
+            -25.1347,
+            -25.6297
+          ],
+          "motif_6_rel_errors": [
+            0.5185,
+            0.0527,
+            0.034
+          ],
+          "motif_7_z_at_checkpoints": [
+            40.289,
+            25.1347,
+            25.6297
+          ],
+          "motif_7_rel_errors": [
+            0.5185,
+            0.0527,
+            0.034
+          ]
+        },
+        {
+          "idx": 10,
+          "slug": "m4-antonym-016-6a269333",
+          "motif_2_z_at_checkpoints": [
+            -23.7856,
+            -28.212,
+            -26.157
+          ],
+          "motif_2_rel_errors": [
+            0.0439,
+            0.1341,
+            0.0515
+          ],
+          "motif_4_z_at_checkpoints": [
+            -23.7856,
+            -28.212,
+            -26.157
+          ],
+          "motif_4_rel_errors": [
+            0.0439,
+            0.1341,
+            0.0515
+          ],
+          "motif_6_z_at_checkpoints": [
+            -23.7856,
+            -28.212,
+            -26.157
+          ],
+          "motif_6_rel_errors": [
+            0.0439,
+            0.1341,
+            0.0515
+          ],
+          "motif_7_z_at_checkpoints": [
+            23.7856,
+            28.212,
+            26.157
+          ],
+          "motif_7_rel_errors": [
+            0.0439,
+            0.1341,
+            0.0515
+          ]
+        },
+        {
+          "idx": 20,
+          "slug": "m4-antonym-009-8aa743e9",
+          "motif_2_z_at_checkpoints": [
+            -20.8437,
+            -19.7921,
+            -23.3525
+          ],
+          "motif_2_rel_errors": [
+            0.0082,
+            0.0583,
+            0.1112
+          ],
+          "motif_4_z_at_checkpoints": [
+            -20.8437,
+            -19.7921,
+            -23.3525
+          ],
+          "motif_4_rel_errors": [
+            0.0082,
+            0.0583,
+            0.1112
+          ],
+          "motif_6_z_at_checkpoints": [
+            -20.8437,
+            -19.7921,
+            -23.3525
+          ],
+          "motif_6_rel_errors": [
+            0.0082,
+            0.0583,
+            0.1112
+          ],
+          "motif_7_z_at_checkpoints": [
+            20.8437,
+            19.7921,
+            23.3525
+          ],
+          "motif_7_rel_errors": [
+            0.0082,
+            0.0583,
+            0.1112
+          ]
+        }
+      ]
+    },
+    "phase_f": {
+      "2": {
+        "label": "021U",
+        "n_graphs": 200,
+        "mean_z_dp": -46.2066,
+        "mean_z_lp": -56.8751,
+        "mean_diff": 10.6685,
+        "median_diff": 10.627,
+        "wilcoxon_p": 0.0,
+        "frac_lp_z_gt_2": 0.0
+      },
+      "4": {
+        "label": "021C",
+        "n_graphs": 200,
+        "mean_z_dp": -46.2066,
+        "mean_z_lp": -56.8751,
+        "mean_diff": 10.6685,
+        "median_diff": 10.627,
+        "wilcoxon_p": 0.0,
+        "frac_lp_z_gt_2": 0.0
+      },
+      "6": {
+        "label": "021D",
+        "n_graphs": 200,
+        "mean_z_dp": -46.2066,
+        "mean_z_lp": -56.8751,
+        "mean_diff": 10.6685,
+        "median_diff": 10.627,
+        "wilcoxon_p": 0.0,
+        "frac_lp_z_gt_2": 0.0
+      },
+      "7": {
+        "label": "030T",
+        "n_graphs": 200,
+        "mean_z_dp": 46.2066,
+        "mean_z_lp": 56.8751,
+        "mean_diff": -10.6685,
+        "median_diff": -10.627,
+        "wilcoxon_p": 0.0,
+        "frac_lp_z_gt_2": 1.0
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_v3",
+      "examples": [
+        {
+          "input": "The opposite of bright is",
+          "output": "{\"phase_a\": {\"n_nodes\": 996, \"n_edges\": 9270, \"n_nulls\": 50, \"acceptance_rate\": 0.3573, \"zscores\": {\"2\": -26.5319, \"4\": -26.5319, \"6\": -26.5319, \"7\": 26.5319}, \"p_values\": {\"2\": 1.0, \"4\": 1.0, \"6\": 1....",
+          "predict_our_method": "{\"zscores\": {\"2\": -26.5319, \"4\": -26.5319, \"6\": -26.5319, \"7\": 26.5319}, \"fdr_applied\": true, \"layer_validated\": true}",
+          "predict_baseline": "{\"zscores\": {\"2\": -25.6297, \"4\": -25.6297, \"6\": -25.6297, \"7\": 25.6297}, \"n_nulls\": 20}",
+          "metadata_fold": "antonym",
+          "metadata_n_nodes": 1000,
+          "metadata_n_edges": 37080,
+          "metadata_density": 0.037117,
+          "metadata_is_dag": true,
+          "metadata_model_correct": "false",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "dim",
+          "metadata_iter": 3,
+          "metadata_provenance": "iter3",
+          "metadata_slug": "m5-antonym-019-a39bd921",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 0,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ]
+        },
+        {
+          "input": "The opposite of clean is",
+          "output": "{\"phase_a\": {\"n_nodes\": 979, \"n_edges\": 8711, \"n_nulls\": 50, \"acceptance_rate\": 0.3579, \"zscores\": {\"2\": -26.653, \"4\": -26.653, \"6\": -26.653, \"7\": 26.653}, \"p_values\": {\"2\": 1.0, \"4\": 1.0, \"6\": 1.0, \"...",
+          "predict_our_method": "{\"zscores\": {\"2\": -26.653, \"4\": -26.653, \"6\": -26.653, \"7\": 26.653}, \"fdr_applied\": true, \"layer_validated\": true}",
+          "predict_baseline": "{\"zscores\": {\"2\": -29.6005, \"4\": -29.6005, \"6\": -29.6005, \"7\": 29.6005}, \"n_nulls\": 20}",
+          "metadata_fold": "antonym",
+          "metadata_n_nodes": 986,
+          "metadata_n_edges": 34844,
+          "metadata_density": 0.035877,
+          "metadata_is_dag": true,
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "dirty",
+          "metadata_iter": 2,
+          "metadata_provenance": "iter2",
+          "metadata_slug": "m4-antonym-013-db7d1359",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 1,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ]
+        },
+        {
+          "input": "The opposite of cold is",
+          "output": "{\"phase_a\": {\"n_nodes\": 975, \"n_edges\": 7819, \"n_nulls\": 50, \"acceptance_rate\": 0.3556, \"zscores\": {\"2\": -30.3984, \"4\": -30.3984, \"6\": -30.3984, \"7\": 30.3984}, \"p_values\": {\"2\": 1.0, \"4\": 1.0, \"6\": 1....",
+          "predict_our_method": "{\"zscores\": {\"2\": -30.3984, \"4\": -30.3984, \"6\": -30.3984, \"7\": 30.3984}, \"fdr_applied\": true, \"layer_validated\": true}",
+          "predict_baseline": "{\"zscores\": {\"2\": -24.144, \"4\": -24.144, \"6\": -24.144, \"7\": 24.144}, \"n_nulls\": 20}",
+          "metadata_fold": "antonym",
+          "metadata_n_nodes": 978,
+          "metadata_n_edges": 31288,
+          "metadata_density": 0.032745,
+          "metadata_is_dag": true,
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "hot",
+          "metadata_iter": 2,
+          "metadata_provenance": "iter2",
+          "metadata_slug": "m4-antonym-004-beb14eca",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 2,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ]
+        }
+      ]
+    }
+  ]
+}

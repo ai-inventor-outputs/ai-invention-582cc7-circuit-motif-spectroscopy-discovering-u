@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "method_name": "FFL Functional Characterization",
+    "description": "Enumerate all feed-forward loop (FFL / 030T motif) instances from 34 pruned attribution graphs, join each node's position (A=regulator, B=intermediary, C=target) to its Neuronpedia semantic explanatio...",
+    "parameters": {
+      "prune_percentile": 75,
+      "min_nodes": 30,
+      "random_seed": 42,
+      "n_baseline_samples_per_graph": 5000
+    },
+    "total_graphs": 34,
+    "total_ffls": 1906060,
+    "explanation_match_rate": 0.6258
+  },
+  "datasets": [
+    {
+      "dataset": "ffl_functional_characterization",
+      "examples": [
+        {
+          "input": "The capital of Japan is",
+          "output": "{\"slug\": \"m3-country_capital-000-385265ab\", \"n_nodes\": 1044, \"n_edges\": 12028}",
+          "predict_ffl_method": "{\"n_ffls\": 48793, \"explanation_match_rate\": 0.7966, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5818, \"semantic_chi2\": 69135.3389, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.356, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "country_capital",
+          "metadata_slug": "m3-country_capital-000-385265ab",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "3 + 5 =",
+          "output": "{\"slug\": \"m3-arithmetic-000-f8f58d4d\", \"n_nodes\": 857, \"n_edges\": 7931}",
+          "predict_ffl_method": "{\"n_ffls\": 24418, \"explanation_match_rate\": 0.6934, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5724, \"semantic_chi2\": 15126.9487, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.34, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "arithmetic",
+          "metadata_slug": "m3-arithmetic-000-f8f58d4d",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The opposite of happy is",
+          "output": "{\"slug\": \"m3-antonym-000-db6a045b\", \"n_nodes\": 1084, \"n_edges\": 12920}",
+          "predict_ffl_method": "{\"n_ffls\": 48919, \"explanation_match_rate\": 0.4694, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5676, \"semantic_chi2\": 18014.9742, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.358, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m3-antonym-000-db6a045b",
+          "metadata_analysis_type": "per_graph"
+        }
+      ]
+    }
+  ]
+}

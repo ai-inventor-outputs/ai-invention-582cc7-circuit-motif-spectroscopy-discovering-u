@@ -1,0 +1,11 @@
+[project]
+name = "motif-zscores"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "igraph==1.0.0",
+    "numpy==2.4.3",
+    "scipy==1.17.1",
+    "statsmodels==0.14.6",
+    "loguru==0.7.3",
+]

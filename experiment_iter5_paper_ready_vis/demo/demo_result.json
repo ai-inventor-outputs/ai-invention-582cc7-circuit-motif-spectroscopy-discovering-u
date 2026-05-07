@@ -1,0 +1,13 @@
+{
+  "id": "exp_id5_it5__opus",
+  "type": "code",
+  "title": "Paper-Ready Visualization Data: Embeddings, Heatmaps, Z-Scores, Ablation, Confusion Matrices, and Motif Diagrams for 200 Attribution Graphs",
+  "summary": "Demonstrates the motif analysis pipeline for 16 Neuronpedia attribution graphs (2 per domain, 8 task domains from Gemma-2-2B). The notebook processes subsampled graphs through: pruned DAG construction, 3-node motif census (021U/021C/021D/030T), null-model Z-scores (14 degree-preserving DAG edge-swap nulls per graph), feed-forward loop enumeration with weighted features, graph statistics, t-SNE embeddings across 4 feature sets, spectral clustering with Hungarian-aligned confusion matrices, and ablation impact analysis comparing FFL hub nodes vs matched controls. Best clustering NMI=0.899 (all_combined features) vs random baseline NMI=0.605. Runs in ~2s on the 16-graph demo subset.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_5/gen_art/exp_id5_it5__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id5_it5__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id5_it5__opus/method_code_demo.ipynb"
+}

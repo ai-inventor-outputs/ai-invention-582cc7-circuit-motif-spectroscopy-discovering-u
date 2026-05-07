@@ -1,0 +1,207 @@
+{
+  "metadata": {
+    "experiment": "layer_architecture_confound_test",
+    "description": "Compares degree-preserving vs layer-preserving DAG null models to determine whether motif overrepresentation in LLM attribution graphs is a genuine computational signal or an artifact of layered transformer architecture.",
+    "parameters": {
+      "n_null_models": 30,
+      "swap_factor": 30,
+      "prune_percentile": 75,
+      "min_nodes_for_census": 30,
+      "n_graphs_analyzed": 3,
+      "n_workers": 4,
+      "layer_baseline_n": 100,
+      "seed": 42
+    },
+    "isoclass_mapping": {
+      "0": "003",
+      "1": "012",
+      "3": "102",
+      "6": "021D",
+      "2": "021U",
+      "4": "021C",
+      "5": "111D",
+      "9": "111U",
+      "7": "030T",
+      "11": "030C",
+      "10": "201",
+      "13": "120D",
+      "8": "120U",
+      "12": "120C",
+      "14": "210",
+      "15": "300"
+    },
+    "dag_possible_motif_ids": [
+      2,
+      4,
+      6,
+      7
+    ],
+    "comparison_analysis": {
+      "021U": {
+        "isoclass_id": 2,
+        "mean_z_degree": -46.1257,
+        "mean_z_layer": -56.8722,
+        "mean_difference": 10.7465,
+        "std_difference": 9.8893,
+        "wilcoxon_statistic": 1.0,
+        "wilcoxon_p_value": 0.5,
+        "z_retention_ratio": 1.233,
+        "classification": "genuine_signal",
+        "per_graph_z_degree": [
+          -54.3068,
+          -35.6078,
+          -48.4625
+        ],
+        "per_graph_z_layer": [
+          -52.325,
+          -47.6995,
+          -70.592
+        ]
+      },
+      "021C": {
+        "isoclass_id": 4,
+        "mean_z_degree": -46.1257,
+        "mean_z_layer": -56.8722,
+        "mean_difference": 10.7465,
+        "std_difference": 9.8893,
+        "wilcoxon_statistic": 1.0,
+        "wilcoxon_p_value": 0.5,
+        "z_retention_ratio": 1.233,
+        "classification": "genuine_signal",
+        "per_graph_z_degree": [
+          -54.3068,
+          -35.6078,
+          -48.4625
+        ],
+        "per_graph_z_layer": [
+          -52.325,
+          -47.6995,
+          -70.592
+        ]
+      },
+      "021D": {
+        "isoclass_id": 6,
+        "mean_z_degree": -46.1257,
+        "mean_z_layer": -56.8722,
+        "mean_difference": 10.7465,
+        "std_difference": 9.8893,
+        "wilcoxon_statistic": 1.0,
+        "wilcoxon_p_value": 0.5,
+        "z_retention_ratio": 1.233,
+        "classification": "genuine_signal",
+        "per_graph_z_degree": [
+          -54.3068,
+          -35.6078,
+          -48.4625
+        ],
+        "per_graph_z_layer": [
+          -52.325,
+          -47.6995,
+          -70.592
+        ]
+      },
+      "030T": {
+        "isoclass_id": 7,
+        "mean_z_degree": 46.1257,
+        "mean_z_layer": 56.8722,
+        "mean_difference": -10.7465,
+        "std_difference": 9.8893,
+        "wilcoxon_statistic": 1.0,
+        "wilcoxon_p_value": 0.5,
+        "z_retention_ratio": 1.233,
+        "classification": "genuine_signal",
+        "per_graph_z_degree": [
+          54.3068,
+          35.6078,
+          48.4625
+        ],
+        "per_graph_z_layer": [
+          52.325,
+          47.6995,
+          70.592
+        ]
+      }
+    },
+    "layer_baseline_results": {
+      "country_capital_0": {
+        "domain": "country_capital",
+        "z_layer_only": {
+          "021U": 90.3941,
+          "021C": -126.4494,
+          "021D": 395.6768,
+          "030T": 269.7043
+        }
+      },
+      "arithmetic_1": {
+        "domain": "arithmetic",
+        "z_layer_only": {
+          "021U": 30.8911,
+          "021C": -131.8116,
+          "021D": 374.7144,
+          "030T": 234.7652
+        }
+      },
+      "antonym_2": {
+        "domain": "antonym",
+        "z_layer_only": {
+          "021U": 177.3474,
+          "021C": -138.9231,
+          "021D": 471.6409,
+          "030T": 248.7613
+        }
+      }
+    },
+    "summary": {
+      "n_graphs": 3,
+      "domains": [
+        "antonym",
+        "arithmetic",
+        "country_capital"
+      ],
+      "mean_degree_acceptance_rate": 0.3355,
+      "mean_layer_acceptance_rate": 0.3653,
+      "overall_conclusion": "genuine_signal"
+    },
+    "runtime_seconds": 83.3
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs",
+      "examples": [
+        {
+          "input": "3 + 5 =",
+          "output": "{\"real_counts\": [0, 0, 54475, 0, 33070, 0, 470160, 24418, 0, 0, 0, 0, 0, 0, 0, 0], \"z_degree\": [0.0, 0.0, -54.3068, 0.0, -54.3068, 0.0, -54.3068, 54.3068, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"z_layer\": [0.0, 0.0, -52.325, 0.0, -52.325, 0.0, -52.325, 52.325, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"p_degree\": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], \"p_layer\": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], \"sp_degree\": [0.0, 0.0, -0.5, 0.0, -0.5, 0.0, -0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"sp_layer\": [0.0, 0.0, -0.5, 0.0, -0.5, 0.0, -0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"degree_acceptance_rate\": 0.3388, \"layer_acceptance_rate\": 0.2996, \"layer_stats\": {\"n_layers\": 28, \"frac_span_1\": 0.1982, \"frac_span_2plus\": 0.8018, \"layer_distance_mean\": 6.4436}, \"timing\": {\"degree_null_seconds\": 9.33, \"layer_null_seconds\": 16.53}}",
+          "metadata_fold": "arithmetic",
+          "metadata_n_nodes_pruned": 857,
+          "metadata_n_edges_pruned": 7931,
+          "metadata_n_layers": 28,
+          "predict_degree_z": "{\"021U\": -54.3068, \"021C\": -54.3068, \"021D\": -54.3068, \"030T\": 54.3068}",
+          "predict_layer_z": "{\"021U\": -52.325, \"021C\": -52.325, \"021D\": -52.325, \"030T\": 52.325}",
+          "predict_motif_classification": "{\"021U\": \"genuine_signal\", \"021C\": \"genuine_signal\", \"021D\": \"genuine_signal\", \"030T\": \"genuine_signal\"}"
+        },
+        {
+          "input": "The opposite of happy is",
+          "output": "{\"real_counts\": [0, 0, 168770, 0, 80600, 0, 922934, 48919, 0, 0, 0, 0, 0, 0, 0, 0], \"z_degree\": [0.0, 0.0, -35.6078, 0.0, -35.6078, 0.0, -35.6078, 35.6078, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"z_layer\": [0.0, 0.0, -47.6995, 0.0, -47.6995, 0.0, -47.6995, 47.6995, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"p_degree\": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], \"p_layer\": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], \"sp_degree\": [0.0, 0.0, -0.5, 0.0, -0.5, 0.0, -0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"sp_layer\": [0.0, 0.0, -0.5, 0.0, -0.5, 0.0, -0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"degree_acceptance_rate\": 0.3306, \"layer_acceptance_rate\": 0.3666, \"layer_stats\": {\"n_layers\": 28, \"frac_span_1\": 0.1905, \"frac_span_2plus\": 0.8095, \"layer_distance_mean\": 6.6763}, \"timing\": {\"degree_null_seconds\": 12.32, \"layer_null_seconds\": 20.16}}",
+          "metadata_fold": "antonym",
+          "metadata_n_nodes_pruned": 1084,
+          "metadata_n_edges_pruned": 12920,
+          "metadata_n_layers": 28,
+          "predict_degree_z": "{\"021U\": -35.6078, \"021C\": -35.6078, \"021D\": -35.6078, \"030T\": 35.6078}",
+          "predict_layer_z": "{\"021U\": -47.6995, \"021C\": -47.6995, \"021D\": -47.6995, \"030T\": 47.6995}",
+          "predict_motif_classification": "{\"021U\": \"genuine_signal\", \"021C\": \"genuine_signal\", \"021D\": \"genuine_signal\", \"030T\": \"genuine_signal\"}"
+        },
+        {
+          "input": "The capital of Japan is",
+          "output": "{\"real_counts\": [0, 0, 129803, 0, 76860, 0, 795545, 48765, 0, 0, 0, 0, 0, 0, 0, 0], \"z_degree\": [0.0, 0.0, -48.4625, 0.0, -48.4625, 0.0, -48.4625, 48.4625, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"z_layer\": [0.0, 0.0, -70.592, 0.0, -70.592, 0.0, -70.592, 70.592, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"p_degree\": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], \"p_layer\": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], \"sp_degree\": [0.0, 0.0, -0.5, 0.0, -0.5, 0.0, -0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"sp_layer\": [0.0, 0.0, -0.5, 0.0, -0.5, 0.0, -0.5, 0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], \"degree_acceptance_rate\": 0.3372, \"layer_acceptance_rate\": 0.4296, \"layer_stats\": {\"n_layers\": 28, \"frac_span_1\": 0.1858, \"frac_span_2plus\": 0.8142, \"layer_distance_mean\": 6.5723}, \"timing\": {\"degree_null_seconds\": 18.21, \"layer_null_seconds\": 21.15}}",
+          "metadata_fold": "country_capital",
+          "metadata_n_nodes_pruned": 1044,
+          "metadata_n_edges_pruned": 12026,
+          "metadata_n_layers": 28,
+          "predict_degree_z": "{\"021U\": -48.4625, \"021C\": -48.4625, \"021D\": -48.4625, \"030T\": 48.4625}",
+          "predict_layer_z": "{\"021U\": -70.592, \"021C\": -70.592, \"021D\": -70.592, \"030T\": 70.592}",
+          "predict_motif_classification": "{\"021U\": \"genuine_signal\", \"021C\": \"genuine_signal\", \"021D\": \"genuine_signal\", \"030T\": \"genuine_signal\"}"
+        }
+      ]
+    }
+  ]
+}

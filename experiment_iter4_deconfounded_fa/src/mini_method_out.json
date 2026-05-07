@@ -1,0 +1,453 @@
+{
+  "metadata": {
+    "experiment": "deconfounded_failure_prediction_motif_spectra",
+    "description": "Predicts model correctness from attribution graph motif spectra, deconfounded from domain and graph-size effects. Baseline: domain+graph_stats features. Our method: full model with motif spectra added.",
+    "method_name": "Motif Spectrum Failure Predictor",
+    "baseline_name": "Domain + Graph Statistics (no motif info)",
+    "n_graphs_total": 200,
+    "n_graphs_used": 176,
+    "n_correct": 127,
+    "n_incorrect": 49,
+    "n_parse_failures": 0,
+    "class_distribution_by_domain": {
+      "antonym": {
+        "correct": 24,
+        "incorrect": 2
+      },
+      "arithmetic": {
+        "correct": 16,
+        "incorrect": 10
+      },
+      "sentiment": {
+        "correct": 16,
+        "incorrect": 8
+      },
+      "translation": {
+        "correct": 21,
+        "incorrect": 5
+      },
+      "code_completion": {
+        "correct": 17,
+        "incorrect": 7
+      },
+      "country_capital": {
+        "correct": 16,
+        "incorrect": 10
+      },
+      "multi_hop_reasoning": {
+        "correct": 17,
+        "incorrect": 7
+      }
+    },
+    "powered_domains": [
+      "arithmetic",
+      "sentiment",
+      "translation",
+      "code_completion",
+      "country_capital",
+      "multi_hop_reasoning"
+    ],
+    "feature_computation": {
+      "prune_quantile": 0.75,
+      "n_null_models": 30,
+      "motif_features": [
+        "motif_021D_ratio",
+        "motif_021U_ratio",
+        "motif_021C_ratio",
+        "motif_030T_ratio",
+        "z_030T_abs"
+      ],
+      "graph_features": [
+        "n_nodes",
+        "n_edges",
+        "density",
+        "mean_in_degree",
+        "mean_out_degree",
+        "max_out_degree",
+        "n_layers",
+        "diameter"
+      ],
+      "domain_features": [
+        "domain_antonym",
+        "domain_arithmetic",
+        "domain_code_completion",
+        "domain_country_capital",
+        "domain_multi_hop_reasoning",
+        "domain_rhyme",
+        "domain_sentiment",
+        "domain_translation"
+      ],
+      "deviation_features": [
+        "dev_euclidean",
+        "dev_cosine",
+        "dev_std_motif_021D_ratio",
+        "dev_std_motif_021U_ratio",
+        "dev_std_motif_021C_ratio",
+        "dev_std_motif_030T_ratio",
+        "dev_std_z_030T_abs"
+      ],
+      "motif_indices": {
+        "021D": 6,
+        "021U": 2,
+        "021C": 4,
+        "030T": 7
+      }
+    },
+    "classifier_results": {
+      "domain_only__logistic_L2": {
+        "auc": 0.532861963683111,
+        "accuracy": 0.7215909090909091,
+        "f1": 0.8382838283828383,
+        "feature_set": "domain_only",
+        "classifier": "logistic_L2",
+        "n_features": 8
+      },
+      "domain_only__random_forest": {
+        "auc": 0.5312550216937169,
+        "accuracy": 0.7215909090909091,
+        "f1": 0.8382838283828383,
+        "feature_set": "domain_only",
+        "classifier": "random_forest",
+        "n_features": 8
+      },
+      "graph_stats_only__logistic_L2": {
+        "auc": 0.5828378595532702,
+        "accuracy": 0.7272727272727273,
+        "f1": 0.8410596026490066,
+        "feature_set": "graph_stats_only",
+        "classifier": "logistic_L2",
+        "n_features": 8
+      },
+      "graph_stats_only__random_forest": {
+        "auc": 0.5228989233488672,
+        "accuracy": 0.6931818181818182,
+        "f1": 0.8187919463087249,
+        "feature_set": "graph_stats_only",
+        "classifier": "random_forest",
+        "n_features": 8
+      },
+      "motif_only__logistic_L2": {
+        "auc": 0.49574160372810544,
+        "accuracy": 0.7159090909090909,
+        "f1": 0.8344370860927153,
+        "feature_set": "motif_only",
+        "classifier": "logistic_L2",
+        "n_features": 5
+      },
+      "motif_only__random_forest": {
+        "auc": 0.48529648079704324,
+        "accuracy": 0.6647727272727273,
+        "f1": 0.7972508591065293,
+        "feature_set": "motif_only",
+        "classifier": "random_forest",
+        "n_features": 5
+      },
+      "domain_plus_graph__logistic_L2": {
+        "auc": 0.5744817612084204,
+        "accuracy": 0.7215909090909091,
+        "f1": 0.8361204013377926,
+        "feature_set": "domain_plus_graph",
+        "classifier": "logistic_L2",
+        "n_features": 16
+      },
+      "domain_plus_graph__random_forest": {
+        "auc": 0.5204885103647758,
+        "accuracy": 0.6875,
+        "f1": 0.8148148148148148,
+        "feature_set": "domain_plus_graph",
+        "classifier": "random_forest",
+        "n_features": 16
+      },
+      "full_model__logistic_L2": {
+        "auc": 0.5540735979431142,
+        "accuracy": 0.7045454545454546,
+        "f1": 0.825503355704698,
+        "feature_set": "full_model",
+        "classifier": "logistic_L2",
+        "n_features": 21
+      },
+      "full_model__random_forest": {
+        "auc": 0.5188815683753816,
+        "accuracy": 0.6647727272727273,
+        "f1": 0.7986348122866894,
+        "feature_set": "full_model",
+        "classifier": "random_forest",
+        "n_features": 21
+      },
+      "domain_graph_plus_dev__logistic_L2": {
+        "auc": 0.5294873855053833,
+        "accuracy": 0.6647727272727273,
+        "f1": 0.7972508591065293,
+        "feature_set": "domain_graph_plus_dev",
+        "classifier": "logistic_L2",
+        "n_features": 23
+      },
+      "domain_graph_plus_dev__random_forest": {
+        "auc": 0.4918849429535594,
+        "accuracy": 0.7102272727272727,
+        "f1": 0.8294314381270903,
+        "feature_set": "domain_graph_plus_dev",
+        "classifier": "random_forest",
+        "n_features": 23
+      },
+      "full_plus_dev__logistic_L2": {
+        "auc": 0.5147035192029568,
+        "accuracy": 0.6477272727272727,
+        "f1": 0.7847222222222222,
+        "feature_set": "full_plus_dev",
+        "classifier": "logistic_L2",
+        "n_features": 28
+      },
+      "full_plus_dev__random_forest": {
+        "auc": 0.5158283785955327,
+        "accuracy": 0.6818181818181818,
+        "f1": 0.8095238095238095,
+        "feature_set": "full_plus_dev",
+        "classifier": "random_forest",
+        "n_features": 28
+      }
+    },
+    "key_comparisons": {
+      "full_vs_domain_graph__logistic": {
+        "mean_diff": -0.020175863330926268,
+        "ci_95": [
+          -0.05859503331598054,
+          0.015951757812500036
+        ],
+        "p_value": 0.865
+      },
+      "full_vs_domain_graph__rf": {
+        "mean_diff": -0.0012675553476591422,
+        "ci_95": [
+          -0.05859333679212174,
+          0.05378915242941969
+        ],
+        "p_value": 0.533
+      },
+      "motif_vs_graph_stats__logistic": {
+        "mean_diff": -0.08649063329496574,
+        "ci_95": [
+          -0.17835950388077346,
+          -0.005653587480266812
+        ],
+        "p_value": 0.982
+      }
+    },
+    "within_domain_analysis": {
+      "arithmetic": {
+        "motif_only": {
+          "auc": 0.23750000000000002,
+          "n_total": 26,
+          "n_correct": 16,
+          "n_incorrect": 10
+        },
+        "graph_stats_only": {
+          "auc": 0.39375000000000004,
+          "n_total": 26,
+          "n_correct": 16,
+          "n_incorrect": 10
+        }
+      },
+      "sentiment": {
+        "motif_only": {
+          "auc": 0.1875,
+          "n_total": 24,
+          "n_correct": 16,
+          "n_incorrect": 8
+        },
+        "graph_stats_only": {
+          "auc": 0.2734375,
+          "n_total": 24,
+          "n_correct": 16,
+          "n_incorrect": 8
+        }
+      },
+      "translation": {
+        "motif_only": {
+          "auc": 0.5047619047619047,
+          "n_total": 26,
+          "n_correct": 21,
+          "n_incorrect": 5
+        },
+        "graph_stats_only": {
+          "auc": 0.33333333333333337,
+          "n_total": 26,
+          "n_correct": 21,
+          "n_incorrect": 5
+        }
+      },
+      "code_completion": {
+        "motif_only": {
+          "auc": 0.5210084033613446,
+          "n_total": 24,
+          "n_correct": 17,
+          "n_incorrect": 7
+        },
+        "graph_stats_only": {
+          "auc": 0.4117647058823529,
+          "n_total": 24,
+          "n_correct": 17,
+          "n_incorrect": 7
+        }
+      },
+      "country_capital": {
+        "motif_only": {
+          "auc": 0.006249999999999999,
+          "n_total": 26,
+          "n_correct": 16,
+          "n_incorrect": 10
+        },
+        "graph_stats_only": {
+          "auc": 0.0,
+          "n_total": 26,
+          "n_correct": 16,
+          "n_incorrect": 10
+        }
+      },
+      "multi_hop_reasoning": {
+        "motif_only": {
+          "auc": 0.3865546218487395,
+          "n_total": 24,
+          "n_correct": 17,
+          "n_incorrect": 7
+        },
+        "graph_stats_only": {
+          "auc": 0.008403361344537818,
+          "n_total": 24,
+          "n_correct": 17,
+          "n_incorrect": 7
+        }
+      }
+    },
+    "deviation_feature_results": {
+      "domain_graph_plus_dev__logistic_L2": {
+        "auc": 0.5294873855053833,
+        "accuracy": 0.6647727272727273,
+        "f1": 0.7972508591065293,
+        "feature_set": "domain_graph_plus_dev",
+        "classifier": "logistic_L2",
+        "n_features": 23
+      },
+      "domain_graph_plus_dev__random_forest": {
+        "auc": 0.4918849429535594,
+        "accuracy": 0.7102272727272727,
+        "f1": 0.8294314381270903,
+        "feature_set": "domain_graph_plus_dev",
+        "classifier": "random_forest",
+        "n_features": 23
+      },
+      "full_plus_dev__logistic_L2": {
+        "auc": 0.5147035192029568,
+        "accuracy": 0.6477272727272727,
+        "f1": 0.7847222222222222,
+        "feature_set": "full_plus_dev",
+        "classifier": "logistic_L2",
+        "n_features": 28
+      },
+      "full_plus_dev__random_forest": {
+        "auc": 0.5158283785955327,
+        "accuracy": 0.6818181818181818,
+        "f1": 0.8095238095238095,
+        "feature_set": "full_plus_dev",
+        "classifier": "random_forest",
+        "n_features": 28
+      }
+    },
+    "feature_importance": {
+      "n_nodes": {
+        "mean": 0.08466441694788147,
+        "std": 0.029960964990452147
+      },
+      "n_edges": {
+        "mean": 0.03662756441159141,
+        "std": 0.03335236218955958
+      },
+      "density": {
+        "mean": 0.10184798328780328,
+        "std": 0.03629653339738651
+      },
+      "mean_in_degree": {
+        "mean": 0.0015212384166264693,
+        "std": 0.007075866760217605
+      },
+      "mean_out_degree": {
+        "mean": 0.0015212384166264693,
+        "std": 0.007075866760217605
+      },
+      "max_out_degree": {
+        "mean": 0.0485564304461942,
+        "std": 0.029668869273769126
+      },
+      "n_layers": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "diameter": {
+        "mean": 0.034367132679843586,
+        "std": 0.026216861154962186
+      }
+    },
+    "bootstrap_ci_best_model": {
+      "model": "graph_stats_only__logistic_L2",
+      "auc_ci_95": [
+        0.48399602450469237,
+        0.6684326608505998
+      ]
+    },
+    "success_criteria_evaluation": {
+      "motif_predicts_errors_auc_gt_065": false,
+      "motif_adds_over_baseline": false,
+      "within_domain_motif_beats_graph_stats": true,
+      "best_model_auc": 0.5828378595532702,
+      "full_model_lr_auc": 0.5540735979431142,
+      "baseline_domain_graph_lr_auc": 0.5744817612084204,
+      "motif_lift_p_value": 0.865,
+      "within_domain_motif_wins": 4,
+      "within_domain_total_compared": 6
+    },
+    "runtime_seconds": 1440.5553410053253
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_v3",
+      "examples": [
+        {
+          "input": "The opposite of bright is",
+          "output": "{\"slug\": \"m5-antonym-019-a39bd921\", \"domain\": \"antonym\", \"label\": 0, \"n_nodes_pruned\": 996, \"n_edges_pruned\": 9270, \"graph_stats\": {\"n_nodes\": 996.0, \"n_edges\": 9270.0, \"density\": 0.00935399891021372, \"mean_in_degree\": 9.30722891566265, \"mean_out_degree\": 9.30722891566265, \"max_out_degree\": 515.0, \"n_layers\": 28.0, \"diameter\": 9.0}, \"motif_features\": {\"motif_021D_ratio\": 0.7926145114166667, \"motif_021U_ratio\": 0.12059124118634872, \"motif_021C_ratio\": 0.05518947014345422, \"motif_030T_ratio\": 0.031604777253530295, \"z_030T_abs\": 26.94073667600408}, \"baseline_prob\": 0.9369093939807657, \"our_method_prob\": 0.930598194075139, \"best_model_prob\": 0.7958632083085888}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m5-antonym-019-a39bd921",
+          "metadata_model_correct": "false",
+          "metadata_difficulty": "easy",
+          "metadata_n_nodes_original": 1000,
+          "metadata_n_edges_original": 37080,
+          "predict_baseline": "0.936909",
+          "predict_our_method": "0.930598"
+        },
+        {
+          "input": "The opposite of clean is",
+          "output": "{\"slug\": \"m4-antonym-013-db7d1359\", \"domain\": \"antonym\", \"label\": 1, \"n_nodes_pruned\": 979, \"n_edges_pruned\": 8711, \"graph_stats\": {\"n_nodes\": 979.0, \"n_edges\": 8711.0, \"density\": 0.009098011200444508, \"mean_in_degree\": 8.89785495403473, \"mean_out_degree\": 8.89785495403473, \"max_out_degree\": 524.0, \"n_layers\": 28.0, \"diameter\": 10.0}, \"motif_features\": {\"motif_021D_ratio\": 0.8039786484002536, \"motif_021U_ratio\": 0.11150013200043482, \"motif_021C_ratio\": 0.0537460593987839, \"motif_030T_ratio\": 0.03077516020052772, \"z_030T_abs\": 25.279498652930705}, \"baseline_prob\": 0.8781773490198033, \"our_method_prob\": 0.8768627564395611, \"best_model_prob\": 0.7144374141140805}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-013-db7d1359",
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_n_nodes_original": 986,
+          "metadata_n_edges_original": 34844,
+          "predict_baseline": "0.878177",
+          "predict_our_method": "0.876863"
+        },
+        {
+          "input": "The opposite of cold is",
+          "output": "{\"slug\": \"m4-antonym-004-beb14eca\", \"domain\": \"antonym\", \"label\": 1, \"n_nodes_pruned\": 975, \"n_edges_pruned\": 7822, \"graph_stats\": {\"n_nodes\": 975.0, \"n_edges\": 7822.0, \"density\": 0.008236718791133576, \"mean_in_degree\": 8.022564102564102, \"mean_out_degree\": 8.022564102564102, \"max_out_degree\": 515.0, \"n_layers\": 28.0, \"diameter\": 8.0}, \"motif_features\": {\"motif_021D_ratio\": 0.8219194379567072, \"motif_021U_ratio\": 0.10194392090317653, \"motif_021C_ratio\": 0.0458319505582237, \"motif_030T_ratio\": 0.030304690581892637, \"z_030T_abs\": 24.87226370845443}, \"baseline_prob\": 0.9616756132764024, \"our_method_prob\": 0.9614982923172241, \"best_model_prob\": 0.8625879080683506}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-004-beb14eca",
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_n_nodes_original": 978,
+          "metadata_n_edges_original": 31288,
+          "predict_baseline": "0.961676",
+          "predict_our_method": "0.961498"
+        }
+      ]
+    }
+  ]
+}

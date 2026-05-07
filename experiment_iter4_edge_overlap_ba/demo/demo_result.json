@@ -1,0 +1,13 @@
+{
+  "id": "exp_id4_it4__opus",
+  "type": "code",
+  "title": "Edge-Overlap Baseline, Motif Fingerprint Stability, and Multi-Scale Feature Complementarity on 200 Attribution Graphs",
+  "summary": "Demo notebook demonstrating edge-overlap baseline, motif fingerprint stability, and multi-scale feature complementarity analysis on 80 Neuronpedia attribution graphs (10 per domain, 8 domains). Loads pre-computed 4D motif count-ratio fingerprints and 8D graph statistics, computes cosine similarity matrices, runs spectral clustering at K=2,3,4,6,8 with permutation tests (p=0.005), evaluates fingerprint stability via Fisher Discriminant Ratio and Cohen's d, and assesses feature complementarity. Produces 3-panel visualization: NMI vs K, stability bar chart, and motif fingerprint distributions by domain.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_4/gen_art/exp_id4_it4__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id4_it4__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id4_it4__opus/method_code_demo.ipynb"
+}

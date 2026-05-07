@@ -1,0 +1,13 @@
+{
+  "id": "exp_id2_it4__opus",
+  "type": "code",
+  "title": "Graph-Theoretic Node Ablation: FFL Motif Participation vs Structural Importance",
+  "summary": "Demo notebook for graph-theoretic node ablation analysis on Neuronpedia attribution graphs. Loads 3 pruned DAGs from diverse domains (antonym, arithmetic, code_completion), enumerates Feed-Forward Loop (FFL) motifs, computes Motif Participation Index (MPI), selects degree/attribution/layer/random matched controls, performs node ablation measuring 4 impact metrics, and runs statistical analysis (Wilcoxon tests, bootstrap CIs, dose-response correlations). Uses full original parameters (2000 bootstrap iterations, 80 dose-response samples, 3 controls per hub). Total runtime ~2.1s on 3 graphs. Produces results tables and 2 matplotlib visualizations (bar chart of hub vs control impact, dose-response scatter).",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id2_it4__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id2_it4__opus/method_code_demo.ipynb"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "exp_id3_it3__opus",
+  "type": "code",
+  "title": "FFL Functional Characterization: Enumerating Feed-Forward Loop Instances and Mapping Semantic Roles in Attribution Graphs",
+  "summary": "Demo notebook demonstrating Feed-Forward Loop (FFL/030T motif) enumeration and analysis in attribution graphs. Uses 6 synthetic DAG graphs across 6 domains with 28 feature explanations. The pipeline builds igraph objects, enumerates FFLs via adjacency-set lookup, annotates with Cantor-decoded feature explanations, runs layer ordering analysis, semantic role categorization (keyword-based chi-squared test), edge weight coherence analysis, cross-domain Cramer's V, and baseline random triad comparison. Visualizations include FFL vs baseline layer ordering, semantic role distributions by position, per-graph FFL counts, and coherence by domain.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_3/gen_art/exp_id3_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id3_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id3_it3__opus/method_code_demo.ipynb"
+}

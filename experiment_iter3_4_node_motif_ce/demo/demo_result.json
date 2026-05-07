@@ -1,0 +1,13 @@
+{
+  "id": "exp_id1_it3__opus",
+  "type": "code",
+  "title": "4-Node Motif Census on Full 174-Graph Corpus with 24D Capability Clustering",
+  "summary": "Demo notebook performing 4-node directed motif census on 16 LLM attribution graphs (gemma-2-2b, 8 capability domains) from Neuronpedia. Computes 3-node and 4-node motif census using igraph, generates degree-preserving DAG null models via edge swaps, computes Z-scores and significance profiles. Compares spectral clustering NMI across 6 feature sets (4-node SP, count ratios, Z-scores, 3-node enriched, graph stats, random). Finds 5/24 motif types universally overrepresented and confirms capability clustering (NMI=0.866). Uses 16 pre-pruned graphs (1MB mini dataset) and runs in ~4 minutes.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_3/gen_art/exp_id1_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it3__opus/method_code_demo.ipynb"
+}

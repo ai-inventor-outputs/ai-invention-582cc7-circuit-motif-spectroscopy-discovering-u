@@ -1,0 +1,13 @@
+{
+  "id": "exp_id2_it5__opus",
+  "type": "code",
+  "title": "Functional Characterization of 4 Universal 4-Node Motifs (IDs 77, 80, 82, 83): 3\u21924 Embedding, Layer Ordering, and Semantic Roles",
+  "summary": "Demo notebook analyzing 4 universal 4-node motif types (IDs 77, 80, 82, 83) from LLM attribution graphs. Loads pre-computed per-graph results (24 graphs across 8 domains), builds canonical motif patterns with igraph, analyzes FFL containment, layer span ordering vs random baselines (Mann-Whitney U), cross-domain consistency (Kruskal-Wallis, Cramer's V), and builds a motif family taxonomy with cosine similarity. Visualizes results in a 4-panel figure: FFL containment bars, layer span comparison, stacked domain counts, and similarity heatmap.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_5/gen_art/exp_id2_it5__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id2_it5__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id2_it5__opus/method_code_demo.ipynb"
+}

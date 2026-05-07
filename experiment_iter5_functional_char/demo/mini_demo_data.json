@@ -1,0 +1,402 @@
+{
+  "metadata": {
+    "experiment": "4node_motif_functional_characterization",
+    "n_graphs_loaded": 179,
+    "prune_percentile": 99,
+    "max_nodes": 700,
+    "target_motif_ids": [
+      77,
+      80,
+      82,
+      83
+    ],
+    "runtime_seconds": 34.1,
+    "domains": [
+      "antonym",
+      "arithmetic",
+      "code_completion",
+      "country_capital",
+      "multi_hop_reasoning",
+      "rhyme",
+      "sentiment",
+      "translation"
+    ],
+    "domain_counts": {
+      "antonym": 26,
+      "arithmetic": 26,
+      "code_completion": 24,
+      "country_capital": 26,
+      "multi_hop_reasoning": 24,
+      "rhyme": 24,
+      "sentiment": 3,
+      "translation": 26
+    },
+    "4node_canonical_patterns": {
+      "77": {
+        "edge_count": 4,
+        "edges": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "80": {
+        "edge_count": 5,
+        "edges": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "82": {
+        "edge_count": 5,
+        "edges": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "83": {
+        "edge_count": 6,
+        "edges": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    "3node_reference": {
+      "2": "021U",
+      "4": "021C",
+      "6": "021D",
+      "7": "030T"
+    },
+    "n_explanations": 6574
+  },
+  "datasets": [
+    {
+      "dataset": "4node_motif_characterization",
+      "examples": [
+        {
+          "input": "graph:m4-antonym-009-8aa743e9 domain:antonym prompt:The opposite of hard is",
+          "output": "{\"slug\": \"m4-antonym-009-8aa743e9\", \"domain\": \"antonym\", \"n_nodes\": 219, \"n_edges\": 251, \"prompt\": \"The opposite of hard is\"}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-009-8aa743e9",
+          "metadata_n_nodes": 219,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 38, \"82\": 56, \"83\": 14}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.292, \"80\": 7.974, \"82\": 4.214, \"83\": 3.571}, \"total_4node_motifs\": 608, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.99, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-antonym-003-eaea9372 domain:antonym prompt:The opposite of dark is",
+          "output": "{\"slug\": \"m4-antonym-003-eaea9372\", \"domain\": \"antonym\", \"n_nodes\": 260, \"n_edges\": 295, \"prompt\": \"The opposite of dark is\"}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-003-eaea9372",
+          "metadata_n_nodes": 260,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 26, \"82\": 20, \"83\": 12}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.464, \"80\": 3.577, \"82\": 3.1, \"83\": 3.167}, \"total_4node_motifs\": 558, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.19, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m5-antonym-019-a39bd921 domain:antonym prompt:The opposite of bright is",
+          "output": "{\"slug\": \"m5-antonym-019-a39bd921\", \"domain\": \"antonym\", \"n_nodes\": 333, \"n_edges\": 371, \"prompt\": \"The opposite of bright is\"}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m5-antonym-019-a39bd921",
+          "metadata_n_nodes": 333,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 12, \"82\": 24, \"83\": 5}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.058, \"80\": 3.167, \"82\": 3.875, \"83\": 2.6}, \"total_4node_motifs\": 541, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.26, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-arithmetic-003-664bffa5 domain:arithmetic prompt:123 + 456 =",
+          "output": "{\"slug\": \"m4-arithmetic-003-664bffa5\", \"domain\": \"arithmetic\", \"n_nodes\": 384, \"n_edges\": 484, \"prompt\": \"123 + 456 =\"}",
+          "metadata_fold": "arithmetic",
+          "metadata_slug": "m4-arithmetic-003-664bffa5",
+          "metadata_n_nodes": 384,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 20, \"82\": 44, \"83\": 15}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 6.998, \"80\": 4.85, \"82\": 4.136, \"83\": 4.333}, \"total_4node_motifs\": 579, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.92, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-arithmetic-006-4ac65788 domain:arithmetic prompt:7 + 4 =",
+          "output": "{\"slug\": \"m4-arithmetic-006-4ac65788\", \"domain\": \"arithmetic\", \"n_nodes\": 267, \"n_edges\": 354, \"prompt\": \"7 + 4 =\"}",
+          "metadata_fold": "arithmetic",
+          "metadata_slug": "m4-arithmetic-006-4ac65788",
+          "metadata_n_nodes": 267,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 33, \"82\": 44, \"83\": 25}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 6.342, \"80\": 5.212, \"82\": 4.659, \"83\": 5.28}, \"total_4node_motifs\": 602, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.97, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-arithmetic-010-ee87993a domain:arithmetic prompt:6 + 3 =",
+          "output": "{\"slug\": \"m4-arithmetic-010-ee87993a\", \"domain\": \"arithmetic\", \"n_nodes\": 245, \"n_edges\": 311, \"prompt\": \"6 + 3 =\"}",
+          "metadata_fold": "arithmetic",
+          "metadata_slug": "m4-arithmetic-010-ee87993a",
+          "metadata_n_nodes": 245,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 18, \"82\": 33, \"83\": 12}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 6.836, \"80\": 5.056, \"82\": 4.121, \"83\": 5.417}, \"total_4node_motifs\": 563, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.09, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-code_completion-004-b0910530 domain:code_completion prompt:def is_even(n):\n    return",
+          "output": "{\"slug\": \"m4-code_completion-004-b0910530\", \"domain\": \"code_completion\", \"n_nodes\": 473, \"n_edges\": 556, \"prompt\": \"def is_even(n):\\n    return\"}",
+          "metadata_fold": "code_completion",
+          "metadata_slug": "m4-code_completion-004-b0910530",
+          "metadata_n_nodes": 473,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 59, \"82\": 67, \"83\": 40}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 13.764, \"80\": 6.0, \"82\": 6.075, \"83\": 6.55}, \"total_4node_motifs\": 666, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 2.63, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m5-code_completion-017-af105ef7 domain:code_completion prompt:def first(lst):\n    return",
+          "output": "{\"slug\": \"m5-code_completion-017-af105ef7\", \"domain\": \"code_completion\", \"n_nodes\": 396, \"n_edges\": 435, \"prompt\": \"def first(lst):\\n    return\"}",
+          "metadata_fold": "code_completion",
+          "metadata_slug": "m5-code_completion-017-af105ef7",
+          "metadata_n_nodes": 396,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 1, \"82\": 4, \"83\": 1}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.786, \"80\": 19.0, \"82\": 8.75, \"83\": 19.0}, \"total_4node_motifs\": 506, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.47, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m5-code_completion-021-717b2d36 domain:code_completion prompt:def reverse(s):\n    return",
+          "output": "{\"slug\": \"m5-code_completion-021-717b2d36\", \"domain\": \"code_completion\", \"n_nodes\": 438, \"n_edges\": 517, \"prompt\": \"def reverse(s):\\n    return\"}",
+          "metadata_fold": "code_completion",
+          "metadata_slug": "m5-code_completion-021-717b2d36",
+          "metadata_n_nodes": 438,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 12, \"82\": 17, \"83\": 8}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 11.778, \"80\": 7.167, \"82\": 5.882, \"83\": 6.5}, \"total_4node_motifs\": 537, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.08, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-country_capital-008-bf5934cd domain:country_capital prompt:The capital of Germany is",
+          "output": "{\"slug\": \"m4-country_capital-008-bf5934cd\", \"domain\": \"country_capital\", \"n_nodes\": 393, \"n_edges\": 516, \"prompt\": \"The capital of Germany is\"}",
+          "metadata_fold": "country_capital",
+          "metadata_slug": "m4-country_capital-008-bf5934cd",
+          "metadata_n_nodes": 393,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 52, \"82\": 146, \"83\": 36}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.718, \"80\": 6.75, \"82\": 6.548, \"83\": 7.556}, \"total_4node_motifs\": 734, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.42, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-country_capital-015-9fe98aa8 domain:country_capital prompt:The capital of Turkey is",
+          "output": "{\"slug\": \"m4-country_capital-015-9fe98aa8\", \"domain\": \"country_capital\", \"n_nodes\": 390, \"n_edges\": 503, \"prompt\": \"The capital of Turkey is\"}",
+          "metadata_fold": "country_capital",
+          "metadata_slug": "m4-country_capital-015-9fe98aa8",
+          "metadata_n_nodes": 390,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 77, \"82\": 102, \"83\": 50}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.762, \"80\": 8.221, \"82\": 6.892, \"83\": 7.86}, \"total_4node_motifs\": 729, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.59, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-country_capital-003-b6705b84 domain:country_capital prompt:The capital of Australia is",
+          "output": "{\"slug\": \"m4-country_capital-003-b6705b84\", \"domain\": \"country_capital\", \"n_nodes\": 325, \"n_edges\": 407, \"prompt\": \"The capital of Australia is\"}",
+          "metadata_fold": "country_capital",
+          "metadata_slug": "m4-country_capital-003-b6705b84",
+          "metadata_n_nodes": 325,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 37, \"82\": 102, \"83\": 18}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.694, \"80\": 6.703, \"82\": 6.029, \"83\": 7.056}, \"total_4node_motifs\": 657, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 5.06, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m5-multi_hop_reasoning-022-86c435fe domain:multi_hop_reasoning prompt:If the train is faster than the car and the car is faster than the bicycle, the train is",
+          "output": "{\"slug\": \"m5-multi_hop_reasoning-022-86c435fe\", \"domain\": \"multi_hop_reasoning\", \"n_nodes\": 451, \"n_edges\": 465, \"prompt\": \"If the train is faster than the car and the car is faster than the bicycle, the train is\"}",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_slug": "m5-multi_hop_reasoning-022-86c435fe",
+          "metadata_n_nodes": 451,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 354, \"80\": 2, \"82\": 2, \"83\": 0}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 0.0}, \"motif_mean_layer_spans\": {\"77\": 8.743, \"80\": 4.0, \"82\": 2.0, \"83\": 0.0}, \"total_4node_motifs\": 358, \"all_ffl_derivative\": false}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.74, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m5-multi_hop_reasoning-023-57f87bab domain:multi_hop_reasoning prompt:If Earth is bigger than Mars and Mars is bigger than Mercury, Earth is",
+          "output": "{\"slug\": \"m5-multi_hop_reasoning-023-57f87bab\", \"domain\": \"multi_hop_reasoning\", \"n_nodes\": 555, \"n_edges\": 578, \"prompt\": \"If Earth is bigger than Mars and Mars is bigger than Mercury, Earth is\"}",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_slug": "m5-multi_hop_reasoning-023-57f87bab",
+          "metadata_n_nodes": 555,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 2, \"82\": 4, \"83\": 0}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 0.0}, \"motif_mean_layer_spans\": {\"77\": 11.032, \"80\": 4.0, \"82\": 4.0, \"83\": 0.0}, \"total_4node_motifs\": 506, \"all_ffl_derivative\": false}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.7, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-multi_hop_reasoning-014-5d087931 domain:multi_hop_reasoning prompt:If the whale is larger than the shark and the shark is larger than the tuna, the whale is",
+          "output": "{\"slug\": \"m4-multi_hop_reasoning-014-5d087931\", \"domain\": \"multi_hop_reasoning\", \"n_nodes\": 476, \"n_edges\": 514, \"prompt\": \"If the whale is larger than the shark and the shark is larger than the tuna, the whale is\"}",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_slug": "m4-multi_hop_reasoning-014-5d087931",
+          "metadata_n_nodes": 476,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 5, \"82\": 9, \"83\": 1}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 13.116, \"80\": 4.2, \"82\": 2.778, \"83\": 5.0}, \"total_4node_motifs\": 515, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.36, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m5-rhyme-017-ddcb18b6 domain:rhyme prompt:The ram in the jam ate some",
+          "output": "{\"slug\": \"m5-rhyme-017-ddcb18b6\", \"domain\": \"rhyme\", \"n_nodes\": 423, \"n_edges\": 561, \"prompt\": \"The ram in the jam ate some\"}",
+          "metadata_fold": "rhyme",
+          "metadata_slug": "m5-rhyme-017-ddcb18b6",
+          "metadata_n_nodes": 423,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 48, \"82\": 86, \"83\": 28}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.108, \"80\": 6.729, \"82\": 4.756, \"83\": 5.571}, \"total_4node_motifs\": 662, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.89, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-rhyme-005-160e0f8a domain:rhyme prompt:The bear on the stair ate a",
+          "output": "{\"slug\": \"m4-rhyme-005-160e0f8a\", \"domain\": \"rhyme\", \"n_nodes\": 620, \"n_edges\": 886, \"prompt\": \"The bear on the stair ate a\"}",
+          "metadata_fold": "rhyme",
+          "metadata_slug": "m4-rhyme-005-160e0f8a",
+          "metadata_n_nodes": 620,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 119, \"82\": 197, \"83\": 93}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 9.288, \"80\": 6.261, \"82\": 5.102, \"83\": 5.57}, \"total_4node_motifs\": 909, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.2, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-rhyme-013-d2bb30c1 domain:rhyme prompt:The bat in the hat found a",
+          "output": "{\"slug\": \"m4-rhyme-013-d2bb30c1\", \"domain\": \"rhyme\", \"n_nodes\": 450, \"n_edges\": 545, \"prompt\": \"The bat in the hat found a\"}",
+          "metadata_fold": "rhyme",
+          "metadata_slug": "m4-rhyme-013-d2bb30c1",
+          "metadata_n_nodes": 450,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 31, \"82\": 112, \"83\": 6}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 9.876, \"80\": 8.065, \"82\": 4.062, \"83\": 3.333}, \"total_4node_motifs\": 649, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.65, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-sentiment-003-27b46ba4 domain:sentiment prompt:This movie was exciting. The sentiment is",
+          "output": "{\"slug\": \"m4-sentiment-003-27b46ba4\", \"domain\": \"sentiment\", \"n_nodes\": 658, \"n_edges\": 799, \"prompt\": \"This movie was exciting. The sentiment is\"}",
+          "metadata_fold": "sentiment",
+          "metadata_slug": "m4-sentiment-003-27b46ba4",
+          "metadata_n_nodes": 658,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 56, \"82\": 106, \"83\": 52}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 7.832, \"80\": 4.804, \"82\": 4.406, \"83\": 4.846}, \"total_4node_motifs\": 714, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.26, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-sentiment-007-4af4fa39 domain:sentiment prompt:This movie was thrilling. The sentiment is",
+          "output": "{\"slug\": \"m4-sentiment-007-4af4fa39\", \"domain\": \"sentiment\", \"n_nodes\": 666, \"n_edges\": 822, \"prompt\": \"This movie was thrilling. The sentiment is\"}",
+          "metadata_fold": "sentiment",
+          "metadata_slug": "m4-sentiment-007-4af4fa39",
+          "metadata_n_nodes": 666,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 61, \"82\": 109, \"83\": 56}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 8.226, \"80\": 4.984, \"82\": 4.339, \"83\": 5.054}, \"total_4node_motifs\": 726, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 2.43, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m5-sentiment-023-fc759cb1 domain:sentiment prompt:This movie was inspiring. The sentiment is",
+          "output": "{\"slug\": \"m5-sentiment-023-fc759cb1\", \"domain\": \"sentiment\", \"n_nodes\": 695, \"n_edges\": 818, \"prompt\": \"This movie was inspiring. The sentiment is\"}",
+          "metadata_fold": "sentiment",
+          "metadata_slug": "m5-sentiment-023-fc759cb1",
+          "metadata_n_nodes": 695,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 32, \"82\": 65, \"83\": 23}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 7.364, \"80\": 3.875, \"82\": 3.662, \"83\": 3.826}, \"total_4node_motifs\": 620, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.67, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-translation-008-4dddb940 domain:translation prompt:The French word for car is",
+          "output": "{\"slug\": \"m4-translation-008-4dddb940\", \"domain\": \"translation\", \"n_nodes\": 426, \"n_edges\": 558, \"prompt\": \"The French word for car is\"}",
+          "metadata_fold": "translation",
+          "metadata_slug": "m4-translation-008-4dddb940",
+          "metadata_n_nodes": 426,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 54, \"82\": 96, \"83\": 35}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 8.728, \"80\": 5.056, \"82\": 4.115, \"83\": 5.0}, \"total_4node_motifs\": 685, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.59, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-translation-010-96d41b9a domain:translation prompt:The French word for fish is",
+          "output": "{\"slug\": \"m4-translation-010-96d41b9a\", \"domain\": \"translation\", \"n_nodes\": 423, \"n_edges\": 514, \"prompt\": \"The French word for fish is\"}",
+          "metadata_fold": "translation",
+          "metadata_slug": "m4-translation-010-96d41b9a",
+          "metadata_n_nodes": 423,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 49, \"82\": 155, \"83\": 5}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 11.794, \"80\": 8.449, \"82\": 3.974, \"83\": 5.4}, \"total_4node_motifs\": 709, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.46, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-translation-003-e0e4b911 domain:translation prompt:The French word for book is",
+          "output": "{\"slug\": \"m4-translation-003-e0e4b911\", \"domain\": \"translation\", \"n_nodes\": 443, \"n_edges\": 554, \"prompt\": \"The French word for book is\"}",
+          "metadata_fold": "translation",
+          "metadata_slug": "m4-translation-003-e0e4b911",
+          "metadata_n_nodes": 443,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 21, \"82\": 80, \"83\": 3}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 8.806, \"80\": 4.571, \"82\": 3.337, \"83\": 3.333}, \"total_4node_motifs\": 604, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.99, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "motif_type_77_summary across 179 graphs",
+          "output": "{\"motif_id\": 77, \"phase_a_instances\": {\"total_instances\": 88140, \"per_domain_counts\": {\"antonym\": 12921, \"arithmetic\": 13000, \"code_completion\": 11556, \"country_capital\": 13000, \"multi_hop_reasoning\": 11163, \"rhyme\": 12000, \"sentiment\": 1500, \"translation\": 13000}}, \"phase_b_embedding\": {\"n_instances\": 88140, \"ffl_containment_frac\": 1.0, \"mean_ffl_count_per_instance\": 1.0484, \"sub_motif_composition\": {\"disconnected\": 0.241, \"030T\": 0.2621, \"021D\": 0.4936, \"021C\": 0.0016, \"021U\": 0.0018}, \"independence_verdict\": \"FFL-derivative\"}, \"phase_c_layer_ordering\": {\"n_instances\": 88140, \"strict_order_frac\": 1.0, \"mean_layer_span\": 9.999, \"std_layer_span\": 6.706, \"random_baseline_mean_span\": 3.858, \"random_baseline_std_span\": 5.282, \"random_baseline_strict_frac\": 1.0, \"mann_whitney_U\": 2577372442.5, \"mann_whitney_p\": 0.0, \"position_layer_distributions\": {\"0\": {\"1\": 378, \"2\": 951, \"3\": 2600, \"4\": 2121, \"5\": 1753, \"6\": 635, \"7\": 6332, \"8\": 5951, \"9\": 17921, \"10\": 1002, \"11\": 4390, \"12\": 14, \"13\": 1807, \"14\": 498, \"15\": 1730, \"16\": 1619, \"17\": 3117, \"18\": 7160, \"19\": 4519, \"20\": 3933, \"21\": 3871, \"22\": 2626, \"23\": 2586, \"24\": 3967, \"25\": 6557, \"27\": 102}, \"1\": {\"0\": 3513, \"1\": 3075, \"2\": 279, \"3\": 2022, \"4\": 8622, \"5\": 7305, \"6\": 2071, \"7\": 17044, \"8\": 3159, \"9\": 1267, \"10\": 711, \"11\": 359, \"12\": 442, \"13\": 192, \"14\": 2634, \"15\": 5007, \"16\": 4641, \"17\": 4946, \"18\": 5731, \"19\": 3510, \"20\": 2628, \"21\": 2468, \"22\": 870, \"23\": 1901, \"24\": 3682, \"25\": 61}, \"2\": {\"0\": 21569, \"1\": 9485, \"2\": 5188, \"3\": 4457, \"4\": 7852, \"5\": 3362, \"6\": 2814, \"7\": 4440, \"8\": 2211, \"9\": 4213, \"10\": 871, \"11\": 1193, \"12\": 464, \"13\": 627, \"14\": 817, \"15\": 1722, \"16\": 1522, \"17\": 1486, \"18\": 2284, \"19\": 1741, \"20\": 1394, \"21\": 1165, \"22\": 1668, \"23\": 1484, \"24\": 2259, \"25\": 1442, \"27\": 410}, \"3\": {\"-1\": 83904, \"0\": 4, \"1\": 5, \"3\": 31, \"4\": 90, \"5\": 188, \"6\": 51, \"7\": 375, \"8\": 9, \"9\": 235, \"10\": 693, \"13\": 2, \"14\": 136, \"15\": 98, \"16\": 91, \"17\": 189, \"18\": 175, \"19\": 387, \"20\": 37, \"21\": 308, \"22\": 1113, \"23\": 19}}, \"comparison_to_ffl\": \"same\"}, \"phase_d_semantic_roles\": {\"n_sampled\": 96, \"explanation_match_rate\": 0.7188, \"per_position_role_distribution\": {\"0\": {\"input_encoding\": 0.2917, \"intermediate_concept\": 0.1146, \"no_explanation\": 0.375, \"other\": 0.2188, \"output_generation\": 0.0, \"syntactic\": 0.0}, \"1\": {\"input_encoding\": 0.1979, \"intermediate_concept\": 0.0625, \"no_explanation\": 0.3646, \"other\": 0.3542, \"output_generation\": 0.0104, \"syntactic\": 0.0104}, \"2\": {\"input_encoding\": 0.2396, \"intermediate_concept\": 0.1146, \"no_explanation\": 0.3854, \"other\": 0.2188, \"output_generation\": 0.0208, \"syntactic\": 0.0208}, \"3\": {\"input_encoding\": 0.9688, \"intermediate_concept\": 0.0208, \"no_explanation\": 0.0, \"other\": 0.0, \"output_generation\": 0.0, \"syntactic\": 0.0104}}, \"chi_squared_per_position\": {\"0\": {\"chi2\": 69.125, \"p\": 0.0}, \"1\": {\"chi2\": 77.75, \"p\": 0.0}, \"2\": {\"chi2\": 58.25, \"p\": 0.0}, \"3\": {\"chi2\": 444.875, \"p\": 0.0}}, \"overall_chi2\": 170.9291, \"overall_p\": 0.0, \"overall_cramers_v\": 0.3852, \"categories_used\": [\"input_encoding\", \"intermediate_concept\", \"no_explanation\", \"other\", \"output_generation\", \"syntactic\"]}, \"phase_e_cross_domain\": {\"per_domain\": {\"antonym\": {\"instance_count\": 12921, \"normalized_count\": 44.8406, \"mean_layer_span\": 10.681, \"std_layer_span\": 6.889}, \"arithmetic\": {\"instance_count\": 13000, \"normalized_count\": 43.9303, \"mean_layer_span\": 6.702, \"std_layer_span\": 4.14}, \"code_completion\": {\"instance_count\": 11556, \"normalized_count\": 25.7253, \"mean_layer_span\": 12.483, \"std_layer_span\": 7.403}, \"country_capital\": {\"instance_count\": 13000, \"normalized_count\": 34.388, \"mean_layer_span\": 10.089, \"std_layer_span\": 6.834}, \"multi_hop_reasoning\": {\"instance_count\": 11163, \"normalized_count\": 22.9495, \"mean_layer_span\": 11.049, \"std_layer_span\": 6.784}, \"rhyme\": {\"instance_count\": 12000, \"normalized_count\": 23.1567, \"mean_layer_span\": 9.653, \"std_layer_span\": 6.164}, \"sentiment\": {\"instance_count\": 1500, \"normalized_count\": 2.2288, \"mean_layer_span\": 7.807, \"std_layer_span\": 4.612}, \"translation\": {\"instance_count\": 13000, \"normalized_count\": 30.4862, \"mean_layer_span\": 9.993, \"std_layer_span\": 7.051}}, \"semantic_cramers_v\": 0.2426, \"kruskal_h\": 4238.4155, \"kruskal_p\": 0.0, \"comparison_to_ffl_v\": \"stronger\", \"n_domains\": 8}}",
+          "metadata_fold": "summary",
+          "predict_motif_characterization": "{\"verdict\": \"FFL-derivative\", \"ffl_containment\": 1.0, \"strict_order_frac\": 1.0, \"mean_layer_span\": 9.999, \"semantic_cramers_v\": 0.3852}",
+          "predict_random_baseline": "{\"verdict\": \"no_motif_structure\", \"ffl_containment\": 0.0, \"strict_order_frac\": 1.0, \"mean_layer_span\": 3.858, \"semantic_cramers_v\": 0.0}"
+        },
+        {
+          "input": "motif_type_80_summary across 179 graphs",
+          "output": "{\"motif_id\": 80, \"phase_a_instances\": {\"total_instances\": 6706, \"per_domain_counts\": {\"antonym\": 433, \"arithmetic\": 983, \"code_completion\": 587, \"country_capital\": 1402, \"multi_hop_reasoning\": 118, \"rhyme\": 1781, \"sentiment\": 149, \"translation\": 1253}}, \"phase_b_embedding\": {\"n_instances\": 6706, \"ffl_containment_frac\": 1.0, \"mean_ffl_count_per_instance\": 3.0865, \"sub_motif_composition\": {\"021C\": 0.1142, \"030T\": 0.7716, \"021D\": 0.1142}, \"independence_verdict\": \"FFL-derivative\"}, \"phase_c_layer_ordering\": {\"n_instances\": 6706, \"strict_order_frac\": 1.0, \"mean_layer_span\": 6.432, \"std_layer_span\": 4.177, \"random_baseline_mean_span\": 3.858, \"random_baseline_std_span\": 5.282, \"random_baseline_strict_frac\": 1.0, \"mann_whitney_U\": 184250243.5, \"mann_whitney_p\": 0.0, \"position_layer_distributions\": {\"0\": {\"1\": 17, \"3\": 6, \"4\": 251, \"5\": 187, \"6\": 56, \"7\": 1103, \"8\": 919, \"9\": 541, \"10\": 115, \"11\": 107, \"12\": 11, \"13\": 100, \"14\": 177, \"15\": 503, \"16\": 149, \"17\": 295, \"18\": 581, \"19\": 416, \"20\": 371, \"21\": 303, \"22\": 133, \"23\": 179, \"24\": 185, \"25\": 1}, \"1\": {\"2\": 8, \"3\": 1, \"4\": 12, \"5\": 40, \"6\": 41, \"7\": 146, \"8\": 198, \"9\": 1487, \"10\": 254, \"11\": 671, \"12\": 2, \"13\": 251, \"14\": 13, \"15\": 262, \"16\": 240, \"17\": 241, \"18\": 252, \"19\": 352, \"20\": 413, \"21\": 372, \"22\": 332, \"23\": 244, \"24\": 334, \"25\": 535, \"27\": 5}, \"2\": {\"0\": 116, \"1\": 85, \"2\": 8, \"3\": 332, \"4\": 1006, \"5\": 1017, \"6\": 308, \"7\": 765, \"8\": 318, \"9\": 187, \"10\": 71, \"11\": 9, \"12\": 118, \"13\": 51, \"14\": 454, \"15\": 356, \"16\": 226, \"17\": 278, \"18\": 414, \"19\": 229, \"20\": 119, \"21\": 138, \"22\": 47, \"23\": 54}, \"3\": {\"-1\": 5112, \"0\": 7, \"1\": 8, \"2\": 1, \"3\": 64, \"4\": 201, \"5\": 158, \"6\": 223, \"7\": 208, \"8\": 12, \"9\": 57, \"10\": 190, \"14\": 62, \"15\": 48, \"16\": 25, \"17\": 113, \"18\": 102, \"19\": 60, \"20\": 13, \"21\": 35, \"22\": 7}}, \"comparison_to_ffl\": \"same\"}, \"phase_d_semantic_roles\": {\"n_sampled\": 96, \"explanation_match_rate\": 0.6667, \"per_position_role_distribution\": {\"0\": {\"input_encoding\": 0.1667, \"intermediate_concept\": 0.0729, \"no_explanation\": 0.4167, \"other\": 0.3333, \"syntactic\": 0.0104}, \"1\": {\"input_encoding\": 0.25, \"intermediate_concept\": 0.0729, \"no_explanation\": 0.4167, \"other\": 0.25, \"syntactic\": 0.0104}, \"2\": {\"input_encoding\": 0.0938, \"intermediate_concept\": 0.0625, \"no_explanation\": 0.4062, \"other\": 0.4375, \"syntactic\": 0.0}, \"3\": {\"input_encoding\": 0.8021, \"intermediate_concept\": 0.0, \"no_explanation\": 0.0938, \"other\": 0.0521, \"syntactic\": 0.0521}}, \"chi_squared_per_position\": {\"0\": {\"chi2\": 56.6042, \"p\": 0.0}, \"1\": {\"chi2\": 49.9375, \"p\": 0.0}, \"2\": {\"chi2\": 81.1875, \"p\": 0.0}, \"3\": {\"chi2\": 219.625, \"p\": 0.0}}, \"overall_chi2\": 157.1091, \"overall_p\": 0.0, \"overall_cramers_v\": 0.3693, \"categories_used\": [\"input_encoding\", \"intermediate_concept\", \"no_explanation\", \"other\", \"syntactic\"]}, \"phase_e_cross_domain\": {\"per_domain\": {\"antonym\": {\"instance_count\": 433, \"normalized_count\": 1.5027, \"mean_layer_span\": 4.61, \"std_layer_span\": 2.867}, \"arithmetic\": {\"instance_count\": 983, \"normalized_count\": 3.3218, \"mean_layer_span\": 4.943, \"std_layer_span\": 1.951}, \"code_completion\": {\"instance_count\": 587, \"normalized_count\": 1.3067, \"mean_layer_span\": 5.882, \"std_layer_span\": 3.437}, \"country_capital\": {\"instance_count\": 1402, \"normalized_count\": 3.7086, \"mean_layer_span\": 7.445, \"std_layer_span\": 4.506}, \"multi_hop_reasoning\": {\"instance_count\": 118, \"normalized_count\": 0.2426, \"mean_layer_span\": 6.102, \"std_layer_span\": 4.452}, \"rhyme\": {\"instance_count\": 1781, \"normalized_count\": 3.4368, \"mean_layer_span\": 6.656, \"std_layer_span\": 4.157}, \"sentiment\": {\"instance_count\": 149, \"normalized_count\": 0.2214, \"mean_layer_span\": 4.678, \"std_layer_span\": 2.09}, \"translation\": {\"instance_count\": 1253, \"normalized_count\": 2.9384, \"mean_layer_span\": 7.277, \"std_layer_span\": 5.197}}, \"semantic_cramers_v\": 0.2708, \"kruskal_h\": 352.3876, \"kruskal_p\": 0.0, \"comparison_to_ffl_v\": \"stronger\", \"n_domains\": 8}}",
+          "metadata_fold": "summary",
+          "predict_motif_characterization": "{\"verdict\": \"FFL-derivative\", \"ffl_containment\": 1.0, \"strict_order_frac\": 1.0, \"mean_layer_span\": 6.432, \"semantic_cramers_v\": 0.3693}",
+          "predict_random_baseline": "{\"verdict\": \"no_motif_structure\", \"ffl_containment\": 0.0, \"strict_order_frac\": 1.0, \"mean_layer_span\": 3.858, \"semantic_cramers_v\": 0.0}"
+        },
+        {
+          "input": "motif_type_82_summary across 179 graphs",
+          "output": "{\"motif_id\": 82, \"phase_a_instances\": {\"total_instances\": 12498, \"per_domain_counts\": {\"antonym\": 690, \"arithmetic\": 1242, \"code_completion\": 884, \"country_capital\": 2484, \"multi_hop_reasoning\": 198, \"rhyme\": 3659, \"sentiment\": 280, \"translation\": 3061}}, \"phase_b_embedding\": {\"n_instances\": 12498, \"ffl_containment_frac\": 1.0, \"mean_ffl_count_per_instance\": 2.583, \"sub_motif_composition\": {\"021D\": 0.3543, \"030T\": 0.6457}, \"independence_verdict\": \"FFL-derivative\"}, \"phase_c_layer_ordering\": {\"n_instances\": 12498, \"strict_order_frac\": 1.0, \"mean_layer_span\": 5.227, \"std_layer_span\": 3.561, \"random_baseline_mean_span\": 3.858, \"random_baseline_std_span\": 5.282, \"random_baseline_strict_frac\": 1.0, \"mann_whitney_U\": 315228694.5, \"mann_whitney_p\": 0.0, \"position_layer_distributions\": {\"0\": {\"1\": 49, \"2\": 102, \"3\": 67, \"4\": 147, \"5\": 418, \"6\": 171, \"7\": 684, \"8\": 919, \"9\": 2244, \"10\": 145, \"11\": 603, \"12\": 4, \"13\": 99, \"14\": 224, \"15\": 208, \"16\": 532, \"17\": 670, \"18\": 1035, \"19\": 839, \"20\": 646, \"21\": 573, \"22\": 461, \"23\": 538, \"24\": 544, \"25\": 576}, \"1\": {\"1\": 4, \"2\": 14, \"3\": 29, \"4\": 128, \"5\": 48, \"6\": 28, \"7\": 316, \"8\": 269, \"9\": 2637, \"10\": 106, \"11\": 766, \"12\": 2, \"13\": 391, \"14\": 36, \"15\": 908, \"16\": 56, \"17\": 324, \"18\": 655, \"19\": 791, \"20\": 682, \"21\": 634, \"22\": 492, \"23\": 632, \"24\": 923, \"25\": 1625, \"27\": 2}, \"2\": {\"0\": 184, \"1\": 176, \"2\": 6, \"3\": 223, \"4\": 1353, \"5\": 649, \"6\": 194, \"7\": 2446, \"8\": 272, \"9\": 164, \"10\": 567, \"12\": 132, \"13\": 55, \"14\": 788, \"15\": 1302, \"16\": 213, \"17\": 530, \"18\": 985, \"19\": 509, \"20\": 337, \"21\": 351, \"22\": 350, \"23\": 201, \"24\": 511}, \"3\": {\"-1\": 8903, \"0\": 6, \"1\": 8, \"2\": 2, \"3\": 81, \"4\": 235, \"5\": 639, \"6\": 210, \"7\": 173, \"8\": 15, \"9\": 563, \"10\": 205, \"13\": 6, \"14\": 168, \"15\": 74, \"16\": 22, \"17\": 124, \"18\": 191, \"19\": 116, \"20\": 21, \"21\": 323, \"22\": 390, \"23\": 23}}, \"comparison_to_ffl\": \"same\"}, \"phase_d_semantic_roles\": {\"n_sampled\": 96, \"explanation_match_rate\": 0.6927, \"per_position_role_distribution\": {\"0\": {\"input_encoding\": 0.1979, \"intermediate_concept\": 0.0938, \"no_explanation\": 0.4062, \"other\": 0.3021, \"syntactic\": 0.0}, \"1\": {\"input_encoding\": 0.1979, \"intermediate_concept\": 0.1042, \"no_explanation\": 0.3854, \"other\": 0.3125, \"syntactic\": 0.0}, \"2\": {\"input_encoding\": 0.125, \"intermediate_concept\": 0.0521, \"no_explanation\": 0.375, \"other\": 0.4271, \"syntactic\": 0.0208}, \"3\": {\"input_encoding\": 0.7708, \"intermediate_concept\": 0.0104, \"no_explanation\": 0.0625, \"other\": 0.1354, \"syntactic\": 0.0208}}, \"chi_squared_per_position\": {\"0\": {\"chi2\": 50.0417, \"p\": 0.0}, \"1\": {\"chi2\": 46.1875, \"p\": 0.0}, \"2\": {\"chi2\": 68.0625, \"p\": 0.0}, \"3\": {\"chi2\": 200.1458, \"p\": 0.0}}, \"overall_chi2\": 131.9343, \"overall_p\": 0.0, \"overall_cramers_v\": 0.3384, \"categories_used\": [\"input_encoding\", \"intermediate_concept\", \"no_explanation\", \"other\", \"syntactic\"]}, \"phase_e_cross_domain\": {\"per_domain\": {\"antonym\": {\"instance_count\": 690, \"normalized_count\": 2.3946, \"mean_layer_span\": 3.89, \"std_layer_span\": 2.143}, \"arithmetic\": {\"instance_count\": 1242, \"normalized_count\": 4.197, \"mean_layer_span\": 4.471, \"std_layer_span\": 2.069}, \"code_completion\": {\"instance_count\": 884, \"normalized_count\": 1.9679, \"mean_layer_span\": 5.227, \"std_layer_span\": 2.454}, \"country_capital\": {\"instance_count\": 2484, \"normalized_count\": 6.5708, \"mean_layer_span\": 6.0, \"std_layer_span\": 3.847}, \"multi_hop_reasoning\": {\"instance_count\": 198, \"normalized_count\": 0.4071, \"mean_layer_span\": 3.929, \"std_layer_span\": 3.602}, \"rhyme\": {\"instance_count\": 3659, \"normalized_count\": 7.0609, \"mean_layer_span\": 5.167, \"std_layer_span\": 3.213}, \"sentiment\": {\"instance_count\": 280, \"normalized_count\": 0.416, \"mean_layer_span\": 4.207, \"std_layer_span\": 1.966}, \"translation\": {\"instance_count\": 3061, \"normalized_count\": 7.1783, \"mean_layer_span\": 5.455, \"std_layer_span\": 4.512}}, \"semantic_cramers_v\": 0.2477, \"kruskal_h\": 452.1933, \"kruskal_p\": 0.0, \"comparison_to_ffl_v\": \"stronger\", \"n_domains\": 8}}",
+          "metadata_fold": "summary",
+          "predict_motif_characterization": "{\"verdict\": \"FFL-derivative\", \"ffl_containment\": 1.0, \"strict_order_frac\": 1.0, \"mean_layer_span\": 5.227, \"semantic_cramers_v\": 0.3384}",
+          "predict_random_baseline": "{\"verdict\": \"no_motif_structure\", \"ffl_containment\": 0.0, \"strict_order_frac\": 1.0, \"mean_layer_span\": 3.858, \"semantic_cramers_v\": 0.0}"
+        },
+        {
+          "input": "motif_type_83_summary across 179 graphs",
+          "output": "{\"motif_id\": 83, \"phase_a_instances\": {\"total_instances\": 3643, \"per_domain_counts\": {\"antonym\": 134, \"arithmetic\": 737, \"code_completion\": 346, \"country_capital\": 740, \"multi_hop_reasoning\": 16, \"rhyme\": 1113, \"sentiment\": 131, \"translation\": 426}}, \"phase_b_embedding\": {\"n_instances\": 3643, \"ffl_containment_frac\": 1.0, \"mean_ffl_count_per_instance\": 4.0, \"sub_motif_composition\": {\"030T\": 1.0}, \"independence_verdict\": \"FFL-derivative\"}, \"phase_c_layer_ordering\": {\"n_instances\": 3643, \"strict_order_frac\": 1.0, \"mean_layer_span\": 5.747, \"std_layer_span\": 3.157, \"random_baseline_mean_span\": 3.858, \"random_baseline_std_span\": 5.282, \"random_baseline_strict_frac\": 1.0, \"mann_whitney_U\": 98483246.5, \"mann_whitney_p\": 0.0, \"position_layer_distributions\": {\"0\": {\"4\": 3, \"5\": 40, \"7\": 41, \"8\": 196, \"9\": 876, \"10\": 70, \"11\": 643, \"13\": 237, \"14\": 4, \"15\": 234, \"16\": 16, \"17\": 106, \"18\": 92, \"19\": 132, \"20\": 140, \"21\": 138, \"22\": 105, \"23\": 84, \"24\": 177, \"25\": 309}, \"1\": {\"3\": 4, \"4\": 119, \"5\": 161, \"6\": 52, \"7\": 482, \"8\": 773, \"9\": 467, \"10\": 115, \"11\": 95, \"12\": 2, \"13\": 81, \"14\": 57, \"15\": 64, \"16\": 92, \"17\": 114, \"18\": 164, \"19\": 189, \"20\": 156, \"21\": 109, \"22\": 61, \"23\": 146, \"24\": 140}, \"2\": {\"0\": 16, \"1\": 58, \"2\": 4, \"3\": 185, \"4\": 631, \"5\": 373, \"6\": 156, \"7\": 680, \"8\": 241, \"9\": 77, \"10\": 61, \"12\": 2, \"13\": 46, \"14\": 170, \"15\": 172, \"16\": 53, \"17\": 126, \"18\": 240, \"19\": 131, \"20\": 39, \"21\": 105, \"22\": 40, \"23\": 37}, \"3\": {\"-1\": 2544, \"0\": 4, \"1\": 8, \"2\": 1, \"3\": 64, \"4\": 177, \"5\": 156, \"6\": 197, \"7\": 90, \"8\": 11, \"9\": 56, \"10\": 48, \"14\": 46, \"15\": 19, \"16\": 10, \"17\": 72, \"18\": 71, \"19\": 28, \"20\": 10, \"21\": 27, \"22\": 4}}, \"comparison_to_ffl\": \"same\"}, \"phase_d_semantic_roles\": {\"n_sampled\": 96, \"explanation_match_rate\": 0.7214, \"per_position_role_distribution\": {\"0\": {\"input_encoding\": 0.2708, \"intermediate_concept\": 0.1458, \"no_explanation\": 0.3542, \"other\": 0.2292, \"syntactic\": 0.0}, \"1\": {\"input_encoding\": 0.2812, \"intermediate_concept\": 0.0312, \"no_explanation\": 0.3646, \"other\": 0.3229, \"syntactic\": 0.0}, \"2\": {\"input_encoding\": 0.1771, \"intermediate_concept\": 0.0521, \"no_explanation\": 0.3438, \"other\": 0.4271, \"syntactic\": 0.0}, \"3\": {\"input_encoding\": 0.8438, \"intermediate_concept\": 0.0104, \"no_explanation\": 0.0521, \"other\": 0.0833, \"syntactic\": 0.0104}}, \"chi_squared_per_position\": {\"0\": {\"chi2\": 34.8333, \"p\": 1e-06}, \"1\": {\"chi2\": 56.2917, \"p\": 0.0}, \"2\": {\"chi2\": 64.625, \"p\": 0.0}, \"3\": {\"chi2\": 250.4583, \"p\": 0.0}}, \"overall_chi2\": 134.6017, \"overall_p\": 0.0, \"overall_cramers_v\": 0.3418, \"categories_used\": [\"input_encoding\", \"intermediate_concept\", \"no_explanation\", \"other\", \"syntactic\"]}, \"phase_e_cross_domain\": {\"per_domain\": {\"antonym\": {\"instance_count\": 134, \"normalized_count\": 0.465, \"mean_layer_span\": 3.672, \"std_layer_span\": 1.606}, \"arithmetic\": {\"instance_count\": 737, \"normalized_count\": 2.4905, \"mean_layer_span\": 4.981, \"std_layer_span\": 2.028}, \"code_completion\": {\"instance_count\": 346, \"normalized_count\": 0.7702, \"mean_layer_span\": 5.633, \"std_layer_span\": 2.291}, \"country_capital\": {\"instance_count\": 740, \"normalized_count\": 1.9575, \"mean_layer_span\": 6.976, \"std_layer_span\": 3.839}, \"multi_hop_reasoning\": {\"instance_count\": 16, \"normalized_count\": 0.0329, \"mean_layer_span\": 4.75, \"std_layer_span\": 3.544}, \"rhyme\": {\"instance_count\": 1113, \"normalized_count\": 2.1478, \"mean_layer_span\": 5.723, \"std_layer_span\": 2.795}, \"sentiment\": {\"instance_count\": 131, \"normalized_count\": 0.1947, \"mean_layer_span\": 4.756, \"std_layer_span\": 2.197}, \"translation\": {\"instance_count\": 426, \"normalized_count\": 0.999, \"mean_layer_span\": 6.085, \"std_layer_span\": 4.429}}, \"semantic_cramers_v\": 0.3153, \"kruskal_h\": 236.8128, \"kruskal_p\": 0.0, \"comparison_to_ffl_v\": \"stronger\", \"n_domains\": 8}}",
+          "metadata_fold": "summary",
+          "predict_motif_characterization": "{\"verdict\": \"FFL-derivative\", \"ffl_containment\": 1.0, \"strict_order_frac\": 1.0, \"mean_layer_span\": 5.747, \"semantic_cramers_v\": 0.3418}",
+          "predict_random_baseline": "{\"verdict\": \"no_motif_structure\", \"ffl_containment\": 0.0, \"strict_order_frac\": 1.0, \"mean_layer_span\": 3.858, \"semantic_cramers_v\": 0.0}"
+        },
+        {
+          "input": "taxonomy_summary: motif family classification and functional interpretations",
+          "output": "{\"sub_motif_similarity_matrix\": {\"77-80\": 0.5394, \"77-82\": 0.7677, \"77-83\": 0.4306, \"80-82\": 0.9278, \"80-83\": 0.9788, \"82-83\": 0.8767}, \"ffl_embeddedness_ranking\": [{\"motif_id\": 77, \"ffl_frac\": 1.0}, {\"motif_id\": 80, \"ffl_frac\": 1.0}, {\"motif_id\": 82, \"ffl_frac\": 1.0}, {\"motif_id\": 83, \"ffl_frac\": 1.0}], \"edge_weight_profiles\": {\"77\": {\"3->2\": {\"mean_abs\": 16.3977, \"mean_signed\": 7.7037, \"frac_positive\": 0.7892, \"std\": 16.6973, \"n_samples\": 88140}, \"3->1\": {\"mean_abs\": 25.7928, \"mean_signed\": 14.4324, \"frac_positive\": 0.7472, \"std\": 25.5401, \"n_samples\": 88140}, \"3->0\": {\"mean_abs\": 24.0704, \"mean_signed\": 5.3985, \"frac_positive\": 0.7101, \"std\": 27.0273, \"n_samples\": 88140}, \"1->0\": {\"mean_abs\": 13.7244, \"mean_signed\": 4.3745, \"frac_positive\": 0.6583, \"std\": 14.0533, \"n_samples\": 88140}}, \"80\": {\"3->2\": {\"mean_abs\": 22.5997, \"mean_signed\": 12.7931, \"frac_positive\": 0.7205, \"std\": 22.2344, \"n_samples\": 6706}, \"3->1\": {\"mean_abs\": 20.8137, \"mean_signed\": 4.0344, \"frac_positive\": 0.7061, \"std\": 24.1691, \"n_samples\": 6706}, \"0->1\": {\"mean_abs\": 14.5961, \"mean_signed\": 3.5438, \"frac_positive\": 0.6004, \"std\": 15.4322, \"n_samples\": 6706}, \"3->0\": {\"mean_abs\": 26.1186, \"mean_signed\": 10.8862, \"frac_positive\": 0.7079, \"std\": 28.641, \"n_samples\": 6706}, \"2->0\": {\"mean_abs\": 13.9341, \"mean_signed\": 4.3133, \"frac_positive\": 0.6399, \"std\": 14.4248, \"n_samples\": 6706}}, \"82\": {\"3->2\": {\"mean_abs\": 26.6213, \"mean_signed\": 20.5715, \"frac_positive\": 0.8373, \"std\": 23.2771, \"n_samples\": 12498}, \"3->1\": {\"mean_abs\": 21.1358, \"mean_signed\": 10.0794, \"frac_positive\": 0.8171, \"std\": 22.6701, \"n_samples\": 12498}, \"2->1\": {\"mean_abs\": 13.7435, \"mean_signed\": 7.413, \"frac_positive\": 0.7829, \"std\": 12.8243, \"n_samples\": 12498}, \"3->0\": {\"mean_abs\": 19.4599, \"mean_signed\": 10.3278, \"frac_positive\": 0.8257, \"std\": 20.3617, \"n_samples\": 12498}, \"2->0\": {\"mean_abs\": 14.1339, \"mean_signed\": 7.9494, \"frac_positive\": 0.777, \"std\": 13.1937, \"n_samples\": 12498}}, \"83\": {\"3->2\": {\"mean_abs\": 21.8474, \"mean_signed\": 6.552, \"frac_positive\": 0.5732, \"std\": 24.4094, \"n_samples\": 3643}, \"3->1\": {\"mean_abs\": 22.2689, \"mean_signed\": -0.6805, \"frac_positive\": 0.5539, \"std\": 25.6319, \"n_samples\": 3643}, \"2->1\": {\"mean_abs\": 14.6955, \"mean_signed\": 0.1162, \"frac_positive\": 0.4842, \"std\": 16.0564, \"n_samples\": 3643}, \"3->0\": {\"mean_abs\": 23.9151, \"mean_signed\": -3.0398, \"frac_positive\": 0.5537, \"std\": 27.6536, \"n_samples\": 3643}, \"2->0\": {\"mean_abs\": 14.3994, \"mean_signed\": -1.3715, \"frac_positive\": 0.4845, \"std\": 15.475, \"n_samples\": 3643}, \"1->0\": {\"mean_abs\": 14.607, \"mean_signed\": -2.5049, \"frac_positive\": 0.4019, \"std\": 15.4855, \"n_samples\": 3643}}}, \"candidate_functions\": {\"77\": \"Type 77 (4 edges): structured information relay with FFL-derivative FFL relationship (containment=100%)\", \"80\": \"Type 80 (5 edges): verified parallel computation with FFL-derivative FFL relationship (containment=100%)\", \"82\": \"Type 82 (5 edges): verified parallel computation with FFL-derivative FFL relationship (containment=100%)\", \"83\": \"Type 83 (6 edges, near-complete DAG): exhaustive information cascade with FFL-derivative FFL relationship (containment=100%)\"}, \"overall_verdict\": \"FFL-derivative family\", \"mean_ffl_containment\": 1.0}",
+          "metadata_fold": "summary",
+          "predict_motif_characterization": "{\"overall_verdict\": \"FFL-derivative family\", \"mean_ffl_containment\": 1.0}",
+          "predict_random_baseline": "{\"overall_verdict\": \"no_structure\", \"mean_ffl_containment\": 0.0}"
+        }
+      ]
+    }
+  ]
+}

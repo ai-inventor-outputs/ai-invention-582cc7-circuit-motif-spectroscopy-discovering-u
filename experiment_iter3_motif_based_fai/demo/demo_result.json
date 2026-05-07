@@ -1,0 +1,13 @@
+{
+  "id": "exp_id2_it3__opus",
+  "type": "code",
+  "title": "Motif-Based Failure/Ambiguity Prediction: Classifying Attribution Graphs by Correctness Status via 3-Node Motif Features",
+  "summary": "Demo notebook that classifies Neuronpedia attribution graphs as verified-correct vs ambiguous using 3-node motif spectrum features. Loads 100 pre-computed graphs (76 true, 24 unknown across 8 domains) from GitHub, builds a 18-feature matrix (motif ratios, z-scores, graph stats, within-domain deviations), and trains Logistic Regression and Random Forest classifiers with repeated stratified cross-validation. Includes ablation study, per-domain analysis, permutation significance testing (p<0.001), bootstrap confidence intervals, and a multi-panel visualization. Best model (RF_all) achieves AUC ~0.84.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id2_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id2_it3__opus/method_code_demo.ipynb"
+}

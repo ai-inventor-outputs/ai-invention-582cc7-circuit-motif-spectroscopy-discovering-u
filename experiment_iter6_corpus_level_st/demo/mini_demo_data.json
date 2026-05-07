@@ -1,0 +1,281 @@
+{
+  "description": "Corpus-level statistical significance for 3-node motif Z-scores across LLM attribution graphs.",
+  "motif_labels": {
+    "2": "021U",
+    "4": "021C",
+    "6": "021D",
+    "7": "030T"
+  },
+  "domains": [
+    "antonym",
+    "arithmetic",
+    "code_completion",
+    "country_capital",
+    "multi_hop_reasoning",
+    "rhyme",
+    "sentiment",
+    "translation"
+  ],
+  "per_graph_zscores": [
+    {
+      "slug": "m5-antonym-019-a39bd921",
+      "domain": "antonym",
+      "z_021U": -25.4300888873258,
+      "z_021C": -25.4300888873258,
+      "z_021D": -25.430088887325685,
+      "z_030T": 25.430088887325816,
+      "n_nodes_pruned": 996,
+      "n_edges_pruned": 9270
+    },
+    {
+      "slug": "m4-antonym-013-db7d1359",
+      "domain": "antonym",
+      "z_021U": -25.459657691771483,
+      "z_021C": -25.459657691771447,
+      "z_021D": -25.459657691771355,
+      "z_030T": 25.459657691771458,
+      "n_nodes_pruned": 979,
+      "n_edges_pruned": 8711
+    },
+    {
+      "slug": "m4-antonym-004-beb14eca",
+      "domain": "antonym",
+      "z_021U": -35.63647487965634,
+      "z_021C": -35.63647487965638,
+      "z_021D": -35.6364748796566,
+      "z_030T": 35.63647487965637,
+      "n_nodes_pruned": 975,
+      "n_edges_pruned": 7819
+    },
+    {
+      "slug": "m4-arithmetic-007-8883759f",
+      "domain": "arithmetic",
+      "z_021U": -50.9932323398425,
+      "z_021C": -50.99323233984252,
+      "z_021D": -50.99323233984256,
+      "z_030T": 50.99323233984252,
+      "n_nodes_pruned": 1008,
+      "n_edges_pruned": 9900
+    },
+    {
+      "slug": "m5-arithmetic-023-9c11091c",
+      "domain": "arithmetic",
+      "z_021U": -59.550245325704864,
+      "z_021C": -59.550245325704864,
+      "z_021D": -59.55024532570505,
+      "z_030T": 59.55024532570484,
+      "n_nodes_pruned": 1001,
+      "n_edges_pruned": 10145
+    },
+    {
+      "slug": "m4-arithmetic-016-d0c8069d",
+      "domain": "arithmetic",
+      "z_021U": -53.70917945534159,
+      "z_021C": -53.70917945534159,
+      "z_021D": -53.70917945534168,
+      "z_030T": 53.70917945534159,
+      "n_nodes_pruned": 830,
+      "n_edges_pruned": 7595
+    },
+    {
+      "slug": "m4-code_completion-005-96098955",
+      "domain": "code_completion",
+      "z_021U": -30.95018238084336,
+      "z_021C": -30.950182380843316,
+      "z_021D": -30.95018238084336,
+      "z_030T": 30.950182380843334,
+      "n_nodes_pruned": 1253,
+      "n_edges_pruned": 13246
+    },
+    {
+      "slug": "m4-code_completion-000-7016315e",
+      "domain": "code_completion",
+      "z_021U": -47.59309104817777,
+      "z_021C": -47.59309104817774,
+      "z_021D": -47.59309104817758,
+      "z_030T": 47.59309104817774,
+      "n_nodes_pruned": 1258,
+      "n_edges_pruned": 9588
+    },
+    {
+      "slug": "m4-code_completion-011-29148a92",
+      "domain": "code_completion",
+      "z_021U": -48.2948277058066,
+      "z_021C": -48.294827705806654,
+      "z_021D": -48.294827705806505,
+      "z_030T": 48.29482770580663,
+      "n_nodes_pruned": 1379,
+      "n_edges_pruned": 12711
+    },
+    {
+      "slug": "m4-country_capital-012-9797caad",
+      "domain": "country_capital",
+      "z_021U": -51.416564309027095,
+      "z_021C": -51.416564309027095,
+      "z_021D": -51.41656430902719,
+      "z_030T": 51.416564309027095,
+      "n_nodes_pruned": 1074,
+      "n_edges_pruned": 12637
+    },
+    {
+      "slug": "m4-country_capital-005-f670bee6",
+      "domain": "country_capital",
+      "z_021U": -45.69730519094299,
+      "z_021C": -45.69730519094294,
+      "z_021D": -45.69730519094299,
+      "z_030T": 45.69730519094297,
+      "n_nodes_pruned": 1060,
+      "n_edges_pruned": 11731
+    },
+    {
+      "slug": "m4-country_capital-004-1aacd3c0",
+      "domain": "country_capital",
+      "z_021U": -48.664590295517854,
+      "z_021C": -48.664590295517854,
+      "z_021D": -48.664590295517854,
+      "z_030T": 48.664590295517854,
+      "n_nodes_pruned": 1085,
+      "n_edges_pruned": 13596
+    },
+    {
+      "slug": "m4-multi_hop_reasoning-004-b01c4a9a",
+      "domain": "multi_hop_reasoning",
+      "z_021U": -36.28848376884723,
+      "z_021C": -36.28848376884725,
+      "z_021D": -36.28848376884754,
+      "z_030T": 36.288483768847264,
+      "n_nodes_pruned": 1620,
+      "n_edges_pruned": 13294
+    },
+    {
+      "slug": "m4-multi_hop_reasoning-000-e9c89588",
+      "domain": "multi_hop_reasoning",
+      "z_021U": -26.483353768692712,
+      "z_021C": -26.483353768692773,
+      "z_021D": -26.483353768692954,
+      "z_030T": 26.48335376869276,
+      "n_nodes_pruned": 1570,
+      "n_edges_pruned": 10660
+    },
+    {
+      "slug": "m5-multi_hop_reasoning-023-57f87bab",
+      "domain": "multi_hop_reasoning",
+      "z_021U": -41.58014633891161,
+      "z_021C": -41.58014633891161,
+      "z_021D": -41.58014633891182,
+      "z_030T": 41.5801463389116,
+      "n_nodes_pruned": 1685,
+      "n_edges_pruned": 14441
+    },
+    {
+      "slug": "m4-rhyme-013-d2bb30c1",
+      "domain": "rhyme",
+      "z_021U": -51.805062806037895,
+      "z_021C": -51.805062806037846,
+      "z_021D": -51.80506280603773,
+      "z_030T": 51.80506280603786,
+      "n_nodes_pruned": 1369,
+      "n_edges_pruned": 13618
+    },
+    {
+      "slug": "m4-rhyme-005-160e0f8a",
+      "domain": "rhyme",
+      "z_021U": -56.08390494984581,
+      "z_021C": -56.08390494984576,
+      "z_021D": -56.0839049498457,
+      "z_030T": 56.08390494984576,
+      "n_nodes_pruned": 1550,
+      "n_edges_pruned": 22140
+    },
+    {
+      "slug": "m4-rhyme-003-a2c14a59",
+      "domain": "rhyme",
+      "z_021U": -53.00674280255298,
+      "z_021C": -53.006742802553035,
+      "z_021D": -53.0067428025532,
+      "z_030T": 53.00674280255302,
+      "n_nodes_pruned": 1517,
+      "n_edges_pruned": 19657
+    },
+    {
+      "slug": "m4-sentiment-005-9a5b6375",
+      "domain": "sentiment",
+      "z_021U": -78.1052923713391,
+      "z_021C": -78.1052923713391,
+      "z_021D": -78.10529237133923,
+      "z_030T": 78.1052923713391,
+      "n_nodes_pruned": 1500,
+      "n_edges_pruned": 21343
+    },
+    {
+      "slug": "m4-sentiment-004-dc9884de",
+      "domain": "sentiment",
+      "z_021U": -64.58909033297907,
+      "z_021C": -64.58909033297907,
+      "z_021D": -64.5890903329788,
+      "z_030T": 64.58909033297905,
+      "n_nodes_pruned": 1584,
+      "n_edges_pruned": 27264
+    },
+    {
+      "slug": "m4-sentiment-002-aa92ae38",
+      "domain": "sentiment",
+      "z_021U": -45.40915131818398,
+      "z_021C": -45.40915131818398,
+      "z_021D": -45.40915131818392,
+      "z_030T": 45.40915131818396,
+      "n_nodes_pruned": 1620,
+      "n_edges_pruned": 26701
+    },
+    {
+      "slug": "m4-translation-003-e0e4b911",
+      "domain": "translation",
+      "z_021U": -48.52109354978185,
+      "z_021C": -48.52109354978185,
+      "z_021D": -48.52109354978172,
+      "z_030T": 48.52109354978182,
+      "n_nodes_pruned": 1172,
+      "n_edges_pruned": 13842
+    },
+    {
+      "slug": "m4-translation-009-71d0cc8b",
+      "domain": "translation",
+      "z_021U": -32.410019367290936,
+      "z_021C": -32.410019367290936,
+      "z_021D": -32.410019367290786,
+      "z_030T": 32.41001936729095,
+      "n_nodes_pruned": 1241,
+      "n_edges_pruned": 15066
+    },
+    {
+      "slug": "m4-translation-000-aeacaa42",
+      "domain": "translation",
+      "z_021U": -45.643249823882456,
+      "z_021C": -45.643249823882456,
+      "z_021D": -45.643249823882456,
+      "z_030T": 45.64324982388248,
+      "n_nodes_pruned": 1226,
+      "n_edges_pruned": 14298
+    }
+  ],
+  "biological_benchmarks": {
+    "E_coli_transcription": {
+      "source": "Milo et al. 2002 (Science)",
+      "ffl_z_score": 12.7,
+      "network_size": 424,
+      "description": "E. coli transcription regulation network"
+    },
+    "yeast_transcription": {
+      "source": "Milo et al. 2002 (Science)",
+      "ffl_z_score": 8.5,
+      "network_size": 688,
+      "description": "S. cerevisiae transcription regulation network"
+    },
+    "c_elegans_neural": {
+      "source": "Milo et al. 2002 (Science)",
+      "ffl_z_score": 10.2,
+      "network_size": 282,
+      "description": "C. elegans neural connectivity"
+    }
+  }
+}

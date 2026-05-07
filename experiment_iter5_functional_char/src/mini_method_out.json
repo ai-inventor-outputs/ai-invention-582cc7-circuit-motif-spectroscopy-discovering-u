@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "experiment": "4node_motif_functional_characterization",
+    "n_graphs_loaded": 179,
+    "prune_percentile": 99,
+    "max_nodes": 700,
+    "target_motif_ids": [
+      77,
+      80,
+      82,
+      83
+    ],
+    "runtime_seconds": 34.1,
+    "domains": [
+      "antonym",
+      "arithmetic",
+      "code_completion",
+      "country_capital",
+      "multi_hop_reasoning",
+      "rhyme",
+      "sentiment",
+      "translation"
+    ],
+    "domain_counts": {
+      "antonym": 26,
+      "arithmetic": 26,
+      "code_completion": 24,
+      "country_capital": 26,
+      "multi_hop_reasoning": 24,
+      "rhyme": 24,
+      "sentiment": 3,
+      "translation": 26
+    },
+    "4node_canonical_patterns": {
+      "77": {
+        "edge_count": 4,
+        "edges": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "80": {
+        "edge_count": 5,
+        "edges": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "82": {
+        "edge_count": 5,
+        "edges": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "83": {
+        "edge_count": 6,
+        "edges": [
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    "3node_reference": {
+      "2": "021U",
+      "4": "021C",
+      "6": "021D",
+      "7": "030T"
+    },
+    "n_explanations": 6574
+  },
+  "datasets": [
+    {
+      "dataset": "4node_motif_characterization",
+      "examples": [
+        {
+          "input": "graph:m5-antonym-019-a39bd921 domain:antonym prompt:The opposite of bright is",
+          "output": "{\"slug\": \"m5-antonym-019-a39bd921\", \"domain\": \"antonym\", \"n_nodes\": 333, \"n_edges\": 371, \"prompt\": \"The opposite of bright is\"}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m5-antonym-019-a39bd921",
+          "metadata_n_nodes": 333,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 12, \"82\": 24, \"83\": 5}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.058, \"80\": 3.167, \"82\": 3.875, \"83\": 2.6}, \"total_4node_motifs\": 541, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 4.26, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-antonym-013-db7d1359 domain:antonym prompt:The opposite of clean is",
+          "output": "{\"slug\": \"m4-antonym-013-db7d1359\", \"domain\": \"antonym\", \"n_nodes\": 318, \"n_edges\": 349, \"prompt\": \"The opposite of clean is\"}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-013-db7d1359",
+          "metadata_n_nodes": 318,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 10, \"82\": 7, \"83\": 0}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 0.0}, \"motif_mean_layer_spans\": {\"77\": 10.622, \"80\": 4.1, \"82\": 2.857, \"83\": 0.0}, \"total_4node_motifs\": 517, \"all_ffl_derivative\": false}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 5.36, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        },
+        {
+          "input": "graph:m4-antonym-004-beb14eca domain:antonym prompt:The opposite of cold is",
+          "output": "{\"slug\": \"m4-antonym-004-beb14eca\", \"domain\": \"antonym\", \"n_nodes\": 277, \"n_edges\": 313, \"prompt\": \"The opposite of cold is\"}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-004-beb14eca",
+          "metadata_n_nodes": 277,
+          "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 13, \"82\": 39, \"83\": 5}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 11.308, \"80\": 3.692, \"82\": 3.026, \"83\": 2.8}, \"total_4node_motifs\": 557, \"all_ffl_derivative\": true}",
+          "predict_random_baseline": "{\"random_baseline_mean_span\": 3.66, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+        }
+      ]
+    }
+  ]
+}

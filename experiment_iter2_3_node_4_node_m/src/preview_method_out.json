@@ -1,0 +1,430 @@
+{
+  "metadata": {
+    "experiment": "circuit_motif_spectroscopy",
+    "n_graphs": 34,
+    "n_domains": 8,
+    "domains": [
+      "antonym",
+      "arithmetic",
+      "code_completion"
+    ],
+    "isoclass_mapping_3node": {
+      "dag_valid_connected_ids": [
+        2,
+        4,
+        6
+      ],
+      "man_labels": {
+        "2": "021U",
+        "4": "021C",
+        "6": "021D",
+        "7": "030T"
+      }
+    },
+    "isoclass_mapping_4node": {
+      "dag_valid_connected_ids": [
+        3,
+        7,
+        12
+      ],
+      "n_types": 24
+    },
+    "methodological_finding": {
+      "title": "3-node SP degeneracy under degree-preserving null models",
+      "description": "Under degree-preserving DAG null models (Goni Method 1), the change in motif counts satisfies the identity: delta(021U) = delta(021C) = delta(021D) = -delta(030T). This follows from degree preservatio...",
+      "implication": "The effective dimensionality of the 3-node DAG motif spectrum under degree-preserving null models is 1, not 4. The 4-node spectrum (24D) is critical for richer analysis."
+    },
+    "hypothesis_1_universal_overrepresentation": {
+      "description": "For each motif type, across how many domains is mean Z > 2.0? Note: due to the mathematical identity above, only 030T (FFL overrepresentation) is independently testable.",
+      "per_motif": {
+        "2": {
+          "name": "021U",
+          "mean_z": -47.25428603752101,
+          "std_z": 9.679619158360259,
+          "n_domains_significant": 0,
+          "n_domains_total": 8,
+          "per_domain_mean_z": {
+            "country_capital": -48.344397343077894,
+            "arithmetic": -53.29663020615567,
+            "antonym": -36.86132978805674,
+            "translation": -51.26421367365279,
+            "code_completion": -43.926146949784886,
+            "multi_hop_reasoning": -32.83614115062148,
+            "rhyme": -49.99938162205352,
+            "sentiment": -59.722933698217155
+          }
+        },
+        "4": {
+          "name": "021C",
+          "mean_z": -47.254286037521005,
+          "std_z": 9.679619158360266,
+          "n_domains_significant": 0,
+          "n_domains_total": 8,
+          "per_domain_mean_z": {
+            "country_capital": -48.34439734307789,
+            "arithmetic": -53.29663020615567,
+            "antonym": -36.861329788056736,
+            "translation": -51.264213673652804,
+            "code_completion": -43.92614694978488,
+            "multi_hop_reasoning": -32.83614115062147,
+            "rhyme": -49.99938162205352,
+            "sentiment": -59.722933698217155
+          }
+        },
+        "6": {
+          "name": "021D",
+          "mean_z": -47.254286037520984,
+          "std_z": 9.679619158360284,
+          "n_domains_significant": 0,
+          "n_domains_total": 8,
+          "per_domain_mean_z": {
+            "country_capital": -48.34439734307787,
+            "arithmetic": -53.29663020615569,
+            "antonym": -36.861329788056636,
+            "translation": -51.26421367365279,
+            "code_completion": -43.926146949784865,
+            "multi_hop_reasoning": -32.836141150621366,
+            "rhyme": -49.99938162205367,
+            "sentiment": -59.72293369821709
+          }
+        },
+        "7": {
+          "name": "030T",
+          "mean_z": 47.254286037521,
+          "std_z": 9.679619158360264,
+          "n_domains_significant": 8,
+          "n_domains_total": 8,
+          "per_domain_mean_z": {
+            "country_capital": 48.34439734307788,
+            "arithmetic": 53.29663020615568,
+            "antonym": 36.861329788056736,
+            "translation": 51.26421367365279,
+            "code_completion": 43.926146949784865,
+            "multi_hop_reasoning": 32.83614115062147,
+            "rhyme": 49.99938162205352,
+            "sentiment": 59.72293369821716
+          }
+        }
+      },
+      "criterion": ">=3 motif types with Z>2.0 in >=6/8 domains",
+      "n_motifs_universal": 1,
+      "result": "DISCONFIRM"
+    },
+    "hypothesis_2_capability_clustering": {
+      "our_method_nmi_by_k": {
+        "2": 0.3244042263615207,
+        "3": 0.5872913064806222,
+        "4": 0.5554569583199455,
+        "6": 0.7318570511701079,
+        "8": 0.8508488489611284
+      },
+      "our_method_ari_by_k": {
+        "2": 0.09516129032258064,
+        "3": 0.25872652728384715,
+        "4": 0.22298539619798965,
+        "6": 0.446171370712568,
+        "8": 0.6851798316469688
+      },
+      "baseline_nmi_by_k": {
+        "2": 0.3154775921944118,
+        "3": 0.5018420867134833,
+        "4": 0.6498981795248244,
+        "6": 0.74411937151956,
+        "8": 0.8472331206927921
+      },
+      "baseline_ari_by_k": {
+        "2": 0.08721888443655779,
+        "3": 0.15221309833767274,
+        "4": 0.32021811183577464,
+        "6": 0.47302737520128824,
+        "8": 0.6660998214437548
+      },
+      "our_method_best_k": 8,
+      "our_method_best_nmi": 0.8508488489611284,
+      "baseline_best_k": 8,
+      "baseline_best_nmi": 0.8472331206927921,
+      "criterion": "NMI > 0.5",
+      "result": "CONFIRM",
+      "discriminative_motifs": {
+        "2": {
+          "name": "021U",
+          "f_statistic": 4.952363707046596,
+          "p_value": 0.0011655490480700435
+        },
+        "4": {
+          "name": "021C",
+          "f_statistic": 19.39300210747685,
+          "p_value": 8.008937685425214e-09
+        },
+        "6": {
+          "name": "021D",
+          "f_statistic": 11.383732488874209,
+          "p_value": 1.5868056707746983e-06
+        },
+        "7": {
+          "name": "030T",
+          "f_statistic": 28.851709149589723,
+          "p_value": 1.047775255723994e-10
+        }
+      }
+    },
+    "threshold_robustness": {
+      "clustering_by_threshold": {
+        "50": {
+          "best_k": 8,
+          "best_nmi": 0.8508488489611283,
+          "best_ari": 0.6851798316469688
+        },
+        "75": {
+          "best_k": 8,
+          "best_nmi": 0.8508488489611284,
+          "best_ari": 0.6851798316469688
+        },
+        "90": {
+          "best_k": 8,
+          "best_nmi": 0.8791649500111315,
+          "best_ari": 0.7424198622566108
+        }
+      },
+      "per_graph_stability_summary": {
+        "sim_50_75": {
+          "mean": 0.9788783805236176,
+          "std": 0.0061314025558710916
+        },
+        "sim_75_90": {
+          "mean": 0.995071107990839,
+          "std": 0.0017559147081704896
+        }
+      }
+    },
+    "domain_aggregate_stats": {
+      "country_capital": {
+        "n_graphs": 5,
+        "mean_z_scores": {
+          "2": -48.344397343077894,
+          "4": -48.34439734307789,
+          "6": -48.34439734307787,
+          "7": 48.34439734307788
+        },
+        "std_z_scores": {
+          "2": 4.859062211165326,
+          "4": 4.859062211165333,
+          "6": 4.859062211165372,
+          "7": 4.859062211165345
+        },
+        "mean_count_ratios": {
+          "2": 0.12142301077601728,
+          "4": 0.07436941745916384,
+          "6": 0.7583916484206756,
+          "7": 0.04581592334414331
+        }
+      },
+      "arithmetic": {
+        "n_graphs": 5,
+        "mean_z_scores": {
+          "2": -53.29663020615567,
+          "4": -53.29663020615567,
+          "6": -53.29663020615569,
+          "7": 53.29663020615568
+        },
+        "std_z_scores": {
+          "2": 8.29201370840832,
+          "4": 8.292013708408314,
+          "6": 8.292013708408337,
+          "7": 8.292013708408318
+        },
+        "mean_count_ratios": {
+          "2": 0.10114923724229494,
+          "4": 0.06108205604507022,
+          "6": 0.7967500968241177,
+          "7": 0.04101860988851716
+        }
+      },
+      "antonym": {
+        "n_graphs": 4,
+        "mean_z_scores": {
+          "2": -36.86132978805674,
+          "4": -36.861329788056736,
+          "6": -36.861329788056636,
+          "7": 36.861329788056736
+        },
+        "std_z_scores": {
+          "2": 7.009329713269164,
+          "4": 7.009329713269184,
+          "6": 7.00932971326913,
+          "7": 7.009329713269182
+        },
+        "mean_count_ratios": {
+          "2": 0.11841489030649895,
+          "4": 0.05671597694644421,
+          "6": 0.7894753512882098,
+          "7": 0.03539378145884704
+        }
+      },
+      "translation": {
+        "n_graphs": 4,
+        "mean_z_scores": {
+          "2": -51.26421367365279,
+          "4": -51.264213673652804,
+          "6": -51.26421367365279,
+          "7": 51.26421367365279
+        },
+        "std_z_scores": {
+          "2": 5.188497714346024,
+          "4": 5.188497714346035,
+          "6": 5.18849771434596,
+          "7": 5.188497714346025
+        },
+        "mean_count_ratios": {
+          "2": 0.11571618549545262,
+          "4": 0.09501522572950727,
+          "6": 0.7363880722720269,
+          "7": 0.05288051650301329
+        }
+      },
+      "code_completion": {
+        "n_graphs": 4,
+        "mean_z_scores": {
+          "2": -43.926146949784886,
+          "4": -43.92614694978488,
+          "6": -43.926146949784865,
+          "7": 43.926146949784865
+        },
+        "std_z_scores": {
+          "2": 3.315439765382045,
+          "4": 3.3154397653820595,
+          "6": 3.3154397653821226,
+          "7": 3.3154397653820538
+        },
+        "mean_count_ratios": {
+          "2": 0.10124663537854867,
+          "4": 0.058245180629750454,
+          "6": 0.8104194420474427,
+          "7": 0.03008874194425822
+        }
+      },
+      "multi_hop_reasoning": {
+        "n_graphs": 4,
+        "mean_z_scores": {
+          "2": -32.83614115062148,
+          "4": -32.83614115062147,
+          "6": -32.836141150621366,
+          "7": 32.83614115062147
+        },
+        "std_z_scores": {
+          "2": 4.974045315085716,
+          "4": 4.9740453150856965,
+          "6": 4.974045315085649,
+          "7": 4.974045315085701
+        },
+        "mean_count_ratios": {
+          "2": 0.12357947141416185,
+          "4": 0.039732302871230536,
+          "6": 0.8139273133640745,
+          "7": 0.02276091235053317
+        }
+      },
+      "rhyme": {
+        "n_graphs": 4,
+        "mean_z_scores": {
+          "2": -49.99938162205352,
+          "4": -49.99938162205352,
+          "6": -49.99938162205367,
+          "7": 49.99938162205352
+        },
+        "std_z_scores": {
+          "2": 2.832182162743932,
+          "4": 2.832182162743932,
+          "6": 2.8321821627438886,
+          "7": 2.8321821627439223
+        },
+        "mean_count_ratios": {
+          "2": 0.11172315662523187,
+          "4": 0.06327018368744344,
+          "6": 0.7888860477323163,
+          "7": 0.03612061195500833
+        }
+      },
+      "sentiment": {
+        "n_graphs": 4,
+        "mean_z_scores": {
+          "2": -59.722933698217155,
+          "4": -59.722933698217155,
+          "6": -59.72293369821709,
+          "7": 59.72293369821716
+        },
+        "std_z_scores": {
+          "2": 2.8220553472921632,
+          "4": 2.822055347292166,
+          "6": 2.8220553472921037,
+          "7": 2.822055347292167
+        },
+        "mean_count_ratios": {
+          "2": 0.12251362877134317,
+          "4": 0.0760582310604537,
+          "6": 0.7555007653574761,
+          "7": 0.045927374810727145
+        }
+      }
+    },
+    "config": {
+      "prune_thresholds": [
+        50,
+        75,
+        90
+      ],
+      "primary_threshold": 75,
+      "n_null_models_3node_actual": 79,
+      "n_null_models_4node": 50,
+      "swap_multiplier": 100,
+      "cluster_k_values": [
+        2,
+        3,
+        4
+      ],
+      "n_workers": 3,
+      "hardware": {
+        "cpus": 4,
+        "ram_gb": 32.0
+      }
+    },
+    "runtime_seconds": 5839.9
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs",
+      "examples": [
+        {
+          "input": "The capital of Japan is",
+          "output": "{\"graph_stats\": {\"50\": {\"n_nodes\": 1047, \"n_edges\": 24055, \"density\": 0.02196478694476251}, \"75\": {\"n_nodes\": 1044, \"n_edges\": 12028, \"density\": 0.01104609088871991}, \"90\": {\"n_nodes\": 1000, \"n_edges\"...",
+          "predict_our_method": "country_capital",
+          "predict_baseline": "country_capital",
+          "metadata_fold": "country_capital",
+          "metadata_graph_idx": 0,
+          "metadata_n_nodes_raw": 1048,
+          "metadata_n_edges_raw": 48109
+        },
+        {
+          "input": "3 + 5 =",
+          "output": "{\"graph_stats\": {\"50\": {\"n_nodes\": 862, \"n_edges\": 15861, \"density\": 0.021370768894961076}, \"75\": {\"n_nodes\": 857, \"n_edges\": 7931, \"density\": 0.010811186599635765}, \"90\": {\"n_nodes\": 799, \"n_edges\": ...",
+          "predict_our_method": "arithmetic",
+          "predict_baseline": "arithmetic",
+          "metadata_fold": "arithmetic",
+          "metadata_graph_idx": 1,
+          "metadata_n_nodes_raw": 869,
+          "metadata_n_edges_raw": 31722
+        },
+        {
+          "input": "The opposite of happy is",
+          "output": "{\"graph_stats\": {\"50\": {\"n_nodes\": 1088, \"n_edges\": 25839, \"density\": 0.021848280480545487}, \"75\": {\"n_nodes\": 1084, \"n_edges\": 12920, \"density\": 0.011005373211626854}, \"90\": {\"n_nodes\": 1057, \"n_edge...",
+          "predict_our_method": "country_capital",
+          "predict_baseline": "country_capital",
+          "metadata_fold": "antonym",
+          "metadata_graph_idx": 2,
+          "metadata_n_nodes_raw": 1088,
+          "metadata_n_edges_raw": 51677
+        }
+      ]
+    }
+  ]
+}

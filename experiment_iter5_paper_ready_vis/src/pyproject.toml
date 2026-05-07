@@ -1,0 +1,26 @@
+[project]
+name = "exp-id5-it5-opus"
+version = "1.0.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "attrs==26.1.0",
+    "igraph==0.11.8",
+    "joblib==1.5.3",
+    "jsonschema==4.26.0",
+    "jsonschema-specifications==2025.9.1",
+    "llvmlite==0.46.0",
+    "loguru==0.7.3",
+    "numba==0.64.0",
+    "numpy==1.26.4",
+    "psutil==6.1.1",
+    "pynndescent==0.6.0",
+    "referencing==0.37.0",
+    "rpds-py==0.30.0",
+    "scikit-learn==1.5.2",
+    "scipy==1.13.1",
+    "texttable==1.7.0",
+    "threadpoolctl==3.6.0",
+    "tqdm==4.67.3",
+    "typing-extensions==4.15.0",
+    "umap-learn==0.5.7",
+]

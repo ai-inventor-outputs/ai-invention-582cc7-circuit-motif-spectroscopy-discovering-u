@@ -1,0 +1,14 @@
+[project]
+name = "circuit-motif-spectroscopy"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+description = "3-node & 4-node motif census with DAG null models, Z-scores, and capability clustering on 34 Neuronpedia attribution graphs"
+
+dependencies = [
+    "igraph==1.0.0",
+    "numpy==2.4.3",
+    "scipy==1.17.1",
+    "scikit-learn==1.8.0",
+    "loguru==0.7.3",
+    "jsonschema==4.26.0",
+]

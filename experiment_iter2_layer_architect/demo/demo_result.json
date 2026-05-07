@@ -1,0 +1,13 @@
+{
+  "id": "exp_id2_it2__opus",
+  "type": "code",
+  "title": "Layer-Architecture Confound Test: Layer-Preserving vs Degree-Preserving DAG Null Models for Motif Z-Scores",
+  "summary": "Demo notebook implementing the layer-architecture confound test comparing degree-preserving vs layer-preserving DAG null models for motif Z-scores on Neuronpedia attribution graphs. Loads 3 diverse attribution graphs (country_capital, arithmetic, antonym domains), applies 75th-percentile edge pruning, generates null model ensembles via edge swaps, computes per-motif Z-scores and significance profiles, runs Wilcoxon signed-rank tests, and includes a layer-only baseline. Visualizes Z-score comparisons across null model types with grouped bar charts and per-graph scatter plots.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_2/gen_art/exp_id2_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id2_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id2_it2__opus/method_code_demo.ipynb"
+}

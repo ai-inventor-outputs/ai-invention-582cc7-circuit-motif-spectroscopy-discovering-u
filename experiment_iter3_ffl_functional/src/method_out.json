@@ -1,0 +1,488 @@
+{
+  "metadata": {
+    "method_name": "FFL Functional Characterization",
+    "description": "Enumerate all feed-forward loop (FFL / 030T motif) instances from 34 pruned attribution graphs, join each node's position (A=regulator, B=intermediary, C=target) to its Neuronpedia semantic explanation, and test whether FFL positions carry consistent functional roles.",
+    "parameters": {
+      "prune_percentile": 75,
+      "min_nodes": 30,
+      "random_seed": 42,
+      "n_baseline_samples_per_graph": 5000
+    },
+    "total_graphs": 34,
+    "total_ffls": 1906060,
+    "explanation_match_rate": 0.6258
+  },
+  "datasets": [
+    {
+      "dataset": "ffl_functional_characterization",
+      "examples": [
+        {
+          "input": "The capital of Japan is",
+          "output": "{\"slug\": \"m3-country_capital-000-385265ab\", \"n_nodes\": 1044, \"n_edges\": 12028}",
+          "predict_ffl_method": "{\"n_ffls\": 48793, \"explanation_match_rate\": 0.7966, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5818, \"semantic_chi2\": 69135.3389, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.356, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "country_capital",
+          "metadata_slug": "m3-country_capital-000-385265ab",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "3 + 5 =",
+          "output": "{\"slug\": \"m3-arithmetic-000-f8f58d4d\", \"n_nodes\": 857, \"n_edges\": 7931}",
+          "predict_ffl_method": "{\"n_ffls\": 24418, \"explanation_match_rate\": 0.6934, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5724, \"semantic_chi2\": 15126.9487, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.34, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "arithmetic",
+          "metadata_slug": "m3-arithmetic-000-f8f58d4d",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The opposite of happy is",
+          "output": "{\"slug\": \"m3-antonym-000-db6a045b\", \"n_nodes\": 1084, \"n_edges\": 12920}",
+          "predict_ffl_method": "{\"n_ffls\": 48919, \"explanation_match_rate\": 0.4694, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5676, \"semantic_chi2\": 18014.9742, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.358, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m3-antonym-000-db6a045b",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The French word for cat is",
+          "output": "{\"slug\": \"m3-translation-000-aeacaa42\", \"n_nodes\": 1226, \"n_edges\": 14298}",
+          "predict_ffl_method": "{\"n_ffls\": 65124, \"explanation_match_rate\": 0.6363, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5979, \"semantic_chi2\": 31393.4508, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3532, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "translation",
+          "metadata_slug": "m3-translation-000-aeacaa42",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "def add(a, b):\n    return",
+          "output": "{\"slug\": \"m3-code_completion-000-7016315e\", \"n_nodes\": 1258, \"n_edges\": 9588}",
+          "predict_ffl_method": "{\"n_ffls\": 24718, \"explanation_match_rate\": 0.7927, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.6116, \"semantic_chi2\": 39501.199, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.346, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "code_completion",
+          "metadata_slug": "m3-code_completion-000-7016315e",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "If Alice is taller than Bob and Bob is taller than Carol, then Alice is",
+          "output": "{\"slug\": \"m3-multi_hop_reasoning-000-e9c89588\", \"n_nodes\": 1570, \"n_edges\": 10660}",
+          "predict_ffl_method": "{\"n_ffls\": 21506, \"explanation_match_rate\": 0.6166, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.6057, \"semantic_chi2\": 21644.0479, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3786, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_slug": "m3-multi_hop_reasoning-000-e9c89588",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The cat in the hat sat on the",
+          "output": "{\"slug\": \"m3-rhyme-000-eed43a63\", \"n_nodes\": 1525, \"n_edges\": 22144}",
+          "predict_ffl_method": "{\"n_ffls\": 89948, \"explanation_match_rate\": 0.2091, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5652, \"semantic_chi2\": 14367.91, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3578, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "rhyme",
+          "metadata_slug": "m3-rhyme-000-eed43a63",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "This movie was terrible. The sentiment is",
+          "output": "{\"slug\": \"m3-sentiment-000-f0ba4998\", \"n_nodes\": 1571, \"n_edges\": 26622}",
+          "predict_ffl_method": "{\"n_ffls\": 175258, \"explanation_match_rate\": 0.7861, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5759, \"semantic_chi2\": 261364.8574, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3514, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "sentiment",
+          "metadata_slug": "m3-sentiment-000-f0ba4998",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The capital of Brazil is",
+          "output": "{\"slug\": \"m3-country_capital-001-2332b571\", \"n_nodes\": 1076, \"n_edges\": 12935}",
+          "predict_ffl_method": "{\"n_ffls\": 57997, \"explanation_match_rate\": 0.6722, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5862, \"semantic_chi2\": 37433.0268, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.34, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "country_capital",
+          "metadata_slug": "m3-country_capital-001-2332b571",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "15 + 28 =",
+          "output": "{\"slug\": \"m3-arithmetic-001-66d03483\", \"n_nodes\": 1041, \"n_edges\": 10485}",
+          "predict_ffl_method": "{\"n_ffls\": 33442, \"explanation_match_rate\": 0.665, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.547, \"semantic_chi2\": 21141.0432, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3478, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "arithmetic",
+          "metadata_slug": "m3-arithmetic-001-66d03483",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The opposite of tall is",
+          "output": "{\"slug\": \"m3-antonym-001-501b0b4a\", \"n_nodes\": 1058, \"n_edges\": 10114}",
+          "predict_ffl_method": "{\"n_ffls\": 32316, \"explanation_match_rate\": 0.7981, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5856, \"semantic_chi2\": 48153.1677, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.342, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m3-antonym-001-501b0b4a",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The French word for house is",
+          "output": "{\"slug\": \"m3-translation-001-f180da04\", \"n_nodes\": 1152, \"n_edges\": 12571}",
+          "predict_ffl_method": "{\"n_ffls\": 55952, \"explanation_match_rate\": 0.6805, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.6084, \"semantic_chi2\": 27571.9375, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.337, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "translation",
+          "metadata_slug": "m3-translation-001-f180da04",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "def multiply(x, y):\n    return",
+          "output": "{\"slug\": \"m3-code_completion-001-6c17630e\", \"n_nodes\": 1302, \"n_edges\": 9900}",
+          "predict_ffl_method": "{\"n_ffls\": 24018, \"explanation_match_rate\": 0.5973, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.6174, \"semantic_chi2\": 14974.5603, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3626, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "code_completion",
+          "metadata_slug": "m3-code_completion-001-6c17630e",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "If X is larger than Y and Y is larger than Z, then X is",
+          "output": "{\"slug\": \"m3-multi_hop_reasoning-001-45196fe5\", \"n_nodes\": 1648, \"n_edges\": 14217}",
+          "predict_ffl_method": "{\"n_ffls\": 35506, \"explanation_match_rate\": 0.7458, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.569, \"semantic_chi2\": 69892.3536, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3518, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_slug": "m3-multi_hop_reasoning-001-45196fe5",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "A mouse in the house found a",
+          "output": "{\"slug\": \"m3-rhyme-001-6fd64fff\", \"n_nodes\": 1448, \"n_edges\": 18043}",
+          "predict_ffl_method": "{\"n_ffls\": 69079, \"explanation_match_rate\": 0.7781, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.6014, \"semantic_chi2\": 111578.5597, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.34, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "rhyme",
+          "metadata_slug": "m3-rhyme-001-6fd64fff",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "This movie was wonderful. The sentiment is",
+          "output": "{\"slug\": \"m3-sentiment-001-2eaf593e\", \"n_nodes\": 1523, \"n_edges\": 22009}",
+          "predict_ffl_method": "{\"n_ffls\": 119800, \"explanation_match_rate\": 0.6247, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5808, \"semantic_chi2\": 67565.9695, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.359, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "sentiment",
+          "metadata_slug": "m3-sentiment-001-2eaf593e",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The capital of Nigeria is",
+          "output": "{\"slug\": \"m3-country_capital-002-0e481295\", \"n_nodes\": 1036, \"n_edges\": 11950}",
+          "predict_ffl_method": "{\"n_ffls\": 48382, \"explanation_match_rate\": 0.5647, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5972, \"semantic_chi2\": 22326.3531, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3524, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "country_capital",
+          "metadata_slug": "m3-country_capital-002-0e481295",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "47 + 36 =",
+          "output": "{\"slug\": \"m3-arithmetic-002-bfa01abe\", \"n_nodes\": 984, \"n_edges\": 9313}",
+          "predict_ffl_method": "{\"n_ffls\": 28936, \"explanation_match_rate\": 0.8115, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5435, \"semantic_chi2\": 40870.7723, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3508, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "arithmetic",
+          "metadata_slug": "m3-arithmetic-002-bfa01abe",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The opposite of fast is",
+          "output": "{\"slug\": \"m3-antonym-002-f8dfd5c7\", \"n_nodes\": 956, \"n_edges\": 8007}",
+          "predict_ffl_method": "{\"n_ffls\": 21262, \"explanation_match_rate\": 0.4781, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.586, \"semantic_chi2\": 8261.709, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3252, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m3-antonym-002-f8dfd5c7",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The French word for water is",
+          "output": "{\"slug\": \"m3-translation-002-2b300606\", \"n_nodes\": 1176, \"n_edges\": 13301}",
+          "predict_ffl_method": "{\"n_ffls\": 65742, \"explanation_match_rate\": 0.828, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5987, \"semantic_chi2\": 81091.6094, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.344, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "translation",
+          "metadata_slug": "m3-translation-002-2b300606",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "def square(n):\n    return",
+          "output": "{\"slug\": \"m3-code_completion-002-ed14b481\", \"n_nodes\": 1179, \"n_edges\": 9631}",
+          "predict_ffl_method": "{\"n_ffls\": 24691, \"explanation_match_rate\": 0.5148, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.6062, \"semantic_chi2\": 10008.8549, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3496, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "code_completion",
+          "metadata_slug": "m3-code_completion-002-ed14b481",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "If the red box is heavier than the blue box and the blue box is heavier than the green box, the red box is",
+          "output": "{\"slug\": \"m3-multi_hop_reasoning-002-dc30d5a7\", \"n_nodes\": 1797, \"n_edges\": 14943}",
+          "predict_ffl_method": "{\"n_ffls\": 36834, \"explanation_match_rate\": 0.5265, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5516, \"semantic_chi2\": 28690.6014, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3634, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_slug": "m3-multi_hop_reasoning-002-dc30d5a7",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The dog on the log saw a",
+          "output": "{\"slug\": \"m3-rhyme-002-e37048af\", \"n_nodes\": 1402, \"n_edges\": 17404}",
+          "predict_ffl_method": "{\"n_ffls\": 78332, \"explanation_match_rate\": 0.4186, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5932, \"semantic_chi2\": 24567.2509, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3532, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "rhyme",
+          "metadata_slug": "m3-rhyme-002-e37048af",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "This movie was boring. The sentiment is",
+          "output": "{\"slug\": \"m3-sentiment-002-aa92ae38\", \"n_nodes\": 1620, \"n_edges\": 26701}",
+          "predict_ffl_method": "{\"n_ffls\": 176259, \"explanation_match_rate\": 0.7487, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5772, \"semantic_chi2\": 206470.5444, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3462, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "sentiment",
+          "metadata_slug": "m3-sentiment-002-aa92ae38",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The capital of Australia is",
+          "output": "{\"slug\": \"m3-country_capital-003-b6705b84\", \"n_nodes\": 1006, \"n_edges\": 10167}",
+          "predict_ffl_method": "{\"n_ffls\": 37769, \"explanation_match_rate\": 0.5835, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5794, \"semantic_chi2\": 16785.1327, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3542, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "country_capital",
+          "metadata_slug": "m3-country_capital-003-b6705b84",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "123 + 456 =",
+          "output": "{\"slug\": \"m3-arithmetic-003-664bffa5\", \"n_nodes\": 1217, \"n_edges\": 12090}",
+          "predict_ffl_method": "{\"n_ffls\": 36852, \"explanation_match_rate\": 0.594, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5528, \"semantic_chi2\": 19806.9174, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3608, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "arithmetic",
+          "metadata_slug": "m3-arithmetic-003-664bffa5",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The opposite of dark is",
+          "output": "{\"slug\": \"m3-antonym-003-eaea9372\", \"n_nodes\": 943, \"n_edges\": 7361}",
+          "predict_ffl_method": "{\"n_ffls\": 16971, \"explanation_match_rate\": 0.4715, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5819, \"semantic_chi2\": 8158.852, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.357, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m3-antonym-003-eaea9372",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The French word for book is",
+          "output": "{\"slug\": \"m3-translation-003-e0e4b911\", \"n_nodes\": 1172, \"n_edges\": 13842}",
+          "predict_ffl_method": "{\"n_ffls\": 68276, \"explanation_match_rate\": 0.6208, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.594, \"semantic_chi2\": 31845.6124, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3434, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "translation",
+          "metadata_slug": "m3-translation-003-e0e4b911",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "def maximum(a, b):\n    return",
+          "output": "{\"slug\": \"m3-code_completion-003-83bd7530\", \"n_nodes\": 1326, \"n_edges\": 12363}",
+          "predict_ffl_method": "{\"n_ffls\": 38573, \"explanation_match_rate\": 0.511, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5896, \"semantic_chi2\": 16420.7941, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3566, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "code_completion",
+          "metadata_slug": "m3-code_completion-003-83bd7530",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "If John is older than Mary and Mary is older than Tom, then John is",
+          "output": "{\"slug\": \"m3-multi_hop_reasoning-003-212b9f49\", \"n_nodes\": 1583, \"n_edges\": 12349}",
+          "predict_ffl_method": "{\"n_ffls\": 29456, \"explanation_match_rate\": 0.4589, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5717, \"semantic_chi2\": 15824.4967, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3858, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_slug": "m3-multi_hop_reasoning-003-212b9f49",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The bee in the tree drank some",
+          "output": "{\"slug\": \"m3-rhyme-003-a2c14a59\", \"n_nodes\": 1517, \"n_edges\": 19657}",
+          "predict_ffl_method": "{\"n_ffls\": 88260, \"explanation_match_rate\": 0.2583, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5864, \"semantic_chi2\": 15962.6678, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.332, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "rhyme",
+          "metadata_slug": "m3-rhyme-003-a2c14a59",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "This movie was exciting. The sentiment is",
+          "output": "{\"slug\": \"m3-sentiment-003-27b46ba4\", \"n_nodes\": 1495, \"n_edges\": 19961}",
+          "predict_ffl_method": "{\"n_ffls\": 95634, \"explanation_match_rate\": 0.6665, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5652, \"semantic_chi2\": 74642.3289, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3514, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "sentiment",
+          "metadata_slug": "m3-sentiment-003-27b46ba4",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "The capital of France is",
+          "output": "{\"slug\": \"m3-country_capital-004-1aacd3c0\", \"n_nodes\": 1085, \"n_edges\": 13596}",
+          "predict_ffl_method": "{\"n_ffls\": 58491, \"explanation_match_rate\": 0.7163, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5846, \"semantic_chi2\": 46361.4952, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3536, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "country_capital",
+          "metadata_slug": "m3-country_capital-004-1aacd3c0",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "8 + 9 =",
+          "output": "{\"slug\": \"m3-arithmetic-004-5b9d4ded\", \"n_nodes\": 874, \"n_edges\": 8481}",
+          "predict_ffl_method": "{\"n_ffls\": 28546, \"explanation_match_rate\": 0.7168, \"layer_strict_order_frac\": 1.0, \"coherent_frac\": 0.5487, \"semantic_chi2\": 19766.7351, \"semantic_p\": 0.0}",
+          "predict_baseline_random_triad": "{\"n_triads\": 5000, \"layer_strict_order_frac\": 0.3378, \"baseline_a_earliest\": 1.0}",
+          "metadata_fold": "arithmetic",
+          "metadata_slug": "m3-arithmetic-004-5b9d4ded",
+          "metadata_analysis_type": "per_graph"
+        },
+        {
+          "input": "domain_aggregate:antonym",
+          "output": "{\"domain\": \"antonym\", \"n_graphs\": 4, \"total_ffls\": 119468}",
+          "predict_ffl_method": "{\"mean_ffls_per_graph\": 29867.0, \"semantic_chi2\": 62096.8333, \"semantic_p\": 0.0, \"cramers_v\": 0.2943, \"coherent_frac\": 0.5778}",
+          "predict_baseline_random_triad": "{\"baseline_strict_order_frac\": 0.3455}",
+          "metadata_fold": "antonym",
+          "metadata_analysis_type": "per_domain_aggregate"
+        },
+        {
+          "input": "domain_aggregate:arithmetic",
+          "output": "{\"domain\": \"arithmetic\", \"n_graphs\": 5, \"total_ffls\": 152194}",
+          "predict_ffl_method": "{\"mean_ffls_per_graph\": 30438.8, \"semantic_chi2\": 105163.5033, \"semantic_p\": 0.0, \"cramers_v\": 0.3394, \"coherent_frac\": 0.5521}",
+          "predict_baseline_random_triad": "{\"baseline_strict_order_frac\": 0.3474}",
+          "metadata_fold": "arithmetic",
+          "metadata_analysis_type": "per_domain_aggregate"
+        },
+        {
+          "input": "domain_aggregate:code_completion",
+          "output": "{\"domain\": \"code_completion\", \"n_graphs\": 4, \"total_ffls\": 112000}",
+          "predict_ffl_method": "{\"mean_ffls_per_graph\": 28000.0, \"semantic_chi2\": 65661.0722, \"semantic_p\": 0.0, \"cramers_v\": 0.3126, \"coherent_frac\": 0.6041}",
+          "predict_baseline_random_triad": "{\"baseline_strict_order_frac\": 0.3537}",
+          "metadata_fold": "code_completion",
+          "metadata_analysis_type": "per_domain_aggregate"
+        },
+        {
+          "input": "domain_aggregate:country_capital",
+          "output": "{\"domain\": \"country_capital\", \"n_graphs\": 5, \"total_ffls\": 251432}",
+          "predict_ffl_method": "{\"mean_ffls_per_graph\": 50286.4, \"semantic_chi2\": 169950.0446, \"semantic_p\": 0.0, \"cramers_v\": 0.3356, \"coherent_frac\": 0.5861}",
+          "predict_baseline_random_triad": "{\"baseline_strict_order_frac\": 0.3512}",
+          "metadata_fold": "country_capital",
+          "metadata_analysis_type": "per_domain_aggregate"
+        },
+        {
+          "input": "domain_aggregate:multi_hop_reasoning",
+          "output": "{\"domain\": \"multi_hop_reasoning\", \"n_graphs\": 4, \"total_ffls\": 123302}",
+          "predict_ffl_method": "{\"mean_ffls_per_graph\": 30825.5, \"semantic_chi2\": 115997.5907, \"semantic_p\": 0.0, \"cramers_v\": 0.396, \"coherent_frac\": 0.5709}",
+          "predict_baseline_random_triad": "{\"baseline_strict_order_frac\": 0.3699}",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_analysis_type": "per_domain_aggregate"
+        },
+        {
+          "input": "domain_aggregate:rhyme",
+          "output": "{\"domain\": \"rhyme\", \"n_graphs\": 4, \"total_ffls\": 325619}",
+          "predict_ffl_method": "{\"mean_ffls_per_graph\": 81404.8, \"semantic_chi2\": 99796.8496, \"semantic_p\": 0.0, \"cramers_v\": 0.226, \"coherent_frac\": 0.5853}",
+          "predict_baseline_random_triad": "{\"baseline_strict_order_frac\": 0.3458}",
+          "metadata_fold": "rhyme",
+          "metadata_analysis_type": "per_domain_aggregate"
+        },
+        {
+          "input": "domain_aggregate:sentiment",
+          "output": "{\"domain\": \"sentiment\", \"n_graphs\": 4, \"total_ffls\": 566951}",
+          "predict_ffl_method": "{\"mean_ffls_per_graph\": 141737.8, \"semantic_chi2\": 555826.3778, \"semantic_p\": 0.0, \"cramers_v\": 0.4042, \"coherent_frac\": 0.5755}",
+          "predict_baseline_random_triad": "{\"baseline_strict_order_frac\": 0.352}",
+          "metadata_fold": "sentiment",
+          "metadata_analysis_type": "per_domain_aggregate"
+        },
+        {
+          "input": "domain_aggregate:translation",
+          "output": "{\"domain\": \"translation\", \"n_graphs\": 4, \"total_ffls\": 255094}",
+          "predict_ffl_method": "{\"mean_ffls_per_graph\": 63773.5, \"semantic_chi2\": 147705.9353, \"semantic_p\": 0.0, \"cramers_v\": 0.3107, \"coherent_frac\": 0.5994}",
+          "predict_baseline_random_triad": "{\"baseline_strict_order_frac\": 0.3444}",
+          "metadata_fold": "translation",
+          "metadata_analysis_type": "per_domain_aggregate"
+        },
+        {
+          "input": "representative_ffl_0",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_3992_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" strings of ellipses and sentence fragments, possibly in conjunction with other punctuation\", \"role\": \"input_encoding\"}, \"c\": {\"node_id\": \"2_11080_1\", \"layer\": 2, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" code snippets and programming terms\", \"role\": \"domain_specific\"}, \"weights\": {\"w_ab\": {\"abs\": 0.9092769622802734, \"signed\": -0.9092769622802734}, \"w_ac\": {\"abs\": 7.58160400390625, \"signed\": -7.58160400390625}, \"w_bc\": {\"abs\": 1.824736475944519, \"signed\": 1.824736475944519}}, \"coherent\": true}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"input_encoding\", \"c_role\": \"domain_specific\", \"coherent\": true}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "representative_ffl_1",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_11207_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" code and documented code\", \"role\": \"domain_specific\"}, \"c\": {\"node_id\": \"2_1852_1\", \"layer\": 2, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" occurrences of the word \\\"the,\\\" with slightly higher activation for 'in'\", \"role\": \"input_encoding\"}, \"weights\": {\"w_ab\": {\"abs\": 1.3225769996643066, \"signed\": -1.3225769996643066}, \"w_ac\": {\"abs\": 3.4467501640319824, \"signed\": -3.4467501640319824}, \"w_bc\": {\"abs\": 0.9118698835372925, \"signed\": -0.9118698835372925}}, \"coherent\": false}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"domain_specific\", \"c_role\": \"input_encoding\", \"coherent\": false}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "representative_ffl_2",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_12115_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" code comments\", \"role\": \"domain_specific\"}, \"c\": {\"node_id\": \"2_1852_1\", \"layer\": 2, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" occurrences of the word \\\"the,\\\" with slightly higher activation for 'in'\", \"role\": \"input_encoding\"}, \"weights\": {\"w_ab\": {\"abs\": 0.7381027340888977, \"signed\": -0.7381027340888977}, \"w_ac\": {\"abs\": 3.4467501640319824, \"signed\": -3.4467501640319824}, \"w_bc\": {\"abs\": 0.6929895877838135, \"signed\": -0.6929895877838135}}, \"coherent\": false}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"domain_specific\", \"c_role\": \"input_encoding\", \"coherent\": false}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "representative_ffl_3",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_12115_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" code comments\", \"role\": \"domain_specific\"}, \"c\": {\"node_id\": \"3_373_1\", \"layer\": 3, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" word beginnings with the letters \\\"a,\\\" \\\"h,\\\"\\\"i,\\\" \\\"r,\\\" and \\\"p\\\" (perhaps prefixes and/or related to medical or scientific terms)\", \"role\": \"input_encoding\"}, \"weights\": {\"w_ab\": {\"abs\": 0.7381027340888977, \"signed\": -0.7381027340888977}, \"w_ac\": {\"abs\": 2.9574203491210938, \"signed\": -2.9574203491210938}, \"w_bc\": {\"abs\": 1.051100254058838, \"signed\": -1.051100254058838}}, \"coherent\": false}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"domain_specific\", \"c_role\": \"input_encoding\", \"coherent\": false}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "representative_ffl_4",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_14137_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code\", \"role\": \"domain_specific\"}, \"c\": {\"node_id\": \"2_1751_1\", \"layer\": 2, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" sentences starting with the word \\\"The\\\"\", \"role\": \"input_encoding\"}, \"weights\": {\"w_ab\": {\"abs\": 5.650704383850098, \"signed\": -5.650704383850098}, \"w_ac\": {\"abs\": 1.1173523664474487, \"signed\": -1.1173523664474487}, \"w_bc\": {\"abs\": 1.550220012664795, \"signed\": -1.550220012664795}}, \"coherent\": false}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"domain_specific\", \"c_role\": \"input_encoding\", \"coherent\": false}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "representative_ffl_5",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_14137_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code\", \"role\": \"domain_specific\"}, \"c\": {\"node_id\": \"2_1852_1\", \"layer\": 2, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" occurrences of the word \\\"the,\\\" with slightly higher activation for 'in'\", \"role\": \"input_encoding\"}, \"weights\": {\"w_ab\": {\"abs\": 5.650704383850098, \"signed\": -5.650704383850098}, \"w_ac\": {\"abs\": 3.4467501640319824, \"signed\": -3.4467501640319824}, \"w_bc\": {\"abs\": 2.6417229175567627, \"signed\": -2.6417229175567627}}, \"coherent\": false}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"domain_specific\", \"c_role\": \"input_encoding\", \"coherent\": false}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "representative_ffl_6",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_14137_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code\", \"role\": \"domain_specific\"}, \"c\": {\"node_id\": \"3_373_1\", \"layer\": 3, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" word beginnings with the letters \\\"a,\\\" \\\"h,\\\"\\\"i,\\\" \\\"r,\\\" and \\\"p\\\" (perhaps prefixes and/or related to medical or scientific terms)\", \"role\": \"input_encoding\"}, \"weights\": {\"w_ab\": {\"abs\": 5.650704383850098, \"signed\": -5.650704383850098}, \"w_ac\": {\"abs\": 2.9574203491210938, \"signed\": -2.9574203491210938}, \"w_bc\": {\"abs\": 1.288476824760437, \"signed\": -1.288476824760437}}, \"coherent\": false}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"domain_specific\", \"c_role\": \"input_encoding\", \"coherent\": false}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "representative_ffl_7",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_14137_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code\", \"role\": \"domain_specific\"}, \"c\": {\"node_id\": \"4_13735_1\", \"layer\": 4, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" the word \\\"the\\\"\", \"role\": \"input_encoding\"}, \"weights\": {\"w_ab\": {\"abs\": 5.650704383850098, \"signed\": -5.650704383850098}, \"w_ac\": {\"abs\": 1.815216064453125, \"signed\": -1.815216064453125}, \"w_bc\": {\"abs\": 1.5744879245758057, \"signed\": -1.5744879245758057}}, \"coherent\": false}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"domain_specific\", \"c_role\": \"input_encoding\", \"coherent\": false}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "representative_ffl_8",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_14137_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code\", \"role\": \"domain_specific\"}, \"c\": {\"node_id\": \"6_4516_1\", \"layer\": 6, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" the letter \\\"i.\\\"\", \"role\": \"input_encoding\"}, \"weights\": {\"w_ab\": {\"abs\": 5.650704383850098, \"signed\": -5.650704383850098}, \"w_ac\": {\"abs\": 0.6589047908782959, \"signed\": -0.6589047908782959}, \"w_bc\": {\"abs\": 0.6654166579246521, \"signed\": -0.6654166579246521}}, \"coherent\": false}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"domain_specific\", \"c_role\": \"input_encoding\", \"coherent\": false}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "representative_ffl_9",
+          "output": "{\"a\": {\"node_id\": \"0_12698_1\", \"layer\": 0, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"question-answer pairs (or just questions) and import statements\", \"role\": \"output_generation\"}, \"b\": {\"node_id\": \"1_14137_1\", \"layer\": 1, \"feature_type\": \"cross layer transcoder\", \"explanation\": \" words or phrases that appear in legal or technical documents, like names of laws, legal terms (pleaded, testified), and technical terms, especially when abbreviated or in code\", \"role\": \"domain_specific\"}, \"c\": {\"node_id\": \"8_3815_1\", \"layer\": 8, \"feature_type\": \"cross layer transcoder\", \"explanation\": \"the digit zero\", \"role\": \"input_encoding\"}, \"weights\": {\"w_ab\": {\"abs\": 5.650704383850098, \"signed\": -5.650704383850098}, \"w_ac\": {\"abs\": 0.8872253894805908, \"signed\": -0.8872253894805908}, \"w_bc\": {\"abs\": 0.9599709510803223, \"signed\": -0.9599709510803223}}, \"coherent\": false}",
+          "predict_ffl_method": "{\"a_role\": \"output_generation\", \"b_role\": \"domain_specific\", \"c_role\": \"input_encoding\", \"coherent\": false}",
+          "predict_baseline_random_triad": "{\"note\": \"no baseline equivalent for individual FFL instances\"}",
+          "metadata_fold": "representative",
+          "metadata_analysis_type": "qualitative_example"
+        },
+        {
+          "input": "global_aggregate_layer_semantic",
+          "output": "{\"total_ffls\": 1906060, \"frac_strict_order_abc\": 1.0, \"frac_a_earliest\": 1.0, \"frac_c_latest\": 1.0, \"frac_same_layer_any\": 0.0, \"gap_ab\": {\"mean\": 7.245, \"std\": 6.523, \"median\": 5.0}, \"gap_ac\": {\"mean\": 11.459, \"std\": 7.246, \"median\": 9.0}, \"gap_bc\": {\"mean\": 4.214, \"std\": 3.934, \"median\": 3.0}}",
+          "predict_ffl_method": "{\"chi2\": 1166758.855, \"p_value\": 0.0, \"cramers_v\": 0.3194, \"coherent_frac\": 0.5814, \"cross_domain_cramers_v\": 0.1264}",
+          "predict_baseline_random_triad": "{\"ffl_strict_order\": 1.0, \"baseline_strict_order\": 0.3511, \"ffl_a_earliest\": 1.0, \"baseline_a_earliest\": 1.0, \"ffl_semantic_chi2\": 1166758.855, \"ffl_semantic_p\": 0.0}",
+          "metadata_fold": "global",
+          "metadata_analysis_type": "aggregate_statistics"
+        },
+        {
+          "input": "summary_statistics",
+          "output": "{\"total_graphs\": 34, \"total_ffls\": 1906060, \"explanation_match_rate\": 0.6258, \"key_findings\": {\"ffl_count_per_graph_mean\": 56060.6, \"ffl_count_per_graph_median\": 43477.5, \"layer_strict_ordering_frac\": 1.0, \"semantic_chi2\": 1166758.855, \"semantic_p_value\": 0.0, \"semantic_cramers_v\": 0.3194, \"cross_domain_cramers_v\": 0.1264, \"coherent_ffl_fraction\": 0.5814, \"baseline_strict_ordering_frac\": 0.3511}, \"confirmation_signals\": {\"ffls_found\": true, \"a_tends_earliest\": true, \"semantic_positions_differ\": true, \"ffl_more_ordered_than_baseline\": true}}",
+          "predict_ffl_method": "{\"ffl_count_per_graph_mean\": 56060.6, \"ffl_count_per_graph_median\": 43477.5, \"layer_strict_ordering_frac\": 1.0, \"semantic_chi2\": 1166758.855, \"semantic_p_value\": 0.0, \"semantic_cramers_v\": 0.3194, \"cross_domain_cramers_v\": 0.1264, \"coherent_ffl_fraction\": 0.5814, \"baseline_strict_ordering_frac\": 0.3511}",
+          "predict_baseline_random_triad": "{\"baseline_strict_ordering_frac\": 0.3511}",
+          "metadata_fold": "summary",
+          "metadata_analysis_type": "confirmation_signals"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[project]
+name = "exp-id1-it4-weighted-motif-clustering"
+version = "1.0.0"
+requires-python = ">=3.11"
+description = "Weighted Motif Intensity & Sign-Coherence Features for Capability Clustering"
+dependencies = [
+    "igraph==1.0.0",
+    "numpy==2.4.3",
+    "scipy==1.17.1",
+    "scikit-learn==1.8.0",
+    "loguru==0.7.3",
+    "texttable==1.7.0",
+]

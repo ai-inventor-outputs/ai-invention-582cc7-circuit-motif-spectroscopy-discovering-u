@@ -1,0 +1,13 @@
+{
+  "id": "exp_id3_it5__opus",
+  "type": "code",
+  "title": "Reviewer-Proof Z-Score Statistics: 100-Null CIs, BH-FDR, Pruning Robustness, and Layer-Preserving Validation at 200-Graph Scale",
+  "summary": "Demo notebook implementing a six-phase statistical pipeline for analyzing network motifs in Neuronpedia attribution graphs. Processes 3 graphs from diverse domains (antonym, arithmetic, code_completion) through: Phase A (3-node motif Z-scores with 50 null models), Phase B (4-node Z-scores on pruned graphs), Phase C (Benjamini-Hochberg FDR correction), Phase D (pruning sensitivity sweep across 3 thresholds), Phase E (convergence diagnostics), and Phase F (layer-preserving null model validation with Wilcoxon comparison). Uses DAG-constrained edge-swap randomization. Full pipeline completes in ~8 seconds. Visualizes Z-score distributions, FDR impact, and degree-preserving vs layer-preserving null model comparison.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_5/gen_art/exp_id3_it5__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id3_it5__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id3_it5__opus/method_code_demo.ipynb"
+}

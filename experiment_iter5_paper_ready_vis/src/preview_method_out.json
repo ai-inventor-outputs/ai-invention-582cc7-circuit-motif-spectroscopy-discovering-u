@@ -1,0 +1,1569 @@
+{
+  "metadata": {
+    "method_name": "motif_viz_pipeline",
+    "description": "Paper-ready visualization data for 200 attribution graphs",
+    "run_date": "2026-03-19",
+    "prune_percentile": 75,
+    "n_null_models": 14,
+    "seed": 42,
+    "figures": {
+      "fig_tsne_umap_embeddings": {
+        "description": "2D embedding coordinates from t-SNE and UMAP across multiple feature sets and hyperparameters",
+        "embeddings": [
+          {
+            "method": "tsne",
+            "feature_set": "motif_only",
+            "hyperparams": {
+              "perplexity": 15
+            },
+            "points": [
+              {
+                "x": 10.583243370056152,
+                "y": -1.2817463874816895,
+                "domain": "antonym",
+                "slug": "m5-antonym-019-a39bd921",
+                "correctness": "false"
+              },
+              {
+                "x": 12.884674072265625,
+                "y": 2.2423083782196045,
+                "domain": "antonym",
+                "slug": "m4-antonym-013-db7d1359",
+                "correctness": "true"
+              },
+              {
+                "x": 24.210468292236328,
+                "y": 4.9189348220825195,
+                "domain": "antonym",
+                "slug": "m4-antonym-004-beb14eca",
+                "correctness": "true"
+              }
+            ],
+            "silhouette_score": 0.14528334140777588,
+            "is_recommended": false
+          },
+          {
+            "method": "tsne",
+            "feature_set": "motif_only",
+            "hyperparams": {
+              "perplexity": 30
+            },
+            "points": [
+              {
+                "x": 2.3170363903045654,
+                "y": 2.863260507583618,
+                "domain": "antonym",
+                "slug": "m5-antonym-019-a39bd921",
+                "correctness": "false"
+              },
+              {
+                "x": 4.819499492645264,
+                "y": 1.8658030033111572,
+                "domain": "antonym",
+                "slug": "m4-antonym-013-db7d1359",
+                "correctness": "true"
+              },
+              {
+                "x": 11.907936096191406,
+                "y": 0.6101083159446716,
+                "domain": "antonym",
+                "slug": "m4-antonym-004-beb14eca",
+                "correctness": "true"
+              }
+            ],
+            "silhouette_score": 0.10813043266534805,
+            "is_recommended": false
+          },
+          {
+            "method": "tsne",
+            "feature_set": "motif_only",
+            "hyperparams": {
+              "perplexity": 50
+            },
+            "points": [
+              {
+                "x": 0.5510295629501343,
+                "y": 1.7488648891448975,
+                "domain": "antonym",
+                "slug": "m5-antonym-019-a39bd921",
+                "correctness": "false"
+              },
+              {
+                "x": 2.4785547256469727,
+                "y": 1.3962510824203491,
+                "domain": "antonym",
+                "slug": "m4-antonym-013-db7d1359",
+                "correctness": "true"
+              },
+              {
+                "x": 5.110584735870361,
+                "y": 1.3967394828796387,
+                "domain": "antonym",
+                "slug": "m4-antonym-004-beb14eca",
+                "correctness": "true"
+              }
+            ],
+            "silhouette_score": 0.1060236245393753,
+            "is_recommended": false
+          }
+        ],
+        "recommended_default": {
+          "method": "tsne",
+          "feature_set": "all_combined",
+          "hyperparams": {
+            "perplexity": 15
+          },
+          "silhouette": 0.6032395958900452
+        },
+        "n_embeddings": 24
+      },
+      "fig_motif_heatmap": {
+        "description": "Domain-level motif spectrum and weighted feature heatmaps with domain similarity",
+        "count_ratio_heatmap": {
+          "matrix": [
+            [
+              -0.738623071787853,
+              -0.9896533655012861,
+              1.0038740083105535
+            ],
+            [
+              -1.5673641467598887,
+              -0.28476329154437513,
+              0.4420854617448498
+            ],
+            [
+              0.29663980048952865,
+              0.10641959275727211,
+              0.05523243229483163
+            ]
+          ],
+          "raw_matrix": [
+            [
+              0.10887910200579726,
+              0.04895887680553252,
+              0.8111340569134836
+            ],
+            [
+              0.1030434358242851,
+              0.06079118034709886,
+              0.7947830752393285
+            ],
+            [
+              0.11616901282978787,
+              0.06735758665402815,
+              0.7835236310342144
+            ]
+          ],
+          "std_matrix": [
+            [
+              0.012649529664201442,
+              0.007125233072606864,
+              0.022246088549711295
+            ],
+            [
+              0.00697842924869062,
+              0.0033537995891889517,
+              0.008942805313157455
+            ],
+            [
+              0.017712394509506933,
+              0.01374368794058556,
+              0.03477631996359752
+            ]
+          ],
+          "row_labels": [
+            "antonym",
+            "arithmetic",
+            "code_completion"
+          ],
+          "col_labels": [
+            "021U",
+            "021C",
+            "021D"
+          ]
+        },
+        "weighted_feature_heatmap": {
+          "matrix": [
+            [
+              1.1243527940735845,
+              0.9045020910654359,
+              1.5158888925680452
+            ],
+            [
+              1.2701554026349504,
+              1.4623438404177012,
+              0.857366312144322
+            ],
+            [
+              -0.18131086110637115,
+              -0.04633261719180891,
+              -0.6172325544780832
+            ]
+          ],
+          "row_labels": [
+            "antonym",
+            "arithmetic",
+            "code_completion"
+          ],
+          "col_labels": [
+            "ffl_intensity_mean",
+            "ffl_intensity_median",
+            "ffl_intensity_std"
+          ]
+        },
+        "domain_similarity_matrix": {
+          "matrix": [
+            [
+              1.0000000000000002,
+              0.9997701943786796,
+              0.9995854554124809
+            ],
+            [
+              0.9997701943786796,
+              0.9999999999999998,
+              0.9997429751295298
+            ],
+            [
+              0.9995854554124809,
+              0.9997429751295298,
+              1.0
+            ]
+          ],
+          "labels": [
+            "antonym",
+            "arithmetic",
+            "code_completion"
+          ]
+        },
+        "discriminative_features": {
+          "antonym_vs_arithmetic": [
+            {
+              "feature": "030T",
+              "abs_t": 10.997626898288292,
+              "p_value": 3.487910454432223e-14
+            },
+            {
+              "feature": "030T",
+              "abs_t": 10.997626898288292,
+              "p_value": 3.487910454432223e-14
+            },
+            {
+              "feature": "ffl_coherence_frac",
+              "abs_t": 10.195676938063091,
+              "p_value": 1.419428200438034e-13
+            }
+          ],
+          "antonym_vs_code_completion": [
+            {
+              "feature": "ffl_intensity_std",
+              "abs_t": 8.506546739989687,
+              "p_value": 7.220594536310604e-10
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 6.252706349856996,
+              "p_value": 3.954135567010847e-07
+            },
+            {
+              "feature": "021C",
+              "abs_t": 5.748664638834244,
+              "p_value": 1.849572100111088e-06
+            }
+          ],
+          "antonym_vs_country_capital": [
+            {
+              "feature": "030T",
+              "abs_t": 17.585012356709537,
+              "p_value": 1.4490061981649393e-18
+            },
+            {
+              "feature": "030T",
+              "abs_t": 17.585012356709537,
+              "p_value": 1.4490061981649393e-18
+            },
+            {
+              "feature": "021C",
+              "abs_t": 17.116748028627608,
+              "p_value": 3.339078530935267e-19
+            }
+          ],
+          "antonym_vs_multi_hop_reasoning": [
+            {
+              "feature": "030T",
+              "abs_t": 9.167334632935372,
+              "p_value": 1.8191624236815584e-11
+            },
+            {
+              "feature": "030T",
+              "abs_t": 9.167334632935372,
+              "p_value": 1.8191624236815584e-11
+            },
+            {
+              "feature": "021C",
+              "abs_t": 5.885812937881746,
+              "p_value": 4.6007020767802835e-07
+            }
+          ],
+          "antonym_vs_rhyme": [
+            {
+              "feature": "ffl_count",
+              "abs_t": 8.891487973727424,
+              "p_value": 7.012233991048112e-10
+            },
+            {
+              "feature": "ffl_density",
+              "abs_t": 8.891487973727424,
+              "p_value": 7.012233991048112e-10
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 7.814604462599322,
+              "p_value": 1.137335068386615e-09
+            }
+          ],
+          "antonym_vs_sentiment": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 28.39559891484576,
+              "p_value": 8.971616573910391e-24
+            },
+            {
+              "feature": "ffl_count",
+              "abs_t": 18.40059802284649,
+              "p_value": 6.687775417667324e-17
+            },
+            {
+              "feature": "ffl_density",
+              "abs_t": 18.40059802284649,
+              "p_value": 6.687775417667324e-17
+            }
+          ],
+          "antonym_vs_translation": [
+            {
+              "feature": "021C",
+              "abs_t": 26.55101179202518,
+              "p_value": 5.793132619405281e-30
+            },
+            {
+              "feature": "021C",
+              "abs_t": 26.55101179202518,
+              "p_value": 5.793132619405281e-30
+            },
+            {
+              "feature": "030T",
+              "abs_t": 20.59067247746256,
+              "p_value": 7.608689197866016e-26
+            }
+          ],
+          "arithmetic_vs_code_completion": [
+            {
+              "feature": "ffl_coherence_frac",
+              "abs_t": 14.566503572009816,
+              "p_value": 5.411883690865347e-19
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 13.9097305113757,
+              "p_value": 1.5632012469373938e-17
+            },
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 13.650011850280697,
+              "p_value": 9.15308729902956e-18
+            }
+          ],
+          "arithmetic_vs_country_capital": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 22.49483760242563,
+              "p_value": 3.774592159280413e-26
+            },
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 20.457936104570404,
+              "p_value": 6.538794740411589e-25
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 18.408745218114774,
+              "p_value": 6.724245390929108e-24
+            }
+          ],
+          "arithmetic_vs_multi_hop_reasoning": [
+            {
+              "feature": "030T",
+              "abs_t": 26.428594721756117,
+              "p_value": 3.427926837899753e-30
+            },
+            {
+              "feature": "030T",
+              "abs_t": 26.428594721756117,
+              "p_value": 3.427926837899753e-30
+            },
+            {
+              "feature": "021C",
+              "abs_t": 17.878105915094352,
+              "p_value": 1.4594136806605884e-20
+            }
+          ],
+          "arithmetic_vs_rhyme": [
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 16.935398652760668,
+              "p_value": 9.799740209489318e-20
+            },
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 14.843752865622053,
+              "p_value": 7.889871818648654e-15
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 14.228444948848015,
+              "p_value": 4.413786631814497e-16
+            }
+          ],
+          "arithmetic_vs_sentiment": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 72.37561328307746,
+              "p_value": 6.303701729791502e-50
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 46.85969221498688,
+              "p_value": 4.0678783686421075e-36
+            },
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 45.946314603714974,
+              "p_value": 3.960776145288005e-30
+            }
+          ],
+          "arithmetic_vs_translation": [
+            {
+              "feature": "021C",
+              "abs_t": 27.896940342754025,
+              "p_value": 2.099192419577429e-28
+            },
+            {
+              "feature": "021C",
+              "abs_t": 27.896940342754025,
+              "p_value": 2.099192419577429e-28
+            },
+            {
+              "feature": "021D",
+              "abs_t": 21.189169218614314,
+              "p_value": 7.793366724268541e-26
+            }
+          ],
+          "code_completion_vs_country_capital": [
+            {
+              "feature": "030T",
+              "abs_t": 12.562786874758885,
+              "p_value": 4.4081843836060947e-13
+            },
+            {
+              "feature": "030T",
+              "abs_t": 12.562786874758885,
+              "p_value": 4.4081843836060947e-13
+            },
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 8.548712019727969,
+              "p_value": 4.020006565401798e-11
+            }
+          ],
+          "code_completion_vs_multi_hop_reasoning": [
+            {
+              "feature": "030T",
+              "abs_t": 9.457693267910644,
+              "p_value": 5.936430402696509e-11
+            },
+            {
+              "feature": "030T",
+              "abs_t": 9.457693267910644,
+              "p_value": 5.936430402696509e-11
+            },
+            {
+              "feature": "021C",
+              "abs_t": 9.441716545782981,
+              "p_value": 2.356151674113978e-10
+            }
+          ],
+          "code_completion_vs_rhyme": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 7.701473072979728,
+              "p_value": 4.929629032095033e-09
+            },
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 5.178630426744256,
+              "p_value": 5.628173544640723e-06
+            },
+            {
+              "feature": "ffl_count",
+              "abs_t": 4.73762350600844,
+              "p_value": 3.050280675594335e-05
+            }
+          ],
+          "code_completion_vs_sentiment": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 45.12637524353611,
+              "p_value": 1.2229280813910727e-36
+            },
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 22.103641926920076,
+              "p_value": 8.086858182991661e-19
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 20.691892927690347,
+              "p_value": 1.2239578897630962e-19
+            }
+          ],
+          "code_completion_vs_translation": [
+            {
+              "feature": "030T",
+              "abs_t": 16.295149262814576,
+              "p_value": 9.470192368955624e-20
+            },
+            {
+              "feature": "030T",
+              "abs_t": 16.295149262814576,
+              "p_value": 9.470192368955624e-20
+            },
+            {
+              "feature": "021C",
+              "abs_t": 9.590106085136812,
+              "p_value": 1.3208625532750342e-10
+            }
+          ],
+          "country_capital_vs_multi_hop_reasoning": [
+            {
+              "feature": "030T",
+              "abs_t": 40.178624468258676,
+              "p_value": 5.23850249364391e-35
+            },
+            {
+              "feature": "030T",
+              "abs_t": 40.178624468258676,
+              "p_value": 5.23850249364391e-35
+            },
+            {
+              "feature": "021C",
+              "abs_t": 29.649582126129857,
+              "p_value": 1.4356175717801815e-29
+            }
+          ],
+          "country_capital_vs_rhyme": [
+            {
+              "feature": "030T",
+              "abs_t": 9.787481472411732,
+              "p_value": 1.7812282428802253e-10
+            },
+            {
+              "feature": "030T",
+              "abs_t": 9.787481472411732,
+              "p_value": 1.7812282428802253e-10
+            },
+            {
+              "feature": "021D",
+              "abs_t": 6.9668457583992955,
+              "p_value": 2.0940852863442307e-07
+            }
+          ],
+          "country_capital_vs_sentiment": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 38.51641105598465,
+              "p_value": 9.324926042524595e-37
+            },
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 27.610661454867486,
+              "p_value": 1.9250678459176513e-25
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 25.39360408882488,
+              "p_value": 2.265852533390921e-26
+            }
+          ],
+          "country_capital_vs_translation": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 15.560892180279222,
+              "p_value": 4.7012264285891396e-20
+            },
+            {
+              "feature": "021C",
+              "abs_t": 15.517574727692013,
+              "p_value": 2.829891956487659e-19
+            },
+            {
+              "feature": "021C",
+              "abs_t": 15.517574727692013,
+              "p_value": 2.829891956487659e-19
+            }
+          ],
+          "multi_hop_reasoning_vs_rhyme": [
+            {
+              "feature": "030T",
+              "abs_t": 10.93838195925626,
+              "p_value": 2.3015405547239467e-12
+            },
+            {
+              "feature": "030T",
+              "abs_t": 10.93838195925626,
+              "p_value": 2.3015405547239467e-12
+            },
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 8.40733627214436,
+              "p_value": 1.792288318359929e-10
+            }
+          ],
+          "multi_hop_reasoning_vs_sentiment": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 43.05823184196888,
+              "p_value": 7.022483245998454e-35
+            },
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 29.046579643193656,
+              "p_value": 2.637644841647022e-22
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 29.03506996974017,
+              "p_value": 1.9132679803560616e-24
+            }
+          ],
+          "multi_hop_reasoning_vs_translation": [
+            {
+              "feature": "021C",
+              "abs_t": 38.291422923430716,
+              "p_value": 1.239804970264305e-37
+            },
+            {
+              "feature": "021C",
+              "abs_t": 38.291422923430716,
+              "p_value": 1.239804970264305e-37
+            },
+            {
+              "feature": "030T",
+              "abs_t": 35.62136923531774,
+              "p_value": 6.2866313097084015e-34
+            }
+          ],
+          "rhyme_vs_sentiment": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 19.12322357906143,
+              "p_value": 4.870191009558709e-18
+            },
+            {
+              "feature": "ffl_intensity_std",
+              "abs_t": 12.658018950849574,
+              "p_value": 2.0421112367187477e-14
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 11.57273843008627,
+              "p_value": 5.6143974134384894e-12
+            }
+          ],
+          "rhyme_vs_translation": [
+            {
+              "feature": "030T",
+              "abs_t": 13.783596285690871,
+              "p_value": 7.561698269204451e-17
+            },
+            {
+              "feature": "030T",
+              "abs_t": 13.783596285690871,
+              "p_value": 7.561698269204451e-17
+            },
+            {
+              "feature": "021C",
+              "abs_t": 13.428642218280759,
+              "p_value": 1.2293158184460169e-14
+            }
+          ],
+          "sentiment_vs_translation": [
+            {
+              "feature": "ffl_path_dominance_mean",
+              "abs_t": 62.93289913596964,
+              "p_value": 1.4745964478483463e-47
+            },
+            {
+              "feature": "ffl_intensity_median",
+              "abs_t": 40.01862868710213,
+              "p_value": 1.3719149092389703e-30
+            },
+            {
+              "feature": "ffl_intensity_mean",
+              "abs_t": 36.71364342717465,
+              "p_value": 2.0645253111346693e-33
+            }
+          ]
+        }
+      },
+      "fig_zscore_boxplot": {
+        "description": "Per-domain Z-score distributions for each motif type (box plot data)",
+        "motif_types": {
+          "021U": {
+            "per_domain": {
+              "antonym": {
+                "median": -26.554990530366425,
+                "q1": -32.590897774552765,
+                "q3": -23.91241646649818,
+                "whisker_lo": -45.608619736634644,
+                "whisker_hi": -16.314597669248393,
+                "min": -47.12007750431253,
+                "max": -16.314597669248393,
+                "outliers": [
+                  -47.12007750431253
+                ],
+                "n": 26
+              },
+              "arithmetic": {
+                "median": -57.39977752448817,
+                "q1": -68.67262600398087,
+                "q3": -48.9054870630728,
+                "whisker_lo": -90.81343495470644,
+                "whisker_hi": -38.96294914155464,
+                "min": -90.81343495470644,
+                "max": -38.96294914155464,
+                "outliers": [],
+                "n": 26
+              },
+              "code_completion": {
+                "median": -48.40696553914782,
+                "q1": -56.63931298429716,
+                "q3": -42.84497845184346,
+                "whisker_lo": -73.01065451754468,
+                "whisker_hi": -31.00982124771201,
+                "min": -73.01065451754468,
+                "max": -31.00982124771201,
+                "outliers": [],
+                "n": 24
+              },
+              "country_capital": {
+                "median": -49.07975540095639,
+                "q1": -57.21957606300456,
+                "q3": -41.93802324506902,
+                "whisker_lo": -75.75058734842823,
+                "whisker_hi": -30.20301153156111,
+                "min": -75.75058734842823,
+                "max": -30.20301153156111,
+                "outliers": [],
+                "n": 26
+              },
+              "multi_hop_reasoning": {
+                "median": -39.93143320457371,
+                "q1": -47.01068387519759,
+                "q3": -35.10128301777968,
+                "whisker_lo": -64.87478516132447,
+                "whisker_hi": -27.226698268249418,
+                "min": -78.21049049274885,
+                "max": -27.226698268249418,
+                "outliers": [
+                  -78.21049049274885
+                ],
+                "n": 24
+              },
+              "rhyme": {
+                "median": -51.98555239908589,
+                "q1": -57.54643247970682,
+                "q3": -45.289583093320246,
+                "whisker_lo": -70.64038633734019,
+                "whisker_hi": -37.36590557572729,
+                "min": -70.64038633734019,
+                "max": -37.36590557572729,
+                "outliers": [],
+                "n": 24
+              },
+              "sentiment": {
+                "median": -65.7295851914451,
+                "q1": -75.84678825840336,
+                "q3": -61.52008291336635,
+                "whisker_lo": -96.87145503492009,
+                "whisker_hi": -42.31154145305587,
+                "min": -96.87145503492009,
+                "max": -42.31154145305587,
+                "outliers": [],
+                "n": 24
+              },
+              "translation": {
+                "median": -53.3418648339632,
+                "q1": -65.32100047260667,
+                "q3": -47.426189637918455,
+                "whisker_lo": -92.163216724639,
+                "whisker_hi": -20.583973385886132,
+                "min": -92.21787046898525,
+                "max": -20.099804930890464,
+                "outliers": [
+                  -20.099804930890464,
+                  -92.21787046898525
+                ],
+                "n": 26
+              }
+            }
+          },
+          "021C": {
+            "per_domain": {
+              "antonym": {
+                "median": -26.55499053036646,
+                "q1": -32.59089777455279,
+                "q3": -23.91241646649816,
+                "whisker_lo": -45.60861973663474,
+                "whisker_hi": -16.314597669248368,
+                "min": -47.12007750431253,
+                "max": -16.314597669248368,
+                "outliers": [
+                  -47.12007750431253
+                ],
+                "n": 26
+              },
+              "arithmetic": {
+                "median": -57.39977752448817,
+                "q1": -68.67262600398085,
+                "q3": -48.90548706307277,
+                "whisker_lo": -90.81343495470644,
+                "whisker_hi": -38.96294914155462,
+                "min": -90.81343495470644,
+                "max": -38.96294914155462,
+                "outliers": [],
+                "n": 26
+              },
+              "code_completion": {
+                "median": -48.40696553914779,
+                "q1": -56.63931298429715,
+                "q3": -42.844978451843474,
+                "whisker_lo": -73.01065451754464,
+                "whisker_hi": -31.00982124771197,
+                "min": -73.01065451754464,
+                "max": -31.00982124771197,
+                "outliers": [],
+                "n": 24
+              },
+              "country_capital": {
+                "median": -49.07975540095641,
+                "q1": -57.21957606300456,
+                "q3": -41.93802324506902,
+                "whisker_lo": -75.75058734842817,
+                "whisker_hi": -30.20301153156111,
+                "min": -75.75058734842817,
+                "max": -30.20301153156111,
+                "outliers": [],
+                "n": 26
+              },
+              "multi_hop_reasoning": {
+                "median": -39.931433204573665,
+                "q1": -47.01068387519756,
+                "q3": -35.10128301777965,
+                "whisker_lo": -64.87478516132441,
+                "whisker_hi": -27.226698268249418,
+                "min": -78.2104904927488,
+                "max": -27.226698268249418,
+                "outliers": [
+                  -78.2104904927488
+                ],
+                "n": 24
+              },
+              "rhyme": {
+                "median": -51.98555239908586,
+                "q1": -57.546432479706844,
+                "q3": -45.289583093320246,
+                "whisker_lo": -70.64038633734019,
+                "whisker_hi": -37.36590557572729,
+                "min": -70.64038633734019,
+                "max": -37.36590557572729,
+                "outliers": [],
+                "n": 24
+              },
+              "sentiment": {
+                "median": -65.72958519144512,
+                "q1": -75.84678825840336,
+                "q3": -61.52008291336636,
+                "whisker_lo": -96.87145503492009,
+                "whisker_hi": -42.31154145305587,
+                "min": -96.87145503492009,
+                "max": -42.31154145305587,
+                "outliers": [],
+                "n": 24
+              },
+              "translation": {
+                "median": -53.3418648339632,
+                "q1": -65.32100047260667,
+                "q3": -47.426189637918455,
+                "whisker_lo": -92.163216724639,
+                "whisker_hi": -20.583973385886132,
+                "min": -92.21787046898525,
+                "max": -20.099804930890443,
+                "outliers": [
+                  -20.099804930890443,
+                  -92.21787046898525
+                ],
+                "n": 26
+              }
+            }
+          },
+          "021D": {
+            "per_domain": {
+              "antonym": {
+                "median": -26.55499053036646,
+                "q1": -32.59089777455263,
+                "q3": -23.912416466498264,
+                "whisker_lo": -45.60861973663418,
+                "whisker_hi": -16.31459766924848,
+                "min": -47.120077504312455,
+                "max": -16.31459766924848,
+                "outliers": [
+                  -47.120077504312455
+                ],
+                "n": 26
+              },
+              "arithmetic": {
+                "median": -57.39977752448805,
+                "q1": -68.67262600398098,
+                "q3": -48.905487063072655,
+                "whisker_lo": -90.81343495470634,
+                "whisker_hi": -38.96294914155459,
+                "min": -90.81343495470634,
+                "max": -38.96294914155459,
+                "outliers": [],
+                "n": 26
+              },
+              "code_completion": {
+                "median": -48.406965539147734,
+                "q1": -56.63931298429726,
+                "q3": -42.84497845184363,
+                "whisker_lo": -73.01065451754485,
+                "whisker_hi": -31.00982124771193,
+                "min": -73.01065451754485,
+                "max": -31.00982124771193,
+                "outliers": [],
+                "n": 24
+              },
+              "country_capital": {
+                "median": -49.07975540095646,
+                "q1": -57.21957606300459,
+                "q3": -41.938023245069004,
+                "whisker_lo": -75.750587348428,
+                "whisker_hi": -30.203011531561163,
+                "min": -75.750587348428,
+                "max": -30.203011531561163,
+                "outliers": [],
+                "n": 26
+              },
+              "multi_hop_reasoning": {
+                "median": -39.931433204574006,
+                "q1": -47.01068387519784,
+                "q3": -35.10128301777978,
+                "whisker_lo": -64.87478516132494,
+                "whisker_hi": -27.2266982682495,
+                "min": -78.21049049274923,
+                "max": -27.2266982682495,
+                "outliers": [
+                  -78.21049049274923
+                ],
+                "n": 24
+              },
+              "rhyme": {
+                "median": -51.985552399085776,
+                "q1": -57.54643247970675,
+                "q3": -45.28958309332031,
+                "whisker_lo": -70.64038633733986,
+                "whisker_hi": -37.36590557572723,
+                "min": -70.64038633733986,
+                "max": -37.36590557572723,
+                "outliers": [],
+                "n": 24
+              },
+              "sentiment": {
+                "median": -65.7295851914453,
+                "q1": -75.84678825840355,
+                "q3": -61.52008291336628,
+                "whisker_lo": -96.87145503492032,
+                "whisker_hi": -42.31154145305587,
+                "min": -96.87145503492032,
+                "max": -42.31154145305587,
+                "outliers": [],
+                "n": 24
+              },
+              "translation": {
+                "median": -53.341864833963115,
+                "q1": -65.32100047260657,
+                "q3": -47.42618963791847,
+                "whisker_lo": -92.16321672463872,
+                "whisker_hi": -20.583973385886317,
+                "min": -92.217870468985,
+                "max": -20.09980493089042,
+                "outliers": [
+                  -20.09980493089042,
+                  -92.217870468985
+                ],
+                "n": 26
+              }
+            }
+          },
+          "030T": {
+            "per_domain": {
+              "antonym": {
+                "median": 26.554990530366446,
+                "q1": 23.912416466498165,
+                "q3": 32.59089777455278,
+                "whisker_lo": 16.314597669248382,
+                "whisker_hi": 45.6086197366347,
+                "min": 16.314597669248382,
+                "max": 47.12007750431254,
+                "outliers": [
+                  47.12007750431254
+                ],
+                "n": 26
+              },
+              "arithmetic": {
+                "median": 57.3997775244882,
+                "q1": 48.9054870630728,
+                "q3": 68.67262600398087,
+                "whisker_lo": 38.96294914155462,
+                "whisker_hi": 90.81343495470644,
+                "min": 38.96294914155462,
+                "max": 90.81343495470644,
+                "outliers": [],
+                "n": 26
+              },
+              "code_completion": {
+                "median": 48.406965539147805,
+                "q1": 42.84497845184346,
+                "q3": 56.63931298429714,
+                "whisker_lo": 31.00982124771197,
+                "whisker_hi": 73.01065451754465,
+                "min": 31.00982124771197,
+                "max": 73.01065451754465,
+                "outliers": [],
+                "n": 24
+              },
+              "country_capital": {
+                "median": 49.0797554009564,
+                "q1": 41.93802324506902,
+                "q3": 57.21957606300456,
+                "whisker_lo": 30.203011531561096,
+                "whisker_hi": 75.7505873484282,
+                "min": 30.203011531561096,
+                "max": 75.7505873484282,
+                "outliers": [],
+                "n": 26
+              },
+              "multi_hop_reasoning": {
+                "median": 39.93143320457367,
+                "q1": 35.10128301777967,
+                "q3": 47.01068387519756,
+                "whisker_lo": 27.226698268249407,
+                "whisker_hi": 64.87478516132438,
+                "min": 27.226698268249407,
+                "max": 78.2104904927488,
+                "outliers": [
+                  78.2104904927488
+                ],
+                "n": 24
+              },
+              "rhyme": {
+                "median": 51.985552399085876,
+                "q1": 45.28958309332023,
+                "q3": 57.54643247970684,
+                "whisker_lo": 37.36590557572729,
+                "whisker_hi": 70.64038633734015,
+                "min": 37.36590557572729,
+                "max": 70.64038633734015,
+                "outliers": [],
+                "n": 24
+              },
+              "sentiment": {
+                "median": 65.7295851914451,
+                "q1": 61.52008291336636,
+                "q3": 75.84678825840336,
+                "whisker_lo": 42.31154145305587,
+                "whisker_hi": 96.87145503492006,
+                "min": 42.31154145305587,
+                "max": 96.87145503492006,
+                "outliers": [],
+                "n": 24
+              },
+              "translation": {
+                "median": 53.3418648339632,
+                "q1": 47.426189637918434,
+                "q3": 65.32100047260664,
+                "whisker_lo": 20.58397338588612,
+                "whisker_hi": 92.16321672463896,
+                "min": 20.099804930890443,
+                "max": 92.21787046898521,
+                "outliers": [
+                  20.099804930890443,
+                  92.21787046898521
+                ],
+                "n": 26
+              }
+            }
+          }
+        }
+      },
+      "fig_ablation_comparison": {
+        "description": "Ablation impact comparison: FFL hub nodes vs matched controls with bootstrap CIs",
+        "bar_chart": {
+          "control_types": [
+            {
+              "name": "degree_matched",
+              "hub_median": 0.004942642111772491,
+              "control_median": 0.0033081738071531353,
+              "ratio": 1.4940696589415008,
+              "ci_95_lo": 0.003233510081336675,
+              "ci_95_hi": 0.00336083524242095,
+              "hub_ci_95_lo": 0.004867506677751703,
+              "hub_ci_95_hi": 0.005036733787296705,
+              "n_comparisons": 2964
+            },
+            {
+              "name": "layer_matched",
+              "hub_median": 0.004942642111772491,
+              "control_median": 0.0011503304319632319,
+              "ratio": 4.296715078064173,
+              "ci_95_lo": 0.0011096410096392477,
+              "ci_95_hi": 0.0011927732738347616,
+              "hub_ci_95_lo": 0.004867506677751703,
+              "hub_ci_95_hi": 0.005036733787296705,
+              "n_comparisons": 4746
+            },
+            {
+              "name": "random",
+              "hub_median": 0.004942642111772491,
+              "control_median": 0.0005329948259774149,
+              "ratio": 9.273339760303658,
+              "ci_95_lo": 0.0005125146988462638,
+              "ci_95_hi": 0.0005557200428602115,
+              "hub_ci_95_lo": 0.004867506677751703,
+              "hub_ci_95_hi": 0.005036733787296705,
+              "n_comparisons": 4746
+            }
+          ]
+        },
+        "dose_response": {
+          "bins": [
+            {
+              "mpi_bin_center": 1.227965102814815,
+              "mean_impact": 0.0003669141397216925,
+              "std_impact": 0.00022609472810653883,
+              "n_points": 8442
+            },
+            {
+              "mpi_bin_center": 2.2976009473245544,
+              "mean_impact": 0.0005520433254723764,
+              "std_impact": 0.0003263165657379505,
+              "n_points": 9386
+            },
+            {
+              "mpi_bin_center": 3.367236791834294,
+              "mean_impact": 0.0008749438735544984,
+              "std_impact": 0.0005365109423294319,
+              "n_points": 9371
+            }
+          ]
+        },
+        "n_graphs_used": 48,
+        "n_hub_total": 4746
+      },
+      "fig_confusion_matrices": {
+        "description": "Clustering confusion matrices with Hungarian alignment for 4 feature sets",
+        "feature_sets": {
+          "motif_only": {
+            "matrix": [
+              [
+                10,
+                0,
+                4
+              ],
+              [
+                3,
+                19,
+                0
+              ],
+              [
+                7,
+                0,
+                8
+              ]
+            ],
+            "domain_order": [
+              "antonym",
+              "arithmetic",
+              "code_completion"
+            ],
+            "cluster_order": [
+              5,
+              3,
+              7
+            ],
+            "nmi": 0.5357325810056945,
+            "ari": 0.3849194848795645,
+            "precision": [
+              0.3225806451612903,
+              0.95,
+              0.5
+            ],
+            "recall": [
+              0.38461538461538464,
+              0.7307692307692307,
+              0.3333333333333333
+            ]
+          },
+          "graph_stats_only": {
+            "matrix": [
+              [
+                22,
+                0,
+                0
+              ],
+              [
+                0,
+                26,
+                0
+              ],
+              [
+                1,
+                0,
+                21
+              ]
+            ],
+            "domain_order": [
+              "antonym",
+              "arithmetic",
+              "code_completion"
+            ],
+            "cluster_order": [
+              2,
+              0,
+              6
+            ],
+            "nmi": 0.8546398200224841,
+            "ari": 0.7885985948325119,
+            "precision": [
+              0.88,
+              1.0,
+              1.0
+            ],
+            "recall": [
+              0.8461538461538461,
+              1.0,
+              0.875
+            ]
+          },
+          "weighted_motif_only": {
+            "matrix": [
+              [
+                21,
+                0,
+                0
+              ],
+              [
+                0,
+                26,
+                0
+              ],
+              [
+                0,
+                0,
+                13
+              ]
+            ],
+            "domain_order": [
+              "antonym",
+              "arithmetic",
+              "code_completion"
+            ],
+            "cluster_order": [
+              1,
+              2,
+              7
+            ],
+            "nmi": 0.8510777101979812,
+            "ari": 0.7668946726874616,
+            "precision": [
+              0.9130434782608695,
+              1.0,
+              1.0
+            ],
+            "recall": [
+              0.8076923076923077,
+              1.0,
+              0.5416666666666666
+            ]
+          },
+          "all_combined": {
+            "matrix": [
+              [
+                15,
+                1,
+                5
+              ],
+              [
+                0,
+                26,
+                0
+              ],
+              [
+                3,
+                0,
+                12
+              ]
+            ],
+            "domain_order": [
+              "antonym",
+              "arithmetic",
+              "code_completion"
+            ],
+            "cluster_order": [
+              3,
+              2,
+              6
+            ],
+            "nmi": 0.8015821223744335,
+            "ari": 0.7081427263569925,
+            "precision": [
+              0.8333333333333334,
+              0.9629629629629629,
+              0.7058823529411765
+            ],
+            "recall": [
+              0.5769230769230769,
+              1.0,
+              0.5
+            ]
+          }
+        },
+        "baseline": {
+          "method": "random_assignment",
+          "nmi": 0.09270015068163412,
+          "ari": 0.008751994641462533,
+          "pred_labels": [
+            6,
+            3,
+            4
+          ]
+        }
+      },
+      "fig_motif_diagrams": {
+        "description": "Network motif diagram specifications with representative real instances",
+        "motifs_3node": [
+          {
+            "name": "021U",
+            "isoclass_id": 2,
+            "adjacency_3x3": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "canonical_labels": [
+              "A (target)",
+              "B (source)",
+              "C (source)"
+            ],
+            "mean_z_score": -50.69312941052594,
+            "universality_score": 0,
+            "representative": {
+              "node_layers": [
+                0,
+                4
+              ],
+              "edge_weights": [
+                1.2132294178009033
+              ],
+              "node_explanations": [
+                "the word \"is\"",
+                "explanation_not_available"
+              ]
+            }
+          },
+          {
+            "name": "021C",
+            "isoclass_id": 4,
+            "adjacency_3x3": [
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ],
+            "canonical_labels": [
+              "A (relay)",
+              "B (target)",
+              "C (source)"
+            ],
+            "mean_z_score": -50.69312941052594,
+            "universality_score": 0,
+            "representative": {
+              "node_layers": [
+                0,
+                4
+              ],
+              "edge_weights": [
+                1.2132294178009033
+              ],
+              "node_explanations": [
+                "the word \"is\"",
+                "explanation_not_available"
+              ]
+            }
+          },
+          {
+            "name": "021D",
+            "isoclass_id": 6,
+            "adjacency_3x3": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0
+              ]
+            ],
+            "canonical_labels": [
+              "A (target)",
+              "B (target)",
+              "C (source)"
+            ],
+            "mean_z_score": -50.69312941052594,
+            "universality_score": 0,
+            "representative": {
+              "node_layers": [
+                0,
+                3
+              ],
+              "edge_weights": [
+                1.060097336769104
+              ],
+              "node_explanations": [
+                "explanation_not_available",
+                "explanation_not_available"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "summary_statistics": {
+      "n_graphs_processed": 200,
+      "n_valid_after_pruning": 200,
+      "domain_counts": {
+        "antonym": 26,
+        "arithmetic": 26,
+        "sentiment": 24,
+        "translation": 26,
+        "code_completion": 24,
+        "country_capital": 26,
+        "multi_hop_reasoning": 24,
+        "rhyme": 24
+      },
+      "correctness_counts": {
+        "false": 49,
+        "true": 127,
+        "unknown": 24
+      },
+      "best_clustering_nmi": 0.8546398200224841,
+      "best_clustering_feature_set": "graph_stats_only",
+      "baseline_nmi": 0.09270015068163412,
+      "ffl_universality_score": 8,
+      "mean_ffl_zscore": 50.69312941052594,
+      "actual_n_null_models": 14,
+      "compute_time_s": 1885.1859979629517,
+      "feature_dimensions": {
+        "motif_only": 4,
+        "graph_stats_only": 10,
+        "weighted_motif_only": 12,
+        "all_combined": 26
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_viz",
+      "examples": [
+        {
+          "input": "The opposite of bright is",
+          "output": "{\"graph_summary\": {\"n_nodes_raw\": 1000, \"n_edges_raw\": 37080, \"n_nodes_pruned\": 996, \"n_edges_pruned\": 9270, \"domain\": \"antonym\", \"slug\": \"m5-antonym-019-a39bd921\", \"source\": \"data_id5_it3__opus\"}}",
+          "predict_our_method": "{\"predicted_domain\": \"antonym\", \"motif_ratios\": {\"021U\": 0.120591, \"021C\": 0.055189, \"021D\": 0.792615, \"030T\": 0.031605}, \"z_scores\": {\"021U\": -30.504, \"021C\": -30.504, \"021D\": -30.504, \"030T\": 30.504...",
+          "predict_baseline": "{\"predicted_domain\": \"sentiment\", \"method\": \"random_assignment\"}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m5-antonym-019-a39bd921",
+          "metadata_model_correct": "false",
+          "metadata_difficulty": "easy",
+          "metadata_n_nodes_pruned": 996,
+          "metadata_n_edges_pruned": 9270,
+          "metadata_n_ffls": 24523
+        },
+        {
+          "input": "The opposite of clean is",
+          "output": "{\"graph_summary\": {\"n_nodes_raw\": 986, \"n_edges_raw\": 34844, \"n_nodes_pruned\": 979, \"n_edges_pruned\": 8711, \"domain\": \"antonym\", \"slug\": \"m4-antonym-013-db7d1359\", \"source\": \"data_id5_it3__opus\"}}",
+          "predict_our_method": "{\"predicted_domain\": \"antonym\", \"motif_ratios\": {\"021U\": 0.1115, \"021C\": 0.053746, \"021D\": 0.803979, \"030T\": 0.030775}, \"z_scores\": {\"021U\": -25.451, \"021C\": -25.451, \"021D\": -25.451, \"030T\": 25.451},...",
+          "predict_baseline": "{\"predicted_domain\": \"country_capital\", \"method\": \"random_assignment\"}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-013-db7d1359",
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_n_nodes_pruned": 979,
+          "metadata_n_edges_pruned": 8711,
+          "metadata_n_ffls": 21799
+        },
+        {
+          "input": "The opposite of cold is",
+          "output": "{\"graph_summary\": {\"n_nodes_raw\": 978, \"n_edges_raw\": 31288, \"n_nodes_pruned\": 975, \"n_edges_pruned\": 7819, \"domain\": \"antonym\", \"slug\": \"m4-antonym-004-beb14eca\", \"source\": \"data_id5_it3__opus\"}}",
+          "predict_our_method": "{\"predicted_domain\": \"antonym\", \"motif_ratios\": {\"021U\": 0.101944, \"021C\": 0.045832, \"021D\": 0.821919, \"030T\": 0.030305}, \"z_scores\": {\"021U\": -32.549, \"021C\": -32.549, \"021D\": -32.549, \"030T\": 32.549...",
+          "predict_baseline": "{\"predicted_domain\": \"multi_hop_reasoning\", \"method\": \"random_assignment\"}",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-004-beb14eca",
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_n_nodes_pruned": 975,
+          "metadata_n_edges_pruned": 7819,
+          "metadata_n_ffls": 19359
+        }
+      ]
+    }
+  ]
+}

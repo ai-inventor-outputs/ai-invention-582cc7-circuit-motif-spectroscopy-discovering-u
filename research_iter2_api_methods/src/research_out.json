@@ -1,0 +1,243 @@
+{
+  "title": "Steering API Validation, Weighted Motif Methods, and Causal Validation Protocol",
+  "summary": "Four-part research resolving critical execution blockers for the motif spectroscopy experiment. Part 1 confirms the public Neuronpedia /api/steer endpoint does NOT support gemma-2-2b transcoder features; circuit-tracer local library is the definitive intervention path (15GB VRAM, Colab T4, unlimited rate). Part 2 surveys weighted motif methods: Onnela intensity/coherence requires positive weights (geometric mean), Saramaki generalized clustering uses cube-root products, Underwood/Elliott motifcluster package provides weighted motif adjacency matrices with mean/product weighting for any 3-node motif on directed networks. For signed attribution weights, recommend threshold binarization as baseline plus absolute-value Onnela intensity and sign-pattern categorization inspired by C. elegans signed motif analysis (710 signed 3-node types). Part 3 designs a complete causal validation protocol: logit-difference metric (per Heimersheim/Nanda), mean ablation or corrupted-prompt patching, Wilcoxon signed-rank test on matched motif-node vs control-node pairs, 20-35 pairs per motif type, Bonferroni correction for 24 comparisons, with confound mitigations for degree, layer, and attribution-strength matching. Part 4 confirms novelty: no Alon-style motif analysis of LLM circuits exists as of March 2026.",
+  "answer": "## Part 1: Steering API Validation for gemma-2-2b\n\n### 1.1 Public /api/steer Endpoint Status\n\nThe Neuronpedia public steering API documentation explicitly lists only three supported models: gemma-2b, gemma-2b-it, and gpt2-small [1]. Critically, gemma-2-2b (Gemma 2, 2B parameters) is a DIFFERENT model from gemma-2b (original Gemma, 2B parameters) and is NOT listed as supported for the public /api/steer endpoint [1, 2].\n\nThe gemma-2-2b-it model page on Neuronpedia shows three source sets with inferenceEnabled=true: axbench-reft-r1-res-16k, gemmascope-att-16k, and gemmascope-res-16k [3]. However, gemmascope-transcoder-16k (the source set used in attribution graphs) is NOT listed among these inference-enabled source sets for gemma-2-2b-it [3]. This means even if the /api/steer endpoint were extended to support gemma-2-2b-it, it would only support residual-stream and attention SAE features, NOT the transcoder features that appear in attribution graphs.\n\nThe graph UI on Neuronpedia does support interventions for Gemma-2 (2B) directly in the browser: 'intervening on models with respect to transcoder features is possible both in scripts/notebooks and on Neuronpedia for Gemma-2 (2B)' [4, 5]. However, this graph-UI intervention functionality appears to use an internal graph-server endpoint (localhost:5002/v1/steer/completion) rather than the public /api/steer endpoint [2].\n\n**Definitive answer: Transcoder features (gemmascope-transcoder-16k) CANNOT be steered via the public /api/steer endpoint for gemma-2-2b. The public API is limited to residual-stream and attention SAE features on gemma-2b/gemma-2b-it/gpt2-small.**\n\n### 1.2 Circuit-Tracer as the Primary Intervention Path\n\nThe circuit-tracer library provides the complete intervention capability needed for causal validation [5, 6, 7].\n\n**Model Loading:**\n```python\nfrom circuit_tracer.replacement_model import ReplacementModel\nimport torch\n\nmodel = ReplacementModel.from_pretrained(\n    \"google/gemma-2-2b\",\n    \"gemma\",\n    dtype=torch.bfloat16,\n    backend='transformerlens'\n)\n```\n[6, 7]\n\n**Getting Baseline Activations:**\n```python\nbaseline_logits, activations = model.get_activations(prompt)\n```\n[6, 7]\n\n**Feature Intervention (Ablation):**\n```python\nfrom collections import namedtuple\nFeature = namedtuple(\"Feature\", [\"layer\", \"pos\", \"feature_idx\"])\nIntervention = namedtuple(\"Intervention\", [\"supernode\", \"scaling_factor\"])\n\n# Complete ablation: set feature activation to 0\ninterventions = [(layer, position, feature_idx, 0.0)]\nnew_logits, new_activations = model.feature_intervention(prompt, interventions)\n```\n[6, 7]\n\n**Multiple Simultaneous Interventions:**\nMultiple features can be intervened in a single forward pass by passing multiple tuples in the interventions list [7]. Example from the Gemma demo: ablating a French-language feature while boosting a Spanish-language feature simultaneously shifted target token probability from 11.1% to 27.5% [7].\n\n**Probability Measurement:**\n```python\nimport torch.nn.functional as F\nbaseline_probs = F.softmax(baseline_logits[0, -1], dim=-1)\nablated_probs = F.softmax(new_logits[0, -1], dim=-1)\ndelta_p = baseline_probs[correct_token_id] - ablated_probs[correct_token_id]\n```\n[6, 7]\n\n**Supported Models:** Gemma-2 (2B) with PLTs and CLTs (426K-2.5M features), Llama-3.2 (1B), Qwen-3 (0.6B-14B), GPT-OSS (20B), Gemma-3 (270M-27B, requires nnsight backend) [5].\n\n**GPU Requirements:** Working with Gemma-2 (2B) requires 15GB VRAM; Google Colab T4 GPUs are sufficient [5]. Larger models benefit from additional memory, and CPU/disk offloading options are available via CLI flags [5].\n\n### 1.3 Rate Limit Feasibility Assessment\n\n| Path | Rate Limit | Time for 480 ablations | GPU Required |\n|------|-----------|----------------------|-------------|\n| Public /api/steer | 100/hr (but transcoder features NOT supported) | N/A | No |\n| Circuit-tracer local | Unlimited | ~2-4 hours on T4 GPU | Yes (15GB VRAM) |\n\n**Recommendation:** Use circuit-tracer locally as the SOLE intervention path. The public API cannot support transcoder feature interventions. A Colab T4 GPU (free tier available) provides sufficient resources. At approximately 1-3 seconds per forward pass on a T4, 480 ablations would take 8-24 minutes of pure compute time, plus overhead for loading graphs and computing metrics [5, 6].\n\n---\n\n## Part 2: Weighted Motif Analysis Literature Survey\n\n### 2.1 Onnela et al. 2005 - Intensity and Coherence Framework\n\nOnnela, Saramaki, Kertesz, and Kaski (Phys. Rev. E 71, 065103, 2005) introduced two measures for generalizing motif analysis to weighted networks [8]:\n\n**Subgraph Intensity** I(g): The geometric mean of the edge weights within a motif instance g:\n\nI(g) = (product of w_e for all edges e in g)^(1/|E_g|)\n\nwhere |E_g| is the number of edges in the subgraph [8].\n\n**Subgraph Coherence** Q(g): The ratio of the geometric mean to the arithmetic mean of edge weights:\n\nQ(g) = I(g) / ((1/|E_g|) * sum of w_e for all edges e in g)\n\nCoherence ranges from 0 to 1, with Q=1 indicating all edge weights are equal (maximum homogeneity) [8].\n\n**CRITICAL LIMITATION for attribution graphs:** The geometric mean requires ALL weights to be strictly positive (w > 0). For negative weights, the geometric mean is undefined (even number of negatives yields a positive product root; odd number yields a complex/negative root). Attribution graph edge weights can be NEGATIVE (inhibitory influence), making direct application of the Onnela framework impossible without transformation [8, 9].\n\n**Weighted Motif Z-scores:** Using intensity and coherence, the binary motif Z-score framework is extended: instead of counting motif instances, one sums their intensities (or coherence values) and compares to a null model. The paper demonstrated that inclusion of weights 'may considerably modify the conclusions obtained from the study of unweighted characteristics' [8].\n\n### 2.2 Saramaki et al. 2007 - Generalized Clustering Coefficients\n\nSaramaki, Kivela, Onnela, Kaski, and Kertesz (Phys. Rev. E 75, 027105, 2007) presented a comparative study of several weighted clustering coefficient generalizations [9].\n\nThe Onnela-Saramaki weighted clustering coefficient for node u is [9, 10]:\n\nC_w(u) = (1 / (deg(u) * (deg(u)-1))) * sum_{v,w} (w_hat_uv * w_hat_uw * w_hat_vw)^(1/3)\n\nwhere w_hat_uv = w_uv / max(w) normalizes edge weights by the maximum weight in the network [9, 10]. This formula is implemented in NetworkX's clustering() function [10].\n\n**Scope:** This framework applies specifically to triangles (3-node complete subgraphs). It does NOT extend to arbitrary 3-node motifs (feed-forward loops, cascades, fan-in/fan-out patterns) or to 4-node motifs [9].\n\n### 2.3 Underwood & Elliott 2020 - Weighted Motif Adjacency Matrices\n\nUnderwood, Elliott, and Cucuringu (Applied Network Science, 2020) developed weighted motif adjacency matrices (WMAMs) for spectral clustering of weighted directed networks [11, 12].\n\n**Construction:** Entry (i,j) of a weighted motif adjacency matrix equals the sum of weights of all motif instances containing both nodes i and j [11, 12, 13]. Three weighting schemes are available:\n- **Unweighted:** Weight of any motif instance is 1 (equivalent to binary census)\n- **Mean:** Weight is the mean of edge weights in the motif instance\n- **Product:** Weight is the product of edge weights in the motif instance\n\n**Motif Coverage:** Supports ANY anchored or non-anchored motif on three nodes in directed networks [11, 12].\n\n**Software:** The `motifcluster` package is available in Python (`pip install motifcluster`), R, and Julia [12, 13]. Key API:\n```python\nfrom motifcluster import motifadjacency\nmam = motifadjacency.build_motif_adjacency_matrix(\n    adj_mat,\n    motif_name='M1',  # any 3-node motif\n    motif_type='struc',  # structural (induced) or functional\n    mam_weight_type='mean',  # 'unweighted', 'mean', or 'product'\n    mam_method='sparse'\n)\n```\n[13]\n\n**Scalability:** Handles graphs with a million nodes and tens of millions of edges in under ten minutes in sparse regimes [11].\n\n**Signed Weight Support:** The product weighting scheme naturally handles negative weights (product of negative weights produces signed results). However, the mean weighting scheme may dilute sign information. The documentation does not explicitly discuss signed networks [11, 12, 13].\n\n### 2.4 Signed Motif Analysis - C. elegans Connectome (2025)\n\nA January 2025 bioRxiv preprint performed the first comprehensive signed motif analysis on a complete neuronal network (C. elegans connectome) [14]. This is directly relevant to our attribution graph analysis:\n\n**Methodology:** Edges labeled as excitatory (positive) or inhibitory (negative) based on neurotransmitter/receptor data. This creates 710 unique three-node signed motif types (compared to 13 unsigned directed 3-node motifs) when considering all edge polarity combinations [14].\n\n**Z-score computation:** Z = (f_conn - f_rand) / std(f_rand) with 1,000 structure-preserving randomizations and |Z| > 1.96 significance threshold [14].\n\n**Key findings:** 56 significantly overrepresented signed motifs, including positive feedforward loops (Z=3.09), incoherent feedforward loops (Z=3.09-4.18), negative feedback loops (Z=5.14), and disinhibitory feedback loops (Z=4.54). Only 1 signed motif was underrepresented [14].\n\n**Direct analogy to attribution graphs:** Attribution graph edges have positive (excitatory) and negative (inhibitory) weights, making this signed motif framework directly applicable. We can categorize each motif instance by its edge-sign pattern, creating a richer analysis than binary topology alone.\n\n### 2.5 Software for Subgraph Census\n\nigraph's `motifs_randesu()` and `triad_census()` functions operate on UNWEIGHTED graph topology only [15]. The function signature `motifs_randesu(size=3, cut_prob=None, callback=None)` has no weight parameter [15]. This confirms that a weighted census requires either: (a) post-hoc weight aggregation over structurally enumerated motifs, or (b) the motifcluster package's WMAM approach.\n\nA comprehensive 2025 survey on motif counting confirms that standard subgraph census algorithms (FANMOD, FaSE, ESCAPE, g-tries) all operate on unweighted topology [16].\n\n### 2.6 Recommended Approach for Attribution Graphs\n\n**Primary method (Option B): Threshold binarization with sensitivity analysis**\n- Binarize edges at multiple thresholds: |w| > tau for tau in {0.01, 0.05, 0.1, 0.2, 0.5}\n- Run igraph `motifs_randesu(size=3)` at each threshold\n- Compute Z-scores against 1000 degree-preserving random rewirings per threshold\n- Report stability of Z-scores and motif rankings across thresholds\n- Uses off-the-shelf igraph; simplest to implement and validate\n\n**Secondary method (Option A): Absolute-value Onnela intensity with sign-pattern categorization**\n- Enumerate motif instances via igraph at a fixed threshold\n- For each instance, compute I(g) = (product |w_e|)^(1/|E_g|) using absolute values\n- Separately categorize each instance by its sign pattern (inspired by the C. elegans signed motif framework [14])\n- This creates sub-types: e.g., coherent FFL (all positive edges) vs. incoherent FFL (one negative edge)\n- Report intensity distributions per sign-pattern sub-type\n\n**Tertiary method (Option C): Dual-network decomposition**\n- Split attribution graph into positive-edge and negative-edge subgraphs\n- Run motif census separately on each\n- Compare motif spectra between excitatory and inhibitory sub-networks\n- Quick to implement; provides complementary insight about excitatory vs. inhibitory circuit structure\n\n**Future work (Option D): Weighted motif adjacency matrices via motifcluster**\n- Use motifcluster's `build_motif_adjacency_matrix()` with 'product' weighting\n- Enables motif-based spectral clustering of attribution graph nodes\n- More principled but requires interpretation of resulting clusters\n- The product weighting naturally propagates signed weights\n\n---\n\n## Part 3: Causal Validation Protocol Design\n\n### 3.1 Intervention Method Selection\n\nBased on Heimersheim & Nanda's comprehensive guidance [17], we make the following methodological choices:\n\n**Ablation technique:** Use MEAN ABLATION (replacing feature activation with its dataset mean) rather than zero ablation. Heimersheim & Nanda explicitly recommend 'avoiding zero ablation entirely' and preferring mean ablation or corrupted-prompt techniques [17]. Zero ablation can produce artificially inflated importance scores due to out-of-distribution activations [17, 18].\n\nHowever, for circuit-tracer, the standard intervention API uses scaling_factor=0 (zeroing) or explicit value setting [6, 7]. To implement mean ablation, we would need to: (1) compute dataset-mean activations for each feature across a corpus, (2) set the intervention value to the mean rather than zero. If this proves impractical, zero ablation remains acceptable as a baseline, as it is the most common approach in the MI literature [18, 19].\n\n**Primary recommendation:** Use zero ablation (scaling_factor=0) via circuit-tracer as the practical baseline, but note this limitation. If time permits, also run mean ablation for comparison.\n\n### 3.2 Output Metrics\n\nBased on Heimersheim & Nanda's analysis [17]:\n\n**Primary metric: Logit difference (Delta_logit)**\n- Delta_logit = logit_baseline[correct_token] - logit_ablated[correct_token]\n- Preferred because it is 'mostly linear in the residual stream, enabling direct attribution' [17]\n- Avoids the exponential sensitivity of probability-based metrics near decision thresholds [17]\n- A component adding +2 logits has consistent mechanistic meaning regardless of baseline confidence [17]\n\n**Secondary metric: KL divergence**\n- KL(P_baseline || P_ablation) over the full output vocabulary\n- Captures distributional shifts beyond the correct token [20]\n- Used in the LLM abliteration literature with values reported as low as 0.043-0.076 for minimal-impact interventions [20]\n\n**Tertiary metric: Probability change (Delta_P)**\n- Delta_P = P(correct_token | baseline) - P(correct_token | ablation)\n- Most interpretable for communication ('ablation reduced correct-token probability by X%')\n- BUT: non-linear in logit space; overemphasizes effects near probability thresholds [17]\n- Report alongside logit difference for interpretability\n\n### 3.3 Experimental Design\n\n**Independent variable:** Node type (motif-node vs. control-node)\n\n**Dependent variable:** Output change magnitude upon ablation (measured by Delta_logit, KL divergence, and Delta_P)\n\n**Control matching criteria (addressing confounds):**\n1. **Attribution strength:** Control node must have similar total attribution strength (sum of absolute incoming + outgoing edge weights) within +/-10% of the motif node\n2. **Node degree:** Control node must have similar degree (number of connections) within +/-20%, since node centrality measures are weakly correlated with causal influence [21]\n3. **Layer range:** Control node must be from the same layer range (+/-2 layers) to avoid layer-position confounds\n4. **Non-motif membership:** Control node must NOT be part of any instance of the overrepresented motif type being tested\n\n### 3.4 Statistical Test\n\n**Primary test: Wilcoxon signed-rank test (paired, non-parametric)**\n- For each motif instance, compute the pair (Delta_logit_motif_node, Delta_logit_control_node)\n- Test H0: median(Delta_logit_motif - Delta_logit_control) = 0\n- Non-parametric; robust to non-normal difference distributions\n- One-sided alternative: motif nodes cause LARGER output changes than controls\n\n**Alternative test: Paired t-test**\n- If the distribution of differences (Delta_logit_motif - Delta_logit_control) is approximately normal (Shapiro-Wilk p > 0.05)\n- More powerful than Wilcoxon if normality holds\n\n**Effect size metrics:**\n- Cohen's d = mean(differences) / std(differences)\n- Ratio: Delta_logit_motif / Delta_logit_control (hypothesis threshold: 1.5x)\n- Report both; the ratio is more interpretable for the paper\n\n**Multiple testing correction:**\n- Testing 3 motif types x 8 capability domains = 24 comparisons\n- Bonferroni correction: alpha = 0.05/24 = 0.00208\n- Alternative: Benjamini-Hochberg FDR control at q = 0.05 (less conservative, more powerful)\n- Recommend BH-FDR as primary, Bonferroni as sensitivity check\n\n### 3.5 Sample Size Estimation\n\n- Desired effect: 1.5x ratio (motif nodes cause 50% more output change)\n- For Cohen's d = 0.5-0.8 (medium-to-large effect): 20-35 pairs needed per comparison\n- Power target: 0.80, alpha = 0.05 (before multiple-testing correction)\n- With Bonferroni alpha = 0.002: need ~45-60 pairs per comparison for 80% power\n- Practical compromise: 25 pairs per motif type per domain\n\n**Total ablation budget:** 3 motif types x 8 domains x 25 pairs x 2 ablations (motif + control) = 1,200 ablations\n- At ~2 seconds per ablation on T4 GPU: ~40 minutes of compute\n- With overhead (graph loading, metric computation): ~2-3 hours total\n\n### 3.6 Step-by-Step Execution Protocol\n\n1. **Prerequisites:** Install circuit-tracer, obtain HF_TOKEN for gemma-2-2b, provision GPU with >= 15GB VRAM\n2. **Load model:** `model = ReplacementModel.from_pretrained('google/gemma-2-2b', 'gemma', dtype=torch.bfloat16, backend='transformerlens')` [6]\n3. **For each of the top 3 overrepresented motif types** (identified in Phase 2 motif census):\n4. **For each capability domain** (8 domains):\n5. Sample 3-5 attribution graphs where this motif type is significantly overrepresented (Z > 2.0)\n6. For each graph, enumerate all instances of the target motif type using igraph\n7. Select the intermediate node in each motif instance (e.g., node B in feed-forward loop A->B->C)\n8. Compute node B's attribution strength: S(B) = sum(|w_e|) for all edges e incident to B\n9. Find a control node C with S(C) within +/-10% of S(B), degree within +/-20%, same layer range (+/-2), and NOT in any overrepresented motif instance\n10. **Run baseline:** `baseline_logits, _ = model.get_activations(prompt)`\n11. **Run motif-node ablation:** `ablated_logits, _ = model.feature_intervention(prompt, [(layer_B, pos_B, feat_B, 0.0)])`\n12. **Run control-node ablation:** `control_logits, _ = model.feature_intervention(prompt, [(layer_C, pos_C, feat_C, 0.0)])`\n13. Compute Delta_logit_motif = baseline_logits[0,-1,correct_token] - ablated_logits[0,-1,correct_token]\n14. Compute Delta_logit_control = baseline_logits[0,-1,correct_token] - control_logits[0,-1,correct_token]\n15. Also compute KL divergence and Delta_P for secondary metrics\n16. Record the tuple (motif_type, domain, graph_id, Delta_logit_motif, Delta_logit_control, KL_motif, KL_control, DeltaP_motif, DeltaP_control)\n17. After collecting all pairs for a (motif_type, domain) combination:\n18. Run Shapiro-Wilk test on differences to check normality\n19. Run Wilcoxon signed-rank test (primary) and paired t-test (if normal)\n20. Compute Cohen's d and the ratio Delta_logit_motif / Delta_logit_control\n21. Apply BH-FDR correction across all 24 comparisons\n22. Report results with effect sizes, confidence intervals, and corrected p-values\n\n### 3.7 Confound Mitigations\n\n| Confound | Risk | Mitigation |\n|----------|------|------------|\n| **Attribution strength** | Motif nodes may have higher attribution by construction | Match controls on attribution strength (+/-10%) |\n| **Node degree** | Motif nodes have higher degree (more connections) | Match controls on degree (+/-20%); node centrality is weakly correlated with causal influence [21] |\n| **Layer position** | Motif nodes may cluster in specific layers | Match controls from same layer range (+/-2 layers) |\n| **Cascading effects** | Ablating a motif node disrupts the entire motif structure | Document as a FEATURE: motifs are functionally integrated units, so cascading effects demonstrate functional coherence |\n| **Multiple testing** | 24 comparisons inflate Type I error | BH-FDR at q=0.05 (primary); Bonferroni at alpha/24 (sensitivity) |\n| **Backup circuits** | Redundant pathways may compensate for ablated nodes | Record compensation magnitude; Hydra effect literature suggests ~0.7x compensation [17] |\n| **Zero ablation bias** | Zero ablation may overestimate importance [17, 18] | Note limitation; run mean ablation comparison if feasible |\n\n---\n\n## Part 4: Novelty Update (March 2026)\n\n### 4.1 Systematic Search Results\n\nFour targeted searches were conducted across multiple phrasings to identify any new publications (2025-2026) applying Alon-style network motif analysis to LLM/transformer circuits:\n\n**Search 1: 'network motif' + LLM/transformer/circuit (2025-2026)**\nNo papers found applying formal subgraph census or Z-score analysis to LLM circuits. Circuit Compositions (ACL 2025) analyzes circuit modularity via node overlap (IoU/IoM) and cross-task faithfulness (JSD) but performs no subgraph motif census [22]. Anthropic's Circuit Tracing (2025) identifies qualitative 'suppression motifs' but performs no systematic motif analysis, no Z-score computation, and no significance profiling [23].\n\n**Search 2: 'motif spectrum/profile/subgraph census' + neural network interpretability (2025-2026)**\nTwo papers found on using GNNs to PREDICT motif profiles in general networks [16, 24], but neither applies motif analysis TO neural network circuits for interpretability purposes. The distinction is critical: these papers use neural networks as tools for motif estimation, not as objects of motif analysis.\n\n**Search 3: 'feed-forward loop/motif Z-score' + attribution/computational graph (2025-2026)**\nNo papers found combining FFL motif analysis with deep learning attribution graphs. The C. elegans signed motif paper [14] applies signed motif analysis to biological neural networks but not to artificial ones. 'What Makes a Good Feedforward Computational Graph?' (arXiv, Feb 2025) examines graph topology for neural architecture design, not for interpretability [25].\n\n**Search 4: Alon network motif + ANN/transformer/superfamily (2025-2026)**\nNo papers found applying Alon's superfamily classification to transformer circuits. The closest work remains Zahn et al. 2024, which applies motif Z-scores to weight-topology of pruned 4-layer MLPs (not LLMs, not attribution graphs) [26]. Zambra et al. 2020 similarly studies weight-topology motif emergence in MLPs under different initialization schemes [27].\n\n### 4.2 Colloquial vs. Formal 'Motif' Usage in MI\n\nThe term 'motif' is increasingly used in mechanistic interpretability, but exclusively in a colloquial sense:\n- Neel Nanda's MI glossary defines 'motif' as 'a fuzzy notion of some abstract notion that recurs between circuits or features' [28]\n- OpenAI's 2025 sparse transformers paper mentions 'circuit motifs underlying more complex reasoning' without formal definition [29]\n- Anthropic identifies 'suppression motifs' qualitatively in attribution graphs [23]\n- None of these uses involve subgraph census, Z-score computation, motif significance profiles, or superfamily classification\n\n### 4.3 Confirmed Prior Work (No Changes from Iter1)\n\n- Nature Communications 2025: Analyzes 882,000 three-node motifs for ANN architecture DESIGN (not interpretability) [30]\n- Zahn et al. 2024: Weight-topology motif Z-scores for pruned MLPs (not LLMs, not attribution graphs) [26]\n- Zambra et al. 2020: Weight-topology motif emergence in MLPs (not LLMs, not attribution graphs) [27]\n\n### 4.4 Novelty Conclusion\n\n**As of March 2026, no published work applies Alon-style network motif analysis (subgraph census, Z-scores against random baselines, motif significance profiles, or superfamily classification) to LLM attribution graphs or circuit-level computational graphs. The novelty claim remains fully valid.** The colloquial adoption of 'motif' terminology in MI actually strengthens our positioning: the field recognizes recurring circuit patterns exist but lacks the formal graph-theoretic framework to quantify them systematically.",
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://docs.neuronpedia.org/steering",
+      "title": "Neuronpedia Steering Documentation",
+      "summary": "Official steering API docs listing supported models (gemma-2b, gemma-2b-it, gpt2-small only), 100 steers/hour rate limit, and feature strength/multiplier parameters."
+    },
+    {
+      "index": 2,
+      "url": "https://www.neuronpedia.org/api-doc",
+      "title": "Neuronpedia Scalar API Reference",
+      "summary": "Complete API documentation including /api/steer endpoint specifications, parameter schemas, and authentication requirements."
+    },
+    {
+      "index": 3,
+      "url": "https://www.neuronpedia.org/gemma-2-2b-it",
+      "title": "Neuronpedia Gemma-2-2B-IT Model Page",
+      "summary": "Lists available source sets for gemma-2-2b-it: axbench-reft-r1-res-16k, gemmascope-att-16k, gemmascope-res-16k with inferenceEnabled=true. Transcoder-16k NOT listed."
+    },
+    {
+      "index": 4,
+      "url": "https://www.neuronpedia.org/graph/info",
+      "title": "Circuits Research Landscape: Results and Perspectives",
+      "summary": "Confirms interventions work for Gemma-2 (2B) in graph UI and scripts/notebooks; reports 7000+ attribution graphs generated."
+    },
+    {
+      "index": 5,
+      "url": "https://github.com/decoderesearch/circuit-tracer",
+      "title": "Circuit-Tracer GitHub Repository",
+      "summary": "Complete library docs covering supported models (Gemma-2-2B, Llama, Qwen, GPT-OSS, Gemma-3), 15GB VRAM requirement, CLI and Python API, intervention capabilities."
+    },
+    {
+      "index": 6,
+      "url": "https://github.com/safety-research/circuit-tracer/blob/main/demos/circuit_tracing_tutorial.ipynb",
+      "title": "Circuit Tracing Tutorial Notebook",
+      "summary": "Tutorial demonstrating model loading, graph generation, Intervention namedtuple with scaling_factor, Feature tuple structure, and intervention code examples."
+    },
+    {
+      "index": 7,
+      "url": "https://github.com/safety-research/circuit-tracer/blob/main/demos/gemma_demo.ipynb",
+      "title": "Gemma-2-2B Demo Notebook",
+      "summary": "Working intervention examples: French/Spanish language switching (11.1% to 27.5%), sport switching, multiple simultaneous interventions, probability comparison via display_topk_token_predictions."
+    },
+    {
+      "index": 8,
+      "url": "https://arxiv.org/abs/cond-mat/0408629",
+      "title": "Intensity and Coherence of Motifs in Weighted Complex Networks (Onnela et al. 2005)",
+      "summary": "Foundational paper introducing subgraph intensity (geometric mean of edge weights) and coherence (geometric/arithmetic mean ratio) for weighted network motif analysis."
+    },
+    {
+      "index": 9,
+      "url": "https://arxiv.org/abs/cond-mat/0608670",
+      "title": "Generalizations of the Clustering Coefficient to Weighted Complex Networks (Saramaki et al. 2007)",
+      "summary": "Comparative study of weighted clustering coefficient generalizations; defines C_w using cube-root product of normalized edge weights."
+    },
+    {
+      "index": 10,
+      "url": "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.cluster.clustering.html",
+      "title": "NetworkX Clustering Coefficient Documentation",
+      "summary": "Implementation of the Onnela-Saramaki weighted clustering coefficient formula with max-weight normalization."
+    },
+    {
+      "index": 11,
+      "url": "https://arxiv.org/abs/2004.01293",
+      "title": "Motif-Based Spectral Clustering of Weighted Directed Networks (Underwood & Elliott 2020)",
+      "summary": "Introduces weighted motif adjacency matrices with mean/product weighting for any 3-node motif; handles million-node graphs in minutes."
+    },
+    {
+      "index": 12,
+      "url": "https://github.com/WGUNDERWOOD/motifcluster",
+      "title": "motifcluster GitHub Repository",
+      "summary": "Python/R/Julia package for motif-based spectral clustering; provides build_motif_adjacency_matrix() with unweighted/mean/product weighting schemes."
+    },
+    {
+      "index": 13,
+      "url": "https://motifcluster.readthedocs.io/en/latest/",
+      "title": "motifcluster Python Documentation",
+      "summary": "Full API docs for motifcluster package including motif adjacency matrix construction, spectral embedding, and clustering methods."
+    },
+    {
+      "index": 14,
+      "url": "https://www.biorxiv.org/content/10.1101/2025.01.09.632090v1.full",
+      "title": "Signed Motif Analysis of C. elegans Connectome (bioRxiv 2025)",
+      "summary": "First comprehensive signed motif analysis of a complete neuronal network: 710 signed 3-node motif types, 56 overrepresented (positive FFLs Z=3.09, negative feedback Z=5.14), structure-preserving randomization."
+    },
+    {
+      "index": 15,
+      "url": "https://igraph.org/c/doc/igraph-Motifs.html",
+      "title": "igraph Graph Motifs Documentation",
+      "summary": "Confirms motifs_randesu operates on unweighted topology only; supports directed 3-4 node motifs and undirected 3-6 node motifs."
+    },
+    {
+      "index": 16,
+      "url": "https://arxiv.org/html/2503.19573v1",
+      "title": "Motif Counting in Complex Networks: A Comprehensive Survey (2025)",
+      "summary": "Comprehensive survey of subgraph census algorithms (FANMOD, FaSE, ESCAPE, g-tries); all operate on unweighted topology."
+    },
+    {
+      "index": 17,
+      "url": "https://arxiv.org/html/2404.15255v1",
+      "title": "How to Use and Interpret Activation Patching (Heimersheim & Nanda 2024)",
+      "summary": "Recommends logit difference over probability metrics, warns against zero ablation, identifies backup behavior and AND/OR circuit confounds, prefers corrupted-prompt techniques."
+    },
+    {
+      "index": 18,
+      "url": "https://arxiv.org/html/2409.09951v1",
+      "title": "Optimal Ablation for Interpretability (NeurIPS 2024)",
+      "summary": "Proposes setting component value to minimize expected loss; shows previous ablation methods may produce artificially high importance scores due to spoofing."
+    },
+    {
+      "index": 19,
+      "url": "https://www.arxiv.org/pdf/2510.00845",
+      "title": "Mechanistic Interpretability as Statistical Estimation (2025)",
+      "summary": "Reframes MI as statistical inference; demonstrates EAP-IG exhibits high structural variance and sensitivity to hyperparameters."
+    },
+    {
+      "index": 20,
+      "url": "https://arxiv.org/pdf/2512.13655",
+      "title": "Comparative Analysis of LLM Abliteration Methods (2026)",
+      "summary": "Reports KL divergence values (0.043-0.076) for minimal-impact interventions; uses 100 prompts with standard errors."
+    },
+    {
+      "index": 21,
+      "url": "https://www.nature.com/articles/s41598-019-43033-9",
+      "title": "Node Centrality Measures are a Poor Substitute for Causal Inference (Scientific Reports)",
+      "summary": "Demonstrates weak correlation between node centrality and causal influence; eigenvector centrality is the only exception. Critical for confound mitigation."
+    },
+    {
+      "index": 22,
+      "url": "https://arxiv.org/abs/2410.01434",
+      "title": "Circuit Compositions: Exploring Modular Structures in Transformer-Based Language Models (ACL 2025)",
+      "summary": "Analyzes circuit modularity via node overlap and cross-task faithfulness; no subgraph motif census or Z-score analysis."
+    },
+    {
+      "index": 23,
+      "url": "https://transformer-circuits.pub/2025/attribution-graphs/methods.html",
+      "title": "Circuit Tracing: Revealing Computational Graphs in Language Models (Anthropic 2025)",
+      "summary": "Identifies qualitative 'suppression motifs' and parallel pathways but performs no systematic motif census or Z-score analysis."
+    },
+    {
+      "index": 24,
+      "url": "https://arxiv.org/html/2506.15709v3",
+      "title": "Studying and Improving GNN-based Motif Estimation (2025)",
+      "summary": "Uses GNNs to predict motif significance profiles via multitarget regression; not applied to LLM circuits."
+    },
+    {
+      "index": 25,
+      "url": "https://arxiv.org/pdf/2502.06751",
+      "title": "What Makes a Good Feedforward Computational Graph? (2025)",
+      "summary": "Examines graph topology properties for neural architecture design; analyzes mixing time and expander properties, not interpretability."
+    },
+    {
+      "index": 26,
+      "url": "https://arxiv.org/abs/2403.00974",
+      "title": "Motif Distribution and Function of Sparse Deep Neural Networks (Zahn et al. 2024)",
+      "summary": "Closest prior work: Alon-style Z-scores on weight-topology of pruned 4-layer MLPs; differs fundamentally (weight graphs, MLPs, no spectrum clustering)."
+    },
+    {
+      "index": 27,
+      "url": "https://www.mdpi.com/1099-4300/22/2/204",
+      "title": "Emergence of Network Motifs in Deep Neural Networks (Zambra et al. 2020)",
+      "summary": "Weight-topology motif emergence in MLPs under initialization schemes; finds motifs consistent with biological transduction networks."
+    },
+    {
+      "index": 28,
+      "url": "https://www.neelnanda.io/mechanistic-interpretability/glossary",
+      "title": "Mechanistic Interpretability Glossary (Neel Nanda)",
+      "summary": "Defines 'motif' as fuzzy recurring pattern notion; confirms only colloquial usage in the MI field, no Alon-style formal framework."
+    },
+    {
+      "index": 29,
+      "url": "https://cdn.openai.com/pdf/41df8f28-d4ef-43e9-aed2-823f9393e470/circuit-sparsity-paper.pdf",
+      "title": "Weight-Sparse Transformers Have Interpretable Circuits (OpenAI 2025)",
+      "summary": "Mentions 'circuit motifs underlying more complex reasoning' but without formal subgraph census or motif analysis framework."
+    },
+    {
+      "index": 30,
+      "url": "https://www.nature.com/articles/s41467-025-66533-x",
+      "title": "Leveraging Network Motifs to Improve Artificial Neural Networks (Nature Communications 2025)",
+      "summary": "Analyzes 882,000 three-node motifs for ANN architecture design; finds incoherent loops superior; focuses on engineering, not interpretability."
+    }
+  ],
+  "follow_up_questions": [
+    "Can the motifcluster package's product-weighted motif adjacency matrices handle the specific scale of attribution graphs (typically 500-5000 nodes, 2000-50000 edges) within reasonable compute time, and does the product weighting correctly propagate negative edge weights through 3-node motif instances?",
+    "For the causal validation protocol, should we use the Cantor-decoded (layer, feature_index) from attribution graph nodes directly as intervention targets in circuit-tracer, or does the mapping between graph node IDs and circuit-tracer Feature namedtuples require additional translation steps?",
+    "Given that Heimersheim & Nanda recommend corrupted-prompt patching over zero ablation, is it feasible to define domain-specific 'corrupted prompts' for each of the 8 capability domains, and would this substantially change the effect sizes compared to zero ablation?"
+  ],
+  "steering_api_status": {
+    "public_api_gemma_2_2b_support": "NO - public /api/steer lists only gemma-2b, gemma-2b-it, gpt2-small",
+    "transcoder_feature_support": "NO - gemmascope-transcoder-16k is not listed as inferenceEnabled for gemma-2-2b-it; only res-16k, att-16k, and axbench-reft-r1-res-16k have inferenceEnabled=true",
+    "graph_ui_intervention_support": "YES - Neuronpedia graph UI supports interventions for Gemma-2 (2B) via internal graph-server endpoint",
+    "recommended_intervention_path": "circuit-tracer local library (SOLE viable path for transcoder feature interventions)",
+    "rate_limit": "Unlimited local (circuit-tracer); 100/hr API (but API cannot do transcoder features)",
+    "gpu_requirement": "15GB VRAM (Colab T4 sufficient for Gemma-2-2B)",
+    "intervention_api": {
+      "model_loading": "ReplacementModel.from_pretrained('google/gemma-2-2b', 'gemma', dtype=torch.bfloat16, backend='transformerlens')",
+      "baseline": "model.get_activations(prompt) -> (logits, activations)",
+      "intervention": "model.feature_intervention(prompt, [(layer, pos, feat_idx, new_value)]) -> (new_logits, new_activations)",
+      "ablation_value": "0.0 for complete ablation (scaling_factor=0)",
+      "batch_support": "YES - multiple interventions in single forward pass via list of tuples"
+    }
+  },
+  "weighted_motif_recommendation": {
+    "primary_method": "Threshold binarization with sensitivity analysis (Option B) - igraph motifs_randesu at multiple |w|>tau thresholds",
+    "secondary_method": "Absolute-value Onnela intensity with sign-pattern categorization (Option A) - compute I(g)=(prod |w_e|)^(1/|E_g|) then categorize by edge sign patterns",
+    "tertiary_method": "Dual-network decomposition (Option C) - separate positive/negative edge subgraphs, census each",
+    "future_work_method": "Weighted motif adjacency matrices via motifcluster (Option D) - product weighting, spectral clustering",
+    "sign_handling": "Categorize motif instances by edge-sign pattern (inspired by C. elegans signed motif analysis with 710 signed 3-node types); absolute-value transform for intensity computation",
+    "negative_weight_issue": "Onnela geometric mean requires w>0; use |w| for intensity, then separately categorize sign patterns. Product weighting in motifcluster naturally handles signs.",
+    "software": {
+      "binary_census": "igraph motifs_randesu(size=3) - unweighted topology only, off-the-shelf",
+      "weighted_mam": "motifcluster pip package - build_motif_adjacency_matrix() with mean/product weighting",
+      "clustering_coefficient": "NetworkX clustering() - Onnela-Saramaki weighted formula implemented"
+    }
+  },
+  "causal_protocol": {
+    "intervention_tool": "circuit-tracer ReplacementModel.feature_intervention()",
+    "ablation_method": "Zero ablation (set activation to 0.0) as practical baseline; mean ablation recommended by literature but requires pre-computation of dataset means",
+    "output_metric_primary": "Logit difference (Delta_logit = logit_baseline[correct] - logit_ablated[correct]) - linear in residual stream, most principled per Heimersheim & Nanda 2024",
+    "output_metric_secondary": "KL divergence KL(P_baseline || P_ablation) - captures full distributional shift",
+    "output_metric_tertiary": "Probability change Delta_P - most interpretable for communication but non-linear",
+    "statistical_test": "Wilcoxon signed-rank test (paired, non-parametric) as primary; paired t-test if normality holds",
+    "effect_size_metrics": "Cohen's d and ratio Delta_logit_motif / Delta_logit_control (threshold: 1.5x)",
+    "sample_size": "25 pairs per motif type per domain (accounts for Bonferroni-corrected alpha)",
+    "total_ablations": "~1200 (3 motif types x 8 domains x 25 pairs x 2 ablations each)",
+    "estimated_time": "2-3 hours on T4 GPU (including overhead)",
+    "multiple_testing_correction": "BH-FDR at q=0.05 (primary); Bonferroni at alpha=0.05/24=0.002 (sensitivity check)",
+    "confound_mitigations": [
+      "Attribution-strength matching (+/-10%)",
+      "Node-degree matching (+/-20%)",
+      "Layer-range matching (+/-2 layers)",
+      "Non-motif-membership requirement for controls",
+      "Bonferroni/BH-FDR correction for 24 comparisons",
+      "Document cascading effects as feature (motif functional integration)",
+      "Note zero-ablation limitation; compare with mean ablation if feasible"
+    ]
+  },
+  "novelty_status": "CONFIRMED: No prior work applies Alon-style network motif analysis (subgraph census, Z-scores, motif significance profiles, or superfamily classification) to LLM attribution graphs or circuit-level computational graphs as of March 2026. The colloquial adoption of 'motif' terminology in MI (Anthropic, OpenAI, Nanda) underscores the field's recognition that recurring circuit patterns exist but lacks the formal graph-theoretic framework to quantify them. Closest prior work remains Zahn et al. 2024 (weight-topology of pruned MLPs, fundamentally different from our approach)."
+}

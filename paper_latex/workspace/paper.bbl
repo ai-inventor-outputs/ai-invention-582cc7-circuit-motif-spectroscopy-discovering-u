@@ -1,0 +1,178 @@
+\begin{thebibliography}{21}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alon(2007)]{Alon2007}
+U.~Alon.
+\newblock \emph{An Introduction to Systems Biology: Design Principles of
+  Biological Circuits}.
+\newblock Chapman and Hall/CRC, 2007.
+
+\bibitem[{Anthropic}(2025)]{Anthropic2025}
+{Anthropic}.
+\newblock Circuit tracing: Revealing computational graphs in language models.
+\newblock Anthropic Research, 2025.
+\newblock URL
+  \url{https://transformer-circuits.pub/2025/attribution-graphs/methods.html}.
+
+\bibitem[Birardi(2025)]{Birardi2025}
+Leonardo Birardi.
+\newblock Automated circuit interpretation via probe prompting.
+\newblock \emph{arXiv preprint}, 2025.
+
+\bibitem[Bricken et~al.(2023)Bricken, Templeton, Batson, Chen, Jermyn, Conerly,
+  Turner, Anil, Denison, Askell, Lasenby, Wu, Kravec, Schiefer, Maxwell,
+  Joseph, Hatfield-Dodds, Tamkin, Nguyen, McLean, Burke, Hume, Carter,
+  Henighan, and Olah]{Bricken2023}
+T.~Bricken, A.~Templeton, J.~Batson, B.~Chen, A.~Jermyn, T.~Conerly, N.~Turner,
+  C.~Anil, C.~Denison, A.~Askell, R.~Lasenby, Y.~Wu, S.~Kravec, N.~Schiefer,
+  T.~Maxwell, N.~Joseph, Z.~Hatfield-Dodds, A.~Tamkin, K.~Nguyen, B.~McLean,
+  J.~E. Burke, T.~Hume, S.~Carter, T.~Henighan, and C.~Olah.
+\newblock Towards monosemanticity: Decomposing language models with dictionary
+  learning.
+\newblock Transformer Circuits Thread, 2023.
+
+\bibitem[Conmy et~al.(2023)Conmy, Mavor-Parker, Lynch, Heimersheim, and
+  Garriga-Alonso]{Conmy2023}
+Arthur Conmy, Augustine~N. Mavor-Parker, Aengus Lynch, Stefan Heimersheim, and
+  Adri\`{a} Garriga-Alonso.
+\newblock Towards automated circuit discovery for mechanistic interpretability.
+\newblock In \emph{Proc. NeurIPS}, 2023.
+\newblock \doi{10.48550/arXiv.2304.14997}.
+
+\bibitem[Cunningham et~al.(2024)Cunningham, Ewart, Riggs, Huben, and
+  Sharkey]{Cunningham2024}
+Hoagy Cunningham, Aidan Ewart, L.~Riggs, R.~Huben, and Lee Sharkey.
+\newblock Sparse autoencoders find highly interpretable features in language
+  models.
+\newblock In \emph{Proc. ICLR}, 2024.
+\newblock \doi{10.48550/arXiv.2309.08600}.
+
+\bibitem[Elhage et~al.(2021)Elhage, Nanda, Olsson, Henighan, Joseph, Mann,
+  Askell, Bai, Chen, Conerly, DasSarma, Drain, Ganguli, Hatfield-Dodds,
+  Hernandez, Jones, Kernion, Lovitt, Ndousse, Amodei, Brown, Clark, Kaplan,
+  McCandlish, and Olah]{Elhage2021}
+N.~Elhage, N.~Nanda, C.~Olsson, T.~Henighan, N.~Joseph, B.~Mann, A.~Askell,
+  Y.~Bai, A.~Chen, T.~Conerly, N.~DasSarma, D.~Drain, D.~Ganguli,
+  Z.~Hatfield-Dodds, D.~Hernandez, A.~Jones, J.~Kernion, L.~Lovitt, K.~Ndousse,
+  D.~Amodei, T.~Brown, J.~Clark, J.~Kaplan, S.~McCandlish, and C.~Olah.
+\newblock A mathematical framework for transformer circuits.
+\newblock Transformer Circuits Thread, 2021.
+
+\bibitem[Elhage et~al.(2022)Elhage, Hume, Olsson, Schiefer, Henighan, Kravec,
+  Hatfield-Dodds, Lasenby, Drain, Chen, Grosse, McCandlish, Kaplan, Amodei,
+  Wattenberg, and Olah]{Elhage2022}
+Nelson Elhage, Tristan Hume, Catherine Olsson, Nicholas Schiefer, T.~Henighan,
+  Shauna Kravec, Zac Hatfield-Dodds, R.~Lasenby, Dawn Drain, Carol Chen,
+  R.~Grosse, Sam McCandlish, Jared Kaplan, Dario Amodei, M.~Wattenberg, and
+  Chris Olah.
+\newblock Toy models of superposition.
+\newblock \emph{ArXiv}, abs/2209.10652, 2022.
+\newblock \doi{10.48550/arXiv.2209.10652}.
+
+\bibitem[Marks et~al.(2024)Marks, Rager, Michaud, Belinkov, Bau, and
+  Mueller]{Marks2024}
+Samuel Marks, C.~Rager, Eric~J. Michaud, Yonatan Belinkov, David Bau, and Aaron
+  Mueller.
+\newblock Sparse feature circuits: Discovering and editing interpretable causal
+  graphs in language models.
+\newblock In \emph{Proc. ICLR}, 2024.
+\newblock \doi{10.48550/arXiv.2403.19647}.
+
+\bibitem[Meng et~al.(2022)Meng, Bau, Andonian, and Belinkov]{Meng2022}
+Kevin Meng, David Bau, Alex Andonian, and Yonatan Belinkov.
+\newblock Locating and editing factual associations in {GPT}.
+\newblock In \emph{Proc. NeurIPS}, 2022.
+\newblock \doi{10.48550/arXiv.2202.12629}.
+
+\bibitem[Milo et~al.(2002)Milo, Shen-Orr, Itzkovitz, Kashtan, Chklovskii, and
+  Alon]{Milo2002}
+R.~Milo, S.~Shen-Orr, S.~Itzkovitz, N.~Kashtan, D.~Chklovskii, and U.~Alon.
+\newblock Network motifs: Simple building blocks of complex networks.
+\newblock \emph{Science}, 298\penalty0 (5594):\penalty0 824--827, 2002.
+\newblock \doi{10.1126/science.298.5594.824}.
+
+\bibitem[Milo et~al.(2004)Milo, Itzkovitz, Kashtan, Levitt, Shen-Orr,
+  Ayzenshtat, Sheffer, and Alon]{Milo2004}
+R.~Milo, S.~Itzkovitz, N.~Kashtan, Reuven Levitt, S.~Shen-Orr, Inbal
+  Ayzenshtat, Michal Sheffer, and U.~Alon.
+\newblock Superfamilies of evolved and designed networks.
+\newblock \emph{Science}, 303\penalty0 (5663):\penalty0 1538--1542, 2004.
+\newblock \doi{10.1126/science.1089167}.
+
+\bibitem[Nanda et~al.(2023)Nanda, Chan, Lieberum, Smith, and
+  Steinhardt]{Nanda2023}
+Neel Nanda, Lawrence Chan, Tom Lieberum, Jessie~J. Smith, and J.~Steinhardt.
+\newblock Progress measures for grokking via mechanistic interpretability.
+\newblock In \emph{Proc. ICLR}, 2023.
+\newblock \doi{10.48550/arXiv.2301.05217}.
+
+\bibitem[{n}i et~al.(2014){n}i, van~den Heuvel, Avena-Koenigsberger,
+  de~Mendiz\'{a}bal, Betzel, Griffa, Hagmann, Corominas-Murtra, Thiran, and
+  Sporns]{Goni2014}
+J.~Go\ {n}i, M.~P. van~den Heuvel, Andrea Avena-Koenigsberger, N.~V\'{e}lez
+  de~Mendiz\'{a}bal, Richard~F. Betzel, A.~Griffa, P.~Hagmann,
+  B.~Corominas-Murtra, J.-P. Thiran, and O.~Sporns.
+\newblock Resting-brain functional connectivity predicted by analytic measures
+  of network communication.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 111\penalty0
+  (2):\penalty0 833--838, 2014.
+\newblock \doi{10.1073/pnas.1315529111}.
+
+\bibitem[Onnela et~al.(2005)Onnela, Saram\"{a}ki, Kert\'{e}sz, and
+  Kaski]{Onnela2005}
+J.-P. Onnela, J.~Saram\"{a}ki, J.~Kert\'{e}sz, and K.~Kaski.
+\newblock Intensity and coherence of motifs in weighted complex networks.
+\newblock \emph{Physical Review E}, 71\penalty0 (6):\penalty0 065103, 2005.
+\newblock \doi{10.1103/PhysRevE.71.065103}.
+
+\bibitem[Saram\"{a}ki et~al.(2007)Saram\"{a}ki, Kivel\"{a}, Onnela, Kaski, and
+  Kert\'{e}sz]{Saramaki2007}
+J.~Saram\"{a}ki, M.~Kivel\"{a}, J.-P. Onnela, K.~Kaski, and J.~Kert\'{e}sz.
+\newblock Generalizations of the clustering coefficient to weighted complex
+  networks.
+\newblock \emph{Physical Review E}, 75\penalty0 (2):\penalty0 027105, 2007.
+
+\bibitem[Shen-Orr et~al.(2002)Shen-Orr, Milo, Mangan, and Alon]{ShenOrr2002}
+S.~Shen-Orr, R.~Milo, S.~Mangan, and U.~Alon.
+\newblock Network motifs in the transcriptional regulation network of
+  {E}scherichia coli.
+\newblock \emph{Nature Genetics}, 31:\penalty0 64--68, 2002.
+\newblock \doi{10.1038/ng881}.
+
+\bibitem[Sun et~al.(2025)Sun, Wen, and Wenger]{Sun2025}
+Yuxiang Sun, Zeping Wen, and Scott Wenger.
+\newblock Circuit stability characterizes language model generalization.
+\newblock In \emph{Proc. ACL}, 2025.
+
+\bibitem[Templeton et~al.(2024)Templeton, Conerly, Marcus, Lindsey, Bricken,
+  Chen, Pearce, Citro, Ameisen, Jones, Cunningham, Turner, McDougall,
+  MacDiarmid, Freeman, Sumers, Rees, Batson, Jermyn, Carter, Olah, and
+  Henighan]{Templeton2024}
+A.~Templeton, T.~Conerly, J.~Marcus, J.~Lindsey, T.~Bricken, B.~Chen,
+  A.~Pearce, C.~Citro, E.~Ameisen, A.~Jones, H.~Cunningham, N.~L. Turner,
+  C.~McDougall, M.~MacDiarmid, C.~D. Freeman, T.~R. Sumers, E.~Rees, J.~Batson,
+  A.~Jermyn, S.~Carter, C.~Olah, and T.~Henighan.
+\newblock Scaling monosemanticity: Extracting interpretable features from
+  {C}laude 3 {S}onnet.
+\newblock Transformer Circuits Thread, 2024.
+
+\bibitem[Tigges et~al.(2024)Tigges, Hanna, Yu, and Biderman]{Tigges2024}
+Curt Tigges, Michael Hanna, Qinan Yu, and Stella Biderman.
+\newblock {LLM} circuit analyses are consistent across training and scale.
+\newblock In \emph{Proc. RepL4NLP Workshop}, 2024.
+\newblock \doi{10.48550/arXiv.2407.10827}.
+
+\bibitem[Wang et~al.(2023)Wang, Variengien, Conmy, Shlegeris, and
+  Steinhardt]{Wang2023}
+Kevin Wang, Alexandre Variengien, Arthur Conmy, Buck Shlegeris, and
+  J.~Steinhardt.
+\newblock Interpretability in the wild: a circuit for indirect object
+  identification in {GPT}-2 small.
+\newblock In \emph{Proc. ICLR}, 2023.
+\newblock \doi{10.48550/arXiv.2211.00593}.
+
+\end{thebibliography}

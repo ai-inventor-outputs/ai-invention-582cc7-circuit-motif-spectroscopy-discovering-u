@@ -1,0 +1,13 @@
+{
+  "id": "data_id4_it1__opus",
+  "type": "code",
+  "title": "Neuronpedia Attribution Graph Collection: 250+ Graphs across 8 Capability Domains",
+  "summary": "Demo notebook for the Neuronpedia Attribution Graph Collection dataset. Loads 3 trimmed attribution graphs (from country_capital, arithmetic, antonym domains) collected via the Neuronpedia API for gemma-2-2b. The notebook parses JSON-encoded graph structures (nodes with feature types, weighted edges), computes summary statistics per domain (node/edge counts, density, DAG validation), analyzes feature type distributions, and visualizes graph topology with NetworkX (nodes colored by feature type), bar charts comparing graph statistics, and edge weight distributions. Mini data contains connected subgraphs (60 nodes, ~120 edges each) trimmed from originals (869-1088 nodes, 31K-51K edges).",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_1/gen_art/data_id4_it1__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/data_id4_it1__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/data_id4_it1__opus/data_code_demo.ipynb"
+}

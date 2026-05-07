@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{Median impact ratio (hub / control) for FFL hub ablation across 4 metrics and 4 matched control types. $^{*}$ indicates $p<0.05$ after FDR correction. Mean ratio used when median is zero.}
+\label{table:ablation}
+\begin{tabular}{lrrrr}
+\toprule
+Metric & Degree & Attribution & Layer & Random \\
+\midrule
+    Downstream attr.\ loss         & $1.35$$^{*}$ & $1.02$$^{*}$ & $1.92$$^{*}$ & $9.23$$^{*}$ \\
+    Path disruption                & $3.85$$^{*}$ & $4.24$$^{*}$ & $6.92$$^{*}$ & $11.38$$^{*}$ \\
+    Reachability loss              & $47.04$$^{*}$ & $0.94$ & $2.11$$^{*}$ & $0.09$ \\
+    Component fragmentation        & $8.26$$^{*}$ & $10.56$$^{*}$ & $12.24$$^{*}$ & $101.66$$^{*}$ \\
+\bottomrule
+\end{tabular}
+\end{table}

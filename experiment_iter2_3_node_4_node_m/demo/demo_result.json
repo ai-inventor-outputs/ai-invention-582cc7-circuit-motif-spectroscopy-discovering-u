@@ -1,0 +1,13 @@
+{
+  "id": "exp_id1_it2__opus",
+  "type": "code",
+  "title": "3-Node & 4-Node Motif Census with DAG Null Models, Z-Scores, and Capability Clustering on 34 Attribution Graphs",
+  "summary": "Demo notebook running Circuit Motif Spectroscopy on 8 Neuronpedia attribution graphs (one per capability domain). Computes 3-node motif census, generates 50 DAG-preserving null models per graph via degree-preserving edge swaps, and computes Z-scores. Performs spectral clustering on enriched motif features (count ratios + Z-magnitude + graph statistics) vs baseline graph statistics. Reproduces key findings: H1 DISCONFIRM (only 030T/FFL universally overrepresented, Z~31 in 8/8 domains) and H2 CONFIRM (NMI=0.800 at K=4, outperforming baseline NMI=0.737). Includes 4-panel visualization: motif ratios by domain, Z-score boxplots, NMI comparison, and t-SNE projection.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_2/gen_art/exp_id1_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/exp_id1_it2__opus/method_code_demo.ipynb"
+}

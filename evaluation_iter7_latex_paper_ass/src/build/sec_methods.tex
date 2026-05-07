@@ -1,0 +1,67 @@
+\section{Methods}\label{sec:methods}
+
+\subsection{Data Collection and Preprocessing}\label{sec:data}
+We collected 200 attribution graphs from the Neuronpedia platform \cite{neuronpedia2024}, spanning 8 capability domains: antonym, arithmetic, code completion, country capital, multi hop reasoning, rhyme, sentiment, translation. Domain sizes range from 24 to 26 graphs per domain (Table~\ref{table:corpus}). Each graph is a weighted directed acyclic graph (DAG) where nodes represent sparse autoencoder features \cite{bricken2023monosemanticity} organized into transformer layers, and edges represent signed attribution scores quantifying causal influence between features for a specific input. Positive edges indicate excitatory influence and negative edges indicate inhibitory influence.
+
+Graphs were pruned at the 75th percentile of absolute edge weights to remove weak connections while preserving the core circuit structure. This threshold was chosen to balance noise removal with structural preservation: lower thresholds retain too many spurious edges, while higher thresholds fragment the graph. After pruning, we retained only graphs with at least 30 nodes to ensure sufficient structure for motif analysis. The resulting graphs span a wide range of sizes, from approximately 300 to over 2,000 nodes per graph, reflecting the diversity of circuit complexity across tasks and domains.
+
+\subsection{3-Node Motif Enumeration and Z-Score Computation}\label{sec:motif_enum}
+We enumerated all 3-node directed subgraph isomorphism classes in each pruned attribution graph, focusing on the four non-trivial DAG-compatible patterns using the canonical numbering of \citet{milo2002network}: 021U (fan-out, where one node sends edges to two others), 021C (chain, a directed path through three nodes), 021D (fan-in, where two nodes send edges to one target), and 030T (feedforward loop, where a source influences a target both directly and through an intermediary). For each graph $G$ and motif type $m$, we computed a Z-score against an ensemble of degree-preserving random graphs:
+\begin{equation}\label{eq:zscore}
+Z_m = \frac{N_m^{\text{real}} - \langle N_m^{\text{null}} \rangle}{\sigma(N_m^{\text{null}})}
+\end{equation}
+where $N_m^{\text{real}}$ is the count of motif $m$ in the real graph, and $\langle N_m^{\text{null}} \rangle$ and $\sigma(N_m^{\text{null}})$ are the mean and standard deviation of counts across null models.
+
+Our statistical pipeline consisted of six phases to ensure rigor:
+\begin{itemize}
+\item \textbf{Phase A (3-node Z-scores):} 50 degree-preserving null models per graph across all 200 graphs at 75th-percentile pruning.
+\item \textbf{Phase B (4-node Z-scores):} 20 null models per graph for the 150 qualifying graphs at 99th-percentile pruning.
+\item \textbf{Phase C (FDR correction):} Benjamini--Hochberg correction at $\alpha=0.05$ across all graph--motif combinations, yielding 800 3-node and 3600 4-node tests.
+\item \textbf{Phase D (Pruning robustness):} Sensitivity analysis at three pruning thresholds (60th, 75th, 90th percentiles) on a subset of 48 graphs with 15 null models each.
+\item \textbf{Phase E (Convergence):} Diagnostics confirming Z-score stability at a median of $N=30$ null models.
+\item \textbf{Phase F (Layer-preserving):} Alternative null models that rewire edges while respecting the DAG layer structure, providing a more conservative baseline that controls for layer effects.
+\end{itemize}
+
+\subsection{4-Node Motif Analysis}\label{sec:4node}
+We extended the analysis to 4-node directed subgraph patterns. Because 4-node enumeration is computationally expensive, we used a more aggressive pruning threshold (99th percentile) and restricted to graphs with at most 700 nodes, yielding 179 qualifying graphs. We enumerated all 4-node connected directed subgraph patterns and identified the universal types --- those appearing across all or nearly all capability domains. We then characterized the relationship between these 4-node motifs and 3-node FFLs through three analyses: (i) FFL containment --- the fraction of 4-node motif instances that contain at least one embedded 3-node FFL; (ii) layer span statistics --- the number of transformer layers spanned by each motif instance compared to random connected 4-node subgraphs; and (iii) cross-domain association via Cram\'{e}r's $V$ between motif type distribution and capability domain.
+
+\subsection{Graph-Theoretic Node Ablation}\label{sec:ablation}
+To assess the functional importance of FFL hub nodes in attribution circuits, we designed a comprehensive graph-theoretic ablation study. We first enumerated all 11,185,566 FFL motif instances across 200 graphs. For each node, we computed a motif participation index (MPI) equal to the number of FFL instances containing that node. Nodes with MPI above the 90th percentile were classified as hubs, yielding 20,056 hub nodes (7.9\% of all nodes). The remaining FFL-participating nodes (179,193) were classified as participants.
+
+For each hub node, we simulated removal by deleting the node and all its incident edges, then measured four complementary impact metrics:
+\begin{enumerate}
+\item \textbf{Downstream attribution loss:} the fraction of total downstream attribution score removed, measuring information flow disruption.
+\item \textbf{Path disruption:} the fraction of source-to-sink paths that are severed, measuring communication breakdown.
+\item \textbf{Reachability loss:} the fraction of previously reachable node pairs that become disconnected, measuring global connectivity impact.
+\item \textbf{Component fragmentation:} the increase in connected components, measuring structural disintegration.
+\end{enumerate}
+We compared hub ablation impact against four carefully designed control baselines: degree-matched (same total degree), attribution-matched (same total attribution magnitude), layer-matched (same transformer layer), and random (uniformly sampled non-hub nodes). Each hub was paired with a matched control from the same graph. Statistical significance was assessed using Wilcoxon signed-rank tests with Benjamini--Hochberg FDR correction across all metric--control combinations.
+
+\subsection{Weighted Motif Feature Extraction}\label{sec:features}
+For each graph, we computed a 19-dimensional weighted motif feature vector adapting the framework of \citet{onnela2005intensity} to signed, layered DAGs. Features were organized into four groups:
+\begin{itemize}
+\item \textbf{FFL features (11):} intensity (mean, median, std, Q25, Q75), sign-coherent fraction, path dominance mean and std, weight asymmetry, and Onnela coherence mean and std. FFL intensity is the geometric mean of absolute edge weights in each FFL instance. Path dominance measures the ratio of indirect-path to direct-path attribution, capturing whether the FFL amplifies or attenuates the direct signal.
+\item \textbf{Chain features (2):} intensity mean and sign-agreement fraction for 3-node chain (021C) instances.
+\item \textbf{Fan-out and fan-in features (4):} intensity mean and sign-agreement fraction for each motif type.
+\item \textbf{Global features (2):} negative edge fraction and edge weight kurtosis, capturing graph-wide weight distribution properties.
+\end{itemize}
+
+We compared five feature sets via spectral clustering \cite{ng2002spectral} against ground-truth domain labels: weighted motif only (19 features), binary motif only (4 features: raw motif counts), graph statistics only (8 features: node count, edge count, density, mean in/out degree, max degree, diameter, layer count, mean absolute edge weight), weighted plus binary (23 features), and all combined (31 features). For each feature set and each $K \in \{2, 4, 6, 8\}$, we performed spectral clustering and evaluated quality using Normalized Mutual Information (NMI) and Adjusted Rand Index (ARI) against domain labels. The best $K$ was selected by NMI. Statistical significance of NMI differences between feature sets was assessed using 1000-permutation tests that randomly shuffle domain labels and re-cluster.
+
+We further analyzed feature discriminativeness using one-way ANOVA with domain as the grouping variable, computing $\eta^2$ (eta-squared) effect sizes for each individual feature.
+
+\subsection{Unique Information Decomposition}\label{sec:uid}
+To rigorously disentangle motif-level from graph-level information about capability domains, we employed four complementary analyses:
+
+\textbf{(1) McFadden variance decomposition.} We fit multinomial logistic regression models predicting domain labels from: motif features only ($R^2_{\text{motif}}$), graph statistics only ($R^2_{\text{gstat}}$), and both combined ($R^2_{\text{combined}}$). Unique contributions were derived as $R^2_{\text{unique\_motif}} = R^2_{\text{combined}} - R^2_{\text{gstat}}$ and analogously for graph statistics. Bootstrap confidence intervals were computed from 1000 resamples to assess whether unique contributions significantly differ from zero.
+
+\textbf{(2) Residualized clustering.} We regressed out one feature set from the other using Ridge regression, then performed spectral clustering on the residuals. If motif features carry unique information, clustering on motif residuals (after removing graph-stat dependence) should exceed chance.
+
+\textbf{(3) Canonical correlation analysis (CCA).} We computed canonical correlations between motif and graph-stat feature blocks to characterize the dimensionality of their shared and unique subspaces.
+
+\textbf{(4) Conditional mutual information.} We estimated the mutual information between each feature and domain labels before and after conditioning on the other feature set, quantifying the fraction of domain-relevant information that survives conditioning.
+
+\textbf{Domain normalization.} To control for the possibility that motif intensity differences across domains merely reflect edge-weight scale differences, we normalized all edge weights within each domain to unit variance before recomputing motif features and clustering.
+
+\subsection{Implementation Details}\label{sec:implementation}
+All motif enumeration was performed using exact subgraph isomorphism counting rather than sampling, ensuring deterministic and reproducible results. Degree-preserving randomized graphs were generated using the configuration model with edge-swap Markov chains \cite{milo2002network}, performing sufficient swaps (10$\times$ edge count) to ensure convergence to the uniform distribution over graphs with identical degree sequence. Z-score computation followed the standard protocol of \citet{milo2002network}: for each graph and motif type, we computed the count in the real graph and the mean and standard deviation across null models, with Z-scores defined per Equation~\ref{eq:zscore}. Spectral clustering followed the normalized Laplacian approach of \citet{ng2002spectral}, with the number of clusters $K$ selected by maximum NMI against domain labels across $K \in \{2, 4, 6, 8\}$. Ridge regression for residualization used leave-one-out cross-validation to select the regularization parameter. All bootstrap and permutation procedures used $B=1000$ resamples with fixed random seeds for reproducibility. Feature standardization (zero mean, unit variance) was applied before all clustering and regression analyses to ensure scale-invariant comparisons across feature types. All analyses were implemented in Python using NumPy, SciPy, and scikit-learn, with custom graph-theoretic routines for motif enumeration and ablation simulation. Computation was parallelized across available CPU cores using multiprocessing for the embarrassingly parallel null model generation and motif enumeration steps.

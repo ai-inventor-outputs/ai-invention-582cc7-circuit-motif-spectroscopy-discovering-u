@@ -1,0 +1,383 @@
+{
+  "metadata": {
+    "evaluation_name": "numerical_claim_cross_verification",
+    "n_sections_audited": 15,
+    "n_source_experiments": 5,
+    "timestamp": "2026-03-19T23:38:40.554270+00:00",
+    "tolerance_rules": {
+      "integers": "exact",
+      "floats": "1% relative (0.002 absolute for values < 0.05)",
+      "p_values": "order of magnitude (log10 diff < 1.5)",
+      "percentages": "1.5pp absolute"
+    },
+    "summary": {
+      "total_claims_extracted": 110,
+      "n_match": 87,
+      "n_stale": 5,
+      "n_mismatch": 1,
+      "n_unverifiable": 17,
+      "accuracy_pct": 93.55,
+      "consistency_pct": 87.5
+    },
+    "per_section": {
+      "abstract": {
+        "n_claims": 17,
+        "n_match": 14,
+        "n_stale": 2,
+        "n_mismatch": 0,
+        "n_unverifiable": 1,
+        "accuracy_pct": 87.5
+      },
+      "introduction": {
+        "n_claims": 6,
+        "n_match": 6,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "related_work": {
+        "n_claims": 2,
+        "n_match": 2,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "methods": {
+        "n_claims": 7,
+        "n_match": 7,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "results_h1": {
+        "n_claims": 7,
+        "n_match": 3,
+        "n_stale": 1,
+        "n_mismatch": 1,
+        "n_unverifiable": 2,
+        "accuracy_pct": 60.0
+      },
+      "results_h2": {
+        "n_claims": 12,
+        "n_match": 8,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 4,
+        "accuracy_pct": 100.0
+      },
+      "results_h3": {
+        "n_claims": 19,
+        "n_match": 16,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 3,
+        "accuracy_pct": 100.0
+      },
+      "results_h4": {
+        "n_claims": 12,
+        "n_match": 10,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 2,
+        "accuracy_pct": 100.0
+      },
+      "results_h5": {
+        "n_claims": 1,
+        "n_match": 0,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 1,
+        "accuracy_pct": 100.0
+      },
+      "discussion": {
+        "n_claims": 14,
+        "n_match": 13,
+        "n_stale": 1,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 92.86
+      },
+      "conclusion": {
+        "n_claims": 7,
+        "n_match": 6,
+        "n_stale": 1,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 85.71
+      },
+      "table_t1": {
+        "n_claims": 1,
+        "n_match": 1,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "table_t2": {
+        "n_claims": 1,
+        "n_match": 1,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "table_t3": {
+        "n_claims": 3,
+        "n_match": 0,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 3,
+        "accuracy_pct": 100.0
+      },
+      "table_t4": {
+        "n_claims": 1,
+        "n_match": 0,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 1,
+        "accuracy_pct": 100.0
+      }
+    },
+    "per_claim_results": [
+      {
+        "claim_id": 1,
+        "section": "abstract",
+        "raw_text": "Z=47.2",
+        "claimed_value": 47.2,
+        "ground_truth_value": 47.76380824766508,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "phase_b_corpus_level_tests.030T.median_z",
+        "status": "STALE",
+        "relative_error": 0.011804089086481938,
+        "correction": "Replace 47.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "gt_key": "ffl_median_z",
+        "match_method": "z_score_match",
+        "pattern_name": "z_score"
+      },
+      {
+        "claim_id": 2,
+        "section": "abstract",
+        "raw_text": "Z=46.2",
+        "claimed_value": 46.2,
+        "ground_truth_value": 47.76380824766508,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "phase_b_corpus_level_tests.030T.median_z",
+        "status": "STALE",
+        "relative_error": 0.032740443131259865,
+        "correction": "Replace 46.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "gt_key": "ffl_median_z",
+        "match_method": "z_score_match",
+        "pattern_name": "z_score"
+      },
+      {
+        "claim_id": 3,
+        "section": "abstract",
+        "raw_text": "p<0.001",
+        "claimed_value": 0.001,
+        "ground_truth_value": null,
+        "source_experiment": null,
+        "json_path": null,
+        "status": "UNVERIFIABLE",
+        "relative_error": null,
+        "correction": null,
+        "gt_key": null,
+        "match_method": "no_match",
+        "pattern_name": "p_value_simple"
+      }
+    ],
+    "consistency_checks": {
+      "ffl_median_z": {
+        "sections_found": [
+          "abstract",
+          "abstract",
+          "results_h1"
+        ],
+        "values_found": [
+          47.2,
+          46.2,
+          46.2
+        ],
+        "consistent": false
+      },
+      "weighted_nmi": {
+        "sections_found": [
+          "abstract",
+          "introduction",
+          "results_h3"
+        ],
+        "values_found": [
+          0.705,
+          0.705,
+          0.705
+        ],
+        "consistent": true
+      },
+      "combined_nmi": {
+        "sections_found": [
+          "abstract",
+          "introduction",
+          "results_h3"
+        ],
+        "values_found": [
+          0.844,
+          0.844,
+          0.844
+        ],
+        "consistent": true
+      },
+      "binary_nmi": {
+        "sections_found": [
+          "abstract",
+          "introduction",
+          "results_h3"
+        ],
+        "values_found": [
+          0.101,
+          0.101,
+          0.101
+        ],
+        "consistent": true
+      },
+      "dose_spearman_r": {
+        "sections_found": [
+          "abstract",
+          "results_h2",
+          "results_h2"
+        ],
+        "values_found": [
+          0.88,
+          0.88,
+          0.88
+        ],
+        "consistent": true
+      },
+      "unique_motif_r2": {
+        "sections_found": [
+          "abstract",
+          "introduction",
+          "results_h4"
+        ],
+        "values_found": [
+          0.0184,
+          0.0184,
+          0.0184
+        ],
+        "consistent": true
+      },
+      "n_graphs_corpus": {
+        "sections_found": [
+          "related_work",
+          "methods",
+          "methods"
+        ],
+        "values_found": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "consistent": true
+      },
+      "n_domains": {
+        "sections_found": [
+          "abstract",
+          "abstract",
+          "introduction"
+        ],
+        "values_found": [
+          8.0,
+          8.0,
+          8.0
+        ],
+        "consistent": true
+      }
+    },
+    "correction_recommendations": [
+      {
+        "section": "abstract",
+        "current_text": "Z=47.2",
+        "corrected_text": "Replace 47.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "reason": "STALE: claimed 47.2, actual 47.76380824766508",
+        "source": "exp_id1_it6"
+      },
+      {
+        "section": "abstract",
+        "current_text": "Z=46.2",
+        "corrected_text": "Replace 46.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "reason": "STALE: claimed 46.2, actual 47.76380824766508",
+        "source": "exp_id1_it6"
+      },
+      {
+        "section": "results_h1",
+        "current_text": "Z=46.2",
+        "corrected_text": "Replace 46.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "reason": "STALE: claimed 46.2, actual 47.76380824766508",
+        "source": "exp_id1_it6"
+      }
+    ]
+  },
+  "metrics_agg": {
+    "accuracy_pct": 93.55,
+    "consistency_pct": 87.5,
+    "n_match": 87,
+    "n_stale": 5,
+    "n_mismatch": 1,
+    "n_unverifiable": 17,
+    "total_claims": 110,
+    "n_corrections_needed": 6,
+    "n_sections_audited": 15,
+    "n_consistency_checks": 8,
+    "n_consistent_metrics": 7
+  },
+  "datasets": [
+    {
+      "dataset": "claim_verification_results",
+      "examples": [
+        {
+          "input": "[abstract] Z=47.2",
+          "output": "Status: STALE | Claimed: 47.2 | GT: 47.76380824766508",
+          "metadata_section": "abstract",
+          "metadata_status": "STALE",
+          "metadata_gt_key": "ffl_median_z",
+          "metadata_pattern": "z_score",
+          "predict_status": "STALE",
+          "predict_ground_truth_value": "47.76380824766508",
+          "eval_is_match": 0.0,
+          "eval_is_stale": 1.0,
+          "eval_is_mismatch": 0.0,
+          "eval_relative_error": 0.011804089086481938
+        },
+        {
+          "input": "[abstract] Z=46.2",
+          "output": "Status: STALE | Claimed: 46.2 | GT: 47.76380824766508",
+          "metadata_section": "abstract",
+          "metadata_status": "STALE",
+          "metadata_gt_key": "ffl_median_z",
+          "metadata_pattern": "z_score",
+          "predict_status": "STALE",
+          "predict_ground_truth_value": "47.76380824766508",
+          "eval_is_match": 0.0,
+          "eval_is_stale": 1.0,
+          "eval_is_mismatch": 0.0,
+          "eval_relative_error": 0.032740443131259865
+        },
+        {
+          "input": "[abstract] p<0.001",
+          "output": "Status: UNVERIFIABLE | Claimed: 0.001 | GT: N/A",
+          "metadata_section": "abstract",
+          "metadata_status": "UNVERIFIABLE",
+          "metadata_gt_key": "N/A",
+          "metadata_pattern": "p_value_simple",
+          "predict_status": "UNVERIFIABLE",
+          "predict_ground_truth_value": "N/A",
+          "eval_is_match": 0.0,
+          "eval_is_stale": 0.0,
+          "eval_is_mismatch": 0.0,
+          "eval_relative_error": 0.0
+        }
+      ]
+    }
+  ]
+}

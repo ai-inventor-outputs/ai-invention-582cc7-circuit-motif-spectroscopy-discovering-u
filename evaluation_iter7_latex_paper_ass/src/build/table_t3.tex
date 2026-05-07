@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Spectral clustering quality by feature set (best $K$ selected from \{2, 4, 6, 8\}). Weighted vs.\ binary: $p=0.001$; weighted vs.\ graph stats: $p=0.001$; combined vs.\ best single: $p=0.001$.}
+\label{table:clustering}
+\begin{tabular}{lrrrr}
+\toprule
+Feature Set & \#Feat & $K$ & NMI & ARI \\
+\midrule
+    Weighted motif       &  19 & 8 & $0.705$ & $0.516$ \\
+    Binary motif         &   4 & 8 & $0.101$ & $0.008$ \\
+    Graph statistics     &   8 & 4 & $0.677$ & $0.372$ \\
+    Weighted + binary    &  23 & 8 & $0.705$ & $0.516$ \\
+    All combined         &  31 & 8 & $0.844$ & $0.688$ \\
+\bottomrule
+\end{tabular}
+\end{table}

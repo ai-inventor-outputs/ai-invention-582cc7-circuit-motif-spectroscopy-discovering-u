@@ -1,0 +1,13 @@
+{
+  "id": "eval_id1_it7__opus",
+  "type": "code",
+  "title": "LaTeX Paper Assembly, Statistics Update, Compilation, and Quality Verification",
+  "summary": "Demo notebook loads pre-computed evaluation data from a LaTeX paper assembly pipeline (Circuit Motif Spectroscopy paper). Analyzes 9 curated paper components (5 sections, 2 tables, 2 figures) from a 25-page research paper. Demonstrates statistics pattern checking in LaTeX text, quality metrics computation (M1-M10), and visualizes a 3-panel dashboard showing metrics scorecard, word count distribution, and citation density per section. All 10 quality metrics achieve PASS status.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_7/gen_art/eval_id1_it7__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id1_it7__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id1_it7__opus/eval_code_demo.ipynb"
+}

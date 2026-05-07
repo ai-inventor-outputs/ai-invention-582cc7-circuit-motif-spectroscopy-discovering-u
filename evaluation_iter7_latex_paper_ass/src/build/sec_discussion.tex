@@ -1,0 +1,56 @@
+\section{Discussion}\label{sec:discussion}
+
+\subsection{Summary of Findings}
+Our systematic analysis of 200 Neuronpedia attribution graphs across 8 capability domains provides converging evidence that feedforward loop motifs constitute a universal organizational principle of neural network circuits. Five complementary experiments support this conclusion:
+
+\begin{enumerate}
+\item \textbf{Universality (H1):} FFL motifs are over-represented in all 8/8 domains with median $Z=47.2$, robust to null model choice, pruning threshold, and layer structure controls.
+\item \textbf{Hub importance (H2):} 20,056 FFL hub nodes (7.9\% of all nodes) cause 1.92$\times$ greater disruption than layer-matched controls, with dose--response $r=0.88$.
+\item \textbf{Weighted features (H3):} $NMI=0.705$ for domain clustering, versus $NMI=0.101$ for binary counts; combined features reach $NMI=0.844$.
+\item \textbf{Unique information (H4):} Motif features carry unique information ($R^2=0.0184$, CI excludes 0; MI retained = 23.6\%) not captured by graph statistics.
+\item \textbf{Higher-order (H5):} All 4 universal 4-node motifs show 100\% FFL containment.
+\end{enumerate}
+
+\subsection{Biological Parallels and Interpretation}
+The FFL's universal prevalence in neural network attribution circuits offers a striking parallel to its role in biological gene regulatory networks, where it serves as a fundamental signal-processing module \cite{alon2007network, mangan2003structure}. Compared to canonical biological networks, LLM FFL Z-scores ($\bar{Z} = 47.14$) are 3.7--5.5$\times$ larger than those reported for \emph{E.~coli} and yeast transcription networks.
+ In biological systems, the coherent type-1 FFL acts as a persistence detector --- it passes signals only if the input persists long enough for the indirect path to activate --- while the incoherent type-1 FFL generates transient pulses. In neural network attribution circuits, we hypothesize that FFLs serve an analogous function: the direct edge provides raw feature attribution, while the indirect path through an intermediary provides a processed or contextualized version. The target node integrates both signals, enabling the circuit to combine multiple levels of abstraction within a single motif instance.
+
+The strong dose--response relationship ($r=0.88$ between motif participation and ablation impact) strengthens this functional interpretation. If FFLs were merely statistical artifacts of graph structure, we would not expect a monotonic relationship between the number of FFL instances a node participates in and the functional impact of its removal. The observed dose--response pattern suggests that each FFL instance contributes additively to a node's functional importance, consistent with FFLs serving as genuine computational building blocks.
+
+\subsection{Limitations and Honest Assessment}
+We identify several important limitations that qualify our conclusions:
+
+\textbf{FDR correction failure.} Despite extreme Z-scores, Benjamini--Hochberg FDR correction yields 0/800 surviving 3-node tests. While this reflects discrete p-value limitations rather than weak effects (\S\ref{sec:results_h1}), it means we cannot claim formal statistical significance under the strictest multiple-testing framework. Future work should employ $\geq 200$ null models per graph for FDR-valid p-values.
+
+\textbf{Small unique $R^2$.} The unique motif $R^2=0.0184$ is small in absolute terms, indicating that the vast majority of domain-predictive variance is shared between motif and graph-level features. Motif analysis is complementary to, not a replacement for, graph-level analysis. The practical implication is that combining both feature types ($NMI=0.844$) substantially outperforms either alone.
+
+\textbf{Single model and method.} Our analysis covers a single model (the Neuronpedia target model) and a single attribution method (sparse autoencoder attribution). Generalization to other architectures (e.g., Mamba, RWKV), scales (e.g., 70B+ parameter models), and attribution methods (e.g., activation patching, integrated gradients) remains untested.
+
+\textbf{Static analysis.} We analyze the structure of attribution graphs as static objects. Dynamic aspects --- how FFL motifs form and dissolve during the forward pass, how they relate to attention patterns, and whether they change during training --- remain unexplored.
+
+\textbf{Domain label granularity.} Our 8-domain labeling scheme is relatively coarse. Finer-grained task taxonomies might reveal sub-domain motif structure not captured by our current analysis. For example, within the arithmetic domain, addition and multiplication circuits might exhibit different FFL profiles that are averaged out in our domain-level analysis. Similarly, the sentiment domain contains only 24 graphs after pruning, limiting statistical power for this particular domain.
+
+\textbf{Correlation versus causation.} While our ablation experiments demonstrate that FFL hub removal causes greater disruption than matched controls, we have not directly shown that FFL motifs \emph{compute} specific functions. The dose--response relationship provides suggestive evidence, but definitive functional characterization would require targeted interventions that modify specific edges within FFL instances while preserving others.
+
+\textbf{Null model assumptions.} Degree-preserving random graphs are the standard null model for motif analysis \cite{milo2002network}, but they do not control for all possible confounds. Our layer-preserving null models address the most obvious confound (DAG layer structure), but other structural properties (e.g., community structure, hierarchical organization) could also contribute to FFL over-representation. Developing richer null models that control for additional structural properties would strengthen the evidence for genuine motif over-representation beyond these potential structural confounds and would provide more definitive causal conclusions about motif function.
+
+\subsection{Implications for Interpretability}
+Despite these limitations, our findings have several practical implications for the mechanistic interpretability community:
+
+\begin{itemize}
+\item \textbf{Principled circuit discovery:} Rather than searching for circuits from scratch, practitioners can enumerate FFL motifs as a structured starting point. Hub nodes identified by motif participation index are promising candidates for detailed feature analysis.
+\item \textbf{Cross-model comparison:} Weighted motif profiles provide a compact, interpretable fingerprint for comparing how different models implement similar capabilities. If two models have similar FFL intensity profiles for arithmetic, they may implement similar computational strategies.
+\item \textbf{Anomaly detection and safety:} Deviations from expected FFL patterns --- e.g., unusually low FFL density or abnormal hub distributions --- may flag unusual or potentially unreliable circuit implementations deserving closer scrutiny.
+\item \textbf{Architecture-aware pruning:} The dose--response relationship between motif participation and functional importance suggests that motif-aware pruning strategies could selectively preserve functionally critical circuit elements.
+\end{itemize}
+
+\subsection{Future Directions}
+Several promising extensions emerge from this work. First, scaling the analysis to larger models and diverse architectures would test the generality of FFL universality. The Neuronpedia platform continues to expand its coverage of models and tasks, providing a natural pathway for replication studies. Models with fundamentally different architectures (e.g., state-space models such as Mamba, or recurrent architectures such as RWKV) would be particularly informative, as they lack the explicit residual stream that may contribute to FFL formation in transformers.
+
+Second, temporal analysis of motif formation during training could reveal how circuit structure emerges. By constructing attribution graphs at multiple training checkpoints, one could track whether FFLs appear early (suggesting they are fundamental to the learning algorithm) or late (suggesting they emerge from optimization of already-functional circuits). This developmental perspective would complement our static structural analysis.
+
+Third, causal intervention experiments that selectively disrupt specific FFL instances (rather than entire nodes) could provide finer-grained evidence for FFL computational function. Such experiments would require modifying attribution scores at the edge level while preserving the rest of the circuit, enabling direct tests of whether the indirect path in a FFL provides essential contextualization or merely redundant information \cite{conmy2023automated}.
+
+Fourth, extending weighted motif features to include attention-head-specific attribution could bridge motif analysis with the attention pattern literature \cite{olsson2022context, voita2019analyzing}. Decomposing FFL edges by attention head would reveal whether specific heads preferentially participate in FFL structures, connecting our structural findings to the growing body of work on attention head specialization.
+
+Fifth, the compositional hierarchy we identified (4-node motifs as FFL extensions) could be extended to 5-node and higher-order patterns. While computational cost grows rapidly with motif size, sampling-based approaches \cite{benson2016higher} could enable approximate enumeration at larger scales. The consistent pattern of FFL derivativeness suggests that the entire higher-order motif hierarchy may be fully determined by the 3-node FFL, a conjecture that warrants formal investigation.

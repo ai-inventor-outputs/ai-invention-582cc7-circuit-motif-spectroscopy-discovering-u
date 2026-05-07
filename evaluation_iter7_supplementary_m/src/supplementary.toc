@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {S1}Extended Methods}{2}{section.1}%
+\contentsline {subsection}{\numberline {S1.1}Null Model Construction}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {S1.2}Pruning Threshold Sensitivity}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {S1.3}Convergence Diagnostics}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {S1.4}Computational Cost}{2}{subsection.1.4}%
+\contentsline {section}{\numberline {S2}Full Evidence Table}{2}{section.2}%
+\contentsline {section}{\numberline {S3}Per-Domain Z-Score Breakdowns}{8}{section.3}%
+\contentsline {section}{\numberline {S4}Per-Domain Ablation Results}{8}{section.4}%
+\contentsline {paragraph}{Dose-Response Analysis.}{8}{section*.9}%
+\contentsline {paragraph}{Corpus Summary.}{8}{section*.10}%
+\contentsline {section}{\numberline {S5}Failure Prediction Extended Results}{9}{section.5}%
+\contentsline {paragraph}{Key Pairwise Comparisons.}{9}{section*.14}%
+\contentsline {section}{\numberline {S6}Corpus-Level Statistical Framework}{9}{section.6}%
+\contentsline {subsection}{\numberline {S6.1}Why Per-Graph BH-FDR Fails}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {S6.2}Corpus-Level Tests}{10}{subsection.6.2}%
+\contentsline {subsection}{\numberline {S6.3}Mixed-Effects Model}{10}{subsection.6.3}%
+\contentsline {subsection}{\numberline {S6.4}Deep Null FDR}{10}{subsection.6.4}%
+\contentsline {subsection}{\numberline {S6.5}Convergence}{10}{subsection.6.5}%
+\contentsline {section}{\numberline {S7}Reviewer Objection-Response Matrix}{10}{section.7}%
+\contentsline {section}{\numberline {S8}Limitations and Future Directions}{12}{section.8}%
+\contentsline {subsection}{\numberline {S8.1}Critical Limitations}{12}{subsection.8.1}%
+\contentsline {subsection}{\numberline {S8.2}Major Limitations}{12}{subsection.8.2}%
+\contentsline {subsection}{\numberline {S8.3}Minor Limitations}{12}{subsection.8.3}%

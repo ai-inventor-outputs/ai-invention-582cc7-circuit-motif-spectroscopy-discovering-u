@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "evaluation_name": "supplementary_materials_compilation",
+    "description": "Supplementary Materials LaTeX compilation from 6 experiment dependencies",
+    "compilation_success": true,
+    "page_count": 13,
+    "section_word_counts": {
+      "S1": 240,
+      "S2": 1202,
+      "S3": 161,
+      "S4": 146,
+      "S5": 265,
+      "S6": 184,
+      "S7": 377,
+      "S8": 34
+    },
+    "total_evidence_rows": 59,
+    "reviewer_objections_count": 12,
+    "limitations_count": 10,
+    "domain_breakdown_completeness": 1.0,
+    "ablation_table_completeness": 1.0,
+    "file_paths": {
+      "tex": "supplementary.tex",
+      "pdf": "supplementary.pdf"
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "section_word_counts",
+      "examples": [
+        {
+          "input": "Section S1 word count",
+          "output": "{\"section\": \"S1\", \"word_count\": 240}",
+          "eval_word_count": 240,
+          "metadata_section": "S1"
+        },
+        {
+          "input": "Section S2 word count",
+          "output": "{\"section\": \"S2\", \"word_count\": 1202}",
+          "eval_word_count": 1202,
+          "metadata_section": "S2"
+        },
+        {
+          "input": "Section S3 word count",
+          "output": "{\"section\": \"S3\", \"word_count\": 161}",
+          "eval_word_count": 161,
+          "metadata_section": "S3"
+        }
+      ]
+    },
+    {
+      "dataset": "master_evidence_table",
+      "examples": [
+        {
+          "input": "H1: FFL (030T) overrepresented across all attribution graphs",
+          "output": "{\"row_id\": 1, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL (030T) overrepresented across all attribution graphs\", \"primary_metric\": \"FFL mean Z-score (200 graphs, 50 nulls each)\", \"value\": 46.2066, \"ci_95_lo...",
+          "eval_criterion_met": 1,
+          "eval_value": 46.2066,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in antonym domain",
+          "output": "{\"row_id\": 2, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in antonym domain\", \"primary_metric\": \"FFL median Z-score (antonym)\", \"value\": 26.2773, \"ci_95_lower\": null, \"ci_95_upper\": null,...",
+          "eval_criterion_met": 1,
+          "eval_value": 26.2773,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in arithmetic domain",
+          "output": "{\"row_id\": 3, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in arithmetic domain\", \"primary_metric\": \"FFL median Z-score (arithmetic)\", \"value\": 55.3803, \"ci_95_lower\": null, \"ci_95_upper\":...",
+          "eval_criterion_met": 1,
+          "eval_value": 55.3803,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        }
+      ]
+    },
+    {
+      "dataset": "reviewer_objections",
+      "examples": [
+        {
+          "input": "Objection 1: Motifs are just proxies for graph statistics — the high shared variance (93%) suggests motif feat...",
+          "output": "{\"objection_id\": 1, \"objection\": \"Motifs are just proxies for graph statistics \\u2014 the high shared variance (93%) suggests motif features add nothing.\", \"severity\": 4, \"evidence_based_response\": \"W...",
+          "eval_severity": 4,
+          "metadata_residual_risk": "medium"
+        },
+        {
+          "input": "Objection 2: BH-FDR eliminates all per-graph significance — the overrepresentation finding is not robust.",
+          "output": "{\"objection_id\": 2, \"objection\": \"BH-FDR eliminates all per-graph significance \\u2014 the overrepresentation finding is not robust.\", \"severity\": 4, \"evidence_based_response\": \"FDR eliminates per-grap...",
+          "eval_severity": 4,
+          "metadata_residual_risk": "low"
+        },
+        {
+          "input": "Objection 3: Only tested on one model (gemma-2-2b) — results may not generalize.",
+          "output": "{\"objection_id\": 3, \"objection\": \"Only tested on one model (gemma-2-2b) \\u2014 results may not generalize.\", \"severity\": 3, \"evidence_based_response\": \"We acknowledge single-model limitation. However,...",
+          "eval_severity": 3,
+          "metadata_residual_risk": "high"
+        }
+      ]
+    }
+  ],
+  "metrics_agg": {
+    "compilation_success": 1,
+    "page_count": 13,
+    "total_evidence_rows": 59,
+    "reviewer_objections_count": 12,
+    "limitations_count": 10,
+    "domain_breakdown_completeness": 1.0,
+    "ablation_table_completeness": 1.0,
+    "total_section_words": 2609
+  }
+}

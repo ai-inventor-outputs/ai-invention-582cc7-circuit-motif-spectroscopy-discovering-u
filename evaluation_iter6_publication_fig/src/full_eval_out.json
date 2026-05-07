@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "evaluation_name": "publication_figure_generation",
+    "description": "8 publication-quality figures from pre-computed circuit motif spectroscopy data",
+    "figures": {
+      "fig_1": {
+        "path_png": "fig_1.png",
+        "path_pdf": "fig_1.pdf",
+        "file_exists_png": true,
+        "file_exists_pdf": true,
+        "file_size_kb_png": 202.2,
+        "resolution_dpi": 300,
+        "colorblind_palette_used": true,
+        "description": "Motif Catalog & Method: 4 DAG-possible 3-node motifs with pipeline schematic",
+        "data_source": "exp_id5_it5",
+        "caption_draft": "Figure 1. (a) The four DAG-possible 3-node motifs: chain (021U), fan-out (021C), fan-in (021D), and feed-forward loop (030T/FFL). Mean Z-scores and universality across 8 capability domains annotated. (b) Pipeline schematic from prompt through Neuronpedia API attribution graph extraction to motif census and spectrum vector construction."
+      },
+      "fig_2": {
+        "path_png": "fig_2.png",
+        "path_pdf": "fig_2.pdf",
+        "file_exists_png": true,
+        "file_exists_pdf": true,
+        "file_size_kb_png": 302.0,
+        "resolution_dpi": 300,
+        "colorblind_palette_used": true,
+        "description": "Universal FFL Overrepresentation: box plots of FFL Z-scores across 8 domains",
+        "data_source": "exp_id5_it5",
+        "caption_draft": "Figure 2. (a) FFL (030T) Z-scores across 8 capability domains. All domains show strong overrepresentation (Z >> 2). Boxes show IQR with whiskers at 1.5x IQR; individual graph Z-scores overlaid as jittered points. (b) Per-domain mean FFL Z-scores with 95% CI error bars."
+      },
+      "fig_3": {
+        "path_png": "fig_3.png",
+        "path_pdf": "fig_3.pdf",
+        "file_exists_png": true,
+        "file_exists_pdf": true,
+        "file_size_kb_png": 683.5,
+        "resolution_dpi": 300,
+        "colorblind_palette_used": true,
+        "description": "Capability Clustering: t-SNE embeddings across 4 feature sets colored by domain",
+        "data_source": "exp_id5_it5",
+        "caption_draft": "Figure 3. t-SNE embeddings of ~200 attribution graphs colored by capability domain for four feature sets: (a) binary motif count-ratios, (b) weighted motif features, (c) graph statistics, (d) all combined. NMI scores annotated; graph statistics achieve best clustering (NMI=0.855)."
+      },
+      "fig_4": {
+        "path_png": "fig_4.png",
+        "path_pdf": "fig_4.pdf",
+        "file_exists_png": true,
+        "file_exists_pdf": true,
+        "file_size_kb_png": 375.6,
+        "resolution_dpi": 300,
+        "colorblind_palette_used": true,
+        "description": "Weighted Feature Heatmap: domain x weighted FFL features with hierarchical clustering",
+        "data_source": "exp_id5_it5",
+        "caption_draft": "Figure 4. Hierarchically clustered heatmap of Z-scored weighted FFL features across 8 capability domains. Dendrograms show domain and feature similarity. Diverging colormap (RdBu) centered at zero."
+      },
+      "fig_5": {
+        "path_png": "fig_5.png",
+        "path_pdf": "fig_5.pdf",
+        "file_exists_png": true,
+        "file_exists_pdf": true,
+        "file_size_kb_png": 175.1,
+        "resolution_dpi": 300,
+        "colorblind_palette_used": true,
+        "description": "Variance Decomposition: stacked bar of unique-motif, shared, unique-graph-stats R-squared",
+        "data_source": "exp_id1_it5",
+        "caption_draft": "Figure 5. McFadden pseudo-R-squared variance decomposition showing unique motif contribution (1.8%), shared variance (93.0%), and unique graph-statistics contribution (5.0%). Bootstrap 95% CIs shown. Inset zooms into unique contributions."
+      },
+      "fig_6": {
+        "path_png": "fig_6.png",
+        "path_pdf": "fig_6.pdf",
+        "file_exists_png": true,
+        "file_exists_pdf": true,
+        "file_size_kb_png": 150.5,
+        "resolution_dpi": 300,
+        "colorblind_palette_used": true,
+        "description": "Ablation Impact: FFL-hub vs control downstream attribution loss with dose-response inset",
+        "data_source": "exp_id2_it4",
+        "caption_draft": "Figure 6. Mean downstream attribution loss from node ablation: FFL-hub nodes vs. degree-matched, attribution-matched, layer-matched, and random controls. Error bars show 95% bootstrap CIs. Inset: dose-response relationship between log motif participation index and impact (Spearman r=0.88)."
+      },
+      "fig_7": {
+        "path_png": "fig_7.png",
+        "path_pdf": "fig_7.pdf",
+        "file_exists_png": true,
+        "file_exists_pdf": true,
+        "file_size_kb_png": 462.2,
+        "resolution_dpi": 300,
+        "colorblind_palette_used": true,
+        "description": "Confusion Matrices: Hungarian-aligned 8x8 for K=8 spectral clustering, 4 feature sets",
+        "data_source": "exp_id5_it5",
+        "caption_draft": "Figure 7. Hungarian-aligned confusion matrices for K=8 spectral clustering across four feature sets. Cell intensity and annotations show count of graphs assigned to each true domain / predicted cluster pair. NMI annotated per panel."
+      },
+      "fig_8": {
+        "path_png": "fig_8.png",
+        "path_pdf": "fig_8.pdf",
+        "file_exists_png": true,
+        "file_exists_pdf": true,
+        "file_size_kb_png": 185.8,
+        "resolution_dpi": 300,
+        "colorblind_palette_used": true,
+        "description": "4-Node Analysis: FFL containment bars and layer span comparison",
+        "data_source": "exp_id2_it5",
+        "caption_draft": "Figure 8. (a) FFL containment fraction for 4 universal 4-node motif types (IDs 77, 80, 82, 83); all show 100% containment. (b) Layer span comparison between 4-node motif instances and random connected 4-node subgraphs."
+      }
+    },
+    "generation_summary": {
+      "total_figures": 8,
+      "figures_generated": 8,
+      "format": "PNG 300 DPI + PDF",
+      "style": "publication (serif, 10-12pt, Okabe-Ito colorblind-safe)",
+      "all_generated": true
+    }
+  },
+  "metrics_agg": {
+    "total_figures": 8,
+    "figures_generated": 8,
+    "figures_failed": 0,
+    "all_generated": 1,
+    "mean_file_size_kb": 317.1,
+    "min_file_size_kb": 150.5
+  },
+  "datasets": [
+    {
+      "dataset": "publication_figures",
+      "examples": [
+        {
+          "input": "Generate figure 1: Motif Catalog & Method: 4 DAG-possible 3-node motifs with pipeline schematic",
+          "output": "{\"path_png\": \"fig_1.png\", \"path_pdf\": \"fig_1.pdf\", \"file_exists_png\": true, \"file_exists_pdf\": true, \"file_size_kb_png\": 202.2}",
+          "metadata_fold": "exp_id5_it5",
+          "metadata_slug": "fig_1",
+          "predict_figure_status": "success",
+          "predict_caption": "Figure 1. (a) The four DAG-possible 3-node motifs: chain (021U), fan-out (021C), fan-in (021D), and feed-forward loop (030T/FFL). Mean Z-scores and universality across 8 capability domains annotated. (b) Pipeline schematic from prompt through Neuronpedia API attribution graph extraction to motif census and spectrum vector construction.",
+          "eval_file_exists": 1,
+          "eval_file_size_kb": 202.2
+        },
+        {
+          "input": "Generate figure 2: Universal FFL Overrepresentation: box plots of FFL Z-scores across 8 domains",
+          "output": "{\"path_png\": \"fig_2.png\", \"path_pdf\": \"fig_2.pdf\", \"file_exists_png\": true, \"file_exists_pdf\": true, \"file_size_kb_png\": 302.0}",
+          "metadata_fold": "exp_id5_it5",
+          "metadata_slug": "fig_2",
+          "predict_figure_status": "success",
+          "predict_caption": "Figure 2. (a) FFL (030T) Z-scores across 8 capability domains. All domains show strong overrepresentation (Z >> 2). Boxes show IQR with whiskers at 1.5x IQR; individual graph Z-scores overlaid as jittered points. (b) Per-domain mean FFL Z-scores with 95% CI error bars.",
+          "eval_file_exists": 1,
+          "eval_file_size_kb": 302.0
+        },
+        {
+          "input": "Generate figure 3: Capability Clustering: t-SNE embeddings across 4 feature sets colored by domain",
+          "output": "{\"path_png\": \"fig_3.png\", \"path_pdf\": \"fig_3.pdf\", \"file_exists_png\": true, \"file_exists_pdf\": true, \"file_size_kb_png\": 683.5}",
+          "metadata_fold": "exp_id5_it5",
+          "metadata_slug": "fig_3",
+          "predict_figure_status": "success",
+          "predict_caption": "Figure 3. t-SNE embeddings of ~200 attribution graphs colored by capability domain for four feature sets: (a) binary motif count-ratios, (b) weighted motif features, (c) graph statistics, (d) all combined. NMI scores annotated; graph statistics achieve best clustering (NMI=0.855).",
+          "eval_file_exists": 1,
+          "eval_file_size_kb": 683.5
+        },
+        {
+          "input": "Generate figure 4: Weighted Feature Heatmap: domain x weighted FFL features with hierarchical clustering",
+          "output": "{\"path_png\": \"fig_4.png\", \"path_pdf\": \"fig_4.pdf\", \"file_exists_png\": true, \"file_exists_pdf\": true, \"file_size_kb_png\": 375.6}",
+          "metadata_fold": "exp_id5_it5",
+          "metadata_slug": "fig_4",
+          "predict_figure_status": "success",
+          "predict_caption": "Figure 4. Hierarchically clustered heatmap of Z-scored weighted FFL features across 8 capability domains. Dendrograms show domain and feature similarity. Diverging colormap (RdBu) centered at zero.",
+          "eval_file_exists": 1,
+          "eval_file_size_kb": 375.6
+        },
+        {
+          "input": "Generate figure 5: Variance Decomposition: stacked bar of unique-motif, shared, unique-graph-stats R-squared",
+          "output": "{\"path_png\": \"fig_5.png\", \"path_pdf\": \"fig_5.pdf\", \"file_exists_png\": true, \"file_exists_pdf\": true, \"file_size_kb_png\": 175.1}",
+          "metadata_fold": "exp_id1_it5",
+          "metadata_slug": "fig_5",
+          "predict_figure_status": "success",
+          "predict_caption": "Figure 5. McFadden pseudo-R-squared variance decomposition showing unique motif contribution (1.8%), shared variance (93.0%), and unique graph-statistics contribution (5.0%). Bootstrap 95% CIs shown. Inset zooms into unique contributions.",
+          "eval_file_exists": 1,
+          "eval_file_size_kb": 175.1
+        },
+        {
+          "input": "Generate figure 6: Ablation Impact: FFL-hub vs control downstream attribution loss with dose-response inset",
+          "output": "{\"path_png\": \"fig_6.png\", \"path_pdf\": \"fig_6.pdf\", \"file_exists_png\": true, \"file_exists_pdf\": true, \"file_size_kb_png\": 150.5}",
+          "metadata_fold": "exp_id2_it4",
+          "metadata_slug": "fig_6",
+          "predict_figure_status": "success",
+          "predict_caption": "Figure 6. Mean downstream attribution loss from node ablation: FFL-hub nodes vs. degree-matched, attribution-matched, layer-matched, and random controls. Error bars show 95% bootstrap CIs. Inset: dose-response relationship between log motif participation index and impact (Spearman r=0.88).",
+          "eval_file_exists": 1,
+          "eval_file_size_kb": 150.5
+        },
+        {
+          "input": "Generate figure 7: Confusion Matrices: Hungarian-aligned 8x8 for K=8 spectral clustering, 4 feature sets",
+          "output": "{\"path_png\": \"fig_7.png\", \"path_pdf\": \"fig_7.pdf\", \"file_exists_png\": true, \"file_exists_pdf\": true, \"file_size_kb_png\": 462.2}",
+          "metadata_fold": "exp_id5_it5",
+          "metadata_slug": "fig_7",
+          "predict_figure_status": "success",
+          "predict_caption": "Figure 7. Hungarian-aligned confusion matrices for K=8 spectral clustering across four feature sets. Cell intensity and annotations show count of graphs assigned to each true domain / predicted cluster pair. NMI annotated per panel.",
+          "eval_file_exists": 1,
+          "eval_file_size_kb": 462.2
+        },
+        {
+          "input": "Generate figure 8: 4-Node Analysis: FFL containment bars and layer span comparison",
+          "output": "{\"path_png\": \"fig_8.png\", \"path_pdf\": \"fig_8.pdf\", \"file_exists_png\": true, \"file_exists_pdf\": true, \"file_size_kb_png\": 185.8}",
+          "metadata_fold": "exp_id2_it5",
+          "metadata_slug": "fig_8",
+          "predict_figure_status": "success",
+          "predict_caption": "Figure 8. (a) FFL containment fraction for 4 universal 4-node motif types (IDs 77, 80, 82, 83); all show 100% containment. (b) Layer span comparison between 4-node motif instances and random connected 4-node subgraphs.",
+          "eval_file_exists": 1,
+          "eval_file_size_kb": 185.8
+        }
+      ]
+    }
+  ]
+}

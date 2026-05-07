@@ -1,0 +1,12 @@
+[project]
+name = "eval-id3-it6-opus"
+version = "0.1.0"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "loguru==0.7.3",
+    "psutil==7.2.2",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.backends._legacy:_Backend"

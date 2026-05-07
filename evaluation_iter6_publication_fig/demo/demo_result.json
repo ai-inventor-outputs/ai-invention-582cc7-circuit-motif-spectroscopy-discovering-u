@@ -1,0 +1,13 @@
+{
+  "id": "eval_id2_it6__opus",
+  "type": "code",
+  "title": "Publication Figure Generation: 8 Figures from Pre-Computed Circuit Motif Spectroscopy Data",
+  "summary": "Demo notebook generates 8 publication-quality figures from pre-computed circuit motif spectroscopy data. Figures include: motif catalog with pipeline schematic, FFL Z-score boxplots across 8 capability domains, t-SNE clustering (4 feature sets, best NMI=0.855), weighted feature heatmap with dendrograms, variance decomposition (shared R\u00b2=93%), ablation impact (FFL-hub 4.3-9.3x vs controls), confusion matrices, and 4-node FFL containment analysis. All figures use Okabe-Ito colorblind-safe palette. Data is a curated 104KB subset from 4 dependency experiments. Notebook runs in ~2 minutes at 100 DPI.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/eval_id2_it6__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id2_it6__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id2_it6__opus/eval_code_demo.ipynb"
+}

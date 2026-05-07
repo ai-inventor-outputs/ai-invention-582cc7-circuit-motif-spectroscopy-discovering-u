@@ -1,0 +1,646 @@
+{
+  "metadata": {
+    "evaluation_name": "supplementary_materials_compilation",
+    "description": "Supplementary Materials LaTeX compilation from 6 experiment dependencies",
+    "compilation_success": true,
+    "page_count": 13,
+    "section_word_counts": {
+      "S1": 240,
+      "S2": 1202,
+      "S3": 161,
+      "S4": 146,
+      "S5": 265,
+      "S6": 184,
+      "S7": 377,
+      "S8": 34
+    },
+    "total_evidence_rows": 59,
+    "reviewer_objections_count": 12,
+    "limitations_count": 10,
+    "domain_breakdown_completeness": 1.0,
+    "ablation_table_completeness": 1.0,
+    "file_paths": {
+      "tex": "supplementary.tex",
+      "pdf": "supplementary.pdf"
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "section_word_counts",
+      "examples": [
+        {
+          "input": "Section S1 word count",
+          "output": "{\"section\": \"S1\", \"word_count\": 240}",
+          "eval_word_count": 240,
+          "metadata_section": "S1"
+        },
+        {
+          "input": "Section S2 word count",
+          "output": "{\"section\": \"S2\", \"word_count\": 1202}",
+          "eval_word_count": 1202,
+          "metadata_section": "S2"
+        },
+        {
+          "input": "Section S3 word count",
+          "output": "{\"section\": \"S3\", \"word_count\": 161}",
+          "eval_word_count": 161,
+          "metadata_section": "S3"
+        },
+        {
+          "input": "Section S4 word count",
+          "output": "{\"section\": \"S4\", \"word_count\": 146}",
+          "eval_word_count": 146,
+          "metadata_section": "S4"
+        },
+        {
+          "input": "Section S5 word count",
+          "output": "{\"section\": \"S5\", \"word_count\": 265}",
+          "eval_word_count": 265,
+          "metadata_section": "S5"
+        },
+        {
+          "input": "Section S6 word count",
+          "output": "{\"section\": \"S6\", \"word_count\": 184}",
+          "eval_word_count": 184,
+          "metadata_section": "S6"
+        },
+        {
+          "input": "Section S7 word count",
+          "output": "{\"section\": \"S7\", \"word_count\": 377}",
+          "eval_word_count": 377,
+          "metadata_section": "S7"
+        },
+        {
+          "input": "Section S8 word count",
+          "output": "{\"section\": \"S8\", \"word_count\": 34}",
+          "eval_word_count": 34,
+          "metadata_section": "S8"
+        }
+      ]
+    },
+    {
+      "dataset": "master_evidence_table",
+      "examples": [
+        {
+          "input": "H1: FFL (030T) overrepresented across all attribution graphs",
+          "output": "{\"row_id\": 1, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL (030T) overrepresented across all attribution graphs\", \"primary_metric\": \"FFL mean Z-score (200 graphs, 50 nulls each)\", \"value\": 46.2066, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 46.2066, \"success_criterion\": \"Mean Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 46.2066,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in antonym domain",
+          "output": "{\"row_id\": 2, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in antonym domain\", \"primary_metric\": \"FFL median Z-score (antonym)\", \"value\": 26.2773, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 26.2773, \"success_criterion\": \"Domain median Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 26.2773,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in arithmetic domain",
+          "output": "{\"row_id\": 3, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in arithmetic domain\", \"primary_metric\": \"FFL median Z-score (arithmetic)\", \"value\": 55.3803, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 55.3803, \"success_criterion\": \"Domain median Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 55.3803,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in code_completion domain",
+          "output": "{\"row_id\": 4, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in code_completion domain\", \"primary_metric\": \"FFL median Z-score (code_completion)\", \"value\": 44.9965, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 44.9965, \"success_criterion\": \"Domain median Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 44.9965,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in country_capital domain",
+          "output": "{\"row_id\": 5, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in country_capital domain\", \"primary_metric\": \"FFL median Z-score (country_capital)\", \"value\": 47.0661, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 47.0661, \"success_criterion\": \"Domain median Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 47.0661,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in multi_hop_reasoning domain",
+          "output": "{\"row_id\": 6, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in multi_hop_reasoning domain\", \"primary_metric\": \"FFL median Z-score (multi_hop_reasoning)\", \"value\": 36.3839, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 36.3839, \"success_criterion\": \"Domain median Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 36.3839,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in rhyme domain",
+          "output": "{\"row_id\": 7, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in rhyme domain\", \"primary_metric\": \"FFL median Z-score (rhyme)\", \"value\": 45.5278, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 45.5278, \"success_criterion\": \"Domain median Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 45.5278,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in sentiment domain",
+          "output": "{\"row_id\": 8, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in sentiment domain\", \"primary_metric\": \"FFL median Z-score (sentiment)\", \"value\": 59.3607, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 59.3607, \"success_criterion\": \"Domain median Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 59.3607,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation in translation domain",
+          "output": "{\"row_id\": 9, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation in translation domain\", \"primary_metric\": \"FFL median Z-score (translation)\", \"value\": 50.8267, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 50.8267, \"success_criterion\": \"Domain median Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 50.8267,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: FFL overrepresentation survives layer-preserving null model",
+          "output": "{\"row_id\": 10, \"hypothesis\": \"H1\", \"sub_claim\": \"FFL overrepresentation survives layer-preserving null model\", \"primary_metric\": \"Layer-preserving null mean Z-score\", \"value\": 56.8751, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 0.0, \"effect_size_type\": \"Z-score\", \"effect_size_value\": 56.8751, \"success_criterion\": \"Layer-preserving Z > 2\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": \"More conservative null preserves layer structure\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 56.8751,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: Individual graph FFL significance survives FDR correction",
+          "output": "{\"row_id\": 11, \"hypothesis\": \"H1\", \"sub_claim\": \"Individual graph FFL significance survives FDR correction\", \"primary_metric\": \"BH-FDR surviving tests (combined 3+4 node)\", \"value\": 0, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.0, \"success_criterion\": \"Some tests survive FDR at alpha=0.05\", \"criterion_met\": false, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": \"0/4400 tests survive \\u2014 corpus-level phenomenon\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.0,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: Z-score estimates converge with sufficient null models",
+          "output": "{\"row_id\": 12, \"hypothesis\": \"H1\", \"sub_claim\": \"Z-score estimates converge with sufficient null models\", \"primary_metric\": \"Median convergence null count (N)\", \"value\": 30.0, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 30.0, \"success_criterion\": \"Convergence within N=50 nulls\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 30.0,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: Z-score rankings stable across pruning thresholds",
+          "output": "{\"row_id\": 13, \"hypothesis\": \"H1\", \"sub_claim\": \"Z-score rankings stable across pruning thresholds\", \"primary_metric\": \"Spearman rho (60th vs 75th pct pruning)\", \"value\": 0.499, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.499, \"success_criterion\": \"rho > 0.5\", \"criterion_met\": false, \"iteration\": 5, \"artifact_source\": \"exp_id3_it5\", \"key_caveat\": \"Moderate stability; rho drops to 0.29 for 60th vs 90th\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.499,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id3_it5"
+        },
+        {
+          "input": "H1: 3-node motif spectrum captures multi-dimensional structure",
+          "output": "{\"row_id\": 14, \"hypothesis\": \"H1\", \"sub_claim\": \"3-node motif spectrum captures multi-dimensional structure\", \"primary_metric\": \"Effective dimensions in 3-node spectrum\", \"value\": 1, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 1, \"success_criterion\": \"Multiple independent motif dimensions\", \"criterion_met\": false, \"iteration\": 2, \"artifact_source\": \"exp_id1_it2\", \"key_caveat\": \"Only 1 dimension \\u2014 021U/C/D anti-correlated with 030T\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 1.0,
+          "metadata_hypothesis": "H1",
+          "metadata_artifact_source": "exp_id1_it2"
+        },
+        {
+          "input": "H2: Weighted motif features cluster by domain (k=4)",
+          "output": "{\"row_id\": 15, \"hypothesis\": \"H2\", \"sub_claim\": \"Weighted motif features cluster by domain (k=4)\", \"primary_metric\": \"Weighted NMI (k=4)\", \"value\": 0.705, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"NMI\", \"effect_size_value\": 0.705, \"success_criterion\": \"NMI > 0.3\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id1_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.705,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it4"
+        },
+        {
+          "input": "H2: Binary motif counts cluster by domain (k=8)",
+          "output": "{\"row_id\": 16, \"hypothesis\": \"H2\", \"sub_claim\": \"Binary motif counts cluster by domain (k=8)\", \"primary_metric\": \"Binary NMI (k=8)\", \"value\": 0.101, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"NMI\", \"effect_size_value\": 0.101, \"success_criterion\": \"NMI > 0.3\", \"criterion_met\": false, \"iteration\": 4, \"artifact_source\": \"exp_id1_it4\", \"key_caveat\": \"Binary counts alone do not cluster well\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.101,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it4"
+        },
+        {
+          "input": "H2: Combined motif+graph features cluster by domain (k=8)",
+          "output": "{\"row_id\": 17, \"hypothesis\": \"H2\", \"sub_claim\": \"Combined motif+graph features cluster by domain (k=8)\", \"primary_metric\": \"Combined NMI (k=8)\", \"value\": 0.844, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"NMI\", \"effect_size_value\": 0.844, \"success_criterion\": \"NMI > 0.3\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id1_it4\", \"key_caveat\": \"Dominated by shared variance with graph statistics\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.844,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it4"
+        },
+        {
+          "input": "H2: Graph-stats features alone cluster by domain (k=4)",
+          "output": "{\"row_id\": 18, \"hypothesis\": \"H2\", \"sub_claim\": \"Graph-stats features alone cluster by domain (k=4)\", \"primary_metric\": \"Graph-stats NMI (k=4)\", \"value\": 0.62, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"NMI\", \"effect_size_value\": 0.62, \"success_criterion\": \"NMI > 0.3\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id1_it4\", \"key_caveat\": \"Graph stats cluster nearly as well as motifs \\u2014 shared variance\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.62,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it4"
+        },
+        {
+          "input": "H2: Count-ratio motif features cluster by domain",
+          "output": "{\"row_id\": 19, \"hypothesis\": \"H2\", \"sub_claim\": \"Count-ratio motif features cluster by domain\", \"primary_metric\": \"Count-ratio NMI (k=8, iter 2)\", \"value\": 0.851, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"NMI\", \"effect_size_value\": 0.851, \"success_criterion\": \"NMI > 0.3\", \"criterion_met\": true, \"iteration\": 2, \"artifact_source\": \"exp_id1_it2\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.851,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it2"
+        },
+        {
+          "input": "H2: Motif features carry unique variance not explained by graph statistics",
+          "output": "{\"row_id\": 20, \"hypothesis\": \"H2\", \"sub_claim\": \"Motif features carry unique variance not explained by graph statistics\", \"primary_metric\": \"Unique motif R-squared (McFadden decomposition)\", \"value\": 0.018365559913235296, \"ci_95_lower\": 0.02130568241913622, \"ci_95_upper\": 0.044777407093980516, \"p_value\": null, \"effect_size_type\": \"R-squared\", \"effect_size_value\": 0.018365559913235296, \"success_criterion\": \"CI excludes 0\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id1_it5\", \"key_caveat\": \"Small unique R-squared (0.018)\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.018365559913235296,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it5"
+        },
+        {
+          "input": "H2: Graph statistics also carry unique variance",
+          "output": "{\"row_id\": 21, \"hypothesis\": \"H2\", \"sub_claim\": \"Graph statistics also carry unique variance\", \"primary_metric\": \"Unique graph-stat R-squared\", \"value\": 0.0502310780822528, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"R-squared\", \"effect_size_value\": 0.0502310780822528, \"success_criterion\": \"Positive value\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id1_it5\", \"key_caveat\": \"Graph stats have 2.7x more unique variance than motifs\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.0502310780822528,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it5"
+        },
+        {
+          "input": "H2: Most domain-predictive variance is shared between feature sets",
+          "output": "{\"row_id\": 22, \"hypothesis\": \"H2\", \"sub_claim\": \"Most domain-predictive variance is shared between feature sets\", \"primary_metric\": \"Shared R-squared\", \"value\": 0.9298725730334148, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"R-squared\", \"effect_size_value\": 0.9298725730334148, \"success_criterion\": \"Informational\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id1_it5\", \"key_caveat\": \"93% shared \\u2014 features are highly redundant\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.9298725730334148,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it5"
+        },
+        {
+          "input": "H2: Motif residuals still cluster by domain after deconfounding",
+          "output": "{\"row_id\": 23, \"hypothesis\": \"H2\", \"sub_claim\": \"Motif residuals still cluster by domain after deconfounding\", \"primary_metric\": \"Residualized motif NMI (best k)\", \"value\": 0.2643, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 0.001, \"effect_size_type\": \"NMI\", \"effect_size_value\": 0.2643, \"success_criterion\": \"NMI > 0 with p < 0.05\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id1_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.2643,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it5"
+        },
+        {
+          "input": "H2: Residualized clustering is statistically significant",
+          "output": "{\"row_id\": 24, \"hypothesis\": \"H2\", \"sub_claim\": \"Residualized clustering is statistically significant\", \"primary_metric\": \"Permutation test p-value (1000 perms)\", \"value\": 0.001, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 0.001, \"effect_size_type\": \"NMI\", \"effect_size_value\": 0.2643, \"success_criterion\": \"p < 0.05\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id1_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.001,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it5"
+        },
+        {
+          "input": "H2: Motif and graph-stat spaces share significant canonical dimensions",
+          "output": "{\"row_id\": 25, \"hypothesis\": \"H2\", \"sub_claim\": \"Motif and graph-stat spaces share significant canonical dimensions\", \"primary_metric\": \"CCA significant dimensions\", \"value\": 7, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.7, \"success_criterion\": \"Some dims significant\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id1_it5\", \"key_caveat\": \"7/10 significant means high linear overlap\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 7.0,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it5"
+        },
+        {
+          "input": "H2: Motif clustering persists after domain-level edge-weight normalization",
+          "output": "{\"row_id\": 26, \"hypothesis\": \"H2\", \"sub_claim\": \"Motif clustering persists after domain-level edge-weight normalization\", \"primary_metric\": \"Domain-normalized motif NMI (k=8)\", \"value\": 0.6594, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"NMI\", \"effect_size_value\": 0.6594, \"success_criterion\": \"NMI comparable to raw\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id1_it5\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.6594,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it5"
+        },
+        {
+          "input": "H2: FFL intensity strongly predicts domain membership",
+          "output": "{\"row_id\": 27, \"hypothesis\": \"H2\", \"sub_claim\": \"FFL intensity strongly predicts domain membership\", \"primary_metric\": \"FFL intensity eta-squared (ANOVA)\", \"value\": 0.917, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"eta-squared\", \"effect_size_value\": 0.917, \"success_criterion\": \"eta-squared > 0.14 (large)\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id1_it4\", \"key_caveat\": \"May be driven by edge-weight scale differences\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.917,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it4"
+        },
+        {
+          "input": "H2: FFL path dominance predicts domain membership",
+          "output": "{\"row_id\": 28, \"hypothesis\": \"H2\", \"sub_claim\": \"FFL path dominance predicts domain membership\", \"primary_metric\": \"FFL path dominance eta-squared\", \"value\": 0.81, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"eta-squared\", \"effect_size_value\": 0.81, \"success_criterion\": \"eta-squared > 0.14 (large)\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id1_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.81,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it4"
+        },
+        {
+          "input": "H2: Mutual information retained after residualization",
+          "output": "{\"row_id\": 29, \"hypothesis\": \"H2\", \"sub_claim\": \"Mutual information retained after residualization\", \"primary_metric\": \"MI retained fraction (motif|gstat)\", \"value\": 0.2362, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.2362, \"success_criterion\": \"Some MI retained (> 0)\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id1_it5\", \"key_caveat\": \"~24% retained \\u2014 most lost to shared variance\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.2362,
+          "metadata_hypothesis": "H2",
+          "metadata_artifact_source": "exp_id1_it5"
+        },
+        {
+          "input": "H3: Best model predicts failures better than chance",
+          "output": "{\"row_id\": 30, \"hypothesis\": \"H3\", \"sub_claim\": \"Best model predicts failures better than chance\", \"primary_metric\": \"Best model AUC (graph_stats_only, logistic)\", \"value\": 0.5828378595532702, \"ci_95_lower\": 0.48399602450469237, \"ci_95_upper\": 0.6684326608505998, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.08283785955327017, \"success_criterion\": \"AUC > 0.65\", \"criterion_met\": false, \"iteration\": 4, \"artifact_source\": \"exp_id3_it4\", \"key_caveat\": \"Barely above chance; CI includes 0.5\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.5828378595532702,
+          "metadata_hypothesis": "H3",
+          "metadata_artifact_source": "exp_id3_it4"
+        },
+        {
+          "input": "H3: Motif features alone predict failures",
+          "output": "{\"row_id\": 31, \"hypothesis\": \"H3\", \"sub_claim\": \"Motif features alone predict failures\", \"primary_metric\": \"Motif-only AUC (logistic)\", \"value\": 0.49574160372810544, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": -0.00425839627189456, \"success_criterion\": \"AUC > 0.5\", \"criterion_met\": false, \"iteration\": 4, \"artifact_source\": \"exp_id3_it4\", \"key_caveat\": \"Below chance \\u2014 motifs carry no failure signal\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.49574160372810544,
+          "metadata_hypothesis": "H3",
+          "metadata_artifact_source": "exp_id3_it4"
+        },
+        {
+          "input": "H3: Adding motifs to baseline improves prediction",
+          "output": "{\"row_id\": 32, \"hypothesis\": \"H3\", \"sub_claim\": \"Adding motifs to baseline improves prediction\", \"primary_metric\": \"Full model AUC (logistic)\", \"value\": 0.5540735979431142, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.05407359794311417, \"success_criterion\": \"AUC > domain+graph AUC\", \"criterion_met\": false, \"iteration\": 4, \"artifact_source\": \"exp_id3_it4\", \"key_caveat\": \"Worse than baseline \\u2014 motifs hurt\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.5540735979431142,
+          "metadata_hypothesis": "H3",
+          "metadata_artifact_source": "exp_id3_it4"
+        },
+        {
+          "input": "H3: Baseline domain+graph model performance",
+          "output": "{\"row_id\": 33, \"hypothesis\": \"H3\", \"sub_claim\": \"Baseline domain+graph model performance\", \"primary_metric\": \"Domain+graph AUC (logistic)\", \"value\": 0.5744817612084204, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.07448176120842043, \"success_criterion\": \"Baseline reference\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id3_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.5744817612084204,
+          "metadata_hypothesis": "H3",
+          "metadata_artifact_source": "exp_id3_it4"
+        },
+        {
+          "input": "H3: Motif features significantly improve over baseline",
+          "output": "{\"row_id\": 34, \"hypothesis\": \"H3\", \"sub_claim\": \"Motif features significantly improve over baseline\", \"primary_metric\": \"Motif lift bootstrap p-value\", \"value\": 0.865, \"ci_95_lower\": -0.05859503331598054, \"ci_95_upper\": 0.015951757812500036, \"p_value\": 0.865, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.0, \"success_criterion\": \"p < 0.05\", \"criterion_met\": false, \"iteration\": 4, \"artifact_source\": \"exp_id3_it4\", \"key_caveat\": \"p=0.865 \\u2014 no significant lift\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.865,
+          "metadata_hypothesis": "H3",
+          "metadata_artifact_source": "exp_id3_it4"
+        },
+        {
+          "input": "H3: Within-domain (code_completion) motif failure prediction",
+          "output": "{\"row_id\": 35, \"hypothesis\": \"H3\", \"sub_claim\": \"Within-domain (code_completion) motif failure prediction\", \"primary_metric\": \"Motif-only AUC (code_completion)\", \"value\": 0.5210084033613446, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.021008403361344574, \"success_criterion\": \"AUC > 0.5\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id3_it4\", \"key_caveat\": \"Within-domain sample size ~25\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.5210084033613446,
+          "metadata_hypothesis": "H3",
+          "metadata_artifact_source": "exp_id3_it4"
+        },
+        {
+          "input": "H3: Within-domain (translation) motif failure prediction",
+          "output": "{\"row_id\": 36, \"hypothesis\": \"H3\", \"sub_claim\": \"Within-domain (translation) motif failure prediction\", \"primary_metric\": \"Motif-only AUC (translation)\", \"value\": 0.5047619047619047, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.004761904761904745, \"success_criterion\": \"AUC > 0.5\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id3_it4\", \"key_caveat\": \"Within-domain sample size ~25\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.5047619047619047,
+          "metadata_hypothesis": "H3",
+          "metadata_artifact_source": "exp_id3_it4"
+        },
+        {
+          "input": "H3: Within-domain (multi_hop_reasoning) motif failure prediction",
+          "output": "{\"row_id\": 37, \"hypothesis\": \"H3\", \"sub_claim\": \"Within-domain (multi_hop_reasoning) motif failure prediction\", \"primary_metric\": \"Motif-only AUC (multi_hop_reasoning)\", \"value\": 0.3865546218487395, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": -0.11344537815126049, \"success_criterion\": \"AUC > 0.5\", \"criterion_met\": false, \"iteration\": 4, \"artifact_source\": \"exp_id3_it4\", \"key_caveat\": \"Within-domain sample size ~25\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.3865546218487395,
+          "metadata_hypothesis": "H3",
+          "metadata_artifact_source": "exp_id3_it4"
+        },
+        {
+          "input": "H3: Deviation from domain-mean predicts failures",
+          "output": "{\"row_id\": 38, \"hypothesis\": \"H3\", \"sub_claim\": \"Deviation from domain-mean predicts failures\", \"primary_metric\": \"Domain+graph+deviation AUC (logistic)\", \"value\": 0.5294873855053833, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.029487385505383323, \"success_criterion\": \"AUC > domain+graph AUC\", \"criterion_met\": false, \"iteration\": 4, \"artifact_source\": \"exp_id3_it4\", \"key_caveat\": \"Deviation features do not improve prediction\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.5294873855053833,
+          "metadata_hypothesis": "H3",
+          "metadata_artifact_source": "exp_id3_it4"
+        },
+        {
+          "input": "H4: FFL hub nodes cause more downstream attr loss than layer-matched controls",
+          "output": "{\"row_id\": 39, \"hypothesis\": \"H4\", \"sub_claim\": \"FFL hub nodes cause more downstream attr loss than layer-matched controls\", \"primary_metric\": \"Downstream attr loss median ratio (layer-matched)\", \"value\": 1.9195629711136541, \"ci_95_lower\": 1.9086129834339416, \"ci_95_upper\": 1.9340528955163707, \"p_value\": 0.0, \"effect_size_type\": \"Cohen's d\", \"effect_size_value\": 0.41274607468663277, \"success_criterion\": \"Ratio > 1.5 with p < 0.05\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": \"Graph-theoretic ablation, not model-level\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 1.9195629711136541,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: FFL hub nodes more important than degree-matched controls",
+          "output": "{\"row_id\": 40, \"hypothesis\": \"H4\", \"sub_claim\": \"FFL hub nodes more important than degree-matched controls\", \"primary_metric\": \"Downstream attr loss median ratio (degree-matched)\", \"value\": 1.353842100088405, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Cohen's d\", \"effect_size_value\": 0.3405467963331597, \"success_criterion\": \"Ratio > 1.0\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 1.353842100088405,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: FFL hub nodes more important than random controls",
+          "output": "{\"row_id\": 41, \"hypothesis\": \"H4\", \"sub_claim\": \"FFL hub nodes more important than random controls\", \"primary_metric\": \"Downstream attr loss median ratio (random)\", \"value\": 9.226745654172998, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Cohen's d\", \"effect_size_value\": 0.542488671748532, \"success_criterion\": \"Ratio > 1.0\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 9.226745654172998,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: FFL hub removal causes extreme graph fragmentation vs random",
+          "output": "{\"row_id\": 42, \"hypothesis\": \"H4\", \"sub_claim\": \"FFL hub removal causes extreme graph fragmentation vs random\", \"primary_metric\": \"Component fragmentation mean ratio (vs random)\", \"value\": 101.65525672371638, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 0.0, \"effect_size_type\": \"Cohen's d\", \"effect_size_value\": 0.1936796610853016, \"success_criterion\": \"Ratio > 10\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": \"Sparse metric \\u2014 many zero values\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 101.65525672371638,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: Higher motif participation -> greater ablation impact (dose-response)",
+          "output": "{\"row_id\": 43, \"hypothesis\": \"H4\", \"sub_claim\": \"Higher motif participation -> greater ablation impact (dose-response)\", \"primary_metric\": \"Spearman r (MPI vs downstream attr loss)\", \"value\": 0.8767965456916026, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 0.0, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.8767965456916026, \"success_criterion\": \"r > 0.5 with p < 0.05\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.8767965456916026,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: Higher motif participation -> greater fragmentation (dose-response)",
+          "output": "{\"row_id\": 44, \"hypothesis\": \"H4\", \"sub_claim\": \"Higher motif participation -> greater fragmentation (dose-response)\", \"primary_metric\": \"Spearman r (MPI vs component fragmentation)\", \"value\": 0.1359593875762796, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 7.060777719168833e-67, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.1359593875762796, \"success_criterion\": \"r > 0 with p < 0.05\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": \"Weak dose-response for fragmentation vs strong for attr loss\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.1359593875762796,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: Effect size of FFL hub ablation (layer-matched)",
+          "output": "{\"row_id\": 45, \"hypothesis\": \"H4\", \"sub_claim\": \"Effect size of FFL hub ablation (layer-matched)\", \"primary_metric\": \"Cohen's d (downstream attr loss, layer-matched)\", \"value\": 0.41274607468663277, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Cohen's d\", \"effect_size_value\": 0.41274607468663277, \"success_criterion\": \"d > 0.2 (small effect)\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": \"Moderate effect size (d~0.41)\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.41274607468663277,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: FFL hub ablation impact in antonym domain",
+          "output": "{\"row_id\": 46, \"hypothesis\": \"H4\", \"sub_claim\": \"FFL hub ablation impact in antonym domain\", \"primary_metric\": \"Layer-matched median ratio (antonym)\", \"value\": 1.980951865119879, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 0.0, \"effect_size_type\": \"Cohen's d\", \"effect_size_value\": 0.43443904635031383, \"success_criterion\": \"Ratio > 1.0 with p < 0.05\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 1.980951865119879,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: FFL hub ablation impact in arithmetic domain",
+          "output": "{\"row_id\": 47, \"hypothesis\": \"H4\", \"sub_claim\": \"FFL hub ablation impact in arithmetic domain\", \"primary_metric\": \"Layer-matched median ratio (arithmetic)\", \"value\": 2.0351185582483553, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 0.0, \"effect_size_type\": \"Cohen's d\", \"effect_size_value\": 0.4979273389860499, \"success_criterion\": \"Ratio > 1.0 with p < 0.05\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 2.0351185582483553,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: FFL hub ablation impact in code_completion domain",
+          "output": "{\"row_id\": 48, \"hypothesis\": \"H4\", \"sub_claim\": \"FFL hub ablation impact in code_completion domain\", \"primary_metric\": \"Layer-matched median ratio (code_completion)\", \"value\": 1.8128392097002872, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 0.0, \"effect_size_type\": \"Cohen's d\", \"effect_size_value\": 0.39171943823680666, \"success_criterion\": \"Ratio > 1.0 with p < 0.05\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 1.8128392097002872,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H4: Ablation effect is universal across domains",
+          "output": "{\"row_id\": 49, \"hypothesis\": \"H4\", \"sub_claim\": \"Ablation effect is universal across domains\", \"primary_metric\": \"Number of domains with significant effect (p < 0.05)\", \"value\": 8, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 1.0, \"success_criterion\": \"All 8 domains significant\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id2_it4\", \"key_caveat\": null}",
+          "eval_criterion_met": 1,
+          "eval_value": 8.0,
+          "metadata_hypothesis": "H4",
+          "metadata_artifact_source": "exp_id2_it4"
+        },
+        {
+          "input": "H5: FFL motifs respect layer ordering",
+          "output": "{\"row_id\": 50, \"hypothesis\": \"H5\", \"sub_claim\": \"FFL motifs respect layer ordering\", \"primary_metric\": \"Strict layer ordering fraction (3-node FFL)\", \"value\": 1.0, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 1.0, \"success_criterion\": \"Fraction > 0.8\", \"criterion_met\": true, \"iteration\": 3, \"artifact_source\": \"exp_id3_it3\", \"key_caveat\": \"Expected in layered DAGs \\u2014 may be trivial\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 1.0,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id3_it3"
+        },
+        {
+          "input": "H5: FFL motifs have coherent sign patterns",
+          "output": "{\"row_id\": 51, \"hypothesis\": \"H5\", \"sub_claim\": \"FFL motifs have coherent sign patterns\", \"primary_metric\": \"FFL coherence fraction\", \"value\": 0.58, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 0.58, \"success_criterion\": \"Fraction > 0.5\", \"criterion_met\": true, \"iteration\": 3, \"artifact_source\": \"exp_id3_it3\", \"key_caveat\": \"Only 58% \\u2014 42% have anti-coherent patterns\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.58,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id3_it3"
+        },
+        {
+          "input": "H5: FFL semantic roles vary across domains",
+          "output": "{\"row_id\": 52, \"hypothesis\": \"H5\", \"sub_claim\": \"FFL semantic roles vary across domains\", \"primary_metric\": \"Cramer's V (3-node FFL, cross-domain)\", \"value\": 0.13, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": 0.001, \"effect_size_type\": \"Cramer's V\", \"effect_size_value\": 0.13, \"success_criterion\": \"V > 0.3 (moderate)\", \"criterion_met\": false, \"iteration\": 3, \"artifact_source\": \"exp_id3_it3\", \"key_caveat\": \"Weak association (V=0.13)\"}",
+          "eval_criterion_met": 0,
+          "eval_value": 0.13,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id3_it3"
+        },
+        {
+          "input": "H5: Universal 4-node motifs are entirely FFL-derivative",
+          "output": "{\"row_id\": 53, \"hypothesis\": \"H5\", \"sub_claim\": \"Universal 4-node motifs are entirely FFL-derivative\", \"primary_metric\": \"4-node FFL containment (all 4 types)\", \"value\": 1.0, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 1.0, \"success_criterion\": \"100% containment\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id2_it5\", \"key_caveat\": \"4-node universality is FFL-derivative, not independent\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 1.0,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id2_it5"
+        },
+        {
+          "input": "H5: 4-node motif 77 cross-domain consistency",
+          "output": "{\"row_id\": 54, \"hypothesis\": \"H5\", \"sub_claim\": \"4-node motif 77 cross-domain consistency\", \"primary_metric\": \"Cramer's V (4-node type 77)\", \"value\": 0.2, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Cramer's V\", \"effect_size_value\": 0.2, \"success_criterion\": \"V > FFL's 0.13\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id2_it5\", \"key_caveat\": \"4-node types show better domain consistency than 3-node FFL\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.2,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id2_it5"
+        },
+        {
+          "input": "H5: 4-node motif 80 cross-domain consistency",
+          "output": "{\"row_id\": 55, \"hypothesis\": \"H5\", \"sub_claim\": \"4-node motif 80 cross-domain consistency\", \"primary_metric\": \"Cramer's V (4-node type 80)\", \"value\": 0.25, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Cramer's V\", \"effect_size_value\": 0.25, \"success_criterion\": \"V > FFL's 0.13\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id2_it5\", \"key_caveat\": \"4-node types show better domain consistency than 3-node FFL\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.25,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id2_it5"
+        },
+        {
+          "input": "H5: 4-node motif 82 cross-domain consistency",
+          "output": "{\"row_id\": 56, \"hypothesis\": \"H5\", \"sub_claim\": \"4-node motif 82 cross-domain consistency\", \"primary_metric\": \"Cramer's V (4-node type 82)\", \"value\": 0.3, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Cramer's V\", \"effect_size_value\": 0.3, \"success_criterion\": \"V > FFL's 0.13\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id2_it5\", \"key_caveat\": \"4-node types show better domain consistency than 3-node FFL\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.3,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id2_it5"
+        },
+        {
+          "input": "H5: 4-node motif 83 cross-domain consistency",
+          "output": "{\"row_id\": 57, \"hypothesis\": \"H5\", \"sub_claim\": \"4-node motif 83 cross-domain consistency\", \"primary_metric\": \"Cramer's V (4-node type 83)\", \"value\": 0.33, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"Cramer's V\", \"effect_size_value\": 0.33, \"success_criterion\": \"V > FFL's 0.13\", \"criterion_met\": true, \"iteration\": 5, \"artifact_source\": \"exp_id2_it5\", \"key_caveat\": \"4-node types show better domain consistency than 3-node FFL\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.33,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id2_it5"
+        },
+        {
+          "input": "H5: FFL layer ordering exceeds random baseline",
+          "output": "{\"row_id\": 58, \"hypothesis\": \"H5\", \"sub_claim\": \"FFL layer ordering exceeds random baseline\", \"primary_metric\": \"Random baseline strict ordering fraction\", \"value\": 0.45, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"ratio\", \"effect_size_value\": 2.2222222222222223, \"success_criterion\": \"FFL ordering >> random\", \"criterion_met\": true, \"iteration\": 3, \"artifact_source\": \"exp_id3_it3\", \"key_caveat\": \"Even random subgraphs may show ordering in layered DAGs\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.45,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id3_it3"
+        },
+        {
+          "input": "H5: FFL intensity discriminates between capability domains",
+          "output": "{\"row_id\": 59, \"hypothesis\": \"H5\", \"sub_claim\": \"FFL intensity discriminates between capability domains\", \"primary_metric\": \"FFL intensity eta-squared (ANOVA, iter 4)\", \"value\": 0.917, \"ci_95_lower\": null, \"ci_95_upper\": null, \"p_value\": null, \"effect_size_type\": \"eta-squared\", \"effect_size_value\": 0.917, \"success_criterion\": \"eta-squared > 0.14\", \"criterion_met\": true, \"iteration\": 4, \"artifact_source\": \"exp_id1_it4\", \"key_caveat\": \"Primarily a scale/intensity effect, not semantic\"}",
+          "eval_criterion_met": 1,
+          "eval_value": 0.917,
+          "metadata_hypothesis": "H5",
+          "metadata_artifact_source": "exp_id1_it4"
+        }
+      ]
+    },
+    {
+      "dataset": "reviewer_objections",
+      "examples": [
+        {
+          "input": "Objection 1: Motifs are just proxies for graph statistics \u2014 the high shared variance (93%) suggests motif feat...",
+          "output": "{\"objection_id\": 1, \"objection\": \"Motifs are just proxies for graph statistics \\u2014 the high shared variance (93%) suggests motif features add nothing.\", \"severity\": 4, \"evidence_based_response\": \"While 93% of variance is shared, unique motif R-squared=0.0184 with CI [0.0213, 0.0448] strictly excludes zero. Residualized NMI=0.264 (p=0.001) confirms motifs carry non-redundant domain signal after removing all linear graph-stat dependence. CCA shows 3/10 dimensions are NOT significantly shared. The unique contribution is small but real.\", \"supporting_artifacts\": [\"exp_id1_it5\"], \"residual_risk\": \"medium\", \"mitigation_action\": \"Frame as 'modest but significant unique contribution' with exact R-squared and CI\"}",
+          "eval_severity": 4,
+          "metadata_residual_risk": "medium"
+        },
+        {
+          "input": "Objection 2: BH-FDR eliminates all per-graph significance \u2014 the overrepresentation finding is not robust.",
+          "output": "{\"objection_id\": 2, \"objection\": \"BH-FDR eliminates all per-graph significance \\u2014 the overrepresentation finding is not robust.\", \"severity\": 4, \"evidence_based_response\": \"FDR eliminates per-graph significance because with only 50 nulls, per-graph p-values have limited resolution. However, the corpus-level signal is overwhelming: mean Z=46.2, median Z=47.2, 100% of graphs show Z>2. Layer-preserving nulls give Z=56.9. The FDR result is correctly reported and reframed as evidence that overrepresentation is a universal corpus-level pattern. Convergence analysis shows N=30 nulls suffice for stable estimates.\", \"supporting_artifacts\": [\"exp_id3_it5\"], \"residual_risk\": \"low\", \"mitigation_action\": \"Frame as corpus-level finding; report FDR honestly; emphasize layer-preserving validation\"}",
+          "eval_severity": 4,
+          "metadata_residual_risk": "low"
+        },
+        {
+          "input": "Objection 3: Only tested on one model (gemma-2-2b) \u2014 results may not generalize.",
+          "output": "{\"objection_id\": 3, \"objection\": \"Only tested on one model (gemma-2-2b) \\u2014 results may not generalize.\", \"severity\": 3, \"evidence_based_response\": \"We acknowledge single-model limitation. However, 200 graphs across 8 diverse capability domains (arithmetic, translation, code, reasoning, etc.) provide substantial within-model diversity. Consistency across all 8 domains suggests robustness at least within this architecture class. Multi-model extension is listed as primary future work.\", \"supporting_artifacts\": [\"exp_id3_it5\", \"exp_id2_it4\"], \"residual_risk\": \"high\", \"mitigation_action\": \"Acknowledge limitation prominently; list multi-model validation as future work\"}",
+          "eval_severity": 3,
+          "metadata_residual_risk": "high"
+        },
+        {
+          "input": "Objection 4: Failure prediction completely failed \u2014 this undermines the practical value of motif analysis.",
+          "output": "{\"objection_id\": 4, \"objection\": \"Failure prediction completely failed \\u2014 this undermines the practical value of motif analysis.\", \"severity\": 3, \"evidence_based_response\": \"The negative result (best AUC=0.583, motif AUC=0.496) is reported transparently. This strengthens the paper: (a) demonstrates scientific rigor; (b) bounds what motif analysis can do; (c) suggests attribution graph structure captures 'how' computation is organized but not 'whether' it succeeds. Obtained with rigorous methodology (stratified CV, bootstrap, deconfounding).\", \"supporting_artifacts\": [\"exp_id3_it4\"], \"residual_risk\": \"low\", \"mitigation_action\": \"Report as informative negative; argue it bounds the method's applicability\"}",
+          "eval_severity": 3,
+          "metadata_residual_risk": "low"
+        },
+        {
+          "input": "Objection 5: 3-node motif spectrum degeneracy \u2014 with only 1 effective dimension, 'motif analysis' reduces to c...",
+          "output": "{\"objection_id\": 5, \"objection\": \"3-node motif spectrum degeneracy \\u2014 with only 1 effective dimension, 'motif analysis' reduces to counting FFLs.\", \"severity\": 3, \"evidence_based_response\": \"Correct \\u2014 the 3-node spectrum effectively has 1 dimension (FFL vs non-FFL). We address this by: (a) using weighted FFL features (intensity, path dominance, coherence) which are multi-dimensional; (b) extending to 4-node motifs with richer structure; (c) framing the paper around weighted features, not just count ratios. The degeneracy finding from iteration 2 motivated these extensions.\", \"supporting_artifacts\": [\"exp_id1_it2\", \"exp_id2_it5\"], \"residual_risk\": \"medium\", \"mitigation_action\": \"Acknowledge degeneracy; emphasize weighted features and 4-node extensions as mitigations\"}",
+          "eval_severity": 3,
+          "metadata_residual_risk": "medium"
+        },
+        {
+          "input": "Objection 6: Graph-theoretic ablation != real model-level causal intervention \u2014 you can't claim functional imp...",
+          "output": "{\"objection_id\": 6, \"objection\": \"Graph-theoretic ablation != real model-level causal intervention \\u2014 you can't claim functional importance without perturbing the actual model.\", \"severity\": 4, \"evidence_based_response\": \"We use careful language: 'graph-theoretic structural importance' not 'causal functional importance'. The ablation quantifies how FFL hubs maintain attribution graph connectivity (ratio=1.92x vs layer-matched, dose-response r=0.88). We explicitly do NOT claim model-level causation. Strong dose-response and consistency across all 8 domains suggests the graph-theoretic importance reflects genuine organizational principles.\", \"supporting_artifacts\": [\"exp_id2_it4\"], \"residual_risk\": \"medium\", \"mitigation_action\": \"Use hedged language consistently; list model-level ablation as critical future work\"}",
+          "eval_severity": 4,
+          "metadata_residual_risk": "medium"
+        },
+        {
+          "input": "Objection 7: Small unique R-squared (0.018) \u2014 statistically significant doesn't mean practically meaningful.",
+          "output": "{\"objection_id\": 7, \"objection\": \"Small unique R-squared (0.018) \\u2014 statistically significant doesn't mean practically meaningful.\", \"severity\": 3, \"evidence_based_response\": \"We agree the unique R-squared=0.0184 is small. However: (a) CI excludes 0; (b) residualized NMI=0.264 shows sufficient signal for above-chance domain clustering; (c) any genuinely orthogonal signal is noteworthy in a field where graph statistics are highly informative; (d) MI retention of ~24% shows non-trivial unique information. We present this honestly as 'modest but significant'.\", \"supporting_artifacts\": [\"exp_id1_it5\"], \"residual_risk\": \"medium\", \"mitigation_action\": \"Report exact numbers; frame as 'modest but significant'; avoid overclaiming\"}",
+          "eval_severity": 3,
+          "metadata_residual_risk": "medium"
+        },
+        {
+          "input": "Objection 8: Weak cross-domain semantic consistency (V=0.13) \u2014 FFL functional roles are not actually consistent.",
+          "output": "{\"objection_id\": 8, \"objection\": \"Weak cross-domain semantic consistency (V=0.13) \\u2014 FFL functional roles are not actually consistent.\", \"severity\": 3, \"evidence_based_response\": \"For 3-node FFLs, V=0.13 is indeed weak. However: (a) 4-node types show stronger consistency (V=0.20-0.33); (b) structural properties (100% layer ordering, 58% coherence) are consistent; (c) semantic roles may legitimately vary across domains since different capabilities require different patterns; (d) FFL intensity eta-squared=0.81-0.92 shows strong domain discrimination at the quantitative level.\", \"supporting_artifacts\": [\"exp_id3_it3\", \"exp_id2_it5\", \"exp_id1_it4\"], \"residual_risk\": \"low\", \"mitigation_action\": \"Distinguish structural universality from semantic specificity; report V honestly\"}",
+          "eval_severity": 3,
+          "metadata_residual_risk": "low"
+        },
+        {
+          "input": "Objection 9: Layer-ordering is trivial in layered DAGs \u2014 it's an artifact of the graph structure.",
+          "output": "{\"objection_id\": 9, \"objection\": \"Layer-ordering is trivial in layered DAGs \\u2014 it's an artifact of the graph structure.\", \"severity\": 2, \"evidence_based_response\": \"We agree that 100% strict layer ordering is expected in DAGs with layer assignments. The finding confirms that FFLs respect layer structure but does not add information beyond what the DAG structure implies. We include this as a sanity check rather than a novel finding, and focus characterization on more informative metrics (coherence, intensity, semantic roles).\", \"supporting_artifacts\": [\"exp_id3_it3\", \"exp_id2_it5\"], \"residual_risk\": \"low\", \"mitigation_action\": \"Downweight in paper; frame as expected structural confirmation\"}",
+          "eval_severity": 2,
+          "metadata_residual_risk": "low"
+        },
+        {
+          "input": "Objection 10: Sample size per domain is small (~25) \u2014 insufficient for reliable domain-specific conclusions.",
+          "output": "{\"objection_id\": 10, \"objection\": \"Sample size per domain is small (~25) \\u2014 insufficient for reliable domain-specific conclusions.\", \"severity\": 3, \"evidence_based_response\": \"Domain sizes range from 24-26 graphs. While small for per-domain inferences, we primarily report corpus-level analyses pooling all 200 graphs. Domain-specific results are supporting evidence, not primary claims. Consistency across all 8 domains despite small samples is itself informative. Power analysis for failure prediction confirmed per-domain classification was underpowered.\", \"supporting_artifacts\": [\"exp_id3_it5\", \"exp_id3_it4\"], \"residual_risk\": \"medium\", \"mitigation_action\": \"Report per-domain results as secondary; emphasize corpus-level findings\"}",
+          "eval_severity": 3,
+          "metadata_residual_risk": "medium"
+        },
+        {
+          "input": "Objection 11: Attribution graphs may not faithfully represent actual model computation \u2014 garbage in, garbage out.",
+          "output": "{\"objection_id\": 11, \"objection\": \"Attribution graphs may not faithfully represent actual model computation \\u2014 garbage in, garbage out.\", \"severity\": 4, \"evidence_based_response\": \"Attribution graph faithfulness is an open question. We use Neuronpedia attribution graphs which are state-of-the-art. Our contribution is conditional: IF attribution graphs capture meaningful structure, THEN motif analysis reveals consistent patterns. Internal consistency of our findings (universal FFL enrichment, domain clustering, structural importance, dose-response) provides indirect evidence these graphs capture real structure.\", \"supporting_artifacts\": [\"exp_id3_it5\", \"exp_id2_it4\"], \"residual_risk\": \"high\", \"mitigation_action\": \"Frame contribution as conditional on attribution faithfulness; list as foundational limitation\"}",
+          "eval_severity": 4,
+          "metadata_residual_risk": "high"
+        },
+        {
+          "input": "Objection 12: Confound: graph size drives everything \u2014 larger graphs have more motifs, more connectivity, more ...",
+          "output": "{\"objection_id\": 12, \"objection\": \"Confound: graph size drives everything \\u2014 larger graphs have more motifs, more connectivity, more importance.\", \"severity\": 4, \"evidence_based_response\": \"We address this through multiple deconfounding: (a) Z-scores normalize against size-matched null models; (b) unique information decomposition separates motif from graph-stat (including size) \\u2014 unique R-squared=0.0184 survives; (c) ablation uses layer-matched controls controlling for size; (d) domain-normalized NMI=0.659 survives within-domain normalization; (e) failure prediction included graph size as baseline. Multiple strategies converge.\", \"supporting_artifacts\": [\"exp_id3_it5\", \"exp_id1_it5\", \"exp_id2_it4\"], \"residual_risk\": \"medium\", \"mitigation_action\": \"Document all deconfounding approaches; highlight convergent evidence\"}",
+          "eval_severity": 4,
+          "metadata_residual_risk": "medium"
+        }
+      ]
+    }
+  ],
+  "metrics_agg": {
+    "compilation_success": 1,
+    "page_count": 13,
+    "total_evidence_rows": 59,
+    "reviewer_objections_count": 12,
+    "limitations_count": 10,
+    "domain_breakdown_completeness": 1.0,
+    "ablation_table_completeness": 1.0,
+    "total_section_words": 2609
+  }
+}

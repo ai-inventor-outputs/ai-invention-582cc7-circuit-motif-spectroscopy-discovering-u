@@ -1,0 +1,13 @@
+{
+  "id": "eval_id3_it7__opus",
+  "type": "code",
+  "title": "Cross-Verification Audit of Paper Numerical Claims Against Source Experiments",
+  "summary": "Demo notebook for the cross-verification audit of paper numerical claims against source experiments. Loads a curated subset of 28 claims (covering MATCH, STALE, MISMATCH, and UNVERIFIABLE statuses across diverse regex patterns and paper sections). Demonstrates the type-specific comparison logic (1% relative for floats, exact for integers, order-of-magnitude for p-values), per-section accuracy analysis across 15 sections, cross-section consistency checking for 8 key metrics, and correction recommendations. Includes 4-panel visualization: status distribution pie chart, per-section accuracy bars, stacked status bars, and consistency check heatmap.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_7/gen_art/eval_id3_it7__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id3_it7__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id3_it7__opus/eval_code_demo.ipynb"
+}

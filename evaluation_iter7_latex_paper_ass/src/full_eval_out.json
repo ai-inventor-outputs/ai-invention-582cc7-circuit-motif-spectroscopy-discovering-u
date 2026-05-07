@@ -1,0 +1,345 @@
+{
+  "metadata": {
+    "evaluation_name": "paper_assembly_compilation",
+    "title": "Feed-Forward Loops as Universal Building Blocks in LLM Attribution Graphs: A Network Motif Analysis",
+    "description": "Assembles all pre-generated paper components into a complete LaTeX document, updates key statistics to final iter_6 values, compiles to PDF, and verifies all cross-references resolve.",
+    "dependencies_used": [
+      "exp_id1_it6__opus",
+      "exp_id1_it5__opus",
+      "exp_id1_it4__opus",
+      "exp_id2_it4__opus",
+      "exp_id5_it5__opus"
+    ],
+    "source_components": {
+      "sections_source": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/eval_id5_it6__opus/full_eval_out.json",
+      "figures_source": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/eval_id2_it6__opus",
+      "bibliography_source": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/research_id4_it6__opus/research_out.json",
+      "statistics_source": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/exp_id1_it6__opus/full_method_out.json"
+    },
+    "compilation_details": {
+      "compiler": "pdflatex (TeX Live 2022)",
+      "passes": "pdflatex -> bibtex -> pdflatex -> pdflatex",
+      "pdf_exists": true,
+      "page_count": 25
+    },
+    "statistics_checklist": [
+      "(a) t-test t≈55.03, p≈2.38e-122: FOUND",
+      "(b) Cohen's d≈3.89: FOUND",
+      "(c) Wilcoxon p≈1.44e-34: FOUND",
+      "(d) sign test 200/200: FOUND",
+      "(e) mixed-effects beta_0≈47.18: FOUND",
+      "(f) ICC≈0.570: FOUND",
+      "(g) BH-FDR 15/60 survived: FOUND",
+      "(h) biological ratios 3.7-5.5x: FOUND",
+      "(i) corpus mean Z≈47.14: FOUND"
+    ],
+    "metrics_summary": {
+      "M1_compilation_success": 1,
+      "M2_page_count": 25,
+      "M3_citations_resolved": "34/34",
+      "M4_figures_resolved": "8/8",
+      "M5_tables_resolved": "4/4",
+      "M6_statistics_updated": "9/9",
+      "M7_latex_warnings_count": 0,
+      "M8_section_count": 23,
+      "M9_figure_files_present": "8/8",
+      "M10_bibtex_entries_count": 36
+    }
+  },
+  "metrics_agg": {
+    "compilation_success": 1.0,
+    "page_count": 25.0,
+    "citations_resolved": 34.0,
+    "citations_total": 34.0,
+    "citations_fraction": 1.0,
+    "figures_resolved": 8.0,
+    "figures_total": 8.0,
+    "figures_fraction": 1.0,
+    "tables_resolved": 4.0,
+    "tables_total": 4.0,
+    "tables_fraction": 1.0,
+    "statistics_updated": 9.0,
+    "statistics_total": 9.0,
+    "statistics_fraction": 1.0,
+    "latex_warnings_count": 0.0,
+    "section_count": 23.0,
+    "figure_files_present": 8.0,
+    "figure_files_fraction": 1.0,
+    "bibtex_entries_count": 36.0
+  },
+  "datasets": [
+    {
+      "dataset": "paper_assembly_evaluation",
+      "examples": [
+        {
+          "input": "Assemble and evaluate the 'abstract' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"abstract\", \"type\": \"section\", \"word_count\": 195, \"citation_keys\": [\"conmy2023automated\", \"marks2024sparse\"], \"table_refs\": [\"table:corpus\", \"table:zscores\"], \"figure_refs\": []}",
+          "predict_paper_component": "\\begin{abstract}\nUnderstanding how neural networks implement learned capabilities requires moving beyond individual neurons to analyzing circuit-level structure. We present a systematic graph-theoretic analysis of feedforward loop (FFL) motifs in 200 neural network attribution graphs from the Neuronpedia platform, spanning 8 capability domains (antonym, arithmetic, code completion, country--capital, multi-hop reasoning, rhyme, sentiment, translation). FFL motifs are universally over-represented ...",
+          "eval_word_count": 195.0,
+          "eval_citation_count": 2.0,
+          "eval_table_ref_count": 2.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "abstract",
+          "metadata_component_type": "section",
+          "metadata_char_count": "1714"
+        },
+        {
+          "input": "Assemble and evaluate the 'introduction' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"introduction\", \"type\": \"section\", \"word_count\": 1169, \"citation_keys\": [\"alon2007network\", \"bricken2023monosemanticity\", \"conmy2023automated\", \"elhage2021mathematical\", \"hanna2023how\", \"mangan2003structure\", \"marks2024sparse\", \"meng2022locating\", \"milo2002network\", \"milo2004superfamilies\", \"neuronpedia2024\", \"olsson2022context\", \"shenorr2002network\", \"templeton2024scaling\", \"wang2023interpretability\"], \"table_refs\": [], \"figure_refs\": []}",
+          "predict_paper_component": "\\section{Introduction}\\label{sec:intro}\n\nA central goal of mechanistic interpretability is to understand how neural networks implement learned capabilities at the level of identifiable circuits --- sparse subnetworks of features and connections responsible for specific input--output behaviors \\cite{elhage2021mathematical, olsson2022context}. Recent work has made remarkable progress in identifying individual circuits for tasks such as indirect object identification \\cite{wang2023interpretability}...",
+          "eval_word_count": 1169.0,
+          "eval_citation_count": 15.0,
+          "eval_table_ref_count": 0.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "introduction",
+          "metadata_component_type": "section",
+          "metadata_char_count": "9640"
+        },
+        {
+          "input": "Assemble and evaluate the 'related_work' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"related_work\", \"type\": \"section\", \"word_count\": 795, \"citation_keys\": [\"alon2007network\", \"benson2016higher\", \"bonacich1987power\", \"bricken2023monosemanticity\", \"conmy2023automated\", \"cunningham2023sparse\", \"elhage2021mathematical\", \"fagiolo2007clustering\", \"frankle2019lottery\", \"freeman1978centrality\", \"hanna2023how\", \"jiang2019fantastic\", \"leskovec2010signed\", \"mangan2003structure\", \"marks2024sparse\", \"michel2019sixteen\", \"milo2002network\", \"milo2004superfamilies\", \"morcos2018importance\", \"neuronpedia2024\", \"olsson2022context\", \"onnela2005intensity\", \"paranjape2017motifs\", \"shenorr2002network\", \"sporns2004motifs\", \"stouffer2007evidence\", \"syed2023attribution\", \"templeton2024scaling\", \"voita2019analyzing\", \"wang2023interpretability\", \"you2020design\"], \"table_refs\": [], \"figure_refs\": []}",
+          "predict_paper_component": "\\section{Related Work}\\label{sec:related}\n\n\\paragraph{Network Motifs in Complex Systems.}\nNetwork motifs were introduced by \\citet{milo2002network} as recurring subgraph patterns that appear significantly more often in real networks than in degree-preserving randomized ensembles. The feedforward loop (FFL) emerged as the most functionally characterized motif in biological gene regulatory networks \\cite{shenorr2002network}, where it implements sign-sensitive delay and noise filtering \\cite{mangan...",
+          "eval_word_count": 795.0,
+          "eval_citation_count": 31.0,
+          "eval_table_ref_count": 0.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "related_work",
+          "metadata_component_type": "section",
+          "metadata_char_count": "7111"
+        },
+        {
+          "input": "Assemble and evaluate the 'methods' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"methods\", \"type\": \"section\", \"word_count\": 1489, \"citation_keys\": [\"bricken2023monosemanticity\", \"milo2002network\", \"neuronpedia2024\", \"ng2002spectral\", \"onnela2005intensity\"], \"table_refs\": [\"table:corpus\"], \"figure_refs\": []}",
+          "predict_paper_component": "\\section{Methods}\\label{sec:methods}\n\n\\subsection{Data Collection and Preprocessing}\\label{sec:data}\nWe collected 200 attribution graphs from the Neuronpedia platform \\cite{neuronpedia2024}, spanning 8 capability domains: antonym, arithmetic, code completion, country capital, multi hop reasoning, rhyme, sentiment, translation. Domain sizes range from 24 to 26 graphs per domain (Table~\\ref{table:corpus}). Each graph is a weighted directed acyclic graph (DAG) where nodes represent sparse autoencod...",
+          "eval_word_count": 1489.0,
+          "eval_citation_count": 5.0,
+          "eval_table_ref_count": 1.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "methods",
+          "metadata_component_type": "section",
+          "metadata_char_count": "11668"
+        },
+        {
+          "input": "Assemble and evaluate the 'results_h1' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"results_h1\", \"type\": \"section\", \"word_count\": 601, \"citation_keys\": [\"alon2007network\", \"milo2002network\", \"milo2004superfamilies\"], \"table_refs\": [\"table:zscores\"], \"figure_refs\": []}",
+          "predict_paper_component": "\\section{Results}\\label{sec:results}\n\n\\subsection{H1: FFL Motif Universality}\\label{sec:results_h1}\n\nAcross all 200 attribution graphs and 50 degree-preserving null models per graph, the FFL motif (030T) achieves a median Z-score of $47.2$ (mean $Z=46.2$, $\\sigma=12.0$), with 100\\% of graphs exceeding $Z>2$ (Table~\\ref{table:zscores}). This represents an extremely strong signal: the observed FFL count exceeds the null expectation by tens of standard deviations in every single graph. All 8 capabi...",
+          "eval_word_count": 601.0,
+          "eval_citation_count": 3.0,
+          "eval_table_ref_count": 1.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "results_h1",
+          "metadata_component_type": "section",
+          "metadata_char_count": "4575"
+        },
+        {
+          "input": "Assemble and evaluate the 'results_h2' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"results_h2\", \"type\": \"section\", \"word_count\": 431, \"citation_keys\": [\"alon2007network\", \"freeman1978centrality\"], \"table_refs\": [\"table:ablation\"], \"figure_refs\": []}",
+          "predict_paper_component": "\\subsection{H2: FFL Hub Structural Importance}\\label{sec:results_h2}\n\nFrom 11,185,566 enumerated FFL motif instances across 200 graphs, we identified 20,056 hub nodes (7.9\\% of all nodes) with motif participation indices above the 90th percentile. The remaining FFL-participating nodes (179,193, 92.1\\% of FFL nodes) were classified as participants. Ablation of hub nodes versus matched controls reveals consistent and statistically significant impact differences across all four metrics (Table~\\ref{...",
+          "eval_word_count": 431.0,
+          "eval_citation_count": 2.0,
+          "eval_table_ref_count": 1.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "results_h2",
+          "metadata_component_type": "section",
+          "metadata_char_count": "3542"
+        },
+        {
+          "input": "Assemble and evaluate the 'results_h3' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"results_h3\", \"type\": \"section\", \"word_count\": 425, \"citation_keys\": [\"fagiolo2007clustering\", \"onnela2005intensity\"], \"table_refs\": [\"table:clustering\"], \"figure_refs\": []}",
+          "predict_paper_component": "\\subsection{H3: Weighted Motif Feature Discrimination}\\label{sec:results_h3}\n\nSpectral clustering with weighted motif features (19 features) achieves $NMI=0.705$ ($ARI=0.516$, optimal $K=8$) against ground-truth domain labels, dramatically outperforming binary motif counts (4 features) at $NMI=0.101$ ($ARI=0.008$). This seven-fold NMI improvement is highly significant ($p=0.001$ by 1000-permutation test) and demonstrates that edge-weight information is essential for capability discrimination (Ta...",
+          "eval_word_count": 425.0,
+          "eval_citation_count": 2.0,
+          "eval_table_ref_count": 1.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "results_h3",
+          "metadata_component_type": "section",
+          "metadata_char_count": "3525"
+        },
+        {
+          "input": "Assemble and evaluate the 'results_h4' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"results_h4\", \"type\": \"section\", \"word_count\": 410, \"citation_keys\": [\"mcfadden1974conditional\", \"ng2002spectral\"], \"table_refs\": [\"table:clustering\"], \"figure_refs\": []}",
+          "predict_paper_component": "\\subsection{H4: Unique Information Decomposition}\\label{sec:results_h4}\n\nMcFadden variance decomposition with 1000 bootstrap resamples reveals that motif features carry a small but statistically significant unique contribution to domain prediction: $R^2_{\\text{unique\\_motif}}=0.0184$ (95\\% bootstrap CI: [0.0213, 0.0448]). Crucially, the confidence interval excludes zero, providing formal evidence that motif features contribute information not captured by graph-level statistics alone. The small a...",
+          "eval_word_count": 410.0,
+          "eval_citation_count": 2.0,
+          "eval_table_ref_count": 1.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "results_h4",
+          "metadata_component_type": "section",
+          "metadata_char_count": "3483"
+        },
+        {
+          "input": "Assemble and evaluate the 'results_h5' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"results_h5\", \"type\": \"section\", \"word_count\": 433, \"citation_keys\": [\"benson2016higher\", \"milo2004superfamilies\"], \"table_refs\": [\"table:ablation\"], \"figure_refs\": []}",
+          "predict_paper_component": "\\subsection{H5: 4-Node Motif FFL-Derivativeness}\\label{sec:results_h5}\n\nAnalysis of 179 pruned attribution graphs (pruned at the 99th percentile to ensure computational tractability, with at most 700 nodes per graph) identifies 4 universal 4-node motif types (IDs 77, 80, 82, 83). These are the 4-node directed subgraph patterns that appear across all or nearly all capability domains. Functional characterization reveals a striking pattern of FFL derivativeness:\n\n\\begin{itemize}\n\\item \\textbf{100\\%...",
+          "eval_word_count": 433.0,
+          "eval_citation_count": 2.0,
+          "eval_table_ref_count": 1.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "results_h5",
+          "metadata_component_type": "section",
+          "metadata_char_count": "3392"
+        },
+        {
+          "input": "Assemble and evaluate the 'discussion' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"discussion\", \"type\": \"section\", \"word_count\": 1216, \"citation_keys\": [\"alon2007network\", \"benson2016higher\", \"conmy2023automated\", \"mangan2003structure\", \"milo2002network\", \"olsson2022context\", \"voita2019analyzing\"], \"table_refs\": [], \"figure_refs\": []}",
+          "predict_paper_component": "\\section{Discussion}\\label{sec:discussion}\n\n\\subsection{Summary of Findings}\nOur systematic analysis of 200 Neuronpedia attribution graphs across 8 capability domains provides converging evidence that feedforward loop motifs constitute a universal organizational principle of neural network circuits. Five complementary experiments support this conclusion:\n\n\\begin{enumerate}\n\\item \\textbf{Universality (H1):} FFL motifs are over-represented in all 8/8 domains with median $Z=47.2$, robust to null mo...",
+          "eval_word_count": 1216.0,
+          "eval_citation_count": 7.0,
+          "eval_table_ref_count": 0.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "discussion",
+          "metadata_component_type": "section",
+          "metadata_char_count": "9660"
+        },
+        {
+          "input": "Assemble and evaluate the 'conclusion' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"conclusion\", \"type\": \"section\", \"word_count\": 198, \"citation_keys\": [\"alon2007network\", \"milo2002network\"], \"table_refs\": [\"table:clustering\", \"table:ablation\"], \"figure_refs\": []}",
+          "predict_paper_component": "\\section{Conclusion}\\label{sec:conclusion}\n\nWe have presented the first comprehensive analysis of network motifs in neural network attribution circuits, establishing that feedforward loop motifs serve as universal structural primitives. Analyzing 200 Neuronpedia attribution graphs across 8 capability domains, we demonstrated FFL universality (median $Z=47.2$, 8/8 domains), functional importance of FFL hubs (1.92$\\times$ ablation impact, dose--response $r=0.88$), the superiority of weighted over ...",
+          "eval_word_count": 198.0,
+          "eval_citation_count": 2.0,
+          "eval_table_ref_count": 2.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "conclusion",
+          "metadata_component_type": "section",
+          "metadata_char_count": "1676"
+        },
+        {
+          "input": "Assemble and evaluate the 'table_t1' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"table_t1\", \"type\": \"table\", \"word_count\": 114, \"citation_keys\": [], \"table_refs\": [], \"figure_refs\": []}",
+          "predict_paper_component": "\\begin{table}[t]\n\\centering\n\\caption{Attribution graph corpus summary across 8 capability domains. Mean node and edge counts are computed after 75th-percentile pruning.}\n\\label{table:corpus}\n\\begin{tabular}{lrrr}\n\\toprule\nDomain & $N$ & Mean Nodes & Mean Edges \\\\\n\\midrule\n    Antonym                   &  26 &      967.6 &     8116.5 \\\\\n    Arithmetic                &  26 &      980.3 &     9467.3 \\\\\n    Code Completion           &  24 &     1323.8 &    12878.1 \\\\\n    Country Capital           & ...",
+          "eval_word_count": 114.0,
+          "eval_citation_count": 0.0,
+          "eval_table_ref_count": 0.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "table_t1",
+          "metadata_component_type": "table",
+          "metadata_char_count": "890"
+        },
+        {
+          "input": "Assemble and evaluate the 'table_t2' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"table_t2\", \"type\": \"table\", \"word_count\": 184, \"citation_keys\": [], \"table_refs\": [], \"figure_refs\": []}",
+          "predict_paper_component": "\\begin{table}[t]\n\\centering\n\\caption{Median motif Z-scores by domain (Phase A, 50 null models/graph, 200 graphs). Positive Z indicates over-representation.}\n\\label{table:zscores}\n\\begin{tabular}{lrrrr}\n\\toprule\nDomain & 021U & 021C & 021D & 030T \\\\\n\\midrule\n    Antonym                   & $  -26.3$ & $  -26.3$ & $  -26.3$ & $   26.3$ \\\\\n    Arithmetic                & $  -55.4$ & $  -55.4$ & $  -55.4$ & $   55.4$ \\\\\n    Code Completion           & $  -45.0$ & $  -45.0$ & $  -45.0$ & $   45.0$ \\\\...",
+          "eval_word_count": 184.0,
+          "eval_citation_count": 0.0,
+          "eval_table_ref_count": 0.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "table_t2",
+          "metadata_component_type": "table",
+          "metadata_char_count": "1114"
+        },
+        {
+          "input": "Assemble and evaluate the 'table_t3' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"table_t3\", \"type\": \"table\", \"word_count\": 104, \"citation_keys\": [], \"table_refs\": [], \"figure_refs\": []}",
+          "predict_paper_component": "\\begin{table}[t]\n\\centering\n\\caption{Spectral clustering quality by feature set (best $K$ selected from \\{2, 4, 6, 8\\}). Weighted vs.\\ binary: $p=0.001$; weighted vs.\\ graph stats: $p=0.001$; combined vs.\\ best single: $p=0.001$.}\n\\label{table:clustering}\n\\begin{tabular}{lrrrr}\n\\toprule\nFeature Set & \\#Feat & $K$ & NMI & ARI \\\\\n\\midrule\n    Weighted motif       &  19 & 8 & $0.705$ & $0.516$ \\\\\n    Binary motif         &   4 & 8 & $0.101$ & $0.008$ \\\\\n    Graph statistics     &   8 & 4 & $0.677$ ...",
+          "eval_word_count": 104.0,
+          "eval_citation_count": 0.0,
+          "eval_table_ref_count": 0.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "table_t3",
+          "metadata_component_type": "table",
+          "metadata_char_count": "666"
+        },
+        {
+          "input": "Assemble and evaluate the 'table_t4' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"table_t4\", \"type\": \"table\", \"word_count\": 95, \"citation_keys\": [], \"table_refs\": [], \"figure_refs\": []}",
+          "predict_paper_component": "\\begin{table}[t]\n\\centering\n\\caption{Median impact ratio (hub / control) for FFL hub ablation across 4 metrics and 4 matched control types. $^{*}$ indicates $p<0.05$ after FDR correction. Mean ratio used when median is zero.}\n\\label{table:ablation}\n\\begin{tabular}{lrrrr}\n\\toprule\nMetric & Degree & Attribution & Layer & Random \\\\\n\\midrule\n    Downstream attr.\\ loss         & $1.35$$^{*}$ & $1.02$$^{*}$ & $1.92$$^{*}$ & $9.23$$^{*}$ \\\\\n    Path disruption                & $3.85$$^{*}$ & $4.24$$^{*...",
+          "eval_word_count": 95.0,
+          "eval_citation_count": 0.0,
+          "eval_table_ref_count": 0.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "table_t4",
+          "metadata_component_type": "table",
+          "metadata_char_count": "763"
+        },
+        {
+          "input": "Include figure 1 (fig_1) in the compiled paper.",
+          "output": "{\"figure_id\": \"fig_1\", \"file_exists\": true, \"caption_length\": 337}",
+          "predict_paper_component": "Figure 1: Figure 1. (a) The four DAG-possible 3-node motifs: chain (021U), fan-out (021C), fan-in (021D), and feed-forward loop (030T/FFL). Mean Z-scores and universality across 8 capability domains annotated. ",
+          "eval_file_exists": 1.0,
+          "eval_caption_length": 337.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "fig_1",
+          "metadata_component_type": "figure",
+          "metadata_char_count": "337"
+        },
+        {
+          "input": "Include figure 2 (fig_2) in the compiled paper.",
+          "output": "{\"figure_id\": \"fig_2\", \"file_exists\": true, \"caption_length\": 269}",
+          "predict_paper_component": "Figure 2: Figure 2. (a) FFL (030T) Z-scores across 8 capability domains. All domains show strong overrepresentation (Z >> 2). Boxes show IQR with whiskers at 1.5x IQR; individual graph Z-scores overlaid as jitt",
+          "eval_file_exists": 1.0,
+          "eval_caption_length": 269.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "fig_2",
+          "metadata_component_type": "figure",
+          "metadata_char_count": "269"
+        },
+        {
+          "input": "Include figure 3 (fig_3) in the compiled paper.",
+          "output": "{\"figure_id\": \"fig_3\", \"file_exists\": true, \"caption_length\": 281}",
+          "predict_paper_component": "Figure 3: Figure 3. t-SNE embeddings of ~200 attribution graphs colored by capability domain for four feature sets: (a) binary motif count-ratios, (b) weighted motif features, (c) graph statistics, (d) all comb",
+          "eval_file_exists": 1.0,
+          "eval_caption_length": 281.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "fig_3",
+          "metadata_component_type": "figure",
+          "metadata_char_count": "281"
+        },
+        {
+          "input": "Include figure 4 (fig_4) in the compiled paper.",
+          "output": "{\"figure_id\": \"fig_4\", \"file_exists\": true, \"caption_length\": 197}",
+          "predict_paper_component": "Figure 4: Figure 4. Hierarchically clustered heatmap of Z-scored weighted FFL features across 8 capability domains. Dendrograms show domain and feature similarity. Diverging colormap (RdBu) centered at zero.",
+          "eval_file_exists": 1.0,
+          "eval_caption_length": 197.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "fig_4",
+          "metadata_component_type": "figure",
+          "metadata_char_count": "197"
+        },
+        {
+          "input": "Include figure 5 (fig_5) in the compiled paper.",
+          "output": "{\"figure_id\": \"fig_5\", \"file_exists\": true, \"caption_length\": 238}",
+          "predict_paper_component": "Figure 5: Figure 5. McFadden pseudo-R-squared variance decomposition showing unique motif contribution (1.8%), shared variance (93.0%), and unique graph-statistics contribution (5.0%). Bootstrap 95% CIs shown. ",
+          "eval_file_exists": 1.0,
+          "eval_caption_length": 238.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "fig_5",
+          "metadata_component_type": "figure",
+          "metadata_char_count": "238"
+        },
+        {
+          "input": "Include figure 6 (fig_6) in the compiled paper.",
+          "output": "{\"figure_id\": \"fig_6\", \"file_exists\": true, \"caption_length\": 290}",
+          "predict_paper_component": "Figure 6: Figure 6. Mean downstream attribution loss from node ablation: FFL-hub nodes vs. degree-matched, attribution-matched, layer-matched, and random controls. Error bars show 95% bootstrap CIs. Inset: dose",
+          "eval_file_exists": 1.0,
+          "eval_caption_length": 290.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "fig_6",
+          "metadata_component_type": "figure",
+          "metadata_char_count": "290"
+        },
+        {
+          "input": "Include figure 7 (fig_7) in the compiled paper.",
+          "output": "{\"figure_id\": \"fig_7\", \"file_exists\": true, \"caption_length\": 232}",
+          "predict_paper_component": "Figure 7: Figure 7. Hungarian-aligned confusion matrices for K=8 spectral clustering across four feature sets. Cell intensity and annotations show count of graphs assigned to each true domain / predicted cluste",
+          "eval_file_exists": 1.0,
+          "eval_caption_length": 232.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "fig_7",
+          "metadata_component_type": "figure",
+          "metadata_char_count": "232"
+        },
+        {
+          "input": "Include figure 8 (fig_8) in the compiled paper.",
+          "output": "{\"figure_id\": \"fig_8\", \"file_exists\": true, \"caption_length\": 218}",
+          "predict_paper_component": "Figure 8: Figure 8. (a) FFL containment fraction for 4 universal 4-node motif types (IDs 77, 80, 82, 83); all show 100% containment. (b) Layer span comparison between 4-node motif instances and random connected",
+          "eval_file_exists": 1.0,
+          "eval_caption_length": 218.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "fig_8",
+          "metadata_component_type": "figure",
+          "metadata_char_count": "218"
+        }
+      ]
+    }
+  ]
+}

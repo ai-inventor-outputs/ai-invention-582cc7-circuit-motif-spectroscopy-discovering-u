@@ -1,0 +1,481 @@
+{
+  "metadata": {
+    "evaluation_name": "Hypothesis Evidence Scorecard: Iterations 1-3",
+    "description": "Comprehensive evidence evaluation of 5 hypothesis claims against 3 iteration-3 experiments",
+    "experiments_evaluated": [
+      "exp_id1_it3: 4-Node Motif Census on 174 graphs",
+      "exp_id2_it3: Failure Prediction on 140 graphs",
+      "exp_id3_it3: FFL Characterization on 34 graphs"
+    ],
+    "hypothesis_scores": {
+      "H1": "Strong Confirm",
+      "H2": "Partial Confirm",
+      "H3": "Partial Confirm",
+      "H4": "Inconclusive",
+      "H5": "Partial Confirm"
+    },
+    "overall_verdict": {
+      "overall_status": "Partially Confirmed",
+      "mean_numeric_score": 0.41,
+      "n_strong_confirm": 1,
+      "n_partial": 3,
+      "n_inconclusive": 1,
+      "strongest_evidence": "H1 Universal Overrepresentation: 4 of 24 four-node motifs show Z > 2 in >= 6/8 domains (motif 83: mean Z = 8.12). Most robust finding with high statistical significance.",
+      "weakest_evidence": "H4 Causal Validation: completely untested. H3 Failure Prediction: AUC = 0.853 severely undermined by domain confound (5/8 domains are pure single-class). Without domain-stratified validation H3 is uninterpretable.",
+      "recommended_paper_angle": "Position as 'Structural Motif Signatures in Neural Network Attribution Graphs': (1) lead with universal 4-node overrepresentation (H1); (2) present 3-node SP degeneracy as methodological insight; (3) show clustering works with count-ratio features (H2); (4) present FFL layer ordering (H5) as structural regularity evidence; (5) include failure prediction (H3) as exploratory with explicit confound discussion; (6) omit causal claims (H4) — future work."
+    },
+    "paper_narrative": {
+      "centerpiece_claim": {
+        "hypothesis": "H1",
+        "claim": "Universal Motif Overrepresentation",
+        "evidence_score": "Strong Confirm",
+        "rationale": "4/24 four-node motifs are universally overrepresented (Z > 2 in >= 6/8 domains), with motif 83 achieving mean Z = 8.12. Strongest finding; survives null-model controls across domains."
+      },
+      "supporting_claims": [
+        {
+          "hypothesis": "H5",
+          "claim": "Functional Characterization of Feed-Forward Loops",
+          "evidence_score": "Partial Confirm",
+          "rationale": "FFL layer ordering is perfectly consistent (100% vs 35% baseline). Semantic roles are statistically significant but weakly consistent across domains."
+        },
+        {
+          "hypothesis": "H2",
+          "claim": "Capability Clustering (Circuit Superfamilies)",
+          "evidence_score": "Partial Confirm",
+          "rationale": "3-node enriched count-ratio features achieve NMI = 0.742, beating baseline. 4-node SP underperforms baseline; 3-node SP is degenerate."
+        }
+      ],
+      "exploratory_claims": [
+        {
+          "hypothesis": "H3",
+          "claim": "Failure/Error Prediction via Motif Features",
+          "evidence_score": "Partial Confirm",
+          "rationale": "AUC = 0.853 is impressive on surface but severe domain confound (rhyme = all unknown, 3 domains = all true) means classifier may detect domain identity, not error topology. Requires domain-stratified validation."
+        }
+      ],
+      "claims_to_drop_or_reframe": [
+        {
+          "hypothesis": "H4",
+          "claim": "Causal Validation via Neuronpedia Steering",
+          "evidence_score": "Inconclusive",
+          "rationale": "No experiments conducted. Future work direction."
+        }
+      ],
+      "suggested_abstract": "We perform the first systematic motif analysis of neural network attribution graphs from Neuronpedia, discovering four 4-node directed motifs that are universally overrepresented across 8 capability domains (Z > 2 in >= 6/8 domains). We show that motif count-ratio features enable capability clustering (NMI = 0.742), while revealing that 3-node significance profiles are degenerate under degree-preserving null models — a methodological finding with implications for graph-theoretic analysis of neural circuits. Feed-forward loops exhibit perfect layer ordering (100% vs 35% baseline), suggesting structural regularities in how neural networks compose information across layers.",
+      "reframing_notes": [
+        "Lead with H1 (universal overrepresentation) as main contribution",
+        "Present 3-node SP degeneracy as a methodological contribution, not a failure",
+        "Reframe H2: emphasise count-ratio features beating baseline; discuss 4-node SP dimensionality",
+        "H3 must carry heavy caveats about domain confound — or run domain-stratified validation first",
+        "H5: emphasise structural regularity (layer ordering) over semantic classification",
+        "H4 is future work, not a claim",
+        "Overall: 'structural motif signatures exist and carry information about neural circuit function, but disentangling this from simpler graph statistics remains an open challenge'"
+      ]
+    },
+    "cross_hypothesis_interactions": {
+      "H1_H2": {
+        "hypotheses": [
+          "H1: Universal Overrepresentation",
+          "H2: Capability Clustering"
+        ],
+        "interaction": "3-node SP degeneracy (relevant to H2) does NOT affect H1 — H1 uses raw Z-scores not SP. However, the degeneracy means 3-node clustering success (NMI = 0.742) comes from count ratios, not motif spectra per se. The effective dimensionality of 4-node SP (14) confirms richer structural vocabulary, suggesting 4-node features have untapped potential for clustering."
+      },
+      "H2_H3": {
+        "hypotheses": [
+          "H2: Capability Clustering",
+          "H3: Failure Prediction"
+        ],
+        "interaction": "Domain confound in H3 also affects H2 — clustering success may reflect graph-size/density differences between domains rather than genuine motif structure. If domains are distinguishable by graph stats alone (NMI = 0.701), motif-based clustering may be partly explained by the same underlying graph-level differences. Domain-stratified analysis for H3 would also help validate H2."
+      },
+      "H1_H5": {
+        "hypotheses": [
+          "H1: Universal Overrepresentation",
+          "H5: FFL Characterization"
+        ],
+        "interaction": "FFL (030T) is the only overrepresented 3-node motif (H1), and FFL characterisation shows 100% layer ordering (H5) — these strongly reinforce each other. The universality of FFL overrepresentation (Z > 32 in all 8 domains) combined with perfect structural regularity suggests FFLs are fundamental computational motifs. The 4 universal 4-node motifs (H1) need similar characterisation to strengthen H5."
+      },
+      "H3_H5": {
+        "hypotheses": [
+          "H3: Failure Prediction",
+          "H5: FFL Characterization"
+        ],
+        "interaction": "If failure prediction (H3) is domain-confounded, FFL characterisation (H5) could provide an alternative within-domain error signal. Specifically: do FFLs in verified-correct graphs have different semantic role distributions than FFLs in ambiguous graphs within the same domain?"
+      },
+      "H1_H3": {
+        "hypotheses": [
+          "H1: Universal Overrepresentation",
+          "H3: Failure Prediction"
+        ],
+        "interaction": "H1 shows motifs are universally overrepresented, while H3 uses motif features to distinguish correctness. If motif profiles are primarily domain-specific (H2 clustering), H3 may detect domain differences rather than error-related motif changes. The marginal improvement (AUC 0.853 vs 0.793 graph_stats ablation) is modest and may not survive domain stratification."
+      },
+      "H2_H5": {
+        "hypotheses": [
+          "H2: Capability Clustering",
+          "H5: FFL Characterization"
+        ],
+        "interaction": "H2 shows motif count ratios cluster by domain; H5 shows FFL semantic roles differ across domains (cross-domain V = 0.126). Consistent: different domains use circuits with different motif compositions and semantic patterns. The low cross-domain consistency in H5 actually supports H2's finding that motif features carry domain-specific information."
+      }
+    },
+    "methodological_validity": [
+      {
+        "experiment": "exp_id1_it3: 4-Node Motif Census",
+        "sample_size_adequate": true,
+        "sample_size_rationale": "n=174 (3-node), n=128 (4-node) across 8 domains — adequate for large effects",
+        "null_model_quality": {
+          "n_null_3node": 12,
+          "n_null_4node": 50,
+          "assessment": "12 nulls for 3-node is LOW (recommend >= 100); 50 for 4-node is acceptable"
+        },
+        "multiple_testing_corrected": false,
+        "multiple_testing_note": "No explicit correction for 24 motif types x 8 domains; universal criterion (>= 6/8) provides implicit correction",
+        "confound_control": [
+          "46/174 graphs skipped for 4-node (selection bias toward smaller graphs)",
+          "125/174 graphs used approximate sampling, 3 exact enumeration",
+          "3-node SP degeneracy correctly identified"
+        ],
+        "reproducibility_seeds": true,
+        "pruning_sensitivity_tested": true,
+        "pruning_thresholds": [
+          90,
+          95,
+          97,
+          99
+        ]
+      },
+      {
+        "experiment": "exp_id2_it3: Failure/Ambiguity Prediction",
+        "sample_size_adequate": false,
+        "sample_size_rationale": "n=140 total but only 24 positive — too few",
+        "null_model_quality": {
+          "n_null_models": 50,
+          "assessment": "50 null models for feature extraction — adequate"
+        },
+        "multiple_testing_corrected": false,
+        "multiple_testing_note": "Multiple classifiers and feature sets compared without correction",
+        "confound_control": [
+          "CRITICAL: Domain-label confound — rhyme=17/17 unknown, antonym/code_completion/multi_hop=all true",
+          "No domain-stratified CV reported",
+          "Label confound: true vs unknown, NOT true vs false"
+        ],
+        "reproducibility_seeds": true,
+        "pruning_sensitivity_tested": false,
+        "pruning_thresholds": [
+          75
+        ]
+      },
+      {
+        "experiment": "exp_id3_it3: FFL Functional Characterization",
+        "sample_size_adequate": false,
+        "sample_size_rationale": "Only 34 graphs — small subset, may not generalise",
+        "null_model_quality": {
+          "baseline_samples_per_graph": 5000,
+          "assessment": "5000 random triads per graph — adequate for comparison"
+        },
+        "multiple_testing_corrected": false,
+        "multiple_testing_note": "Chi-squared on large contingency tables without correction",
+        "confound_control": [
+          "Explanation match rate = 62.6% — missing data",
+          "Semantic roles depend on auto-generated Neuronpedia explanations",
+          "FFL enumeration on pruned graphs may bias results"
+        ],
+        "reproducibility_seeds": true,
+        "pruning_sensitivity_tested": false,
+        "pruning_thresholds": [
+          75
+        ]
+      }
+    ],
+    "gap_list": [
+      {
+        "gap_id": "G1_domain_stratified_h3",
+        "description": "H3 failure prediction has severe domain confound — need domain-stratified CV or within-domain analysis",
+        "priority": "must_fix",
+        "impact": 5.0,
+        "feasibility": 5.0,
+        "priority_score": 25.0,
+        "artifact_type_needed": "experiment",
+        "specific_action": "Re-run failure prediction with leave-one-domain-out CV, or restrict to mixed domains (country_capital 14/4, arithmetic 16/2, sentiment 16/1). Compute per-domain AUC where both classes exist."
+      },
+      {
+        "gap_id": "G2_4node_characterization",
+        "description": "Only FFL (030T, 3-node) is functionally characterised — need characterisation of the 4 universal 4-node motifs",
+        "priority": "must_fix",
+        "impact": 5.0,
+        "feasibility": 4.0,
+        "priority_score": 20.0,
+        "artifact_type_needed": "experiment",
+        "specific_action": "Enumerate instances of 4-node motifs 77, 80, 82, 83 and characterise semantic roles (analogous to FFL characterisation). Directly addresses H5 success criterion."
+      },
+      {
+        "gap_id": "G3_within_domain_error_signal",
+        "description": "Test if motif features predict errors within domains (not just across domains)",
+        "priority": "must_fix",
+        "impact": 4.0,
+        "feasibility": 4.0,
+        "priority_score": 16.0,
+        "artifact_type_needed": "experiment",
+        "specific_action": "For domains with both classes (country_capital 14/4, arithmetic 16/2, sentiment 16/1), compute within-domain motif-based prediction. Isolates motif signal from domain confound."
+      },
+      {
+        "gap_id": "G4_graph_stats_ablation",
+        "description": "Rigorously test what motif features add beyond graph statistics",
+        "priority": "would_strengthen",
+        "impact": 4.0,
+        "feasibility": 4.0,
+        "priority_score": 16.0,
+        "artifact_type_needed": "experiment",
+        "specific_action": "Run clustering (H2) with motif features residualised against graph stats (partial correlation / regression). If motif NMI drops to baseline after controlling graph stats, the motif signal is redundant."
+      },
+      {
+        "gap_id": "G5_more_null_models_3node",
+        "description": "Only 12 null models for 3-node census — Z-scores may be unreliable",
+        "priority": "would_strengthen",
+        "impact": 3.0,
+        "feasibility": 4.0,
+        "priority_score": 12.0,
+        "artifact_type_needed": "experiment",
+        "specific_action": "Rerun 3-node census with >= 100 null models. Check if Z-scores change substantially."
+      },
+      {
+        "gap_id": "G6_causal_validation",
+        "description": "H4 causal validation not attempted — strongest theoretical gap",
+        "priority": "would_strengthen",
+        "impact": 5.0,
+        "feasibility": 2.0,
+        "priority_score": 10.0,
+        "artifact_type_needed": "experiment",
+        "specific_action": "Use Neuronpedia /api/steer to ablate/steer nodes in overrepresented motif instances and measure behavioural change. Even a small pilot (10 graphs) would add causal evidence."
+      },
+      {
+        "gap_id": "G7_multiple_testing_correction",
+        "description": "No explicit multiple-testing correction for 24 motif types x 8 domains",
+        "priority": "would_strengthen",
+        "impact": 2.0,
+        "feasibility": 5.0,
+        "priority_score": 10.0,
+        "artifact_type_needed": "evaluation",
+        "specific_action": "Apply Bonferroni or FDR correction to H1 Z-scores across 24 x 8 = 192 tests. Verify the 4 universal motifs survive correction."
+      },
+      {
+        "gap_id": "G8_pruning_sensitivity",
+        "description": "Most experiments use single pruning threshold — results may be sensitive",
+        "priority": "would_strengthen",
+        "impact": 3.0,
+        "feasibility": 3.0,
+        "priority_score": 9.0,
+        "artifact_type_needed": "experiment",
+        "specific_action": "Rerun H1 4-node overrepresentation and H5 FFL characterisation at multiple pruning thresholds (50, 75, 90, 95, 99 percentile) and check stability."
+      },
+      {
+        "gap_id": "G9_full_corpus_ffl",
+        "description": "FFL characterisation only on 34/174 graphs",
+        "priority": "would_strengthen",
+        "impact": 3.0,
+        "feasibility": 3.0,
+        "priority_score": 9.0,
+        "artifact_type_needed": "experiment",
+        "specific_action": "Extend FFL characterisation to full 174-graph corpus. Compare per-domain patterns across larger sample."
+      },
+      {
+        "gap_id": "G10_weighted_motif_analysis",
+        "description": "Current analysis ignores edge weights (attribution scores)",
+        "priority": "future_work",
+        "impact": 4.0,
+        "feasibility": 2.0,
+        "priority_score": 8.0,
+        "artifact_type_needed": "experiment",
+        "specific_action": "Develop weighted motif census using edge attribution scores. Test if weighted features improve clustering (H2) and prediction (H3)."
+      }
+    ]
+  },
+  "metrics_agg": {
+    "h1_numeric_score": 0.85,
+    "h2_numeric_score": 0.45,
+    "h3_numeric_score": 0.25,
+    "h4_numeric_score": 0.0,
+    "h5_numeric_score": 0.5,
+    "mean_hypothesis_score": 0.41,
+    "n_criteria_met": 3,
+    "n_hypotheses_tested": 4,
+    "n_strong_confirm": 1,
+    "n_partial_confirm": 3,
+    "n_inconclusive": 1,
+    "h1_4node_n_universal_motifs": 4,
+    "h1_3node_ffl_mean_z": 51.90351297485094,
+    "h1_4node_motif83_z": 8.118384679232957,
+    "h1_4node_motif77_z": 4.973708113422128,
+    "h1_4node_motif82_z": 4.382818448627232,
+    "h1_4node_motif80_z": 3.0143160094863077,
+    "h2_nmi_4node_zscores": 0.5962823212966187,
+    "h2_nmi_3node_enriched": 0.7421707833449567,
+    "h2_nmi_graph_stats": 0.7006628459670411,
+    "h2_nmi_gap_128": 0.04150793737791558,
+    "h2_nmi_gap_174": 0.09097899521351316,
+    "h2_eff_dim_4node": 14,
+    "h3_best_auc": 0.8533731884057971,
+    "h3_auc_graph_stats": 0.7824510869565218,
+    "h3_auc_diff": 0.07092210144927534,
+    "h3_domain_confound_severity": 0.625,
+    "h3_n_positive": 24,
+    "h3_permutation_p": 0.0,
+    "h3_ablation_count_ratios_auc": 0.7719655797101449,
+    "h3_ablation_graph_stats_auc": 0.7930045289855073,
+    "h5_layer_strict_frac": 1.0,
+    "h5_baseline_strict_frac": 0.3511,
+    "h5_semantic_cramers_v": 0.3194,
+    "h5_cross_domain_v": 0.1264,
+    "h5_coherent_frac": 0.5814,
+    "h5_total_ffls": 1906060,
+    "h5_explanation_match_rate": 0.6258,
+    "n_must_fix_gaps": 3,
+    "n_would_strengthen_gaps": 6,
+    "n_future_work_gaps": 1,
+    "top_gap_priority_score": 25.0
+  },
+  "datasets": [
+    {
+      "dataset": "hypothesis_evidence_scores",
+      "examples": [
+        {
+          "input": "Hypothesis H1: Universal Motif Overrepresentation",
+          "output": "{\"evidence_score\": \"Strong Confirm\", \"numeric_score\": 0.85, \"success_criterion_met\": true, \"confidence\": \"high\"}",
+          "predict_evidence_assessment": "{\"evidence_score\": \"Strong Confirm\", \"numeric_score\": 0.85, \"key_metrics\": {\"3node_ffl_mean_z\": 51.90351297485094, \"3node_ffl_n_domains_significant\": 8, \"3node_ffl_z_min\": 32.10775852210855, \"3node_ffl_z_max\": 66.36691078530937, \"3node_ffl_z_mean\": 51.87279926565238, \"3node_n_domains_z_gt2\": 8, \"4node_n_motifs_universal\": 4, \"4node_motifs_meeting_criterion\": 4, \"4node_universal_motif_77_z\": 4.973708113422128, \"4node_universal_motif_80_z\": 3.0143160094863077, \"4node_universal_motif_82_z\": 4.382818448627232, \"4node_universal_motif_83_z\": 8.118384679232957, \"n_graphs_3node\": 174, \"n_graphs_4node\": 128}, \"caveats\": [\"3-node SP is degenerate [-0.5,-0.5,-0.5,0.5] under degree-preserving null models; H1 3-node result (030T overrepresentation) holds via Z-scores but SP-based claims are invalid\", \"4-node census used sampling (sampled_5) not exact enumeration for most graphs\", \"46/174 graphs skipped for 4-node analysis (too large); only 128 graphs analyzed\", \"Only 12 null models for 3-node (low for reliable Z-score estimation)\"], \"success_criterion_met\": true, \"confidence\": \"high\"}",
+          "eval_numeric_score": 0.85,
+          "eval_criterion_met": 1.0,
+          "metadata_hypothesis_id": "H1",
+          "metadata_claim": "Universal Motif Overrepresentation",
+          "metadata_evidence_score": "Strong Confirm",
+          "metadata_confidence": "high"
+        },
+        {
+          "input": "Hypothesis H2: Capability Clustering (Circuit Superfamilies)",
+          "output": "{\"evidence_score\": \"Partial Confirm\", \"numeric_score\": 0.45, \"success_criterion_met\": true, \"confidence\": \"medium\"}",
+          "predict_evidence_assessment": "{\"evidence_score\": \"Partial Confirm\", \"numeric_score\": 0.45, \"key_metrics\": {\"nmi_4node_sp\": 0.4553397046747826, \"nmi_4node_count_ratios\": 0.5419563969720321, \"nmi_4node_zscores\": 0.5962823212966187, \"nmi_3node_enriched\": 0.7421707833449567, \"nmi_graph_stats\": 0.7006628459670411, \"nmi_random\": 0.1253434343162329, \"nmi_combined\": 0.6561751455156378, \"nmi_3node_enriched_full_174\": 0.7554179989047933, \"nmi_graph_stats_full_174\": 0.6644390036912802, \"nmi_gap_128_graphs\": 0.04150793737791558, \"nmi_gap_174_graphs\": 0.09097899521351316, \"nmi_gap_4node_vs_baseline\": -0.10438052467042236, \"effective_dim_3node_sp\": 1, \"effective_dim_4node_sp\": 14}, \"caveats\": [\"4-node features do NOT beat graph-stats baseline (NMI 0.596 vs 0.701)\", \"3-node enriched features (NMI=0.742) beat baseline but use count ratios, not the degenerate SP\", \"3-node SP is constant [-0.5,-0.5,-0.5,0.5] \\u2014 carries zero clustering information\", \"Clustering success may partly reflect graph-size/density differences between domains\", \"4-node SP effective dim=14 (95% var), richer than 3-node (dim=1)\"], \"success_criterion_met\": true, \"confidence\": \"medium\"}",
+          "eval_numeric_score": 0.45,
+          "eval_criterion_met": 1.0,
+          "metadata_hypothesis_id": "H2",
+          "metadata_claim": "Capability Clustering (Circuit Superfamilies)",
+          "metadata_evidence_score": "Partial Confirm",
+          "metadata_confidence": "medium"
+        },
+        {
+          "input": "Hypothesis H3: Failure/Error Prediction via Motif Features",
+          "output": "{\"evidence_score\": \"Partial Confirm\", \"numeric_score\": 0.25, \"success_criterion_met\": true, \"confidence\": \"low\"}",
+          "predict_evidence_assessment": "{\"evidence_score\": \"Partial Confirm\", \"numeric_score\": 0.25, \"key_metrics\": {\"best_auc_rf_all\": 0.8533731884057971, \"best_auc_std\": 0.11067678186789441, \"bootstrap_ci_lower\": 0.7642896092863374, \"bootstrap_ci_upper\": 0.929874743698669, \"permutation_p_value\": 0.0, \"auc_graph_stats_baseline\": 0.7824510869565218, \"auc_random_baseline\": 0.5125797101449276, \"auc_majority_baseline\": 0.5, \"stat_test_t\": 4.535621627605111, \"stat_test_p\": 3.723831435180085e-05, \"auc_diff_vs_graph_stats\": 0.07092210144927534, \"auc_diff_ci_lower\": 0.03949899993432681, \"auc_diff_ci_upper\": 0.10234520296422386, \"ablation_count_ratios_only_auc\": 0.7719655797101449, \"ablation_graph_stats_only_auc\": 0.7930045289855073, \"ablation_zscore_only_auc\": 0.5235217391304348, \"ablation_deviation_only_auc\": 0.49978442028985515, \"n_pure_true_domains\": 4, \"n_pure_unknown_domains\": 1, \"n_mixed_domains\": 3, \"domain_confound_severity\": 0.625, \"positive_rate\": 0.17142857142857143, \"n_samples\": 140, \"n_positive\": 24}, \"caveats\": [\"CRITICAL: Label confound \\u2014 testing true vs unknown, NOT true vs false (No 'false' labels in dataset; experiment tests true vs unknown)\", \"CRITICAL: Domain confound \\u2014 4 domains purely 'true', 1 purely 'unknown' (rhyme=17/17 unknown); domain_confound_severity=0.62\", \"Class imbalance: 116 true vs 24 unknown (17.1% positive rate)\", \"Ablation: graph_stats_only AUC=0.793, count_ratios_only=0.772 \\u2014 motif features add marginal value\", \"No cross-validation stratified by domain reported\", \"Only 24 positive samples \\u2014 very small for reliable classification\"], \"success_criterion_met\": true, \"confidence\": \"low\"}",
+          "eval_numeric_score": 0.25,
+          "eval_criterion_met": 1.0,
+          "metadata_hypothesis_id": "H3",
+          "metadata_claim": "Failure/Error Prediction via Motif Features",
+          "metadata_evidence_score": "Partial Confirm",
+          "metadata_confidence": "low"
+        }
+      ]
+    },
+    {
+      "dataset": "methodological_validity",
+      "examples": [
+        {
+          "input": "Validity assessment: exp_id1_it3: 4-Node Motif Census",
+          "output": "{\"sample_size_adequate\": true, \"multiple_testing_corrected\": false}",
+          "predict_validity_assessment": "{\"experiment\": \"exp_id1_it3: 4-Node Motif Census\", \"sample_size_adequate\": true, \"sample_size_rationale\": \"n=174 (3-node), n=128 (4-node) across 8 domains \\u2014 adequate for large effects\", \"null_model_quality\": {\"n_null_3node\": 12, \"n_null_4node\": 50, \"assessment\": \"12 nulls for 3-node is LOW (recommend >= 100); 50 for 4-node is acceptable\"}, \"multiple_testing_corrected\": false, \"multiple_testing_note\": \"No explicit correction for 24 motif types x 8 domains; universal criterion (>= 6/8) provides implicit correction\", \"confound_control\": [\"46/174 graphs skipped for 4-node (selection bias toward smaller graphs)\", \"125/174 graphs used approximate sampling, 3 exact enumeration\", \"3-node SP degeneracy correctly identified\"], \"pruning_sensitivity_tested\": true, \"pruning_thresholds\": [90, 95, 97, 99]}",
+          "eval_sample_adequate": 1.0,
+          "eval_testing_corrected": 0.0,
+          "metadata_experiment": "exp_id1_it3: 4-Node Motif Census"
+        },
+        {
+          "input": "Validity assessment: exp_id2_it3: Failure/Ambiguity Prediction",
+          "output": "{\"sample_size_adequate\": false, \"multiple_testing_corrected\": false}",
+          "predict_validity_assessment": "{\"experiment\": \"exp_id2_it3: Failure/Ambiguity Prediction\", \"sample_size_adequate\": false, \"sample_size_rationale\": \"n=140 total but only 24 positive \\u2014 too few\", \"null_model_quality\": {\"n_null_models\": 50, \"assessment\": \"50 null models for feature extraction \\u2014 adequate\"}, \"multiple_testing_corrected\": false, \"multiple_testing_note\": \"Multiple classifiers and feature sets compared without correction\", \"confound_control\": [\"CRITICAL: Domain-label confound \\u2014 rhyme=17/17 unknown, antonym/code_completion/multi_hop=all true\", \"No domain-stratified CV reported\", \"Label confound: true vs unknown, NOT true vs false\"], \"pruning_sensitivity_tested\": false, \"pruning_thresholds\": [75]}",
+          "eval_sample_adequate": 0.0,
+          "eval_testing_corrected": 0.0,
+          "metadata_experiment": "exp_id2_it3: Failure/Ambiguity Prediction"
+        },
+        {
+          "input": "Validity assessment: exp_id3_it3: FFL Functional Characterization",
+          "output": "{\"sample_size_adequate\": false, \"multiple_testing_corrected\": false}",
+          "predict_validity_assessment": "{\"experiment\": \"exp_id3_it3: FFL Functional Characterization\", \"sample_size_adequate\": false, \"sample_size_rationale\": \"Only 34 graphs \\u2014 small subset, may not generalise\", \"null_model_quality\": {\"baseline_samples_per_graph\": 5000, \"assessment\": \"5000 random triads per graph \\u2014 adequate for comparison\"}, \"multiple_testing_corrected\": false, \"multiple_testing_note\": \"Chi-squared on large contingency tables without correction\", \"confound_control\": [\"Explanation match rate = 62.6% \\u2014 missing data\", \"Semantic roles depend on auto-generated Neuronpedia explanations\", \"FFL enumeration on pruned graphs may bias results\"], \"pruning_sensitivity_tested\": false, \"pruning_thresholds\": [75]}",
+          "eval_sample_adequate": 0.0,
+          "eval_testing_corrected": 0.0,
+          "metadata_experiment": "exp_id3_it3: FFL Functional Characterization"
+        }
+      ]
+    },
+    {
+      "dataset": "gap_analysis",
+      "examples": [
+        {
+          "input": "Gap G1_domain_stratified_h3: H3 failure prediction has severe domain confound — need domain-stratified CV or within-domain analysis",
+          "output": "{\"priority\": \"must_fix\", \"impact\": 5.0, \"feasibility\": 5.0, \"priority_score\": 25.0}",
+          "predict_gap_analysis": "{\"gap_id\": \"G1_domain_stratified_h3\", \"description\": \"H3 failure prediction has severe domain confound \\u2014 need domain-stratified CV or within-domain analysis\", \"priority\": \"must_fix\", \"impact\": 5.0, \"feasibility\": 5.0, \"priority_score\": 25.0, \"artifact_type_needed\": \"experiment\", \"specific_action\": \"Re-run failure prediction with leave-one-domain-out CV, or restrict to mixed domains (country_capital 14/4, arithmetic 16/2, sentiment 16/1). Compute per-domain AUC where both classes exist.\"}",
+          "eval_impact": 5.0,
+          "eval_feasibility": 5.0,
+          "eval_priority_score": 25.0,
+          "metadata_gap_id": "G1_domain_stratified_h3",
+          "metadata_priority": "must_fix",
+          "metadata_artifact_type": "experiment"
+        },
+        {
+          "input": "Gap G2_4node_characterization: Only FFL (030T, 3-node) is functionally characterised — need characterisation of the 4 universal 4-node motifs",
+          "output": "{\"priority\": \"must_fix\", \"impact\": 5.0, \"feasibility\": 4.0, \"priority_score\": 20.0}",
+          "predict_gap_analysis": "{\"gap_id\": \"G2_4node_characterization\", \"description\": \"Only FFL (030T, 3-node) is functionally characterised \\u2014 need characterisation of the 4 universal 4-node motifs\", \"priority\": \"must_fix\", \"impact\": 5.0, \"feasibility\": 4.0, \"priority_score\": 20.0, \"artifact_type_needed\": \"experiment\", \"specific_action\": \"Enumerate instances of 4-node motifs 77, 80, 82, 83 and characterise semantic roles (analogous to FFL characterisation). Directly addresses H5 success criterion.\"}",
+          "eval_impact": 5.0,
+          "eval_feasibility": 4.0,
+          "eval_priority_score": 20.0,
+          "metadata_gap_id": "G2_4node_characterization",
+          "metadata_priority": "must_fix",
+          "metadata_artifact_type": "experiment"
+        },
+        {
+          "input": "Gap G3_within_domain_error_signal: Test if motif features predict errors within domains (not just across domains)",
+          "output": "{\"priority\": \"must_fix\", \"impact\": 4.0, \"feasibility\": 4.0, \"priority_score\": 16.0}",
+          "predict_gap_analysis": "{\"gap_id\": \"G3_within_domain_error_signal\", \"description\": \"Test if motif features predict errors within domains (not just across domains)\", \"priority\": \"must_fix\", \"impact\": 4.0, \"feasibility\": 4.0, \"priority_score\": 16.0, \"artifact_type_needed\": \"experiment\", \"specific_action\": \"For domains with both classes (country_capital 14/4, arithmetic 16/2, sentiment 16/1), compute within-domain motif-based prediction. Isolates motif signal from domain confound.\"}",
+          "eval_impact": 4.0,
+          "eval_feasibility": 4.0,
+          "eval_priority_score": 16.0,
+          "metadata_gap_id": "G3_within_domain_error_signal",
+          "metadata_priority": "must_fix",
+          "metadata_artifact_type": "experiment"
+        }
+      ]
+    },
+    {
+      "dataset": "cross_hypothesis_interactions",
+      "examples": [
+        {
+          "input": "Interaction H1_H2: H1: Universal Overrepresentation <-> H2: Capability Clustering",
+          "output": "3-node SP degeneracy (relevant to H2) does NOT affect H1 — H1 uses raw Z-scores not SP. However, the degeneracy means 3-node clustering success (NMI = 0.742) comes from count ratios, not motif spectra per se. The effective dimensionality of 4-node SP (14) confirms richer structural vocabulary, suggesting 4-node features have untapped potential for clustering.",
+          "predict_interaction_analysis": "{\"hypotheses\": [\"H1: Universal Overrepresentation\", \"H2: Capability Clustering\"], \"interaction\": \"3-node SP degeneracy (relevant to H2) does NOT affect H1 \\u2014 H1 uses raw Z-scores not SP. However, the degeneracy means 3-node clustering success (NMI = 0.742) comes from count ratios, not motif spectra per se. The effective dimensionality of 4-node SP (14) confirms richer structural vocabulary, suggesting 4-node features have untapped potential for clustering.\"}",
+          "eval_interaction_present": 1.0,
+          "metadata_pair_id": "H1_H2"
+        },
+        {
+          "input": "Interaction H2_H3: H2: Capability Clustering <-> H3: Failure Prediction",
+          "output": "Domain confound in H3 also affects H2 — clustering success may reflect graph-size/density differences between domains rather than genuine motif structure. If domains are distinguishable by graph stats alone (NMI = 0.701), motif-based clustering may be partly explained by the same underlying graph-level differences. Domain-stratified analysis for H3 would also help validate H2.",
+          "predict_interaction_analysis": "{\"hypotheses\": [\"H2: Capability Clustering\", \"H3: Failure Prediction\"], \"interaction\": \"Domain confound in H3 also affects H2 \\u2014 clustering success may reflect graph-size/density differences between domains rather than genuine motif structure. If domains are distinguishable by graph stats alone (NMI = 0.701), motif-based clustering may be partly explained by the same underlying graph-level differences. Domain-stratified analysis for H3 would also help validate H2.\"}",
+          "eval_interaction_present": 1.0,
+          "metadata_pair_id": "H2_H3"
+        },
+        {
+          "input": "Interaction H1_H5: H1: Universal Overrepresentation <-> H5: FFL Characterization",
+          "output": "FFL (030T) is the only overrepresented 3-node motif (H1), and FFL characterisation shows 100% layer ordering (H5) — these strongly reinforce each other. The universality of FFL overrepresentation (Z > 32 in all 8 domains) combined with perfect structural regularity suggests FFLs are fundamental computational motifs. The 4 universal 4-node motifs (H1) need similar characterisation to strengthen H5.",
+          "predict_interaction_analysis": "{\"hypotheses\": [\"H1: Universal Overrepresentation\", \"H5: FFL Characterization\"], \"interaction\": \"FFL (030T) is the only overrepresented 3-node motif (H1), and FFL characterisation shows 100% layer ordering (H5) \\u2014 these strongly reinforce each other. The universality of FFL overrepresentation (Z > 32 in all 8 domains) combined with perfect structural regularity suggests FFLs are fundamental computational motifs. The 4 universal 4-node motifs (H1) need similar characterisation to strengthen H5.\"}",
+          "eval_interaction_present": 1.0,
+          "metadata_pair_id": "H1_H5"
+        }
+      ]
+    },
+    {
+      "dataset": "paper_narrative_and_verdict",
+      "examples": [
+        {
+          "input": "Paper narrative recommendation and overall hypothesis verdict",
+          "output": "{\"centerpiece\": \"H1\", \"overall_status\": \"Partially Confirmed\", \"mean_score\": 0.41}",
+          "predict_narrative": "{\"centerpiece_claim\": {\"hypothesis\": \"H1\", \"claim\": \"Universal Motif Overrepresentation\", \"evidence_score\": \"Strong Confirm\", \"rationale\": \"4/24 four-node motifs are universally overrepresented (Z > 2 in >= 6/8 domains), with motif 83 achieving mean Z = 8.12. Strongest finding; survives null-model controls across domains.\"}, \"supporting_claims\": [{\"hypothesis\": \"H5\", \"claim\": \"Functional Characterization of Feed-Forward Loops\", \"evidence_score\": \"Partial Confirm\", \"rationale\": \"FFL layer ordering is perfectly consistent (100% vs 35% baseline). Semantic roles are statistically significant but weakly consistent across domains.\"}, {\"hypothesis\": \"H2\", \"claim\": \"Capability Clustering (Circuit Superfamilies)\", \"evidence_score\": \"Partial Confirm\", \"rationale\": \"3-node enriched count-ratio features achieve NMI = 0.742, beating baseline. 4-node SP underperforms baseline; 3-node SP is degenerate.\"}], \"exploratory_claims\": [{\"hypothesis\": \"H3\", \"claim\": \"Failure/Error Prediction via Motif Features\", \"evidence_score\": \"Partial Confirm\", \"rationale\": \"AUC = 0.853 is impressive on surface but severe domain confound (rhyme = all unknown, 3 domains = all true) means classifier may detect domain identity, not error topology. Requires domain-stratified validation.\"}], \"claims_to_drop_or_reframe\": [{\"hypothesis\": \"H4\", \"claim\": \"Causal Validation via Neuronpedia Steering\", \"evidence_score\": \"Inconclusive\", \"rationale\": \"No experiments conducted. Future work direction.\"}], \"suggested_abstract\": \"We perform the first systematic motif analysis of neural network attribution graphs from Neuronpedia, discovering four 4-node directed motifs that are universally overrepresented across 8 capability domains (Z > 2 in >= 6/8 domains). We show that motif count-ratio features enable capability clustering (NMI = 0.742), while revealing that 3-node significance profiles are degenerate under degree-preserving null models \\u2014 a methodological finding with implications for graph-theoretic analysis of neural circuits. Feed-forward loops exhibit perfect layer ordering (100% vs 35% baseline), suggesting structural regularities in how neural networks compose information across layers.\", \"reframing_notes\": [\"Lead with H1 (universal overrepresentation) as main contribution\", \"Present 3-node SP degeneracy as a methodological contribution, not a failure\", \"Reframe H2: emphasise count-ratio features beating baseline; discuss 4-node SP dimensionality\", \"H3 must carry heavy caveats about domain confound \\u2014 or run domain-stratified validation first\", \"H5: emphasise structural regularity (layer ordering) over semantic classification\", \"H4 is future work, not a claim\", \"Overall: 'structural motif signatures exist and carry information about neural circuit function, but disentangling this from simpler graph statistics remains an open challenge'\"]}",
+          "predict_verdict": "{\"overall_status\": \"Partially Confirmed\", \"mean_numeric_score\": 0.41, \"n_strong_confirm\": 1, \"n_partial\": 3, \"n_inconclusive\": 1, \"strongest_evidence\": \"H1 Universal Overrepresentation: 4 of 24 four-node motifs show Z > 2 in >= 6/8 domains (motif 83: mean Z = 8.12). Most robust finding with high statistical significance.\", \"weakest_evidence\": \"H4 Causal Validation: completely untested. H3 Failure Prediction: AUC = 0.853 severely undermined by domain confound (5/8 domains are pure single-class). Without domain-stratified validation H3 is uninterpretable.\", \"recommended_paper_angle\": \"Position as 'Structural Motif Signatures in Neural Network Attribution Graphs': (1) lead with universal 4-node overrepresentation (H1); (2) present 3-node SP degeneracy as methodological insight; (3) show clustering works with count-ratio features (H2); (4) present FFL layer ordering (H5) as structural regularity evidence; (5) include failure prediction (H3) as exploratory with explicit confound discussion; (6) omit causal claims (H4) \\u2014 future work.\"}",
+          "eval_mean_score": 0.41,
+          "metadata_overall_status": "Partially Confirmed"
+        }
+      ]
+    }
+  ]
+}

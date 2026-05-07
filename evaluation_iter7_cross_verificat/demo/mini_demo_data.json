@@ -1,0 +1,793 @@
+{
+  "metadata": {
+    "evaluation_name": "numerical_claim_cross_verification",
+    "n_sections_audited": 15,
+    "n_source_experiments": 5,
+    "tolerance_rules": {
+      "integers": "exact",
+      "floats": "1% relative (0.002 absolute for values < 0.05)",
+      "p_values": "order of magnitude (log10 diff < 1.5)",
+      "percentages": "1.5pp absolute"
+    },
+    "summary": {
+      "total_claims_extracted": 110,
+      "n_match": 87,
+      "n_stale": 5,
+      "n_mismatch": 1,
+      "n_unverifiable": 17,
+      "accuracy_pct": 93.55,
+      "consistency_pct": 87.5
+    },
+    "per_section": {
+      "abstract": {
+        "n_claims": 17,
+        "n_match": 14,
+        "n_stale": 2,
+        "n_mismatch": 0,
+        "n_unverifiable": 1,
+        "accuracy_pct": 87.5
+      },
+      "introduction": {
+        "n_claims": 6,
+        "n_match": 6,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "related_work": {
+        "n_claims": 2,
+        "n_match": 2,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "methods": {
+        "n_claims": 7,
+        "n_match": 7,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "results_h1": {
+        "n_claims": 7,
+        "n_match": 3,
+        "n_stale": 1,
+        "n_mismatch": 1,
+        "n_unverifiable": 2,
+        "accuracy_pct": 60.0
+      },
+      "results_h2": {
+        "n_claims": 12,
+        "n_match": 8,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 4,
+        "accuracy_pct": 100.0
+      },
+      "results_h3": {
+        "n_claims": 19,
+        "n_match": 16,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 3,
+        "accuracy_pct": 100.0
+      },
+      "results_h4": {
+        "n_claims": 12,
+        "n_match": 10,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 2,
+        "accuracy_pct": 100.0
+      },
+      "results_h5": {
+        "n_claims": 1,
+        "n_match": 0,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 1,
+        "accuracy_pct": 100.0
+      },
+      "discussion": {
+        "n_claims": 14,
+        "n_match": 13,
+        "n_stale": 1,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 92.86
+      },
+      "conclusion": {
+        "n_claims": 7,
+        "n_match": 6,
+        "n_stale": 1,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 85.71
+      },
+      "table_t1": {
+        "n_claims": 1,
+        "n_match": 1,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "table_t2": {
+        "n_claims": 1,
+        "n_match": 1,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 0,
+        "accuracy_pct": 100.0
+      },
+      "table_t3": {
+        "n_claims": 3,
+        "n_match": 0,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 3,
+        "accuracy_pct": 100.0
+      },
+      "table_t4": {
+        "n_claims": 1,
+        "n_match": 0,
+        "n_stale": 0,
+        "n_mismatch": 0,
+        "n_unverifiable": 1,
+        "accuracy_pct": 100.0
+      }
+    },
+    "per_claim_results": [
+      {
+        "claim_id": 1,
+        "section": "abstract",
+        "raw_text": "Z=47.2",
+        "claimed_value": 47.2,
+        "ground_truth_value": 47.76380824766508,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "phase_b_corpus_level_tests.030T.median_z",
+        "status": "STALE",
+        "relative_error": 0.011804089086481938,
+        "correction": "Replace 47.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "gt_key": "ffl_median_z",
+        "match_method": "z_score_match",
+        "pattern_name": "z_score"
+      },
+      {
+        "claim_id": 2,
+        "section": "abstract",
+        "raw_text": "Z=46.2",
+        "claimed_value": 46.2,
+        "ground_truth_value": 47.76380824766508,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "phase_b_corpus_level_tests.030T.median_z",
+        "status": "STALE",
+        "relative_error": 0.032740443131259865,
+        "correction": "Replace 46.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "gt_key": "ffl_median_z",
+        "match_method": "z_score_match",
+        "pattern_name": "z_score"
+      },
+      {
+        "claim_id": 33,
+        "section": "results_h1",
+        "raw_text": "Z=46.2",
+        "claimed_value": 46.2,
+        "ground_truth_value": 47.76380824766508,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "phase_b_corpus_level_tests.030T.median_z",
+        "status": "STALE",
+        "relative_error": 0.032740443131259865,
+        "correction": "Replace 46.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "gt_key": "ffl_median_z",
+        "match_method": "z_score_match",
+        "pattern_name": "z_score"
+      },
+      {
+        "claim_id": 34,
+        "section": "results_h1",
+        "raw_text": "Z=56.9",
+        "claimed_value": 56.9,
+        "ground_truth_value": 57.67322161918628,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "phase_b_corpus_level_tests.030T.domain_breakdown.arithmetic.mean_z",
+        "status": "MISMATCH",
+        "relative_error": 0.013406943421538482,
+        "correction": "Replace 56.9 with 57.673 (from exp_id1_it6: phase_b_corpus_level_tests.030T.domain_breakdown.arithmetic.mean_z)",
+        "gt_key": "domain_z_arithmetic",
+        "match_method": "z_score_match",
+        "pattern_name": "z_score"
+      },
+      {
+        "claim_id": 84,
+        "section": "discussion",
+        "raw_text": "Z=47.2",
+        "claimed_value": 47.2,
+        "ground_truth_value": 47.76380824766508,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "phase_b_corpus_level_tests.030T.median_z",
+        "status": "STALE",
+        "relative_error": 0.011804089086481938,
+        "correction": "Replace 47.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "gt_key": "ffl_median_z",
+        "match_method": "z_score_match",
+        "pattern_name": "z_score"
+      },
+      {
+        "claim_id": 98,
+        "section": "conclusion",
+        "raw_text": "Z=47.2",
+        "claimed_value": 47.2,
+        "ground_truth_value": 47.76380824766508,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "phase_b_corpus_level_tests.030T.median_z",
+        "status": "STALE",
+        "relative_error": 0.011804089086481938,
+        "correction": "Replace 47.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "gt_key": "ffl_median_z",
+        "match_method": "z_score_match",
+        "pattern_name": "z_score"
+      },
+      {
+        "claim_id": 3,
+        "section": "abstract",
+        "raw_text": "p<0.001",
+        "claimed_value": 0.001,
+        "ground_truth_value": null,
+        "source_experiment": null,
+        "json_path": null,
+        "status": "UNVERIFIABLE",
+        "relative_error": null,
+        "correction": null,
+        "gt_key": null,
+        "match_method": "no_match",
+        "pattern_name": "p_value_simple"
+      },
+      {
+        "claim_id": 39,
+        "section": "results_h1",
+        "raw_text": "10\\%",
+        "claimed_value": 10.0,
+        "ground_truth_value": null,
+        "source_experiment": null,
+        "json_path": null,
+        "status": "UNVERIFIABLE",
+        "relative_error": null,
+        "correction": null,
+        "gt_key": null,
+        "match_method": "no_match",
+        "pattern_name": "percentage"
+      },
+      {
+        "claim_id": 4,
+        "section": "abstract",
+        "raw_text": "p=0.001",
+        "claimed_value": 0.001,
+        "ground_truth_value": 0.001,
+        "source_experiment": "exp_id1_it5",
+        "json_path": "metadata.residualized_clustering.motif_resid_on_gstats.perm_p_value",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "resid_nmi_pvalue",
+        "match_method": "context",
+        "pattern_name": "p_value_simple"
+      },
+      {
+        "claim_id": 6,
+        "section": "abstract",
+        "raw_text": "NMI$=0.705",
+        "claimed_value": 0.705,
+        "ground_truth_value": 0.7050227135242816,
+        "source_experiment": "exp_id1_it4",
+        "json_path": "metadata.clustering_comparison.weighted_motif_only.best_nmi",
+        "status": "MATCH",
+        "relative_error": 3.221672698753893e-05,
+        "correction": null,
+        "gt_key": "weighted_nmi",
+        "match_method": "value_match",
+        "pattern_name": "nmi"
+      },
+      {
+        "claim_id": 11,
+        "section": "abstract",
+        "raw_text": "R^2=0.0184",
+        "claimed_value": 0.0184,
+        "ground_truth_value": 0.018365559913235296,
+        "source_experiment": "exp_id1_it5",
+        "json_path": "metadata.variance_decomposition.unique_motif.value",
+        "status": "MATCH",
+        "relative_error": 0.001875253840743711,
+        "correction": null,
+        "gt_key": "unique_motif_r2",
+        "match_method": "context",
+        "pattern_name": "r_squared"
+      },
+      {
+        "claim_id": 12,
+        "section": "abstract",
+        "raw_text": "r=0.88",
+        "claimed_value": 0.88,
+        "ground_truth_value": 0.8767965456916026,
+        "source_experiment": "exp_id2_it4",
+        "json_path": "metadata.dose_response.downstream_attr_loss.spearman_r",
+        "status": "MATCH",
+        "relative_error": 0.0036535891070038165,
+        "correction": null,
+        "gt_key": "dose_spearman_r",
+        "match_method": "direct",
+        "pattern_name": "spearman_r"
+      },
+      {
+        "claim_id": 13,
+        "section": "abstract",
+        "raw_text": "8 capability domains",
+        "claimed_value": 8,
+        "ground_truth_value": 8,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "metadata.n_domains_computed",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_domains",
+        "match_method": "exact",
+        "pattern_name": "count_domains"
+      },
+      {
+        "claim_id": 15,
+        "section": "abstract",
+        "raw_text": "20,056 hub nodes",
+        "claimed_value": 20056,
+        "ground_truth_value": 20056,
+        "source_experiment": "exp_id2_it4",
+        "json_path": "metadata.corpus_summary.node_classification.n_hub",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_hub_nodes",
+        "match_method": "direct",
+        "pattern_name": "count_hub"
+      },
+      {
+        "claim_id": 16,
+        "section": "abstract",
+        "raw_text": "11,185,566 FFL",
+        "claimed_value": 11185566,
+        "ground_truth_value": 11185566,
+        "source_experiment": "exp_id2_it4",
+        "json_path": "metadata.corpus_summary.total_ffls",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "total_ffls",
+        "match_method": "direct",
+        "pattern_name": "count_ffl"
+      },
+      {
+        "claim_id": 17,
+        "section": "abstract",
+        "raw_text": "23.6\\%",
+        "claimed_value": 23.6,
+        "ground_truth_value": 0.2362,
+        "source_experiment": "exp_id1_it5",
+        "json_path": "metadata.verdict.conditional_mi_retained",
+        "status": "MATCH",
+        "relative_error": 0.019999999999999574,
+        "correction": null,
+        "gt_key": "mi_retained_frac",
+        "match_method": "pct_to_frac",
+        "pattern_name": "percentage"
+      },
+      {
+        "claim_id": 18,
+        "section": "introduction",
+        "raw_text": "NMI$=0.705",
+        "claimed_value": 0.705,
+        "ground_truth_value": 0.7050227135242816,
+        "source_experiment": "exp_id1_it4",
+        "json_path": "metadata.clustering_comparison.weighted_motif_only.best_nmi",
+        "status": "MATCH",
+        "relative_error": 3.221672698753893e-05,
+        "correction": null,
+        "gt_key": "weighted_nmi",
+        "match_method": "qualifier",
+        "pattern_name": "nmi"
+      },
+      {
+        "claim_id": 21,
+        "section": "introduction",
+        "raw_text": "R^2=0.0184",
+        "claimed_value": 0.0184,
+        "ground_truth_value": 0.018365559913235296,
+        "source_experiment": "exp_id1_it5",
+        "json_path": "metadata.variance_decomposition.unique_motif.value",
+        "status": "MATCH",
+        "relative_error": 0.001875253840743711,
+        "correction": null,
+        "gt_key": "unique_motif_r2",
+        "match_method": "context",
+        "pattern_name": "r_squared"
+      },
+      {
+        "claim_id": 22,
+        "section": "introduction",
+        "raw_text": "8 capability domains",
+        "claimed_value": 8,
+        "ground_truth_value": 8,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "metadata.n_domains_computed",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_domains",
+        "match_method": "exact",
+        "pattern_name": "count_domains"
+      },
+      {
+        "claim_id": 24,
+        "section": "related_work",
+        "raw_text": "200 graphs",
+        "claimed_value": 200,
+        "ground_truth_value": 200,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "metadata.n_graphs",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_graphs_corpus",
+        "match_method": "exact",
+        "pattern_name": "count_graphs"
+      },
+      {
+        "claim_id": 25,
+        "section": "related_work",
+        "raw_text": "8 capability domains",
+        "claimed_value": 8,
+        "ground_truth_value": 8,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "metadata.n_domains_computed",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_domains",
+        "match_method": "exact",
+        "pattern_name": "count_domains"
+      },
+      {
+        "claim_id": 26,
+        "section": "methods",
+        "raw_text": "200 attribution graphs",
+        "claimed_value": 200,
+        "ground_truth_value": 200,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "metadata.n_graphs",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_graphs_corpus",
+        "match_method": "exact",
+        "pattern_name": "count_graphs"
+      },
+      {
+        "claim_id": 29,
+        "section": "methods",
+        "raw_text": "8 capability domains",
+        "claimed_value": 8,
+        "ground_truth_value": 8,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "metadata.n_domains_computed",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_domains",
+        "match_method": "exact",
+        "pattern_name": "count_domains"
+      },
+      {
+        "claim_id": 30,
+        "section": "methods",
+        "raw_text": "20,056 hub nodes",
+        "claimed_value": 20056,
+        "ground_truth_value": 20056,
+        "source_experiment": "exp_id2_it4",
+        "json_path": "metadata.corpus_summary.node_classification.n_hub",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_hub_nodes",
+        "match_method": "direct",
+        "pattern_name": "count_hub"
+      },
+      {
+        "claim_id": 31,
+        "section": "methods",
+        "raw_text": "11,185,566 FFL",
+        "claimed_value": 11185566,
+        "ground_truth_value": 11185566,
+        "source_experiment": "exp_id2_it4",
+        "json_path": "metadata.corpus_summary.total_ffls",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "total_ffls",
+        "match_method": "direct",
+        "pattern_name": "count_ffl"
+      },
+      {
+        "claim_id": 32,
+        "section": "methods",
+        "raw_text": "7.9\\%",
+        "claimed_value": 7.9,
+        "ground_truth_value": 7.94,
+        "source_experiment": "exp_id2_it4",
+        "json_path": "metadata.corpus_summary.node_classification.pct_hub",
+        "status": "MATCH",
+        "relative_error": 0.040000000000000036,
+        "correction": null,
+        "gt_key": "pct_hub",
+        "match_method": "value_match",
+        "pattern_name": "percentage"
+      },
+      {
+        "claim_id": 36,
+        "section": "results_h1",
+        "raw_text": "200 attribution graphs",
+        "claimed_value": 200,
+        "ground_truth_value": 200,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "metadata.n_graphs",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_graphs_corpus",
+        "match_method": "exact",
+        "pattern_name": "count_graphs"
+      },
+      {
+        "claim_id": 37,
+        "section": "results_h1",
+        "raw_text": "8 capability domains",
+        "claimed_value": 8,
+        "ground_truth_value": 8,
+        "source_experiment": "exp_id1_it6",
+        "json_path": "metadata.n_domains_computed",
+        "status": "MATCH",
+        "relative_error": 0.0,
+        "correction": null,
+        "gt_key": "n_domains",
+        "match_method": "exact",
+        "pattern_name": "count_domains"
+      }
+    ],
+    "consistency_checks": {
+      "ffl_median_z": {
+        "sections_found": [
+          "abstract",
+          "abstract",
+          "results_h1",
+          "discussion",
+          "conclusion"
+        ],
+        "values_found": [
+          47.2,
+          46.2,
+          46.2,
+          47.2,
+          47.2
+        ],
+        "consistent": false
+      },
+      "weighted_nmi": {
+        "sections_found": [
+          "abstract",
+          "introduction",
+          "results_h3",
+          "results_h3",
+          "results_h3",
+          "results_h3",
+          "discussion",
+          "conclusion"
+        ],
+        "values_found": [
+          0.705,
+          0.705,
+          0.705,
+          0.705,
+          0.705,
+          0.705,
+          0.705,
+          0.705
+        ],
+        "consistent": true
+      },
+      "combined_nmi": {
+        "sections_found": [
+          "abstract",
+          "introduction",
+          "results_h3",
+          "discussion",
+          "discussion"
+        ],
+        "values_found": [
+          0.844,
+          0.844,
+          0.844,
+          0.844,
+          0.844
+        ],
+        "consistent": true
+      },
+      "binary_nmi": {
+        "sections_found": [
+          "abstract",
+          "introduction",
+          "results_h3",
+          "discussion"
+        ],
+        "values_found": [
+          0.101,
+          0.101,
+          0.101,
+          0.101
+        ],
+        "consistent": true
+      },
+      "dose_spearman_r": {
+        "sections_found": [
+          "abstract",
+          "results_h2",
+          "results_h2",
+          "discussion",
+          "discussion",
+          "conclusion"
+        ],
+        "values_found": [
+          0.88,
+          0.88,
+          0.88,
+          0.88,
+          0.88,
+          0.88
+        ],
+        "consistent": true
+      },
+      "unique_motif_r2": {
+        "sections_found": [
+          "abstract",
+          "introduction",
+          "results_h4",
+          "discussion",
+          "discussion",
+          "conclusion"
+        ],
+        "values_found": [
+          0.0184,
+          0.0184,
+          0.0184,
+          0.0184,
+          0.0184,
+          0.0184
+        ],
+        "consistent": true
+      },
+      "n_graphs_corpus": {
+        "sections_found": [
+          "related_work",
+          "methods",
+          "methods",
+          "methods",
+          "results_h1",
+          "results_h2",
+          "table_t2"
+        ],
+        "values_found": [
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0
+        ],
+        "consistent": true
+      },
+      "n_domains": {
+        "sections_found": [
+          "abstract",
+          "abstract",
+          "introduction",
+          "introduction",
+          "related_work",
+          "methods",
+          "results_h1",
+          "results_h1",
+          "results_h2",
+          "results_h2",
+          "discussion",
+          "discussion",
+          "conclusion",
+          "conclusion",
+          "table_t1"
+        ],
+        "values_found": [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "consistent": true
+      }
+    },
+    "correction_recommendations": [
+      {
+        "section": "abstract",
+        "current_text": "Z=47.2",
+        "corrected_text": "Replace 47.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "reason": "STALE: claimed 47.2, actual 47.76380824766508",
+        "source": "exp_id1_it6"
+      },
+      {
+        "section": "abstract",
+        "current_text": "Z=46.2",
+        "corrected_text": "Replace 46.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "reason": "STALE: claimed 46.2, actual 47.76380824766508",
+        "source": "exp_id1_it6"
+      },
+      {
+        "section": "results_h1",
+        "current_text": "Z=46.2",
+        "corrected_text": "Replace 46.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "reason": "STALE: claimed 46.2, actual 47.76380824766508",
+        "source": "exp_id1_it6"
+      },
+      {
+        "section": "results_h1",
+        "current_text": "Z=56.9",
+        "corrected_text": "Replace 56.9 with 57.673 (from exp_id1_it6: phase_b_corpus_level_tests.030T.domain_breakdown.arithmetic.mean_z)",
+        "reason": "MISMATCH: claimed 56.9, actual 57.67322161918628",
+        "source": "exp_id1_it6"
+      },
+      {
+        "section": "discussion",
+        "current_text": "Z=47.2",
+        "corrected_text": "Replace 47.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "reason": "STALE: claimed 47.2, actual 47.76380824766508",
+        "source": "exp_id1_it6"
+      },
+      {
+        "section": "conclusion",
+        "current_text": "Z=47.2",
+        "corrected_text": "Replace 47.2 with 47.764 (from exp_id1_it6: phase_b_corpus_level_tests.030T.median_z)",
+        "reason": "STALE: claimed 47.2, actual 47.76380824766508",
+        "source": "exp_id1_it6"
+      }
+    ]
+  },
+  "metrics_agg": {
+    "accuracy_pct": 93.55,
+    "consistency_pct": 87.5,
+    "n_match": 87,
+    "n_stale": 5,
+    "n_mismatch": 1,
+    "n_unverifiable": 17,
+    "total_claims": 110,
+    "n_corrections_needed": 6,
+    "n_sections_audited": 15,
+    "n_consistency_checks": 8,
+    "n_consistent_metrics": 7
+  }
+}

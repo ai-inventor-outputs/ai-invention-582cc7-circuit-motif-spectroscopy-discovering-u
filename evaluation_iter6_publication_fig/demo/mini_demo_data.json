@@ -1,0 +1,3244 @@
+{
+  "exp_id5": {
+    "metadata": {
+      "figures": {
+        "fig_motif_diagrams": {
+          "description": "Network motif diagram specifications with representative real instances",
+          "motifs_3node": [
+            {
+              "name": "021U",
+              "isoclass_id": 2,
+              "adjacency_3x3": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "canonical_labels": [
+                "A (target)",
+                "B (source)",
+                "C (source)"
+              ],
+              "mean_z_score": -50.69312941052594,
+              "universality_score": 0,
+              "representative": {
+                "node_layers": [
+                  0,
+                  4
+                ],
+                "edge_weights": [
+                  1.2132294178009033
+                ],
+                "node_explanations": [
+                  "the word \"is\"",
+                  "explanation_not_available"
+                ]
+              }
+            },
+            {
+              "name": "021C",
+              "isoclass_id": 4,
+              "adjacency_3x3": [
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "canonical_labels": [
+                "A (relay)",
+                "B (target)",
+                "C (source)"
+              ],
+              "mean_z_score": -50.69312941052594,
+              "universality_score": 0,
+              "representative": {
+                "node_layers": [
+                  0,
+                  4
+                ],
+                "edge_weights": [
+                  1.2132294178009033
+                ],
+                "node_explanations": [
+                  "the word \"is\"",
+                  "explanation_not_available"
+                ]
+              }
+            },
+            {
+              "name": "021D",
+              "isoclass_id": 6,
+              "adjacency_3x3": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0
+                ]
+              ],
+              "canonical_labels": [
+                "A (target)",
+                "B (target)",
+                "C (source)"
+              ],
+              "mean_z_score": -50.69312941052594,
+              "universality_score": 0,
+              "representative": {
+                "node_layers": [
+                  0,
+                  3
+                ],
+                "edge_weights": [
+                  1.060097336769104
+                ],
+                "node_explanations": [
+                  "explanation_not_available",
+                  "explanation_not_available"
+                ]
+              }
+            },
+            {
+              "name": "030T",
+              "isoclass_id": 7,
+              "adjacency_3x3": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0
+                ]
+              ],
+              "canonical_labels": [
+                "A (target)",
+                "B (relay)",
+                "C (source)"
+              ],
+              "mean_z_score": 50.69312941052594,
+              "universality_score": 8,
+              "representative": {
+                "node_layers": [
+                  0,
+                  4
+                ],
+                "edge_weights": [
+                  1.2132294178009033
+                ],
+                "node_explanations": [
+                  "the word \"is\"",
+                  "explanation_not_available"
+                ]
+              }
+            }
+          ]
+        },
+        "fig_zscore_boxplot": {
+          "description": "Per-domain Z-score distributions for each motif type (box plot data)",
+          "motif_types": {
+            "021U": {
+              "per_domain": {
+                "antonym": {
+                  "median": -26.554990530366425,
+                  "q1": -32.590897774552765,
+                  "q3": -23.91241646649818,
+                  "whisker_lo": -45.608619736634644,
+                  "whisker_hi": -16.314597669248393,
+                  "min": -47.12007750431253,
+                  "max": -16.314597669248393,
+                  "outliers": [
+                    -47.12007750431253
+                  ],
+                  "n": 26
+                },
+                "arithmetic": {
+                  "median": -57.39977752448817,
+                  "q1": -68.67262600398087,
+                  "q3": -48.9054870630728,
+                  "whisker_lo": -90.81343495470644,
+                  "whisker_hi": -38.96294914155464,
+                  "min": -90.81343495470644,
+                  "max": -38.96294914155464,
+                  "outliers": [],
+                  "n": 26
+                },
+                "code_completion": {
+                  "median": -48.40696553914782,
+                  "q1": -56.63931298429716,
+                  "q3": -42.84497845184346,
+                  "whisker_lo": -73.01065451754468,
+                  "whisker_hi": -31.00982124771201,
+                  "min": -73.01065451754468,
+                  "max": -31.00982124771201,
+                  "outliers": [],
+                  "n": 24
+                },
+                "country_capital": {
+                  "median": -49.07975540095639,
+                  "q1": -57.21957606300456,
+                  "q3": -41.93802324506902,
+                  "whisker_lo": -75.75058734842823,
+                  "whisker_hi": -30.20301153156111,
+                  "min": -75.75058734842823,
+                  "max": -30.20301153156111,
+                  "outliers": [],
+                  "n": 26
+                },
+                "multi_hop_reasoning": {
+                  "median": -39.93143320457371,
+                  "q1": -47.01068387519759,
+                  "q3": -35.10128301777968,
+                  "whisker_lo": -64.87478516132447,
+                  "whisker_hi": -27.226698268249418,
+                  "min": -78.21049049274885,
+                  "max": -27.226698268249418,
+                  "outliers": [
+                    -78.21049049274885
+                  ],
+                  "n": 24
+                },
+                "rhyme": {
+                  "median": -51.98555239908589,
+                  "q1": -57.54643247970682,
+                  "q3": -45.289583093320246,
+                  "whisker_lo": -70.64038633734019,
+                  "whisker_hi": -37.36590557572729,
+                  "min": -70.64038633734019,
+                  "max": -37.36590557572729,
+                  "outliers": [],
+                  "n": 24
+                },
+                "sentiment": {
+                  "median": -65.7295851914451,
+                  "q1": -75.84678825840336,
+                  "q3": -61.52008291336635,
+                  "whisker_lo": -96.87145503492009,
+                  "whisker_hi": -42.31154145305587,
+                  "min": -96.87145503492009,
+                  "max": -42.31154145305587,
+                  "outliers": [],
+                  "n": 24
+                },
+                "translation": {
+                  "median": -53.3418648339632,
+                  "q1": -65.32100047260667,
+                  "q3": -47.426189637918455,
+                  "whisker_lo": -92.163216724639,
+                  "whisker_hi": -20.583973385886132,
+                  "min": -92.21787046898525,
+                  "max": -20.099804930890464,
+                  "outliers": [
+                    -20.099804930890464,
+                    -92.21787046898525
+                  ],
+                  "n": 26
+                }
+              }
+            },
+            "021C": {
+              "per_domain": {
+                "antonym": {
+                  "median": -26.55499053036646,
+                  "q1": -32.59089777455279,
+                  "q3": -23.91241646649816,
+                  "whisker_lo": -45.60861973663474,
+                  "whisker_hi": -16.314597669248368,
+                  "min": -47.12007750431253,
+                  "max": -16.314597669248368,
+                  "outliers": [
+                    -47.12007750431253
+                  ],
+                  "n": 26
+                },
+                "arithmetic": {
+                  "median": -57.39977752448817,
+                  "q1": -68.67262600398085,
+                  "q3": -48.90548706307277,
+                  "whisker_lo": -90.81343495470644,
+                  "whisker_hi": -38.96294914155462,
+                  "min": -90.81343495470644,
+                  "max": -38.96294914155462,
+                  "outliers": [],
+                  "n": 26
+                },
+                "code_completion": {
+                  "median": -48.40696553914779,
+                  "q1": -56.63931298429715,
+                  "q3": -42.844978451843474,
+                  "whisker_lo": -73.01065451754464,
+                  "whisker_hi": -31.00982124771197,
+                  "min": -73.01065451754464,
+                  "max": -31.00982124771197,
+                  "outliers": [],
+                  "n": 24
+                },
+                "country_capital": {
+                  "median": -49.07975540095641,
+                  "q1": -57.21957606300456,
+                  "q3": -41.93802324506902,
+                  "whisker_lo": -75.75058734842817,
+                  "whisker_hi": -30.20301153156111,
+                  "min": -75.75058734842817,
+                  "max": -30.20301153156111,
+                  "outliers": [],
+                  "n": 26
+                },
+                "multi_hop_reasoning": {
+                  "median": -39.931433204573665,
+                  "q1": -47.01068387519756,
+                  "q3": -35.10128301777965,
+                  "whisker_lo": -64.87478516132441,
+                  "whisker_hi": -27.226698268249418,
+                  "min": -78.2104904927488,
+                  "max": -27.226698268249418,
+                  "outliers": [
+                    -78.2104904927488
+                  ],
+                  "n": 24
+                },
+                "rhyme": {
+                  "median": -51.98555239908586,
+                  "q1": -57.546432479706844,
+                  "q3": -45.289583093320246,
+                  "whisker_lo": -70.64038633734019,
+                  "whisker_hi": -37.36590557572729,
+                  "min": -70.64038633734019,
+                  "max": -37.36590557572729,
+                  "outliers": [],
+                  "n": 24
+                },
+                "sentiment": {
+                  "median": -65.72958519144512,
+                  "q1": -75.84678825840336,
+                  "q3": -61.52008291336636,
+                  "whisker_lo": -96.87145503492009,
+                  "whisker_hi": -42.31154145305587,
+                  "min": -96.87145503492009,
+                  "max": -42.31154145305587,
+                  "outliers": [],
+                  "n": 24
+                },
+                "translation": {
+                  "median": -53.3418648339632,
+                  "q1": -65.32100047260667,
+                  "q3": -47.426189637918455,
+                  "whisker_lo": -92.163216724639,
+                  "whisker_hi": -20.583973385886132,
+                  "min": -92.21787046898525,
+                  "max": -20.099804930890443,
+                  "outliers": [
+                    -20.099804930890443,
+                    -92.21787046898525
+                  ],
+                  "n": 26
+                }
+              }
+            },
+            "021D": {
+              "per_domain": {
+                "antonym": {
+                  "median": -26.55499053036646,
+                  "q1": -32.59089777455263,
+                  "q3": -23.912416466498264,
+                  "whisker_lo": -45.60861973663418,
+                  "whisker_hi": -16.31459766924848,
+                  "min": -47.120077504312455,
+                  "max": -16.31459766924848,
+                  "outliers": [
+                    -47.120077504312455
+                  ],
+                  "n": 26
+                },
+                "arithmetic": {
+                  "median": -57.39977752448805,
+                  "q1": -68.67262600398098,
+                  "q3": -48.905487063072655,
+                  "whisker_lo": -90.81343495470634,
+                  "whisker_hi": -38.96294914155459,
+                  "min": -90.81343495470634,
+                  "max": -38.96294914155459,
+                  "outliers": [],
+                  "n": 26
+                },
+                "code_completion": {
+                  "median": -48.406965539147734,
+                  "q1": -56.63931298429726,
+                  "q3": -42.84497845184363,
+                  "whisker_lo": -73.01065451754485,
+                  "whisker_hi": -31.00982124771193,
+                  "min": -73.01065451754485,
+                  "max": -31.00982124771193,
+                  "outliers": [],
+                  "n": 24
+                },
+                "country_capital": {
+                  "median": -49.07975540095646,
+                  "q1": -57.21957606300459,
+                  "q3": -41.938023245069004,
+                  "whisker_lo": -75.750587348428,
+                  "whisker_hi": -30.203011531561163,
+                  "min": -75.750587348428,
+                  "max": -30.203011531561163,
+                  "outliers": [],
+                  "n": 26
+                },
+                "multi_hop_reasoning": {
+                  "median": -39.931433204574006,
+                  "q1": -47.01068387519784,
+                  "q3": -35.10128301777978,
+                  "whisker_lo": -64.87478516132494,
+                  "whisker_hi": -27.2266982682495,
+                  "min": -78.21049049274923,
+                  "max": -27.2266982682495,
+                  "outliers": [
+                    -78.21049049274923
+                  ],
+                  "n": 24
+                },
+                "rhyme": {
+                  "median": -51.985552399085776,
+                  "q1": -57.54643247970675,
+                  "q3": -45.28958309332031,
+                  "whisker_lo": -70.64038633733986,
+                  "whisker_hi": -37.36590557572723,
+                  "min": -70.64038633733986,
+                  "max": -37.36590557572723,
+                  "outliers": [],
+                  "n": 24
+                },
+                "sentiment": {
+                  "median": -65.7295851914453,
+                  "q1": -75.84678825840355,
+                  "q3": -61.52008291336628,
+                  "whisker_lo": -96.87145503492032,
+                  "whisker_hi": -42.31154145305587,
+                  "min": -96.87145503492032,
+                  "max": -42.31154145305587,
+                  "outliers": [],
+                  "n": 24
+                },
+                "translation": {
+                  "median": -53.341864833963115,
+                  "q1": -65.32100047260657,
+                  "q3": -47.42618963791847,
+                  "whisker_lo": -92.16321672463872,
+                  "whisker_hi": -20.583973385886317,
+                  "min": -92.217870468985,
+                  "max": -20.09980493089042,
+                  "outliers": [
+                    -20.09980493089042,
+                    -92.217870468985
+                  ],
+                  "n": 26
+                }
+              }
+            },
+            "030T": {
+              "per_domain": {
+                "antonym": {
+                  "median": 26.554990530366446,
+                  "q1": 23.912416466498165,
+                  "q3": 32.59089777455278,
+                  "whisker_lo": 16.314597669248382,
+                  "whisker_hi": 45.6086197366347,
+                  "min": 16.314597669248382,
+                  "max": 47.12007750431254,
+                  "outliers": [
+                    47.12007750431254
+                  ],
+                  "n": 26
+                },
+                "arithmetic": {
+                  "median": 57.3997775244882,
+                  "q1": 48.9054870630728,
+                  "q3": 68.67262600398087,
+                  "whisker_lo": 38.96294914155462,
+                  "whisker_hi": 90.81343495470644,
+                  "min": 38.96294914155462,
+                  "max": 90.81343495470644,
+                  "outliers": [],
+                  "n": 26
+                },
+                "code_completion": {
+                  "median": 48.406965539147805,
+                  "q1": 42.84497845184346,
+                  "q3": 56.63931298429714,
+                  "whisker_lo": 31.00982124771197,
+                  "whisker_hi": 73.01065451754465,
+                  "min": 31.00982124771197,
+                  "max": 73.01065451754465,
+                  "outliers": [],
+                  "n": 24
+                },
+                "country_capital": {
+                  "median": 49.0797554009564,
+                  "q1": 41.93802324506902,
+                  "q3": 57.21957606300456,
+                  "whisker_lo": 30.203011531561096,
+                  "whisker_hi": 75.7505873484282,
+                  "min": 30.203011531561096,
+                  "max": 75.7505873484282,
+                  "outliers": [],
+                  "n": 26
+                },
+                "multi_hop_reasoning": {
+                  "median": 39.93143320457367,
+                  "q1": 35.10128301777967,
+                  "q3": 47.01068387519756,
+                  "whisker_lo": 27.226698268249407,
+                  "whisker_hi": 64.87478516132438,
+                  "min": 27.226698268249407,
+                  "max": 78.2104904927488,
+                  "outliers": [
+                    78.2104904927488
+                  ],
+                  "n": 24
+                },
+                "rhyme": {
+                  "median": 51.985552399085876,
+                  "q1": 45.28958309332023,
+                  "q3": 57.54643247970684,
+                  "whisker_lo": 37.36590557572729,
+                  "whisker_hi": 70.64038633734015,
+                  "min": 37.36590557572729,
+                  "max": 70.64038633734015,
+                  "outliers": [],
+                  "n": 24
+                },
+                "sentiment": {
+                  "median": 65.7295851914451,
+                  "q1": 61.52008291336636,
+                  "q3": 75.84678825840336,
+                  "whisker_lo": 42.31154145305587,
+                  "whisker_hi": 96.87145503492006,
+                  "min": 42.31154145305587,
+                  "max": 96.87145503492006,
+                  "outliers": [],
+                  "n": 24
+                },
+                "translation": {
+                  "median": 53.3418648339632,
+                  "q1": 47.426189637918434,
+                  "q3": 65.32100047260664,
+                  "whisker_lo": 20.58397338588612,
+                  "whisker_hi": 92.16321672463896,
+                  "min": 20.099804930890443,
+                  "max": 92.21787046898521,
+                  "outliers": [
+                    20.099804930890443,
+                    92.21787046898521
+                  ],
+                  "n": 26
+                }
+              }
+            }
+          }
+        },
+        "fig_tsne_umap_embeddings": {
+          "description": "2D embedding coordinates from t-SNE and UMAP across multiple feature sets and hyperparameters",
+          "embeddings": [
+            {
+              "method": "umap",
+              "feature_set": "motif_only",
+              "hyperparams": {
+                "n_neighbors": 15
+              },
+              "points": [
+                {
+                  "x": 6.909663200378418,
+                  "y": 8.571847915649414,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-001-501b0b4a",
+                  "correctness": "true"
+                },
+                {
+                  "x": 7.158635139465332,
+                  "y": 4.809452533721924,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-006-784884f4",
+                  "correctness": "true"
+                },
+                {
+                  "x": 5.786333084106445,
+                  "y": 3.488344430923462,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-011-9a7d4704",
+                  "correctness": "true"
+                },
+                {
+                  "x": 8.452271461486816,
+                  "y": 5.198056697845459,
+                  "domain": "antonym",
+                  "slug": "m5-antonym-020-c79fdf41",
+                  "correctness": "true"
+                },
+                {
+                  "x": 7.312432765960693,
+                  "y": 4.459332466125488,
+                  "domain": "antonym",
+                  "slug": "m5-antonym-023-7da12ab5",
+                  "correctness": "true"
+                },
+                {
+                  "x": 4.682539939880371,
+                  "y": 6.951718807220459,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-016-d0c8069d",
+                  "correctness": "true"
+                },
+                {
+                  "x": 5.533389568328857,
+                  "y": 6.904358863830566,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-018-b385bcc8",
+                  "correctness": "false"
+                },
+                {
+                  "x": 6.9118571281433105,
+                  "y": 8.957592964172363,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-014-cb3874bb",
+                  "correctness": "true"
+                },
+                {
+                  "x": 4.608808517456055,
+                  "y": 6.838172912597656,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-010-ee87993a",
+                  "correctness": "true"
+                },
+                {
+                  "x": 5.066426753997803,
+                  "y": 7.398016929626465,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-002-bfa01abe",
+                  "correctness": "true"
+                },
+                {
+                  "x": 12.089743614196777,
+                  "y": 12.457182884216309,
+                  "domain": "sentiment",
+                  "slug": "m5-sentiment-020-73548a2b",
+                  "correctness": "false"
+                },
+                {
+                  "x": 6.7788262367248535,
+                  "y": 8.319398880004883,
+                  "domain": "sentiment",
+                  "slug": "m5-sentiment-023-fc759cb1",
+                  "correctness": "false"
+                },
+                {
+                  "x": 7.088232517242432,
+                  "y": 9.983933448791504,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-001-2eaf593e",
+                  "correctness": "true"
+                },
+                {
+                  "x": 12.215703964233398,
+                  "y": 12.530247688293457,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-014-acec1a3a",
+                  "correctness": "true"
+                },
+                {
+                  "x": 11.825284957885742,
+                  "y": 13.382373809814453,
+                  "domain": "sentiment",
+                  "slug": "m5-sentiment-022-7aacbc33",
+                  "correctness": "false"
+                },
+                {
+                  "x": 14.918962478637695,
+                  "y": 12.464284896850586,
+                  "domain": "translation",
+                  "slug": "m4-translation-006-95397d3f",
+                  "correctness": "true"
+                },
+                {
+                  "x": 14.73055362701416,
+                  "y": 11.503599166870117,
+                  "domain": "translation",
+                  "slug": "m4-translation-016-2a500064",
+                  "correctness": "true"
+                },
+                {
+                  "x": 15.5283784866333,
+                  "y": 12.642382621765137,
+                  "domain": "translation",
+                  "slug": "m4-translation-015-6dcbbd71",
+                  "correctness": "true"
+                },
+                {
+                  "x": 15.373580932617188,
+                  "y": 12.502503395080566,
+                  "domain": "translation",
+                  "slug": "m4-translation-001-f180da04",
+                  "correctness": "true"
+                },
+                {
+                  "x": 15.453255653381348,
+                  "y": 12.162967681884766,
+                  "domain": "translation",
+                  "slug": "m4-translation-010-96d41b9a",
+                  "correctness": "true"
+                },
+                {
+                  "x": 7.805305004119873,
+                  "y": 9.458869934082031,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-015-0809e3f8",
+                  "correctness": "true"
+                },
+                {
+                  "x": 7.919210433959961,
+                  "y": 9.755868911743164,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-004-b0910530",
+                  "correctness": "true"
+                },
+                {
+                  "x": 10.609339714050293,
+                  "y": 12.066908836364746,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-005-96098955",
+                  "correctness": "true"
+                },
+                {
+                  "x": 8.181385040283203,
+                  "y": 9.762398719787598,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-003-83bd7530",
+                  "correctness": "true"
+                },
+                {
+                  "x": 5.749758243560791,
+                  "y": 3.6589596271514893,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-009-8cf31475",
+                  "correctness": "true"
+                },
+                {
+                  "x": 10.248291969299316,
+                  "y": 14.02017593383789,
+                  "domain": "country_capital",
+                  "slug": "m5-country_capital-020-f1323e58",
+                  "correctness": "false"
+                },
+                {
+                  "x": 11.141250610351562,
+                  "y": 13.355582237243652,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-011-8958b59a",
+                  "correctness": "true"
+                },
+                {
+                  "x": 10.701864242553711,
+                  "y": 12.91051197052002,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-007-8c05bfff",
+                  "correctness": "true"
+                },
+                {
+                  "x": 7.184596538543701,
+                  "y": 10.455840110778809,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-006-6929fb57",
+                  "correctness": "true"
+                },
+                {
+                  "x": 11.668293952941895,
+                  "y": 12.821585655212402,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-016-7c2634ba",
+                  "correctness": "true"
+                },
+                {
+                  "x": 9.151535034179688,
+                  "y": 4.791718006134033,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-011-8e128a56",
+                  "correctness": "true"
+                },
+                {
+                  "x": 8.89138126373291,
+                  "y": 3.953300714492798,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m5-multi_hop_reasoning-017-07ddb234",
+                  "correctness": "false"
+                },
+                {
+                  "x": 9.136584281921387,
+                  "y": 5.602272033691406,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-000-e9c89588",
+                  "correctness": "true"
+                },
+                {
+                  "x": 9.088114738464355,
+                  "y": 5.733137130737305,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-001-45196fe5",
+                  "correctness": "true"
+                },
+                {
+                  "x": 9.133856773376465,
+                  "y": 5.525030612945557,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-006-06b5fd29",
+                  "correctness": "true"
+                },
+                {
+                  "x": 5.655214309692383,
+                  "y": 3.3564388751983643,
+                  "domain": "rhyme",
+                  "slug": "m5-rhyme-018-9df6d3eb",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 6.231584548950195,
+                  "y": 5.047905445098877,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-016-ded06a9c",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 6.034412384033203,
+                  "y": 4.824611663818359,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-013-d2bb30c1",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 12.052840232849121,
+                  "y": 13.182406425476074,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-014-2ec9746a",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 5.04417610168457,
+                  "y": 7.406597137451172,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-002-e37048af",
+                  "correctness": "unknown"
+                }
+              ],
+              "silhouette_score": 0.1580941528081894,
+              "is_recommended": false
+            },
+            {
+              "method": "tsne",
+              "feature_set": "weighted_motif_only",
+              "hyperparams": {
+                "perplexity": 15
+              },
+              "points": [
+                {
+                  "x": -18.46258544921875,
+                  "y": -11.196287155151367,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-008-3a5abe79",
+                  "correctness": "true"
+                },
+                {
+                  "x": -14.99825382232666,
+                  "y": -7.55321741104126,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-004-beb14eca",
+                  "correctness": "true"
+                },
+                {
+                  "x": -18.4313907623291,
+                  "y": -9.739642143249512,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-012-b30d9da9",
+                  "correctness": "true"
+                },
+                {
+                  "x": -18.712167739868164,
+                  "y": -10.79014778137207,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-015-ff942ddb",
+                  "correctness": "true"
+                },
+                {
+                  "x": -5.602547645568848,
+                  "y": 0.2874687612056732,
+                  "domain": "antonym",
+                  "slug": "m5-antonym-021-29645279",
+                  "correctness": "true"
+                },
+                {
+                  "x": -24.856550216674805,
+                  "y": 20.071640014648438,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-018-b385bcc8",
+                  "correctness": "false"
+                },
+                {
+                  "x": -25.306032180786133,
+                  "y": 22.223596572875977,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-007-8883759f",
+                  "correctness": "true"
+                },
+                {
+                  "x": -24.768325805664062,
+                  "y": 21.621469497680664,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-001-66d03483",
+                  "correctness": "true"
+                },
+                {
+                  "x": -22.57346534729004,
+                  "y": 22.28949546813965,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-020-b89854ce",
+                  "correctness": "false"
+                },
+                {
+                  "x": -28.130489349365234,
+                  "y": 19.20524024963379,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-025-453e00cc",
+                  "correctness": "false"
+                },
+                {
+                  "x": 12.488282203674316,
+                  "y": -18.610902786254883,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-001-2eaf593e",
+                  "correctness": "true"
+                },
+                {
+                  "x": 15.97263240814209,
+                  "y": -25.058263778686523,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-004-dc9884de",
+                  "correctness": "true"
+                },
+                {
+                  "x": 11.084660530090332,
+                  "y": -16.295190811157227,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-003-27b46ba4",
+                  "correctness": "true"
+                },
+                {
+                  "x": 14.513863563537598,
+                  "y": -23.733110427856445,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-010-c65d2185",
+                  "correctness": "false"
+                },
+                {
+                  "x": 14.185072898864746,
+                  "y": -24.352413177490234,
+                  "domain": "sentiment",
+                  "slug": "m5-sentiment-020-73548a2b",
+                  "correctness": "false"
+                },
+                {
+                  "x": 10.185087203979492,
+                  "y": 30.837804794311523,
+                  "domain": "translation",
+                  "slug": "m4-translation-001-f180da04",
+                  "correctness": "true"
+                },
+                {
+                  "x": 11.57863998413086,
+                  "y": 30.44552993774414,
+                  "domain": "translation",
+                  "slug": "m4-translation-005-a9d075ea",
+                  "correctness": "true"
+                },
+                {
+                  "x": 10.585535049438477,
+                  "y": 32.71272277832031,
+                  "domain": "translation",
+                  "slug": "m5-translation-020-d5dde25a",
+                  "correctness": "true"
+                },
+                {
+                  "x": 10.24069595336914,
+                  "y": 32.108131408691406,
+                  "domain": "translation",
+                  "slug": "m4-translation-010-96d41b9a",
+                  "correctness": "true"
+                },
+                {
+                  "x": 14.243608474731445,
+                  "y": 29.55500030517578,
+                  "domain": "translation",
+                  "slug": "m4-translation-016-2a500064",
+                  "correctness": "true"
+                },
+                {
+                  "x": 5.242004871368408,
+                  "y": -2.9783194065093994,
+                  "domain": "code_completion",
+                  "slug": "m5-code_completion-022-9148d559",
+                  "correctness": "false"
+                },
+                {
+                  "x": -3.917283058166504,
+                  "y": -8.842070579528809,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-007-5bdaa63a",
+                  "correctness": "true"
+                },
+                {
+                  "x": 6.8297834396362305,
+                  "y": -1.022316575050354,
+                  "domain": "code_completion",
+                  "slug": "m5-code_completion-023-4d134e36",
+                  "correctness": "false"
+                },
+                {
+                  "x": -2.033604145050049,
+                  "y": -10.341471672058105,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-009-8cf31475",
+                  "correctness": "true"
+                },
+                {
+                  "x": 8.359195709228516,
+                  "y": 0.16733643412590027,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-006-fe1e9c99",
+                  "correctness": "true"
+                },
+                {
+                  "x": 13.034138679504395,
+                  "y": -4.646717548370361,
+                  "domain": "country_capital",
+                  "slug": "m5-country_capital-021-5832322c",
+                  "correctness": "false"
+                },
+                {
+                  "x": 12.686884880065918,
+                  "y": -0.2991393208503723,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-012-9797caad",
+                  "correctness": "true"
+                },
+                {
+                  "x": 10.513171195983887,
+                  "y": -1.3980985879898071,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-014-00e09c89",
+                  "correctness": "true"
+                },
+                {
+                  "x": 12.922672271728516,
+                  "y": 0.6312877535820007,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-007-8c05bfff",
+                  "correctness": "true"
+                },
+                {
+                  "x": 10.483380317687988,
+                  "y": 0.1697434037923813,
+                  "domain": "country_capital",
+                  "slug": "m5-country_capital-024-b07069cc",
+                  "correctness": "false"
+                },
+                {
+                  "x": -10.645915031433105,
+                  "y": -3.30877947807312,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m5-multi_hop_reasoning-018-13dd86c4",
+                  "correctness": "false"
+                },
+                {
+                  "x": -12.182435035705566,
+                  "y": -6.155921459197998,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m5-multi_hop_reasoning-017-07ddb234",
+                  "correctness": "false"
+                },
+                {
+                  "x": -12.457267761230469,
+                  "y": -4.975191593170166,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-005-26be574f",
+                  "correctness": "true"
+                },
+                {
+                  "x": -13.024659156799316,
+                  "y": -3.2409682273864746,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-007-778ac4d9",
+                  "correctness": "true"
+                },
+                {
+                  "x": -11.887170791625977,
+                  "y": -5.644144058227539,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-012-ba7e8fa6",
+                  "correctness": "true"
+                },
+                {
+                  "x": -6.949639320373535,
+                  "y": -4.280893325805664,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-016-ded06a9c",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 3.9410367012023926,
+                  "y": -11.344829559326172,
+                  "domain": "rhyme",
+                  "slug": "m5-rhyme-019-b8e0055d",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 10.366698265075684,
+                  "y": -9.599494934082031,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-005-160e0f8a",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": -8.129605293273926,
+                  "y": -2.3114640712738037,
+                  "domain": "rhyme",
+                  "slug": "m5-rhyme-017-ddcb18b6",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 6.532847881317139,
+                  "y": -10.469684600830078,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-008-80d6622d",
+                  "correctness": "unknown"
+                }
+              ],
+              "silhouette_score": 0.46003028750419617,
+              "is_recommended": false
+            },
+            {
+              "method": "umap",
+              "feature_set": "graph_stats_only",
+              "hyperparams": {
+                "n_neighbors": 15
+              },
+              "points": [
+                {
+                  "x": 11.539610862731934,
+                  "y": 0.09353291988372803,
+                  "domain": "antonym",
+                  "slug": "m5-antonym-024-2a095e50",
+                  "correctness": "true"
+                },
+                {
+                  "x": 16.345657348632812,
+                  "y": 0.5361388921737671,
+                  "domain": "antonym",
+                  "slug": "m5-antonym-021-29645279",
+                  "correctness": "true"
+                },
+                {
+                  "x": 11.283858299255371,
+                  "y": 0.3059292435646057,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-011-9a7d4704",
+                  "correctness": "true"
+                },
+                {
+                  "x": 12.823905944824219,
+                  "y": -0.23111538589000702,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-005-934b1b6b",
+                  "correctness": "true"
+                },
+                {
+                  "x": 13.371992111206055,
+                  "y": 0.1193125769495964,
+                  "domain": "antonym",
+                  "slug": "m5-antonym-018-dad7794f",
+                  "correctness": "true"
+                },
+                {
+                  "x": 13.375743865966797,
+                  "y": -0.4535790979862213,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-008-5796581c",
+                  "correctness": "true"
+                },
+                {
+                  "x": 11.753384590148926,
+                  "y": -0.4052557349205017,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-022-ea1cfd33",
+                  "correctness": "false"
+                },
+                {
+                  "x": 12.3986177444458,
+                  "y": -0.906941831111908,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-004-5b9d4ded",
+                  "correctness": "true"
+                },
+                {
+                  "x": 13.122784614562988,
+                  "y": -1.2213773727416992,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-006-4ac65788",
+                  "correctness": "true"
+                },
+                {
+                  "x": 13.414628028869629,
+                  "y": -0.485525518655777,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-023-9c11091c",
+                  "correctness": "false"
+                },
+                {
+                  "x": 1.4267988204956055,
+                  "y": 3.2148144245147705,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-009-88a54785",
+                  "correctness": "true"
+                },
+                {
+                  "x": 1.3245956897735596,
+                  "y": 3.9765260219573975,
+                  "domain": "sentiment",
+                  "slug": "m5-sentiment-023-fc759cb1",
+                  "correctness": "false"
+                },
+                {
+                  "x": -0.23046307265758514,
+                  "y": 3.0372378826141357,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-014-acec1a3a",
+                  "correctness": "true"
+                },
+                {
+                  "x": -0.3040715754032135,
+                  "y": 2.9407012462615967,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-006-d188e156",
+                  "correctness": "true"
+                },
+                {
+                  "x": 0.5068510174751282,
+                  "y": 3.521700382232666,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-008-cbeec359",
+                  "correctness": "true"
+                },
+                {
+                  "x": 14.29229736328125,
+                  "y": 2.441117763519287,
+                  "domain": "translation",
+                  "slug": "m4-translation-008-4dddb940",
+                  "correctness": "true"
+                },
+                {
+                  "x": 14.729280471801758,
+                  "y": 1.9280641078948975,
+                  "domain": "translation",
+                  "slug": "m4-translation-017-5c96a143",
+                  "correctness": "true"
+                },
+                {
+                  "x": 15.693297386169434,
+                  "y": 0.25800958275794983,
+                  "domain": "translation",
+                  "slug": "m4-translation-000-aeacaa42",
+                  "correctness": "true"
+                },
+                {
+                  "x": 14.650846481323242,
+                  "y": 1.931562900543213,
+                  "domain": "translation",
+                  "slug": "m4-translation-011-d32c1247",
+                  "correctness": "true"
+                },
+                {
+                  "x": 14.723824501037598,
+                  "y": 0.41082751750946045,
+                  "domain": "translation",
+                  "slug": "m4-translation-006-95397d3f",
+                  "correctness": "true"
+                },
+                {
+                  "x": 4.281103134155273,
+                  "y": 2.490265130996704,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-005-96098955",
+                  "correctness": "true"
+                },
+                {
+                  "x": 4.939240455627441,
+                  "y": 2.713021993637085,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-008-f704b876",
+                  "correctness": "true"
+                },
+                {
+                  "x": 5.8107099533081055,
+                  "y": 1.9131296873092651,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-001-6c17630e",
+                  "correctness": "true"
+                },
+                {
+                  "x": 5.7156195640563965,
+                  "y": 2.0606627464294434,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-000-7016315e",
+                  "correctness": "true"
+                },
+                {
+                  "x": 4.344552993774414,
+                  "y": 2.593524694442749,
+                  "domain": "code_completion",
+                  "slug": "m5-code_completion-021-717b2d36",
+                  "correctness": "false"
+                },
+                {
+                  "x": 13.357304573059082,
+                  "y": -0.05249139666557312,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-006-6929fb57",
+                  "correctness": "true"
+                },
+                {
+                  "x": 14.606684684753418,
+                  "y": 0.3576659858226776,
+                  "domain": "country_capital",
+                  "slug": "m5-country_capital-020-f1323e58",
+                  "correctness": "false"
+                },
+                {
+                  "x": 13.289259910583496,
+                  "y": -0.01942528411746025,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-003-b6705b84",
+                  "correctness": "true"
+                },
+                {
+                  "x": 16.116573333740234,
+                  "y": 0.3358113169670105,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-015-9fe98aa8",
+                  "correctness": "false"
+                },
+                {
+                  "x": 16.698144912719727,
+                  "y": 0.5876696109771729,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-014-00e09c89",
+                  "correctness": "true"
+                },
+                {
+                  "x": 6.090003967285156,
+                  "y": -0.3999464511871338,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m5-multi_hop_reasoning-019-771c0913",
+                  "correctness": "false"
+                },
+                {
+                  "x": 6.576030254364014,
+                  "y": 0.06188422068953514,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-014-5d087931",
+                  "correctness": "true"
+                },
+                {
+                  "x": 6.884288311004639,
+                  "y": 0.2633095979690552,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m5-multi_hop_reasoning-023-57f87bab",
+                  "correctness": "false"
+                },
+                {
+                  "x": 6.8308258056640625,
+                  "y": 0.18584206700325012,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m5-multi_hop_reasoning-021-013f58eb",
+                  "correctness": "false"
+                },
+                {
+                  "x": 6.459614276885986,
+                  "y": -0.22613924741744995,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m5-multi_hop_reasoning-018-13dd86c4",
+                  "correctness": "false"
+                },
+                {
+                  "x": 5.015951633453369,
+                  "y": 2.969531774520874,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-013-d2bb30c1",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 5.178781509399414,
+                  "y": 2.2176530361175537,
+                  "domain": "rhyme",
+                  "slug": "m5-rhyme-023-fc416726",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 4.082436561584473,
+                  "y": 3.021360397338867,
+                  "domain": "rhyme",
+                  "slug": "m5-rhyme-020-e3f71502",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 1.826192855834961,
+                  "y": 3.867141008377075,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-007-3952a206",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 1.7383843660354614,
+                  "y": 3.368009090423584,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-000-eed43a63",
+                  "correctness": "unknown"
+                }
+              ],
+              "silhouette_score": 0.32406607270240784,
+              "is_recommended": false
+            },
+            {
+              "method": "tsne",
+              "feature_set": "all_combined",
+              "hyperparams": {
+                "perplexity": 15
+              },
+              "points": [
+                {
+                  "x": -11.338521957397461,
+                  "y": -5.38321590423584,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-004-beb14eca",
+                  "correctness": "true"
+                },
+                {
+                  "x": -14.12346363067627,
+                  "y": -5.791969299316406,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-016-6a269333",
+                  "correctness": "true"
+                },
+                {
+                  "x": -7.919134140014648,
+                  "y": 2.5325703620910645,
+                  "domain": "antonym",
+                  "slug": "m5-antonym-025-b8471e60",
+                  "correctness": "false"
+                },
+                {
+                  "x": -11.816349029541016,
+                  "y": -4.728970527648926,
+                  "domain": "antonym",
+                  "slug": "m5-antonym-024-2a095e50",
+                  "correctness": "true"
+                },
+                {
+                  "x": -15.058186531066895,
+                  "y": -7.222829818725586,
+                  "domain": "antonym",
+                  "slug": "m4-antonym-015-ff942ddb",
+                  "correctness": "true"
+                },
+                {
+                  "x": -23.145843505859375,
+                  "y": 6.659724712371826,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-024-f647140d",
+                  "correctness": "false"
+                },
+                {
+                  "x": -22.81878662109375,
+                  "y": 3.1657958030700684,
+                  "domain": "arithmetic",
+                  "slug": "m4-arithmetic-006-4ac65788",
+                  "correctness": "true"
+                },
+                {
+                  "x": -18.854183197021484,
+                  "y": 7.189045429229736,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-023-9c11091c",
+                  "correctness": "false"
+                },
+                {
+                  "x": -21.125459671020508,
+                  "y": 7.01481819152832,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-022-ea1cfd33",
+                  "correctness": "false"
+                },
+                {
+                  "x": -22.84927749633789,
+                  "y": 2.707737445831299,
+                  "domain": "arithmetic",
+                  "slug": "m5-arithmetic-025-453e00cc",
+                  "correctness": "false"
+                },
+                {
+                  "x": 24.04958724975586,
+                  "y": -7.499692440032959,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-000-f0ba4998",
+                  "correctness": "true"
+                },
+                {
+                  "x": 16.299758911132812,
+                  "y": -8.818329811096191,
+                  "domain": "sentiment",
+                  "slug": "m5-sentiment-019-7e9ab618",
+                  "correctness": "false"
+                },
+                {
+                  "x": 21.642995834350586,
+                  "y": -7.410444259643555,
+                  "domain": "sentiment",
+                  "slug": "m5-sentiment-021-7cf6eb2a",
+                  "correctness": "false"
+                },
+                {
+                  "x": 16.973215103149414,
+                  "y": -7.663743495941162,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-001-2eaf593e",
+                  "correctness": "true"
+                },
+                {
+                  "x": 21.363676071166992,
+                  "y": -8.713470458984375,
+                  "domain": "sentiment",
+                  "slug": "m4-sentiment-008-cbeec359",
+                  "correctness": "true"
+                },
+                {
+                  "x": -2.6097590923309326,
+                  "y": 36.48698425292969,
+                  "domain": "translation",
+                  "slug": "m4-translation-001-f180da04",
+                  "correctness": "true"
+                },
+                {
+                  "x": -3.3353660106658936,
+                  "y": 39.3016242980957,
+                  "domain": "translation",
+                  "slug": "m4-translation-004-5b040c27",
+                  "correctness": "true"
+                },
+                {
+                  "x": 2.2264351844787598,
+                  "y": 37.65164566040039,
+                  "domain": "translation",
+                  "slug": "m4-translation-016-2a500064",
+                  "correctness": "true"
+                },
+                {
+                  "x": -0.5132207274436951,
+                  "y": 40.35228729248047,
+                  "domain": "translation",
+                  "slug": "m4-translation-000-aeacaa42",
+                  "correctness": "true"
+                },
+                {
+                  "x": 0.09952031821012497,
+                  "y": 34.62969207763672,
+                  "domain": "translation",
+                  "slug": "m5-translation-021-be98892f",
+                  "correctness": "false"
+                },
+                {
+                  "x": 3.5124568939208984,
+                  "y": -6.511199474334717,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-011-29148a92",
+                  "correctness": "true"
+                },
+                {
+                  "x": 9.208943367004395,
+                  "y": -1.9803978204727173,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-016-4fe36470",
+                  "correctness": "true"
+                },
+                {
+                  "x": 4.619943618774414,
+                  "y": -2.7736785411834717,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-003-83bd7530",
+                  "correctness": "true"
+                },
+                {
+                  "x": 0.3332246243953705,
+                  "y": -8.17405891418457,
+                  "domain": "code_completion",
+                  "slug": "m4-code_completion-010-0884a1fd",
+                  "correctness": "true"
+                },
+                {
+                  "x": 4.995734691619873,
+                  "y": -3.297034978866577,
+                  "domain": "code_completion",
+                  "slug": "m5-code_completion-019-0f920a6a",
+                  "correctness": "false"
+                },
+                {
+                  "x": -1.1063787937164307,
+                  "y": 8.301074028015137,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-013-7ecdc675",
+                  "correctness": "true"
+                },
+                {
+                  "x": 1.4029804468154907,
+                  "y": 8.405303001403809,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-017-4fc8b44d",
+                  "correctness": "true"
+                },
+                {
+                  "x": 3.120138168334961,
+                  "y": 7.824559688568115,
+                  "domain": "country_capital",
+                  "slug": "m4-country_capital-015-9fe98aa8",
+                  "correctness": "false"
+                },
+                {
+                  "x": 2.293417453765869,
+                  "y": 12.605725288391113,
+                  "domain": "country_capital",
+                  "slug": "m5-country_capital-021-5832322c",
+                  "correctness": "false"
+                },
+                {
+                  "x": -1.3556839227676392,
+                  "y": 9.340500831604004,
+                  "domain": "country_capital",
+                  "slug": "m5-country_capital-024-b07069cc",
+                  "correctness": "false"
+                },
+                {
+                  "x": -4.27808952331543,
+                  "y": -24.184911727905273,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m5-multi_hop_reasoning-019-771c0913",
+                  "correctness": "false"
+                },
+                {
+                  "x": -2.4348535537719727,
+                  "y": -23.194087982177734,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-007-778ac4d9",
+                  "correctness": "true"
+                },
+                {
+                  "x": -1.0911513566970825,
+                  "y": -26.047256469726562,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-000-e9c89588",
+                  "correctness": "true"
+                },
+                {
+                  "x": -3.1611337661743164,
+                  "y": -24.817340850830078,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m5-multi_hop_reasoning-022-86c435fe",
+                  "correctness": "false"
+                },
+                {
+                  "x": -3.9066386222839355,
+                  "y": -22.349679946899414,
+                  "domain": "multi_hop_reasoning",
+                  "slug": "m4-multi_hop_reasoning-006-06b5fd29",
+                  "correctness": "true"
+                },
+                {
+                  "x": 10.982073783874512,
+                  "y": -4.422232627868652,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-005-160e0f8a",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 6.709933280944824,
+                  "y": -9.398780822753906,
+                  "domain": "rhyme",
+                  "slug": "m5-rhyme-019-b8e0055d",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 3.0850439071655273,
+                  "y": -13.138592720031738,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-006-4225675c",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 4.160454750061035,
+                  "y": -10.209228515625,
+                  "domain": "rhyme",
+                  "slug": "m5-rhyme-020-e3f71502",
+                  "correctness": "unknown"
+                },
+                {
+                  "x": 10.670709609985352,
+                  "y": -6.127102375030518,
+                  "domain": "rhyme",
+                  "slug": "m4-rhyme-011-012440b9",
+                  "correctness": "unknown"
+                }
+              ],
+              "silhouette_score": 0.6032395958900452,
+              "is_recommended": true
+            }
+          ]
+        },
+        "fig_motif_heatmap": {
+          "weighted_feature_heatmap": {
+            "matrix": [
+              [
+                1.1243527940735845,
+                0.9045020910654359,
+                1.5158888925680452,
+                0.26779947202253523,
+                -0.6056184528645693,
+                0.9475581245560919,
+                -0.9506063653845866,
+                -0.9506063653845866,
+                -0.738623071787853,
+                -0.9896533655012861,
+                1.0038740083105535,
+                -0.8142976680123394
+              ],
+              [
+                1.2701554026349504,
+                1.4623438404177012,
+                0.857366312144322,
+                -2.0635067070779125,
+                -1.023374298062197,
+                -0.3946477214982793,
+                -0.7197841711226322,
+                -0.7197841711226322,
+                -1.5673641467598887,
+                -0.28476329154437513,
+                0.4420854617448498,
+                0.3243981769303714
+              ],
+              [
+                -0.18131086110637115,
+                -0.04633261719180891,
+                -0.6172325544780832,
+                1.084424386568343,
+                -0.3692561143610183,
+                0.3772004052253285,
+                -0.4016822544227659,
+                -0.4016822544227659,
+                0.29663980048952865,
+                0.10641959275727211,
+                0.05523243229483163,
+                -0.6029514410211632
+              ],
+              [
+                -0.3103963850212899,
+                -0.3603573741263488,
+                -0.15867174927907912,
+                0.03474461192158303,
+                0.20132704303955343,
+                -0.13740462469141554,
+                -0.140030788048319,
+                -0.140030788048319,
+                1.4699228347742268,
+                0.6406229726967875,
+                -0.9834666693555374,
+                0.8269830482926813
+              ],
+              [
+                0.44692206569429327,
+                0.36907561736057715,
+                0.5366242925266721,
+                -0.7003546611315649,
+                -0.36435014235680646,
+                1.3150998107981409,
+                -0.7196410534933223,
+                -0.7196410534933223,
+                0.22978618054802272,
+                -1.60987497378901,
+                1.415307548750332,
+                -1.7361952862473338
+              ],
+              [
+                -0.63390282701997,
+                -0.7692571057371472,
+                -0.2605161173511849,
+                0.33736446518570723,
+                0.45190047767339575,
+                0.7224038632299526,
+                0.3558609552657882,
+                0.3558609552657882,
+                -1.1781412998437526,
+                -0.32295234676203305,
+                0.58193124370496,
+                -0.35412863881137424
+              ],
+              [
+                -2.066157775277249,
+                -1.9979135085513544,
+                -2.0435475872867,
+                -0.30133838380379535,
+                2.373090855950508,
+                -1.929316863162,
+                2.3913892558749494,
+                2.3913892558749494,
+                1.0613598852904629,
+                0.5994335920540774,
+                -0.8560603802495524,
+                0.811603992261845
+              ],
+              [
+                0.35033758602205006,
+                0.4379390567629446,
+                0.17008851115600535,
+                1.340866816315097,
+                -0.6637193690188641,
+                -0.9008929944577728,
+                0.18449442133088914,
+                0.18449442133088914,
+                0.42641981728924944,
+                1.8607678200885713,
+                -1.658903645200403,
+                1.5445878166073121
+              ]
+            ],
+            "row_labels": [
+              "antonym",
+              "arithmetic",
+              "code_completion",
+              "country_capital",
+              "multi_hop_reasoning",
+              "rhyme",
+              "sentiment",
+              "translation"
+            ],
+            "col_labels": [
+              "ffl_intensity_mean",
+              "ffl_intensity_median",
+              "ffl_intensity_std",
+              "ffl_coherence_frac",
+              "ffl_path_dominance_mean",
+              "ffl_weight_asymmetry_mean",
+              "ffl_count",
+              "ffl_density",
+              "021U",
+              "021C",
+              "021D",
+              "030T"
+            ]
+          }
+        },
+        "fig_ablation_comparison": {
+          "description": "Ablation impact comparison: FFL hub nodes vs matched controls with bootstrap CIs",
+          "bar_chart": {
+            "control_types": [
+              {
+                "name": "degree_matched",
+                "hub_median": 0.004942642111772491,
+                "control_median": 0.0033081738071531353,
+                "ratio": 1.4940696589415008,
+                "ci_95_lo": 0.003233510081336675,
+                "ci_95_hi": 0.00336083524242095,
+                "hub_ci_95_lo": 0.004867506677751703,
+                "hub_ci_95_hi": 0.005036733787296705,
+                "n_comparisons": 2964
+              },
+              {
+                "name": "layer_matched",
+                "hub_median": 0.004942642111772491,
+                "control_median": 0.0011503304319632319,
+                "ratio": 4.296715078064173,
+                "ci_95_lo": 0.0011096410096392477,
+                "ci_95_hi": 0.0011927732738347616,
+                "hub_ci_95_lo": 0.004867506677751703,
+                "hub_ci_95_hi": 0.005036733787296705,
+                "n_comparisons": 4746
+              },
+              {
+                "name": "random",
+                "hub_median": 0.004942642111772491,
+                "control_median": 0.0005329948259774149,
+                "ratio": 9.273339760303658,
+                "ci_95_lo": 0.0005125146988462638,
+                "ci_95_hi": 0.0005557200428602115,
+                "hub_ci_95_lo": 0.004867506677751703,
+                "hub_ci_95_hi": 0.005036733787296705,
+                "n_comparisons": 4746
+              }
+            ]
+          },
+          "dose_response": {
+            "bins": [
+              {
+                "mpi_bin_center": 1.227965102814815,
+                "mean_impact": 0.0003669141397216925,
+                "std_impact": 0.00022609472810653883,
+                "n_points": 8442
+              },
+              {
+                "mpi_bin_center": 2.2976009473245544,
+                "mean_impact": 0.0005520433254723764,
+                "std_impact": 0.0003263165657379505,
+                "n_points": 9386
+              },
+              {
+                "mpi_bin_center": 3.367236791834294,
+                "mean_impact": 0.0008749438735544984,
+                "std_impact": 0.0005365109423294319,
+                "n_points": 9371
+              },
+              {
+                "mpi_bin_center": 4.436872636344033,
+                "mean_impact": 0.0015673741540594133,
+                "std_impact": 0.0010518260055197284,
+                "n_points": 8355
+              },
+              {
+                "mpi_bin_center": 5.506508480853773,
+                "mean_impact": 0.0029109276919948466,
+                "std_impact": 0.0020227407265279895,
+                "n_points": 7143
+              },
+              {
+                "mpi_bin_center": 6.5761443253635115,
+                "mean_impact": 0.00550233874595334,
+                "std_impact": 0.007344338597019265,
+                "n_points": 3826
+              },
+              {
+                "mpi_bin_center": 7.645780169873251,
+                "mean_impact": 0.015783871565687786,
+                "std_impact": 0.0238700983554788,
+                "n_points": 978
+              },
+              {
+                "mpi_bin_center": 8.71541601438299,
+                "mean_impact": 0.04672892915036218,
+                "std_impact": 0.0314525934500153,
+                "n_points": 127
+              }
+            ]
+          },
+          "n_graphs_used": 48,
+          "n_hub_total": 4746
+        },
+        "fig_confusion_matrices": {
+          "description": "Clustering confusion matrices with Hungarian alignment for 4 feature sets",
+          "feature_sets": {
+            "motif_only": {
+              "matrix": [
+                [
+                  10,
+                  0,
+                  4,
+                  0,
+                  11,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  3,
+                  19,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4,
+                  0
+                ],
+                [
+                  7,
+                  0,
+                  8,
+                  1,
+                  1,
+                  6,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  12,
+                  0,
+                  12,
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  1,
+                  22,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  11,
+                  1,
+                  3,
+                  0,
+                  2,
+                  5,
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  6,
+                  0,
+                  5,
+                  9,
+                  4
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  26
+                ]
+              ],
+              "domain_order": [
+                "antonym",
+                "arithmetic",
+                "code_completion",
+                "country_capital",
+                "multi_hop_reasoning",
+                "rhyme",
+                "sentiment",
+                "translation"
+              ],
+              "cluster_order": [
+                5,
+                3,
+                7,
+                0,
+                1,
+                4,
+                6,
+                2
+              ],
+              "nmi": 0.5357325810056945,
+              "ari": 0.3849194848795645,
+              "precision": [
+                0.3225806451612903,
+                0.95,
+                0.5,
+                0.6,
+                0.6111111111111112,
+                0.1724137931034483,
+                0.6923076923076923,
+                0.7428571428571429
+              ],
+              "recall": [
+                0.38461538461538464,
+                0.7307692307692307,
+                0.3333333333333333,
+                0.46153846153846156,
+                0.9166666666666666,
+                0.20833333333333334,
+                0.375,
+                1.0
+              ]
+            },
+            "graph_stats_only": {
+              "matrix": [
+                [
+                  22,
+                  0,
+                  0,
+                  3,
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  26,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  21,
+                  0,
+                  0,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  24,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  13,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  24,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  25
+                ]
+              ],
+              "domain_order": [
+                "antonym",
+                "arithmetic",
+                "code_completion",
+                "country_capital",
+                "multi_hop_reasoning",
+                "rhyme",
+                "sentiment",
+                "translation"
+              ],
+              "cluster_order": [
+                2,
+                0,
+                6,
+                5,
+                3,
+                7,
+                1,
+                4
+              ],
+              "nmi": 0.8546398200224841,
+              "ari": 0.7885985948325119,
+              "precision": [
+                0.88,
+                1.0,
+                1.0,
+                0.8888888888888888,
+                1.0,
+                0.9285714285714286,
+                0.631578947368421,
+                1.0
+              ],
+              "recall": [
+                0.8461538461538461,
+                1.0,
+                0.875,
+                0.9230769230769231,
+                1.0,
+                0.5416666666666666,
+                1.0,
+                0.9615384615384616
+              ]
+            },
+            "weighted_motif_only": {
+              "matrix": [
+                [
+                  21,
+                  0,
+                  0,
+                  3,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  26,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  13,
+                  0,
+                  0,
+                  11,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  26,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  2,
+                  0,
+                  0,
+                  0,
+                  22,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  14,
+                  9,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  24,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  26
+                ]
+              ],
+              "domain_order": [
+                "antonym",
+                "arithmetic",
+                "code_completion",
+                "country_capital",
+                "multi_hop_reasoning",
+                "rhyme",
+                "sentiment",
+                "translation"
+              ],
+              "cluster_order": [
+                1,
+                2,
+                7,
+                4,
+                3,
+                6,
+                0,
+                5
+              ],
+              "nmi": 0.8510777101979812,
+              "ari": 0.7668946726874616,
+              "precision": [
+                0.9130434782608695,
+                1.0,
+                1.0,
+                0.896551724137931,
+                0.88,
+                0.56,
+                0.7272727272727273,
+                1.0
+              ],
+              "recall": [
+                0.8076923076923077,
+                1.0,
+                0.5416666666666666,
+                1.0,
+                0.9166666666666666,
+                0.5833333333333334,
+                1.0,
+                1.0
+              ]
+            },
+            "all_combined": {
+              "matrix": [
+                [
+                  15,
+                  1,
+                  5,
+                  5,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  26,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  3,
+                  0,
+                  12,
+                  0,
+                  7,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  26,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  24,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1,
+                  13,
+                  10,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  24,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  26
+                ]
+              ],
+              "domain_order": [
+                "antonym",
+                "arithmetic",
+                "code_completion",
+                "country_capital",
+                "multi_hop_reasoning",
+                "rhyme",
+                "sentiment",
+                "translation"
+              ],
+              "cluster_order": [
+                3,
+                2,
+                6,
+                0,
+                5,
+                7,
+                1,
+                4
+              ],
+              "nmi": 0.8015821223744335,
+              "ari": 0.7081427263569925,
+              "precision": [
+                0.8333333333333334,
+                0.9629629629629629,
+                0.7058823529411765,
+                0.8387096774193549,
+                0.75,
+                0.9285714285714286,
+                0.7058823529411765,
+                0.9629629629629629
+              ],
+              "recall": [
+                0.5769230769230769,
+                1.0,
+                0.5,
+                1.0,
+                1.0,
+                0.5416666666666666,
+                1.0,
+                1.0
+              ]
+            }
+          },
+          "baseline": {
+            "method": "random_assignment",
+            "nmi": 0.09270015068163412,
+            "ari": 0.008751994641462533,
+            "pred_labels": [
+              6,
+              3,
+              4,
+              6,
+              2,
+              7,
+              4,
+              4,
+              6,
+              1,
+              2,
+              6,
+              2,
+              2,
+              7,
+              4,
+              3,
+              7,
+              7,
+              2,
+              5,
+              4,
+              1,
+              7,
+              3,
+              5,
+              5,
+              1,
+              7,
+              3,
+              4,
+              0,
+              3,
+              1,
+              5,
+              4,
+              3,
+              0,
+              0,
+              2,
+              2,
+              6,
+              1,
+              7,
+              3,
+              3,
+              7,
+              6,
+              5,
+              5,
+              6,
+              5,
+              2,
+              3,
+              6,
+              3,
+              7,
+              0,
+              2,
+              4,
+              2,
+              6,
+              4,
+              0,
+              6,
+              1,
+              3,
+              0,
+              3,
+              5,
+              1,
+              1,
+              0,
+              1,
+              4,
+              1,
+              3,
+              3,
+              6,
+              3,
+              6,
+              3,
+              4,
+              7,
+              6,
+              2,
+              5,
+              0,
+              3,
+              1,
+              7,
+              3,
+              1,
+              5,
+              5,
+              5,
+              1,
+              3,
+              5,
+              4,
+              6,
+              1,
+              1,
+              3,
+              1,
+              1,
+              5,
+              3,
+              5,
+              6,
+              7,
+              6,
+              7,
+              5,
+              6,
+              3,
+              0,
+              5,
+              7,
+              4,
+              7,
+              4,
+              1,
+              6,
+              4,
+              7,
+              1,
+              0,
+              3,
+              3,
+              3,
+              4,
+              0,
+              4,
+              6,
+              4,
+              0,
+              0,
+              6,
+              0,
+              7,
+              0,
+              3,
+              7,
+              7,
+              6,
+              2,
+              2,
+              0,
+              7,
+              2,
+              2,
+              0,
+              2,
+              4,
+              1,
+              6,
+              1,
+              0,
+              3,
+              6,
+              0,
+              7,
+              3,
+              1,
+              0,
+              7,
+              6,
+              6,
+              5,
+              7,
+              4,
+              2,
+              3,
+              7,
+              5,
+              2,
+              2,
+              0,
+              2,
+              4,
+              6,
+              5,
+              2,
+              0,
+              4,
+              1,
+              6,
+              6,
+              5,
+              6,
+              2,
+              0,
+              6,
+              6,
+              1,
+              1,
+              3,
+              4,
+              2
+            ]
+          }
+        }
+      }
+    }
+  },
+  "exp_id1": {
+    "metadata": {
+      "variance_decomposition": {
+        "R2_motif": {
+          "value": 0.94823813294665,
+          "ci_lower": 0.9468437040592911,
+          "ci_upper": 0.971957941422638
+        },
+        "R2_gstat": {
+          "value": 0.9801036511156676,
+          "ci_lower": 0.947099725627467,
+          "ci_upper": 0.9723839196266951
+        },
+        "R2_combined": {
+          "value": 0.9984692110289028,
+          "ci_lower": 0.9909220274999573,
+          "ci_upper": 0.9942149306431771
+        },
+        "unique_motif": {
+          "value": 0.018365559913235296,
+          "ci_lower": 0.02130568241913622,
+          "ci_upper": 0.044777407093980516
+        },
+        "unique_gstat": {
+          "value": 0.0502310780822528,
+          "ci_lower": 0.021315745673446143,
+          "ci_upper": 0.045361604744230136
+        },
+        "shared": {
+          "value": 0.9298725730334148,
+          "ci_lower": 0.9080839530834088,
+          "ci_upper": 0.946710632437151
+        },
+        "unique_motif_significant": true,
+        "n_bootstrap_successful": 1000,
+        "n_bootstrap_failed": 0
+      }
+    }
+  },
+  "exp_id2_it4": {
+    "metadata": {
+      "hub_vs_control_results": {
+        "downstream_attr_loss__degree_matched": {
+          "n_pairs": 60168,
+          "hub_median": 0.004930185989320447,
+          "control_median": 0.0036416255551504186,
+          "median_ratio": 1.353842100088405,
+          "hub_mean": 0.009227152829226854,
+          "control_mean": 0.0041512661979039986,
+          "mean_ratio": 2.22273214709423,
+          "hub_frac_nonzero": 1.0,
+          "ctrl_frac_nonzero": 1.0,
+          "ratio_ci_lower": 1.3453271977028627,
+          "ratio_ci_upper": 1.359408533566847,
+          "wilcoxon_stat": 1462439006.0,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.3405467963331597,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "downstream_attr_loss__attribution_matched": {
+          "n_pairs": 60168,
+          "hub_median": 0.004930185989320447,
+          "control_median": 0.004817690286810427,
+          "median_ratio": 1.023350546799989,
+          "hub_mean": 0.009227152829226854,
+          "control_mean": 0.00514416776863778,
+          "mean_ratio": 1.793711489248393,
+          "hub_frac_nonzero": 1.0,
+          "ctrl_frac_nonzero": 1.0,
+          "ratio_ci_lower": 1.0203237558506832,
+          "ratio_ci_upper": 1.0251850695165017,
+          "wilcoxon_stat": 1291775790.0,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.28451050057629396,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "downstream_attr_loss__layer_matched": {
+          "n_pairs": 59386,
+          "hub_median": 0.004884234500624676,
+          "control_median": 0.0025444513017413733,
+          "median_ratio": 1.9195629711136541,
+          "hub_mean": 0.008695736536912968,
+          "control_mean": 0.003025557178455148,
+          "mean_ratio": 2.8740942656231727,
+          "hub_frac_nonzero": 1.0,
+          "ctrl_frac_nonzero": 1.0,
+          "ratio_ci_lower": 1.9086129834339416,
+          "ratio_ci_upper": 1.9340528955163707,
+          "wilcoxon_stat": 1640771247.0,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.41274607468663277,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "downstream_attr_loss__random": {
+          "n_pairs": 60168,
+          "hub_median": 0.004930185989320447,
+          "control_median": 0.0005343363927118401,
+          "median_ratio": 9.226745654172998,
+          "hub_mean": 0.009227152829226854,
+          "control_mean": 0.0009179409037791304,
+          "mean_ratio": 10.05201183566283,
+          "hub_frac_nonzero": 1.0,
+          "ctrl_frac_nonzero": 1.0,
+          "ratio_ci_lower": 9.108669683270366,
+          "ratio_ci_upper": 9.339972588773396,
+          "wilcoxon_stat": 1802768114.0,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.542488671748532,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "path_disruption__degree_matched": {
+          "n_pairs": 60168,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 0.010132475005110773,
+          "control_mean": 0.0026348796347979773,
+          "mean_ratio": 3.84551721881127,
+          "hub_frac_nonzero": 0.08875149581172716,
+          "ctrl_frac_nonzero": 0.03596596197314187,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 17352505.0,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.20530806084102024,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "path_disruption__attribution_matched": {
+          "n_pairs": 60168,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 0.010132475005110773,
+          "control_mean": 0.002387267930730188,
+          "mean_ratio": 4.244381149966513,
+          "hub_frac_nonzero": 0.08875149581172716,
+          "ctrl_frac_nonzero": 0.03315715995213402,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 15300348.5,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.2146742473943987,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "path_disruption__layer_matched": {
+          "n_pairs": 59386,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 0.008891269819116978,
+          "control_mean": 0.001285096052754668,
+          "mean_ratio": 6.918758951953898,
+          "hub_frac_nonzero": 0.07683629138180716,
+          "ctrl_frac_nonzero": 0.017596739972384062,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 6896620.5,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.2409449001022919,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "path_disruption__random": {
+          "n_pairs": 60168,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 0.010132475005110773,
+          "control_mean": 0.0008903199761811249,
+          "mean_ratio": 11.38071173980875,
+          "hub_frac_nonzero": 0.08875149581172716,
+          "ctrl_frac_nonzero": 0.008841909320569073,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 15876780.0,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.256971641709496,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "reachability_loss__degree_matched": {
+          "n_pairs": 60168,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 7.817397002678216e-05,
+          "control_mean": 1.6620130301821567e-06,
+          "mean_ratio": 47.03571428571429,
+          "hub_frac_nonzero": 0.0007479058635819705,
+          "ctrl_frac_nonzero": 1.6620130301821565e-05,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 1060.5,
+          "wilcoxon_p": 2.902489074815658e-10,
+          "cohens_d": 0.026338115281935366,
+          "wilcoxon_p_fdr": 3.572294245926964e-10,
+          "significant_at_005": true
+        },
+        "reachability_loss__attribution_matched": {
+          "n_pairs": 60168,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 7.817397002678216e-05,
+          "control_mean": 8.310065150910784e-05,
+          "mean_ratio": 0.9407142857142857,
+          "hub_frac_nonzero": 0.0007479058635819705,
+          "ctrl_frac_nonzero": 0.0008310065150910783,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 2215.0,
+          "wilcoxon_p": 0.44967441273673336,
+          "cohens_d": -0.0012219191529360923,
+          "wilcoxon_p_fdr": 0.47965270691918227,
+          "significant_at_005": false
+        },
+        "reachability_loss__layer_matched": {
+          "n_pairs": 59386,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 7.92033716460349e-05,
+          "control_mean": 3.7526882237756855e-05,
+          "mean_ratio": 2.1105769230769234,
+          "hub_frac_nonzero": 0.0007577543528777827,
+          "ctrl_frac_nonzero": 0.0003536186980096319,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 300.0,
+          "wilcoxon_p": 1.5111678954428654e-06,
+          "cohens_d": 0.02004268052907443,
+          "wilcoxon_p_fdr": 1.7270490233632746e-06,
+          "significant_at_005": true
+        },
+        "reachability_loss__random": {
+          "n_pairs": 60168,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 7.817397002678216e-05,
+          "control_mean": 0.0008495524700151745,
+          "mean_ratio": 0.09201782442629569,
+          "hub_frac_nonzero": 0.0007479058635819705,
+          "ctrl_frac_nonzero": 0.008326685281212604,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 13198.5,
+          "wilcoxon_p": 1.0,
+          "cohens_d": -0.0789893595390843,
+          "wilcoxon_p_fdr": 1.0,
+          "significant_at_005": false
+        },
+        "component_fragmentation__degree_matched": {
+          "n_pairs": 60168,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 0.6910151575588352,
+          "control_mean": 0.0836158755484643,
+          "mean_ratio": 8.264162194394753,
+          "hub_frac_nonzero": 0.09254088552054249,
+          "ctrl_frac_nonzero": 0.032924478127908524,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 20796715.5,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.17083438812743196,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "component_fragmentation__attribution_matched": {
+          "n_pairs": 60168,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 0.6910151575588352,
+          "control_mean": 0.06541683286796969,
+          "mean_ratio": 10.56326219512195,
+          "hub_frac_nonzero": 0.09254088552054249,
+          "ctrl_frac_nonzero": 0.03122922483712272,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 20874035.5,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.17771587224570226,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "component_fragmentation__layer_matched": {
+          "n_pairs": 59386,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 0.6138147038022429,
+          "control_mean": 0.050129660189270196,
+          "mean_ratio": 12.244541484716157,
+          "hub_frac_nonzero": 0.08299936011854646,
+          "ctrl_frac_nonzero": 0.024921698716869296,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 15695349.0,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.16889290202304044,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        },
+        "component_fragmentation__random": {
+          "n_pairs": 60168,
+          "hub_median": 0.0,
+          "control_median": 0.0,
+          "median_ratio": 0.0,
+          "hub_mean": 0.6910151575588352,
+          "control_mean": 0.006797633293445021,
+          "mean_ratio": 101.65525672371638,
+          "hub_frac_nonzero": 0.09254088552054249,
+          "ctrl_frac_nonzero": 0.005468022869299295,
+          "ratio_ci_lower": 0.0,
+          "ratio_ci_upper": 0.0,
+          "wilcoxon_stat": 16747451.5,
+          "wilcoxon_p": 0.0,
+          "cohens_d": 0.1936796610853016,
+          "wilcoxon_p_fdr": 0.0,
+          "significant_at_005": true
+        }
+      },
+      "dose_response": {
+        "downstream_attr_loss": {
+          "spearman_r": 0.8767965456916026,
+          "spearman_p": 0.0,
+          "regression_slope": 0.0009176711110420732,
+          "regression_r2": 0.14413111939592188,
+          "regression_p": 0.0,
+          "n_datapoints": 16000
+        },
+        "path_disruption": {
+          "spearman_r": 0.12676878177220355,
+          "spearman_p": 2.59867979033299e-58,
+          "regression_slope": 0.001006684509459946,
+          "regression_r2": 0.023565132533564983,
+          "regression_p": 5.878120404457574e-85,
+          "n_datapoints": 16000
+        },
+        "reachability_loss": {
+          "spearman_r": 0.03471739765107584,
+          "spearman_p": 1.1209435475197215e-05,
+          "regression_slope": 0.00012904683343404325,
+          "regression_r2": 0.0009838174032741447,
+          "regression_p": 7.242693571989617e-05,
+          "n_datapoints": 16000
+        },
+        "component_fragmentation": {
+          "spearman_r": 0.1359593875762796,
+          "spearman_p": 7.060777719168833e-67,
+          "regression_slope": 0.061026285425708884,
+          "regression_r2": 0.013150046447948097,
+          "regression_p": 5.664637414660948e-48,
+          "n_datapoints": 16000
+        }
+      }
+    }
+  },
+  "exp_id2_it5": {
+    "metadata": {
+      "experiment": "4node_motif_functional_characterization",
+      "n_graphs_loaded": 179,
+      "prune_percentile": 99,
+      "max_nodes": 700,
+      "target_motif_ids": [
+        77,
+        80,
+        82,
+        83
+      ],
+      "runtime_seconds": 34.1,
+      "domains": [
+        "antonym",
+        "arithmetic",
+        "code_completion",
+        "country_capital",
+        "multi_hop_reasoning",
+        "rhyme",
+        "sentiment",
+        "translation"
+      ],
+      "domain_counts": {
+        "antonym": 26,
+        "arithmetic": 26,
+        "code_completion": 24,
+        "country_capital": 26,
+        "multi_hop_reasoning": 24,
+        "rhyme": 24,
+        "sentiment": 3,
+        "translation": 26
+      },
+      "4node_canonical_patterns": {
+        "77": {
+          "edge_count": 4,
+          "edges": [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        "80": {
+          "edge_count": 5,
+          "edges": [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        "82": {
+          "edge_count": 5,
+          "edges": [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        "83": {
+          "edge_count": 6,
+          "edges": [
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        }
+      },
+      "3node_reference": {
+        "2": "021U",
+        "4": "021C",
+        "6": "021D",
+        "7": "030T"
+      },
+      "n_explanations": 6574
+    },
+    "datasets": [
+      {
+        "dataset": "4node_motif_characterization",
+        "examples": [
+          {
+            "input": "graph:m5-antonym-019-a39bd921 domain:antonym prompt:The opposite of bright is",
+            "output": "{\"slug\": \"m5-antonym-019-a39bd921\", \"domain\": \"antonym\", \"n_nodes\": 333, \"n_edges\": 371, \"prompt\": \"The opposite of bright is\"}",
+            "metadata_fold": "antonym",
+            "metadata_slug": "m5-antonym-019-a39bd921",
+            "metadata_n_nodes": 333,
+            "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 12, \"82\": 24, \"83\": 5}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 10.058, \"80\": 3.167, \"82\": 3.875, \"83\": 2.6}, \"total_4node_motifs\": 541, \"all_ffl_derivative\": true}",
+            "predict_random_baseline": "{\"random_baseline_mean_span\": 4.26, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+          },
+          {
+            "input": "graph:m4-antonym-013-db7d1359 domain:antonym prompt:The opposite of clean is",
+            "output": "{\"slug\": \"m4-antonym-013-db7d1359\", \"domain\": \"antonym\", \"n_nodes\": 318, \"n_edges\": 349, \"prompt\": \"The opposite of clean is\"}",
+            "metadata_fold": "antonym",
+            "metadata_slug": "m4-antonym-013-db7d1359",
+            "metadata_n_nodes": 318,
+            "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 10, \"82\": 7, \"83\": 0}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 0.0}, \"motif_mean_layer_spans\": {\"77\": 10.622, \"80\": 4.1, \"82\": 2.857, \"83\": 0.0}, \"total_4node_motifs\": 517, \"all_ffl_derivative\": false}",
+            "predict_random_baseline": "{\"random_baseline_mean_span\": 5.36, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+          },
+          {
+            "input": "graph:m4-antonym-004-beb14eca domain:antonym prompt:The opposite of cold is",
+            "output": "{\"slug\": \"m4-antonym-004-beb14eca\", \"domain\": \"antonym\", \"n_nodes\": 277, \"n_edges\": 313, \"prompt\": \"The opposite of cold is\"}",
+            "metadata_fold": "antonym",
+            "metadata_slug": "m4-antonym-004-beb14eca",
+            "metadata_n_nodes": 277,
+            "predict_motif_characterization": "{\"motif_counts\": {\"77\": 500, \"80\": 13, \"82\": 39, \"83\": 5}, \"motif_ffl_containment\": {\"77\": 1.0, \"80\": 1.0, \"82\": 1.0, \"83\": 1.0}, \"motif_mean_layer_spans\": {\"77\": 11.308, \"80\": 3.692, \"82\": 3.026, \"83\": 2.8}, \"total_4node_motifs\": 557, \"all_ffl_derivative\": true}",
+            "predict_random_baseline": "{\"random_baseline_mean_span\": 3.66, \"random_baseline_strict_frac\": 1.0, \"motif_counts\": {\"77\": 0, \"80\": 0, \"82\": 0, \"83\": 0}, \"interpretation\": \"random_connected_subgraphs_no_motif_structure\"}"
+          }
+        ]
+      }
+    ]
+  }
+}

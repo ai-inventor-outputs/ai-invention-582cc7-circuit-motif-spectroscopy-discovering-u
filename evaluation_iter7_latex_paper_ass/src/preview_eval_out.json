@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "evaluation_name": "paper_assembly_compilation",
+    "title": "Feed-Forward Loops as Universal Building Blocks in LLM Attribution Graphs: A Network Motif Analysis",
+    "description": "Assembles all pre-generated paper components into a complete LaTeX document, updates key statistics to final iter_6 values, compiles to PDF, and verifies all cross-references resolve.",
+    "dependencies_used": [
+      "exp_id1_it6__opus",
+      "exp_id1_it5__opus",
+      "exp_id1_it4__opus"
+    ],
+    "source_components": {
+      "sections_source": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/eval_id5_it6__opus/full_eval_out.json",
+      "figures_source": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/eval_id2_it6__opus",
+      "bibliography_source": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/research_id4_it6__opus/research_out.json",
+      "statistics_source": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/exp_id1_it6__opus/full_method_out.json"
+    },
+    "compilation_details": {
+      "compiler": "pdflatex (TeX Live 2022)",
+      "passes": "pdflatex -> bibtex -> pdflatex -> pdflatex",
+      "pdf_exists": true,
+      "page_count": 25
+    },
+    "statistics_checklist": [
+      "(a) t-test t≈55.03, p≈2.38e-122: FOUND",
+      "(b) Cohen's d≈3.89: FOUND",
+      "(c) Wilcoxon p≈1.44e-34: FOUND"
+    ],
+    "metrics_summary": {
+      "M1_compilation_success": 1,
+      "M2_page_count": 25,
+      "M3_citations_resolved": "34/34",
+      "M4_figures_resolved": "8/8",
+      "M5_tables_resolved": "4/4",
+      "M6_statistics_updated": "9/9",
+      "M7_latex_warnings_count": 0,
+      "M8_section_count": 23,
+      "M9_figure_files_present": "8/8",
+      "M10_bibtex_entries_count": 36
+    }
+  },
+  "metrics_agg": {
+    "compilation_success": 1.0,
+    "page_count": 25.0,
+    "citations_resolved": 34.0,
+    "citations_total": 34.0,
+    "citations_fraction": 1.0,
+    "figures_resolved": 8.0,
+    "figures_total": 8.0,
+    "figures_fraction": 1.0,
+    "tables_resolved": 4.0,
+    "tables_total": 4.0,
+    "tables_fraction": 1.0,
+    "statistics_updated": 9.0,
+    "statistics_total": 9.0,
+    "statistics_fraction": 1.0,
+    "latex_warnings_count": 0.0,
+    "section_count": 23.0,
+    "figure_files_present": 8.0,
+    "figure_files_fraction": 1.0,
+    "bibtex_entries_count": 36.0
+  },
+  "datasets": [
+    {
+      "dataset": "paper_assembly_evaluation",
+      "examples": [
+        {
+          "input": "Assemble and evaluate the 'abstract' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"abstract\", \"type\": \"section\", \"word_count\": 195, \"citation_keys\": [\"conmy2023automated\", \"marks2024sparse\"], \"table_refs\": [\"table:corpus\", \"table:zscores\"], \"figure_refs\": []}",
+          "predict_paper_component": "\\begin{abstract}\nUnderstanding how neural networks implement learned capabilities requires moving beyond individual neurons to analyzing circuit-level structure. We present a systematic graph-theoreti...",
+          "eval_word_count": 195.0,
+          "eval_citation_count": 2.0,
+          "eval_table_ref_count": 2.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "abstract",
+          "metadata_component_type": "section",
+          "metadata_char_count": "1714"
+        },
+        {
+          "input": "Assemble and evaluate the 'introduction' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"introduction\", \"type\": \"section\", \"word_count\": 1169, \"citation_keys\": [\"alon2007network\", \"bricken2023monosemanticity\", \"conmy2023automated\", \"elhage2021mathematical\", \"hanna2023how...",
+          "predict_paper_component": "\\section{Introduction}\\label{sec:intro}\n\nA central goal of mechanistic interpretability is to understand how neural networks implement learned capabilities at the level of identifiable circuits --- sp...",
+          "eval_word_count": 1169.0,
+          "eval_citation_count": 15.0,
+          "eval_table_ref_count": 0.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "introduction",
+          "metadata_component_type": "section",
+          "metadata_char_count": "9640"
+        },
+        {
+          "input": "Assemble and evaluate the 'related_work' component for the paper on circuit motif spectroscopy.",
+          "output": "{\"section_name\": \"related_work\", \"type\": \"section\", \"word_count\": 795, \"citation_keys\": [\"alon2007network\", \"benson2016higher\", \"bonacich1987power\", \"bricken2023monosemanticity\", \"conmy2023automated\",...",
+          "predict_paper_component": "\\section{Related Work}\\label{sec:related}\n\n\\paragraph{Network Motifs in Complex Systems.}\nNetwork motifs were introduced by \\citet{milo2002network} as recurring subgraph patterns that appear significa...",
+          "eval_word_count": 795.0,
+          "eval_citation_count": 31.0,
+          "eval_table_ref_count": 0.0,
+          "eval_compiled_successfully": 1.0,
+          "metadata_section_name": "related_work",
+          "metadata_component_type": "section",
+          "metadata_char_count": "7111"
+        }
+      ]
+    }
+  ]
+}

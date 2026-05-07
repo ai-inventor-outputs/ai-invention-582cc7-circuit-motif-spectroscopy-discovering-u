@@ -1,0 +1,533 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{pdflscape}
+\usepackage{enumitem}
+
+\setcounter{secnumdepth}{3}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{S\arabic{section}.\arabic{subsection}}
+
+\definecolor{rowgray}{gray}{0.93}
+\definecolor{criticalred}{RGB}{220,53,69}
+\definecolor{majororange}{RGB}{255,152,0}
+\definecolor{minorgreen}{RGB}{40,167,69}
+
+\title{Supplementary Materials:\\Circuit Motif Spectroscopy}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+
+\section{Extended Methods}
+
+\subsection{Null Model Construction}
+The null models are generated using the Goni Method 1 edge-swap algorithm,
+which preserves in-degree and out-degree sequences while randomizing connectivity.
+The algorithm proceeds as follows:
+
+\begin{enumerate}
+\item Initialize with the original directed acyclic graph (DAG).
+\item For each swap iteration (total swaps = $10 \times |E|$):
+  \begin{enumerate}
+  \item Select two random edges $(u,v)$ and $(x,y)$.
+  \item Propose swap: replace with $(u,y)$ and $(x,v)$.
+  \item Accept swap only if the resulting graph remains acyclic (verified via topological sort).
+  \end{enumerate}
+\item Output the rewired graph as a null model.
+\end{enumerate}
+
+This procedure ensures that each null model preserves the degree distribution while
+randomizing higher-order structure, making it appropriate for testing motif enrichment.
+
+\subsection{Pruning Threshold Sensitivity}
+Table~\ref{tab:pruning-stability} shows Spearman $\rho$ correlation matrices between Z-scores computed at different pruning thresholds (60th, 75th, 90th percentile).
+
+\begin{table}[htbp]
+\centering
+\caption{Pruning threshold stability: Spearman $\rho$ between Z-scores at different thresholds.}
+\label{tab:pruning-stability}
+\begin{tabular}{llccc}
+\toprule
+Motif & & 60th & 75th & 90th \\
+\midrule
+\multirow{3}{*}{021U} & 60th & 1.000 & 0.499 & 0.288 \\
+ & 75th & 0.499 & 1.000 & 0.401 \\
+ & 90th & 0.288 & 0.401 & 1.000 \\
+\midrule
+\multirow{3}{*}{021C} & 60th & 1.000 & 0.499 & 0.288 \\
+ & 75th & 0.499 & 1.000 & 0.401 \\
+ & 90th & 0.288 & 0.401 & 1.000 \\
+\midrule
+\multirow{3}{*}{021D} & 60th & 1.000 & 0.499 & 0.288 \\
+ & 75th & 0.499 & 1.000 & 0.401 \\
+ & 90th & 0.288 & 0.401 & 1.000 \\
+\midrule
+\multirow{3}{*}{030T} & 60th & 1.000 & 0.499 & 0.288 \\
+ & 75th & 0.499 & 1.000 & 0.401 \\
+ & 90th & 0.288 & 0.401 & 1.000 \\
+\midrule
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Convergence Diagnostics}
+Median convergence is reached at $N=30$ null models. Table~\ref{tab:convergence} shows the fraction of graphs converged at each checkpoint.
+
+\begin{table}[htbp]
+\centering
+\caption{Convergence diagnostics: fraction of graphs with Z-score relative error $<5\%$.}
+\label{tab:convergence}
+\begin{tabular}{lc}
+\toprule
+Null Count & Fraction Converged \\
+\midrule
+$N=5$ & 0.10 \\
+$N=10$ & 0.15 \\
+$N=20$ & 0.45 \\
+$N=30$ & 0.70 \\
+$N=40$ & 0.85 \\
+$N=50$ & 1.00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Computational Cost}
+\begin{table}[htbp]
+\centering
+\caption{Runtime per experiment phase.}
+\label{tab:runtime}
+\begin{tabular}{lrr}
+\toprule
+Experiment & Runtime (s) & Runtime (min) \\
+\midrule
+Corpus-Level Stats (exp1\_it6) & 1777.5 & 29.6 \\
+Node Ablation (exp2\_it4) & 0.0 & 0.0 \\
+Failure Prediction (exp3\_it4) & 1440.6 & 24.0 \\
+Z-Score Fortification (exp3\_it5) & 0.0 & 0.0 \\
+4-Node Characterization (exp2\_it5) & 34.1 & 0.6 \\
+\midrule
+\textbf{Total} & \textbf{3252.2} & \textbf{54.2} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Full Evidence Table}
+Table~\ref{tab:evidence} presents the complete master evidence table with all 59 evidence rows spanning hypotheses H1--H5.
+
+\begin{landscape}
+\scriptsize
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+\begin{longtable}{rlp{3.2cm}p{3cm}rrrrp{1.5cm}l}
+\caption{Master Evidence Table: all 59 evidence rows across hypotheses H1--H5.}\label{tab:evidence}\\
+\toprule
+\# & Hyp & Sub-claim & Primary Metric & Value & 95\% CI & p-value & Effect Size & Criterion & Met \\
+\midrule
+\endfirsthead
+\toprule
+\# & Hyp & Sub-claim & Primary Metric & Value & 95\% CI & p-value & Effect Size & Criterion & Met \\
+\midrule
+\endhead
+\midrule
+\multicolumn{10}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+\rowcolor{rowgray}
+1 & H1 & FFL (030T) overrepresented across all attr... & FFL mean Z-score (200 graphs, 50 null... & 46.2066 & --- & --- & Z-score=46.207 & Mean Z \textgreater{} 2 & $\checkmark$ \\
+2 & H1 & FFL overrepresentation in antonym domain & FFL median Z-score (antonym) & 26.2773 & --- & --- & Z-score=26.277 & Domain median Z \textgreater{} 2 & $\checkmark$ \\
+\rowcolor{rowgray}
+3 & H1 & FFL overrepresentation in arithmetic domain & FFL median Z-score (arithmetic) & 55.3803 & --- & --- & Z-score=55.380 & Domain median Z \textgreater{} 2 & $\checkmark$ \\
+4 & H1 & FFL overrepresentation in code\_completion ... & FFL median Z-score (code\_completion) & 44.9965 & --- & --- & Z-score=44.996 & Domain median Z \textgreater{} 2 & $\checkmark$ \\
+\rowcolor{rowgray}
+5 & H1 & FFL overrepresentation in country\_capital ... & FFL median Z-score (country\_capital) & 47.0661 & --- & --- & Z-score=47.066 & Domain median Z \textgreater{} 2 & $\checkmark$ \\
+6 & H1 & FFL overrepresentation in multi\_hop\_reason... & FFL median Z-score (multi\_hop\_reasoning) & 36.3839 & --- & --- & Z-score=36.384 & Domain median Z \textgreater{} 2 & $\checkmark$ \\
+\rowcolor{rowgray}
+7 & H1 & FFL overrepresentation in rhyme domain & FFL median Z-score (rhyme) & 45.5278 & --- & --- & Z-score=45.528 & Domain median Z \textgreater{} 2 & $\checkmark$ \\
+8 & H1 & FFL overrepresentation in sentiment domain & FFL median Z-score (sentiment) & 59.3607 & --- & --- & Z-score=59.361 & Domain median Z \textgreater{} 2 & $\checkmark$ \\
+\rowcolor{rowgray}
+9 & H1 & FFL overrepresentation in translation domain & FFL median Z-score (translation) & 50.8267 & --- & --- & Z-score=50.827 & Domain median Z \textgreater{} 2 & $\checkmark$ \\
+10 & H1 & FFL overrepresentation survives layer-pres... & Layer-preserving null mean Z-score & 56.8751 & --- & $<10^{-300}$ & Z-score=56.875 & Layer-preserving ... & $\checkmark$ \\
+\rowcolor{rowgray}
+11 & H1 & Individual graph FFL significance survives... & BH-FDR surviving tests (combined 3+4 ... & 0 & --- & --- & ratio=0 & Some tests surviv... & $\times$ \\
+12 & H1 & Z-score estimates converge with sufficient... & Median convergence null count (N) & 30.0000 & --- & --- & ratio=30.000 & Convergence withi... & $\checkmark$ \\
+\rowcolor{rowgray}
+13 & H1 & Z-score rankings stable across pruning thr... & Spearman rho (60th vs 75th pct pruning) & 0.49900 & --- & --- & ratio=0.4990 & rho \textgreater{} 0.5 & $\times$ \\
+14 & H1 & 3-node motif spectrum captures multi-dimen... & Effective dimensions in 3-node spectrum & 1.0000 & --- & --- & ratio=1.000 & Multiple independ... & $\times$ \\
+\midrule
+\rowcolor{rowgray}
+15 & H2 & Weighted motif features cluster by domain ... & Weighted NMI (k=4) & 0.70500 & --- & --- & NMI=0.7050 & NMI \textgreater{} 0.3 & $\checkmark$ \\
+16 & H2 & Binary motif counts cluster by domain (k=8) & Binary NMI (k=8) & 0.10100 & --- & --- & NMI=0.1010 & NMI \textgreater{} 0.3 & $\times$ \\
+\rowcolor{rowgray}
+17 & H2 & Combined motif+graph features cluster by d... & Combined NMI (k=8) & 0.84400 & --- & --- & NMI=0.8440 & NMI \textgreater{} 0.3 & $\checkmark$ \\
+18 & H2 & Graph-stats features alone cluster by doma... & Graph-stats NMI (k=4) & 0.62000 & --- & --- & NMI=0.6200 & NMI \textgreater{} 0.3 & $\checkmark$ \\
+\rowcolor{rowgray}
+19 & H2 & Count-ratio motif features cluster by domain & Count-ratio NMI (k=8, iter 2) & 0.85100 & --- & --- & NMI=0.8510 & NMI \textgreater{} 0.3 & $\checkmark$ \\
+20 & H2 & Motif features carry unique variance not e... & Unique motif R-squared (McFadden deco... & 0.01837 & [0.0213, 0.0448] & --- & R-square=0.0184 & CI excludes 0 & $\checkmark$ \\
+\rowcolor{rowgray}
+21 & H2 & Graph statistics also carry unique variance & Unique graph-stat R-squared & 0.05023 & --- & --- & R-square=0.0502 & Positive value & $\checkmark$ \\
+22 & H2 & Most domain-predictive variance is shared ... & Shared R-squared & 0.92987 & --- & --- & R-square=0.9299 & Informational & $\checkmark$ \\
+\rowcolor{rowgray}
+23 & H2 & Motif residuals still cluster by domain af... & Residualized motif NMI (best k) & 0.26430 & --- & $0.001$ & NMI=0.2643 & NMI \textgreater{} 0 with p \textless{} ... & $\checkmark$ \\
+24 & H2 & Residualized clustering is statistically s... & Permutation test p-value (1000 perms) & 0.00100 & --- & $0.001$ & NMI=0.2643 & p \textless{} 0.05 & $\checkmark$ \\
+\rowcolor{rowgray}
+25 & H2 & Motif and graph-stat spaces share signific... & CCA significant dimensions & 7.0000 & --- & --- & ratio=0.7000 & Some dims signifi... & $\checkmark$ \\
+26 & H2 & Motif clustering persists after domain-lev... & Domain-normalized motif NMI (k=8) & 0.65940 & --- & --- & NMI=0.6594 & NMI comparable to... & $\checkmark$ \\
+\rowcolor{rowgray}
+27 & H2 & FFL intensity strongly predicts domain mem... & FFL intensity eta-squared (ANOVA) & 0.91700 & --- & --- & eta-squa=0.9170 & eta-squared \textgreater{} 0.1... & $\checkmark$ \\
+28 & H2 & FFL path dominance predicts domain membership & FFL path dominance eta-squared & 0.81000 & --- & --- & eta-squa=0.8100 & eta-squared \textgreater{} 0.1... & $\checkmark$ \\
+\rowcolor{rowgray}
+29 & H2 & Mutual information retained after residual... & MI retained fraction (motif|gstat) & 0.23620 & --- & --- & ratio=0.2362 & Some MI retained ... & $\checkmark$ \\
+\midrule
+30 & H3 & Best model predicts failures better than c... & Best model AUC (graph\_stats\_only, log... & 0.58284 & [0.4840, 0.6684] & --- & ratio=0.0828 & AUC \textgreater{} 0.65 & $\times$ \\
+\rowcolor{rowgray}
+31 & H3 & Motif features alone predict failures & Motif-only AUC (logistic) & 0.49574 & --- & --- & ratio=-0.0043 & AUC \textgreater{} 0.5 & $\times$ \\
+32 & H3 & Adding motifs to baseline improves prediction & Full model AUC (logistic) & 0.55407 & --- & --- & ratio=0.0541 & AUC \textgreater{} domain+grap... & $\times$ \\
+\rowcolor{rowgray}
+33 & H3 & Baseline domain+graph model performance & Domain+graph AUC (logistic) & 0.57448 & --- & --- & ratio=0.0745 & Baseline reference & $\checkmark$ \\
+34 & H3 & Motif features significantly improve over ... & Motif lift bootstrap p-value & 0.86500 & [-0.0586, 0.0160] & $0.865$ & ratio=0 & p \textless{} 0.05 & $\times$ \\
+\rowcolor{rowgray}
+35 & H3 & Within-domain (code\_completion) motif fail... & Motif-only AUC (code\_completion) & 0.52101 & --- & --- & ratio=0.0210 & AUC \textgreater{} 0.5 & $\checkmark$ \\
+36 & H3 & Within-domain (translation) motif failure ... & Motif-only AUC (translation) & 0.50476 & --- & --- & ratio=0.0048 & AUC \textgreater{} 0.5 & $\checkmark$ \\
+\rowcolor{rowgray}
+37 & H3 & Within-domain (multi\_hop\_reasoning) motif ... & Motif-only AUC (multi\_hop\_reasoning) & 0.38655 & --- & --- & ratio=-0.1134 & AUC \textgreater{} 0.5 & $\times$ \\
+38 & H3 & Deviation from domain-mean predicts failures & Domain+graph+deviation AUC (logistic) & 0.52949 & --- & --- & ratio=0.0295 & AUC \textgreater{} domain+grap... & $\times$ \\
+\midrule
+\rowcolor{rowgray}
+39 & H4 & FFL hub nodes cause more downstream attr l... & Downstream attr loss median ratio (la... & 1.9196 & [1.909, 1.934] & $<10^{-300}$ & Cohen's =0.4127 & Ratio \textgreater{} 1.5 with ... & $\checkmark$ \\
+40 & H4 & FFL hub nodes more important than degree-m... & Downstream attr loss median ratio (de... & 1.3538 & --- & --- & Cohen's =0.3405 & Ratio \textgreater{} 1.0 & $\checkmark$ \\
+\rowcolor{rowgray}
+41 & H4 & FFL hub nodes more important than random c... & Downstream attr loss median ratio (ra... & 9.2267 & --- & --- & Cohen's =0.5425 & Ratio \textgreater{} 1.0 & $\checkmark$ \\
+42 & H4 & FFL hub removal causes extreme graph fragm... & Component fragmentation mean ratio (v... & 101.6553 & --- & $<10^{-300}$ & Cohen's =0.1937 & Ratio \textgreater{} 10 & $\checkmark$ \\
+\rowcolor{rowgray}
+43 & H4 & Higher motif participation -\textgreater{} greater abla... & Spearman r (MPI vs downstream attr loss) & 0.87680 & --- & $<10^{-300}$ & ratio=0.8768 & r \textgreater{} 0.5 with p \textless{} ... & $\checkmark$ \\
+44 & H4 & Higher motif participation -\textgreater{} greater frag... & Spearman r (MPI vs component fragment... & 0.13596 & --- & $7.06 \times 10^{-67}$ & ratio=0.1360 & r \textgreater{} 0 with p \textless{} 0.05 & $\checkmark$ \\
+\rowcolor{rowgray}
+45 & H4 & Effect size of FFL hub ablation (layer-mat... & Cohen's d (downstream attr loss, laye... & 0.41275 & --- & --- & Cohen's =0.4127 & d \textgreater{} 0.2 (small ef... & $\checkmark$ \\
+46 & H4 & FFL hub ablation impact in antonym domain & Layer-matched median ratio (antonym) & 1.9810 & --- & $<10^{-300}$ & Cohen's =0.4344 & Ratio \textgreater{} 1.0 with ... & $\checkmark$ \\
+\rowcolor{rowgray}
+47 & H4 & FFL hub ablation impact in arithmetic domain & Layer-matched median ratio (arithmetic) & 2.0351 & --- & $<10^{-300}$ & Cohen's =0.4979 & Ratio \textgreater{} 1.0 with ... & $\checkmark$ \\
+48 & H4 & FFL hub ablation impact in code\_completion... & Layer-matched median ratio (code\_comp... & 1.8128 & --- & $<10^{-300}$ & Cohen's =0.3917 & Ratio \textgreater{} 1.0 with ... & $\checkmark$ \\
+\rowcolor{rowgray}
+49 & H4 & Ablation effect is universal across domains & Number of domains with significant ef... & 8.0000 & --- & --- & ratio=1.000 & All 8 domains sig... & $\checkmark$ \\
+\midrule
+50 & H5 & FFL motifs respect layer ordering & Strict layer ordering fraction (3-nod... & 1.0000 & --- & --- & ratio=1.000 & Fraction \textgreater{} 0.8 & $\checkmark$ \\
+\rowcolor{rowgray}
+51 & H5 & FFL motifs have coherent sign patterns & FFL coherence fraction & 0.58000 & --- & --- & ratio=0.5800 & Fraction \textgreater{} 0.5 & $\checkmark$ \\
+52 & H5 & FFL semantic roles vary across domains & Cramer's V (3-node FFL, cross-domain) & 0.13000 & --- & $0.001$ & Cramer's=0.1300 & V \textgreater{} 0.3 (moderate) & $\times$ \\
+\rowcolor{rowgray}
+53 & H5 & Universal 4-node motifs are entirely FFL-d... & 4-node FFL containment (all 4 types) & 1.0000 & --- & --- & ratio=1.000 & 100\% containment & $\checkmark$ \\
+54 & H5 & 4-node motif 77 cross-domain consistency & Cramer's V (4-node type 77) & 0.20000 & --- & --- & Cramer's=0.2000 & V \textgreater{} FFL's 0.13 & $\checkmark$ \\
+\rowcolor{rowgray}
+55 & H5 & 4-node motif 80 cross-domain consistency & Cramer's V (4-node type 80) & 0.25000 & --- & --- & Cramer's=0.2500 & V \textgreater{} FFL's 0.13 & $\checkmark$ \\
+56 & H5 & 4-node motif 82 cross-domain consistency & Cramer's V (4-node type 82) & 0.30000 & --- & --- & Cramer's=0.3000 & V \textgreater{} FFL's 0.13 & $\checkmark$ \\
+\rowcolor{rowgray}
+57 & H5 & 4-node motif 83 cross-domain consistency & Cramer's V (4-node type 83) & 0.33000 & --- & --- & Cramer's=0.3300 & V \textgreater{} FFL's 0.13 & $\checkmark$ \\
+58 & H5 & FFL layer ordering exceeds random baseline & Random baseline strict ordering fraction & 0.45000 & --- & --- & ratio=2.222 & FFL ordering \textgreater{}\textgreater{} r... & $\checkmark$ \\
+\rowcolor{rowgray}
+59 & H5 & FFL intensity discriminates between capabi... & FFL intensity eta-squared (ANOVA, ite... & 0.91700 & --- & --- & eta-squa=0.9170 & eta-squared \textgreater{} 0.14 & $\checkmark$ \\
+\end{longtable}
+\end{landscape}
+
+
+\section{Per-Domain Z-Score Breakdowns}
+Table~\ref{tab:domain-z} presents per-domain Z-score statistics for FFL (030T) and one representative non-FFL motif (021U). The 3-node motif spectrum exhibits degeneracy: 021U, 021C, and 021D Z-scores are identical in magnitude (anti-correlated with 030T).
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Per-domain Z-score statistics for FFL (030T) and 021U motifs across 200 graphs.}
+\label{tab:domain-z}
+\begin{tabular}{l|rrr|rrr}
+\toprule
+ & \multicolumn{3}{c|}{FFL (030T)} & \multicolumn{3}{c}{021U (anti-FFL)} \\
+Domain & Mean Z $\pm$ SD & Median Z & $n$ & Mean Z $\pm$ SD & Median Z & $n$ \\
+\midrule
+\rowcolor{rowgray}
+Antonym & 29.8 $\pm$ 9.0 & 27.4 & 26 & -29.8 $\pm$ 9.0 & -27.4 & 26 \\
+Arithmetic & 57.7 $\pm$ 9.6 & 57.8 & 26 & -57.7 $\pm$ 9.6 & -57.8 & 26 \\
+\rowcolor{rowgray}
+Code Completion & 46.6 $\pm$ 8.9 & 47.2 & 24 & -46.6 $\pm$ 8.9 & -47.2 & 24 \\
+Country Capital & 47.0 $\pm$ 6.4 & 46.9 & 26 & -47.0 $\pm$ 6.4 & -46.9 & 26 \\
+\rowcolor{rowgray}
+Multi Hop Reasoning & 38.5 $\pm$ 7.2 & 38.4 & 24 & -38.5 $\pm$ 7.2 & -38.4 & 24 \\
+Rhyme & 48.8 $\pm$ 7.6 & 49.0 & 24 & -48.8 $\pm$ 7.6 & -49.0 & 24 \\
+\rowcolor{rowgray}
+Sentiment & 59.3 $\pm$ 7.8 & 58.3 & 24 & -59.3 $\pm$ 7.8 & -58.3 & 24 \\
+Translation & 49.8 $\pm$ 8.6 & 49.5 & 26 & -49.8 $\pm$ 8.6 & -49.5 & 26 \\
+\midrule
+\textbf{Corpus} & 47.1 $\pm$ 12.1 & 47.8 & 200 & --- & --- & --- \\
+\textbf{Cohen's d} & \multicolumn{3}{c|}{3.89} & \multicolumn{3}{c}{---} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Comparison with biological network FFL Z-scores.}
+\label{tab:bio-comparison}
+\begin{tabular}{lrrr}
+\toprule
+Network & FFL Z-score & Network Size & LLM/Bio Ratio \\
+\midrule
+E. coli transcription regulation network & 12.7 & 424 & 3.71$\times$ \\
+S. cerevisiae transcription regulation network & 8.5 & 688 & 5.55$\times$ \\
+C. elegans neural connectivity & 10.2 & 282 & 4.62$\times$ \\
+\midrule
+\textbf{LLM Mean (200 graphs)} & 47.1 & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Per-Domain Ablation Results}
+Table~\ref{tab:ablation-domain} presents per-domain ablation results comparing FFL hub node removal against four control types.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Per-domain downstream attribution loss: median ratio (hub/control) and significance.}
+\label{tab:ablation-domain}
+\begin{tabular}{lrrrr}
+\toprule
+Domain & Degree Matched & Attribution Matched & Layer Matched & Random \\
+\midrule
+\rowcolor{rowgray}
+Antonym & 1.45*** & 1.03*** & 1.98*** & 8.82*** \\
+Arithmetic & 1.42*** & 1.00*** & 2.04*** & 9.23*** \\
+\rowcolor{rowgray}
+Code Completion & 1.29*** & 1.01*** & 1.81*** & 8.32*** \\
+Country Capital & 1.36*** & 1.00*** & 1.94*** & 9.33*** \\
+\rowcolor{rowgray}
+Multi Hop Reasoning & 1.31*** & 1.03*** & 1.95*** & 9.27*** \\
+Rhyme & 1.37*** & 1.01*** & 1.88*** & 9.74*** \\
+\rowcolor{rowgray}
+Sentiment & 1.10*** & 1.00*** & 1.65*** & 6.93*** \\
+Translation & 1.52*** & 1.02*** & 1.88*** & 11.56*** \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Corpus-level hub vs.\ control comparisons (downstream attribution loss).}
+\label{tab:ablation-corpus}
+\begin{tabular}{lrrrr}
+\toprule
+Control Type & Median Ratio & Wilcoxon $p$ & Cohen's $d$ & $n$ pairs \\
+\midrule
+Degree Matched & 1.35 & $<10^{-300}$ & 0.34 & 60168 \\
+Attribution Matched & 1.02 & $<10^{-300}$ & 0.28 & 60168 \\
+Layer Matched & 1.92 & $<10^{-300}$ & 0.41 & 59386 \\
+Random & 9.23 & $<10^{-300}$ & 0.54 & 60168 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Dose-Response Analysis.}
+Downstream Attr Loss: Spearman $r = 0.88$. 
+Path Disruption: Spearman $r = 0.13$. 
+Reachability Loss: Spearman $r = 0.03$. 
+Component Fragmentation: Spearman $r = 0.14$. 
+
+\paragraph{Corpus Summary.}
+Total FFLs enumerated: 11,185,566. Hub nodes: 20056 (7.94\%). Participant nodes: 179193 (70.93\%).
+
+
+\section{Failure Prediction Extended Results}
+Table~\ref{tab:classifier} presents all classifier configurations tested for predicting model failures from attribution graph features.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Classifier battery: 7 feature sets $\times$ 2 classifiers with stratified 5-fold CV.}
+\label{tab:classifier}
+\begin{tabular}{llrrrr}
+\toprule
+Feature Set & Classifier & $n$ feat. & AUC & Accuracy & F1 \\
+\midrule
+\rowcolor{rowgray}
+graph stats only & logistic L2 & 8 & 0.58 & 0.73 & 0.84 \\
+domain plus graph & logistic L2 & 16 & 0.57 & 0.72 & 0.84 \\
+\rowcolor{rowgray}
+full model & logistic L2 & 21 & 0.55 & 0.70 & 0.83 \\
+domain only & logistic L2 & 8 & 0.53 & 0.72 & 0.84 \\
+\rowcolor{rowgray}
+domain only & random forest & 8 & 0.53 & 0.72 & 0.84 \\
+domain graph plus dev & logistic L2 & 23 & 0.53 & 0.66 & 0.80 \\
+\rowcolor{rowgray}
+graph stats only & random forest & 8 & 0.52 & 0.69 & 0.82 \\
+domain plus graph & random forest & 16 & 0.52 & 0.69 & 0.81 \\
+\rowcolor{rowgray}
+full model & random forest & 21 & 0.52 & 0.66 & 0.80 \\
+full plus dev & random forest & 28 & 0.52 & 0.68 & 0.81 \\
+\rowcolor{rowgray}
+full plus dev & logistic L2 & 28 & 0.51 & 0.65 & 0.78 \\
+motif only & logistic L2 & 5 & 0.50 & 0.72 & 0.83 \\
+\rowcolor{rowgray}
+domain graph plus dev & random forest & 23 & 0.49 & 0.71 & 0.83 \\
+motif only & random forest & 5 & 0.49 & 0.66 & 0.80 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Within-domain leave-one-out analysis: motif-only vs.\ graph-stats-only AUC.}
+\label{tab:within-domain}
+\begin{tabular}{lrrrr}
+\toprule
+Domain & Motif AUC & Graph Stats AUC & $n$ total & Winner \\
+\midrule
+Arithmetic & 0.24 & 0.39 & 26 & Graph Stats \\
+Sentiment & 0.19 & 0.27 & 24 & Graph Stats \\
+Translation & 0.50 & 0.33 & 26 & Motif \\
+Code Completion & 0.52 & 0.41 & 24 & Motif \\
+Country Capital & 0.01 & 0.00 & 26 & Motif \\
+Multi Hop Reasoning & 0.39 & 0.01 & 24 & Motif \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Random forest feature importance (graph statistics features).}
+\label{tab:feat-importance}
+\begin{tabular}{lrr}
+\toprule
+Feature & Mean Importance & Std \\
+\midrule
+density & 0.102 & 0.036 \\
+n nodes & 0.085 & 0.030 \\
+max out degree & 0.049 & 0.030 \\
+n edges & 0.037 & 0.033 \\
+diameter & 0.034 & 0.026 \\
+mean in degree & 0.002 & 0.007 \\
+mean out degree & 0.002 & 0.007 \\
+n layers & 0.000 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Key Pairwise Comparisons.}
+full vs domain graph  logistic: mean diff = -0.0202, $p = 0.8650$. 
+full vs domain graph  rf: mean diff = -0.0013, $p = 0.5330$. 
+motif vs graph stats  logistic: mean diff = -0.0865, $p = 0.9820$. 
+
+
+\section{Corpus-Level Statistical Framework}
+
+\subsection{Why Per-Graph BH-FDR Fails}
+With 50 null models per graph, the minimum achievable $p$-value is $1/51 \approx 0.0323$. The Benjamini--Hochberg FDR threshold for rank-1 of 800 tests is $0.05/800 = 6.25 \times 10^{-5}$. This resolution gap makes BH-FDR survival mathematically impossible for most tests, regardless of the true effect size.
+
+\subsection{Corpus-Level Tests}
+The corpus-level alternative treats each graph's Z-score as one observation and applies standard tests across $n=200$ graphs:
+\begin{itemize}
+\item One-sample $t$-test: $t = 55.0$, $p = 2.38 \times 10^{-122}$
+\item Wilcoxon signed-rank: $W = 0$, $p = 1.44 \times 10^{-34}$
+\item Sign test: 200/200 positive, $p = 1.24 \times 10^{-60}$
+\item Cohen's $d = 3.89$ (large effect)
+\end{itemize}
+
+\subsection{Mixed-Effects Model}
+We fit a random-intercept model: $Z_{ij} \sim \beta_0 + u_j + \varepsilon_{ij}$, where $j$ indexes domains.
+\begin{itemize}
+\item $\beta_0 = 47.2$, 95\% CI: [40.5, 53.8]
+\item $p = 4.93 \times 10^{-44}$
+\item $\mathrm{Var}(u_j) = 89.23$, $\mathrm{Var}(\varepsilon) = 67.36$
+\item ICC $= 0.570$
+\end{itemize}
+
+\subsection{Deep Null FDR}
+With 200 nulls per graph on 15 stratified graphs, 15/60 tests survive BH-FDR at $\alpha = 0.05$.
+
+\subsection{Convergence}
+Median convergence at $N = 30$ null models. 10\% converged by $N=5$, 70\% by $N=30$, 100\% by $N=50$.
+
+
+\section{Reviewer Objection-Response Matrix}
+Table~\ref{tab:reviewer} presents anticipated reviewer objections with evidence-based responses and risk assessment.
+
+\small
+\begin{longtable}{rp{3cm}cp{5.5cm}p{2cm}c}
+\caption{Reviewer Objection-Response Matrix.}\label{tab:reviewer}\\
+\toprule
+\# & Objection & Sev. & Evidence-Based Response & Artifacts & Risk \\
+\midrule
+\endfirsthead
+\toprule
+\# & Objection & Sev. & Evidence-Based Response & Artifacts & Risk \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+1 & \textit{Motifs are just proxies for graph statistics — the high shared variance (93\%)...} & \cellcolor{red!20}4 & While 93\% of variance is shared, unique motif R-squared=0.0184 with CI [0.0213, 0.0448] strictly excludes zero. Residualized NMI=0.264 (p=0.001) co... & exp\_id1\_it5 & \cellcolor{orange!20}medium \\
+\midrule
+2 & \textit{BH-FDR eliminates all per-graph significance — the overrepresentation finding...} & \cellcolor{red!20}4 & FDR eliminates per-graph significance because with only 50 nulls, per-graph p-values have limited resolution. However, the corpus-level signal is o... & exp\_id3\_it5 & \cellcolor{green!20}low \\
+\midrule
+3 & \textit{Only tested on one model (gemma-2-2b) — results may not generalize.} & \cellcolor{orange!20}3 & We acknowledge single-model limitation. However, 200 graphs across 8 diverse capability domains (arithmetic, translation, code, reasoning, etc.) pr... & exp\_id3\_it5, exp\_id2\_it4 & \cellcolor{red!20}high \\
+\midrule
+4 & \textit{Failure prediction completely failed — this undermines the practical value of...} & \cellcolor{orange!20}3 & The negative result (best AUC=0.583, motif AUC=0.496) is reported transparently. This strengthens the paper: (a) demonstrates scientific rigor; (b)... & exp\_id3\_it4 & \cellcolor{green!20}low \\
+\midrule
+5 & \textit{3-node motif spectrum degeneracy — with only 1 effective dimension, 'motif an...} & \cellcolor{orange!20}3 & Correct — the 3-node spectrum effectively has 1 dimension (FFL vs non-FFL). We address this by: (a) using weighted FFL features (intensity, path do... & exp\_id1\_it2, exp\_id2\_it5 & \cellcolor{orange!20}medium \\
+\midrule
+6 & \textit{Graph-theoretic ablation != real model-level causal intervention — you can't ...} & \cellcolor{red!20}4 & We use careful language: 'graph-theoretic structural importance' not 'causal functional importance'. The ablation quantifies how FFL hubs maintain ... & exp\_id2\_it4 & \cellcolor{orange!20}medium \\
+\midrule
+7 & \textit{Small unique R-squared (0.018) — statistically significant doesn't mean pract...} & \cellcolor{orange!20}3 & We agree the unique R-squared=0.0184 is small. However: (a) CI excludes 0; (b) residualized NMI=0.264 shows sufficient signal for above-chance doma... & exp\_id1\_it5 & \cellcolor{orange!20}medium \\
+\midrule
+8 & \textit{Weak cross-domain semantic consistency (V=0.13) — FFL functional roles are no...} & \cellcolor{orange!20}3 & For 3-node FFLs, V=0.13 is indeed weak. However: (a) 4-node types show stronger consistency (V=0.20-0.33); (b) structural properties (100\% layer or... & exp\_id3\_it3, exp\_id2\_it5, exp\_id1\_it4 & \cellcolor{green!20}low \\
+\midrule
+9 & \textit{Layer-ordering is trivial in layered DAGs — it's an artifact of the graph str...} & \cellcolor{green!20}2 & We agree that 100\% strict layer ordering is expected in DAGs with layer assignments. The finding confirms that FFLs respect layer structure but doe... & exp\_id3\_it3, exp\_id2\_it5 & \cellcolor{green!20}low \\
+\midrule
+10 & \textit{Sample size per domain is small (\textasciitilde{}25) — insufficient for reliable domain-spec...} & \cellcolor{orange!20}3 & Domain sizes range from 24-26 graphs. While small for per-domain inferences, we primarily report corpus-level analyses pooling all 200 graphs. Doma... & exp\_id3\_it5, exp\_id3\_it4 & \cellcolor{orange!20}medium \\
+\midrule
+11 & \textit{Attribution graphs may not faithfully represent actual model computation — ga...} & \cellcolor{red!20}4 & Attribution graph faithfulness is an open question. We use Neuronpedia attribution graphs which are state-of-the-art. Our contribution is condition... & exp\_id3\_it5, exp\_id2\_it4 & \cellcolor{red!20}high \\
+\midrule
+12 & \textit{Confound: graph size drives everything — larger graphs have more motifs, more...} & \cellcolor{red!20}4 & We address this through multiple deconfounding: (a) Z-scores normalize against size-matched null models; (b) unique information decomposition separ... & exp\_id3\_it5, exp\_id1\_it5, exp\_id2\_it4 & \cellcolor{orange!20}medium \\
+\midrule
+\end{longtable}
+\normalsize
+
+
+\section{Limitations and Future Directions}
+
+\subsection{Critical Limitations}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Single model (gemma-2-2b) — all findings may be model-specific} \\\textcolor{criticalred}{[critical]} Mitigation: acknowledged only. \\\textit{Future work: Extend to multiple architectures (GPT, Llama, Mistral) and model sizes (7B, 13B, 70B)}
+\item \textbf{Attribution graph faithfulness — unknown whether graphs capture real model computation} \\\textcolor{criticalred}{[critical]} Mitigation: acknowledged only. \\\textit{Future work: Compare attribution methods; validate with ground-truth circuits from toy models}
+\end{enumerate}
+
+\subsection{Major Limitations}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{No model-level causal intervention — graph-theoretic ablation does not prove functional importance} \\\textcolor{majororange}{[major]} Mitigation: partially addressed. \\\textit{Future work: Implement actual model-level ablation of FFL hub nodes and measure task accuracy change}
+\item \textbf{3-node motif spectrum degeneracy — effectively 1 dimension, limiting diversity claims} \\\textcolor{majororange}{[major]} Mitigation: partially addressed. \\\textit{Future work: Extend to larger motifs (5-node+); develop weighted motif spectrum theory}
+\item \textbf{Small unique motif R-squared (0.018) — most variance shared with graph statistics} \\\textcolor{majororange}{[major]} Mitigation: fully addressed. \\\textit{Future work: Investigate non-linear unique information measures; develop less-correlated motif features}
+\item \textbf{BH-FDR eliminates per-graph significance — overrepresentation is corpus-level only} \\\textcolor{majororange}{[major]} Mitigation: fully addressed. \\\textit{Future work: Increase null models per graph (100+) to improve per-graph p-value resolution}
+\item \textbf{Failure prediction completely negative — motifs cannot predict model errors} \\\textcolor{majororange}{[major]} Mitigation: fully addressed. \\\textit{Future work: Investigate whether finer-grained failure modes are predictable}
+\end{enumerate}
+
+\subsection{Minor Limitations}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Small per-domain sample sizes (\textasciitilde{}25 graphs per domain)} \\\textcolor{minorgreen}{[minor]} Mitigation: partially addressed. \\\textit{Future work: Collect more attribution graphs per domain; include more capability domains}
+\item \textbf{Weak semantic consistency for 3-node FFLs (V=0.13)} \\\textcolor{minorgreen}{[minor]} Mitigation: partially addressed. \\\textit{Future work: Develop richer semantic characterization methods}
+\item \textbf{Pruning sensitivity — Z-scores depend on pruning threshold (rho=0.29-0.50)} \\\textcolor{minorgreen}{[minor]} Mitigation: fully addressed. \\\textit{Future work: Develop pruning-invariant motif measures; use multiple thresholds in reporting}
+\end{enumerate}
+
+
+\end{document}

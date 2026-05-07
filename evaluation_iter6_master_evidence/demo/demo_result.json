@@ -1,0 +1,13 @@
+{
+  "id": "eval_id3_it6__opus",
+  "type": "code",
+  "title": "Master Evidence Synthesis: Final H1-H5 Scores, 50+-Row Evidence Table, Claim Mapping, and Reviewer Objection Matrix",
+  "summary": "Demo notebook for the Master Evidence Synthesis evaluation of Circuit Motif Spectroscopy. Loads pre-computed synthesis data (hypothesis scores, evidence table, claim mapping, reviewer objections, limitations) from a curated 46KB mini dataset. Displays H1-H5 hypothesis verdicts with confidence scores, a master evidence table mapping sub-claims to metrics, paper claim mappings by section, reviewer objection-response matrix, and limitations. Includes a 3-panel dashboard visualization showing hypothesis confidence bars, key aggregate metrics, and objection severity distribution.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/eval_id3_it6__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id3_it6__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id3_it6__opus/eval_code_demo.ipynb"
+}

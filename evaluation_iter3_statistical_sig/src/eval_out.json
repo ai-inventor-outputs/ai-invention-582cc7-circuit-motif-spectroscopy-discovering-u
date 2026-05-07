@@ -1,0 +1,778 @@
+{
+  "metadata": {
+    "experiment": "statistical_significance_audit_iter3",
+    "n_graphs": 10,
+    "n_domains": 8,
+    "domains": [
+      "antonym",
+      "arithmetic",
+      "code_completion",
+      "country_capital",
+      "multi_hop_reasoning",
+      "rhyme",
+      "sentiment",
+      "translation"
+    ],
+    "runtime_seconds": 74.8,
+    "phase_b_permutation_tests": {
+      "nmi_our_observed": 1.0,
+      "nmi_our_p_value": 0.0196078431372549,
+      "nmi_baseline_observed": 0.9315520459418732,
+      "nmi_baseline_p_value": 0.0196078431372549,
+      "ari_our_observed": 1.0,
+      "ari_our_p_value": 0.0196078431372549,
+      "ari_baseline_observed": 0.47674418604651164,
+      "ari_baseline_p_value": 0.0196078431372549,
+      "nmi_difference_observed": 0.06844795405812676,
+      "nmi_difference_p_value": 0.0784313725490196,
+      "motif_only_nmi": 0.9315520459418732,
+      "motif_only_ari": 0.47674418604651164,
+      "motif_only_p_value": 0.1568627450980392,
+      "null_distributions": {
+        "nmi_our_mean": 0.8672109691272343,
+        "nmi_our_std": 0.01625548843288105,
+        "nmi_base_mean": 0.8631040918837466,
+        "nmi_base_std": 1.1102230246251565e-16,
+        "nmi_motif_mean": 0.8726868054518845,
+        "nmi_motif_std": 0.023750552387999505
+      },
+      "n_permutations": 50
+    },
+    "phase_c_bootstrap_cis": {
+      "per_domain_z030t_ci": {
+        "antonym": {
+          "mean": 36.478,
+          "n": 1,
+          "ci_95_lo": 36.478,
+          "ci_95_hi": 36.478,
+          "excludes_zero": true
+        },
+        "arithmetic": {
+          "mean": 56.4579,
+          "n": 2,
+          "ci_95_lo": 46.9256,
+          "ci_95_hi": 65.9902,
+          "excludes_zero": true
+        },
+        "code_completion": {
+          "mean": 48.9545,
+          "n": 1,
+          "ci_95_lo": 48.9545,
+          "ci_95_hi": 48.9545,
+          "excludes_zero": true
+        },
+        "country_capital": {
+          "mean": 54.109049999999996,
+          "n": 2,
+          "ci_95_lo": 52.2016,
+          "ci_95_hi": 56.0165,
+          "excludes_zero": true
+        },
+        "multi_hop_reasoning": {
+          "mean": 24.5879,
+          "n": 1,
+          "ci_95_lo": 24.5879,
+          "ci_95_hi": 24.5879,
+          "excludes_zero": true
+        },
+        "rhyme": {
+          "mean": 45.95,
+          "n": 1,
+          "ci_95_lo": 45.95,
+          "ci_95_hi": 45.95,
+          "excludes_zero": true
+        },
+        "sentiment": {
+          "mean": 62.083,
+          "n": 1,
+          "ci_95_lo": 62.083,
+          "ci_95_hi": 62.083,
+          "excludes_zero": true
+        },
+        "translation": {
+          "mean": 46.8883,
+          "n": 1,
+          "ci_95_lo": 46.8883,
+          "ci_95_hi": 46.8883,
+          "excludes_zero": true
+        }
+      },
+      "grand_mean_ci": {
+        "mean": 48.60756,
+        "ci_95_lo": 40.54057825,
+        "ci_95_hi": 54.8831275
+      },
+      "count_ratio_cis": {
+        "antonym": {
+          "021U": {
+            "mean": 0.138198,
+            "ci_95_lo": 0.138198,
+            "ci_95_hi": 0.138198
+          },
+          "021C": {
+            "mean": 0.065999,
+            "ci_95_lo": 0.065999,
+            "ci_95_hi": 0.065999
+          },
+          "021D": {
+            "mean": 0.755746,
+            "ci_95_lo": 0.755746,
+            "ci_95_hi": 0.755746
+          },
+          "030T": {
+            "mean": 0.040057,
+            "ci_95_lo": 0.040057,
+            "ci_95_hi": 0.040057
+          }
+        },
+        "arithmetic": {
+          "021U": {
+            "mean": 0.0984295,
+            "ci_95_lo": 0.09358,
+            "ci_95_hi": 0.103279
+          },
+          "021C": {
+            "mean": 0.059064,
+            "ci_95_lo": 0.056809,
+            "ci_95_hi": 0.061319
+          },
+          "021D": {
+            "mean": 0.8016445000000001,
+            "ci_95_lo": 0.795625,
+            "ci_95_hi": 0.807664
+          },
+          "030T": {
+            "mean": 0.040861499999999995,
+            "ci_95_lo": 0.039777,
+            "ci_95_hi": 0.041946
+          }
+        },
+        "code_completion": {
+          "021U": {
+            "mean": 0.095423,
+            "ci_95_lo": 0.095423,
+            "ci_95_hi": 0.095423
+          },
+          "021C": {
+            "mean": 0.048178,
+            "ci_95_lo": 0.048178,
+            "ci_95_hi": 0.048178
+          },
+          "021D": {
+            "mean": 0.826377,
+            "ci_95_lo": 0.826377,
+            "ci_95_hi": 0.826377
+          },
+          "030T": {
+            "mean": 0.030023,
+            "ci_95_lo": 0.030023,
+            "ci_95_hi": 0.030023
+          }
+        },
+        "country_capital": {
+          "021U": {
+            "mean": 0.1240125,
+            "ci_95_lo": 0.123535,
+            "ci_95_hi": 0.12449
+          },
+          "021C": {
+            "mean": 0.07509550000000001,
+            "ci_95_lo": 0.073176,
+            "ci_95_hi": 0.077015
+          },
+          "021D": {
+            "mean": 0.7537594999999999,
+            "ci_95_lo": 0.750651,
+            "ci_95_hi": 0.756868
+          },
+          "030T": {
+            "mean": 0.047132499999999994,
+            "ci_95_lo": 0.046421,
+            "ci_95_hi": 0.047844
+          }
+        },
+        "multi_hop_reasoning": {
+          "021U": {
+            "mean": 0.12332,
+            "ci_95_lo": 0.12332,
+            "ci_95_hi": 0.12332
+          },
+          "021C": {
+            "mean": 0.037401,
+            "ci_95_lo": 0.037401,
+            "ci_95_hi": 0.037401
+          },
+          "021D": {
+            "mean": 0.81878,
+            "ci_95_lo": 0.81878,
+            "ci_95_hi": 0.81878
+          },
+          "030T": {
+            "mean": 0.020499,
+            "ci_95_lo": 0.020499,
+            "ci_95_hi": 0.020499
+          }
+        },
+        "rhyme": {
+          "021U": {
+            "mean": 0.113115,
+            "ci_95_lo": 0.113115,
+            "ci_95_hi": 0.113115
+          },
+          "021C": {
+            "mean": 0.05627,
+            "ci_95_lo": 0.05627,
+            "ci_95_hi": 0.05627
+          },
+          "021D": {
+            "mean": 0.798319,
+            "ci_95_lo": 0.798319,
+            "ci_95_hi": 0.798319
+          },
+          "030T": {
+            "mean": 0.032296,
+            "ci_95_lo": 0.032296,
+            "ci_95_hi": 0.032296
+          }
+        },
+        "sentiment": {
+          "021U": {
+            "mean": 0.125681,
+            "ci_95_lo": 0.125681,
+            "ci_95_hi": 0.125681
+          },
+          "021C": {
+            "mean": 0.090779,
+            "ci_95_lo": 0.090779,
+            "ci_95_hi": 0.090779
+          },
+          "021D": {
+            "mean": 0.731966,
+            "ci_95_lo": 0.731966,
+            "ci_95_hi": 0.731966
+          },
+          "030T": {
+            "mean": 0.051574,
+            "ci_95_lo": 0.051574,
+            "ci_95_hi": 0.051574
+          }
+        },
+        "translation": {
+          "021U": {
+            "mean": 0.110253,
+            "ci_95_lo": 0.110253,
+            "ci_95_hi": 0.110253
+          },
+          "021C": {
+            "mean": 0.098453,
+            "ci_95_lo": 0.098453,
+            "ci_95_hi": 0.098453
+          },
+          "021D": {
+            "mean": 0.74302,
+            "ci_95_lo": 0.74302,
+            "ci_95_hi": 0.74302
+          },
+          "030T": {
+            "mean": 0.048273,
+            "ci_95_lo": 0.048273,
+            "ci_95_hi": 0.048273
+          }
+        }
+      },
+      "eta_squared_z030t": 0.8533233792549524,
+      "anova_f_z030t": 1.6622054595252267,
+      "anova_p_z030t": 0.4260186836647786
+    },
+    "phase_d_layer_confound": {
+      "n_graphs_processed": 10,
+      "per_graph_results": [
+        {
+          "graph_idx": 0,
+          "domain": "country_capital",
+          "z_degree_030T": 37.6371502357585,
+          "z_layer_030T": 66.04581167843871,
+          "retention_ratio": 1.7548037315452636
+        },
+        {
+          "graph_idx": 1,
+          "domain": "arithmetic",
+          "z_degree_030T": 40.5739240643379,
+          "z_layer_030T": 34.90679283232063,
+          "retention_ratio": 0.8603257791129366
+        },
+        {
+          "graph_idx": 2,
+          "domain": "antonym",
+          "z_degree_030T": 36.085895074167915,
+          "z_layer_030T": 72.44403793597203,
+          "retention_ratio": 2.007544437711096
+        },
+        {
+          "graph_idx": 3,
+          "domain": "translation",
+          "z_degree_030T": 51.85028892865762,
+          "z_layer_030T": 60.859554939180285,
+          "retention_ratio": 1.1737553675528942
+        },
+        {
+          "graph_idx": 4,
+          "domain": "code_completion",
+          "z_degree_030T": 48.65814344671132,
+          "z_layer_030T": 57.188074014022234,
+          "retention_ratio": 1.1753032475777172
+        },
+        {
+          "graph_idx": 5,
+          "domain": "multi_hop_reasoning",
+          "z_degree_030T": 23.342125559862346,
+          "z_layer_030T": 57.16181831004409,
+          "retention_ratio": 2.4488694555022
+        },
+        {
+          "graph_idx": 6,
+          "domain": "rhyme",
+          "z_degree_030T": 55.64274092132269,
+          "z_layer_030T": 65.20046898588376,
+          "retention_ratio": 1.171769540937522
+        },
+        {
+          "graph_idx": 7,
+          "domain": "sentiment",
+          "z_degree_030T": 55.547331427868826,
+          "z_layer_030T": 42.20483532355988,
+          "retention_ratio": 0.7597995122117632
+        },
+        {
+          "graph_idx": 8,
+          "domain": "country_capital",
+          "z_degree_030T": 46.82123261175902,
+          "z_layer_030T": 80.98993167427658,
+          "retention_ratio": 1.7297693195274013
+        },
+        {
+          "graph_idx": 9,
+          "domain": "arithmetic",
+          "z_degree_030T": 52.60246254300175,
+          "z_layer_030T": 56.55863513244774,
+          "retention_ratio": 1.0752088856336692
+        }
+      ],
+      "wilcoxon_test": {
+        "statistic": 8.0,
+        "p_value": 0.048828125,
+        "direction": "layer_higher",
+        "n_pairs": 10
+      },
+      "z_retention_ratio": {
+        "mean": 1.4157149277312464,
+        "ci_95_lo": 0.7824179222645272,
+        "ci_95_hi": 2.349571326499202,
+        "n_valid": 10
+      },
+      "per_motif_classification": {
+        "021U": {
+          "n_genuine": 10,
+          "n_artifact": 0,
+          "n_partial": 0,
+          "n_total": 10,
+          "frac_genuine": 1.0,
+          "mean_z_degree": -44.8761294813448,
+          "mean_z_layer": -59.3559960826146
+        },
+        "021C": {
+          "n_genuine": 10,
+          "n_artifact": 0,
+          "n_partial": 0,
+          "n_total": 10,
+          "frac_genuine": 1.0,
+          "mean_z_degree": -44.87612948134479,
+          "mean_z_layer": -59.3559960826146
+        },
+        "021D": {
+          "n_genuine": 10,
+          "n_artifact": 0,
+          "n_partial": 0,
+          "n_total": 10,
+          "frac_genuine": 1.0,
+          "mean_z_degree": -44.8761294813448,
+          "mean_z_layer": -59.35599608261458
+        },
+        "030T": {
+          "n_genuine": 10,
+          "n_artifact": 0,
+          "n_partial": 0,
+          "n_total": 10,
+          "frac_genuine": 1.0,
+          "mean_z_degree": 44.87612948134479,
+          "mean_z_layer": 59.355996082614595
+        }
+      }
+    },
+    "phase_e_effect_sizes": {
+      "nmi_cohens_d": 5.9549133417541364,
+      "nmi_cohens_d_classification": "large",
+      "z_cross_domain_cohens_d": {
+        "antonym_vs_arithmetic": -1.4821,
+        "antonym_vs_code_completion": -124765000000.0,
+        "antonym_vs_country_capital": -6.536,
+        "antonym_vs_multi_hop_reasoning": 118901000000.0,
+        "antonym_vs_rhyme": -94720000000.0,
+        "antonym_vs_sentiment": -256050000000.0,
+        "antonym_vs_translation": -104103000000.0,
+        "arithmetic_vs_code_completion": 0.5566,
+        "arithmetic_vs_country_capital": 0.2416,
+        "arithmetic_vs_multi_hop_reasoning": 2.3641,
+        "arithmetic_vs_rhyme": 0.7795,
+        "arithmetic_vs_sentiment": -0.4173,
+        "arithmetic_vs_translation": 0.7099,
+        "code_completion_vs_country_capital": -1.9108,
+        "code_completion_vs_multi_hop_reasoning": 243666000000.0,
+        "code_completion_vs_rhyme": 30045000000.0,
+        "code_completion_vs_sentiment": -131285000000.0,
+        "code_completion_vs_translation": 20662000000.0,
+        "country_capital_vs_multi_hop_reasoning": 10.9437,
+        "country_capital_vs_rhyme": 3.0246,
+        "country_capital_vs_sentiment": -2.956,
+        "country_capital_vs_translation": 2.6768,
+        "multi_hop_reasoning_vs_rhyme": -213621000000.0,
+        "multi_hop_reasoning_vs_sentiment": -374950999999.9999,
+        "multi_hop_reasoning_vs_translation": -223004000000.0,
+        "rhyme_vs_sentiment": -161329999999.9999,
+        "rhyme_vs_translation": -9383000000.0,
+        "sentiment_vs_translation": 151947000000.0
+      },
+      "count_ratio_grand_d_030T": 7.624569036290297,
+      "count_ratio_eta_squared": {
+        "021U": 0.9455,
+        "021C": 0.9855,
+        "021D": 0.9755,
+        "030T": 0.9902,
+        "021U_computed": 0.9749,
+        "021U_f_stat": 11.0837,
+        "021U_p_value": 0.08522662039166436,
+        "021C_computed": 0.9945,
+        "021C_f_stat": 51.4144,
+        "021C_p_value": 0.019209063838809857,
+        "021D_computed": 0.9914,
+        "021D_f_stat": 32.8218,
+        "021D_p_value": 0.029880208767153978,
+        "030T_computed": 0.996,
+        "030T_f_stat": 71.7225,
+        "030T_p_value": 0.013818567808593508
+      }
+    },
+    "phase_f_robustness": {
+      "loo_influence": {
+        "mean_loo_nmi_our": 0.9698446907484997,
+        "std_loo_nmi_our": 0.036932560351002404,
+        "mean_loo_nmi_base": 0.9290771604772505,
+        "std_loo_nmi_base": 0.023817862477535808,
+        "n_influential": 4,
+        "influential_graphs": [
+          {
+            "index": 0,
+            "domain": "country_capital",
+            "nmi_without": 0.9246117268712492,
+            "nmi_delta": -0.07538827312875085
+          },
+          {
+            "index": 1,
+            "domain": "arithmetic",
+            "nmi_without": 0.924611726871249,
+            "nmi_delta": -0.07538827312875096
+          },
+          {
+            "index": 8,
+            "domain": "country_capital",
+            "nmi_without": 0.9246117268712492,
+            "nmi_delta": -0.07538827312875085
+          },
+          {
+            "index": 9,
+            "domain": "arithmetic",
+            "nmi_without": 0.924611726871249,
+            "nmi_delta": -0.07538827312875096
+          }
+        ]
+      },
+      "domain_imbalance": {
+        "ami": 1.0,
+        "v_measure": 1.0,
+        "domain_sizes": {
+          "country_capital": 2,
+          "arithmetic": 2,
+          "antonym": 1,
+          "translation": 1,
+          "code_completion": 1,
+          "multi_hop_reasoning": 1,
+          "rhyme": 1,
+          "sentiment": 1
+        }
+      },
+      "seed_stability": {
+        "seeds": [
+          42,
+          123,
+          456,
+          789,
+          1000,
+          2000,
+          3000,
+          4000,
+          5000,
+          6000
+        ],
+        "nmi_our_mean": 1.0,
+        "nmi_our_std": 0.0,
+        "nmi_our_values": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "nmi_base_mean": 0.9315520459418731,
+        "nmi_base_std": 1.1102230246251565e-16,
+        "nmi_base_values": [
+          0.9315520459418732,
+          0.9315520459418732,
+          0.9315520459418732,
+          0.9315520459418732,
+          0.9315520459418732,
+          0.9315520459418732,
+          0.9315520459418732,
+          0.9315520459418732,
+          0.9315520459418732,
+          0.9315520459418732
+        ]
+      },
+      "feature_ablation": {
+        "ratio_021U": {
+          "nmi_without": 0.9176,
+          "delta_nmi": -0.0824
+        },
+        "ratio_021C": {
+          "nmi_without": 1.0,
+          "delta_nmi": 0.0
+        },
+        "ratio_021D": {
+          "nmi_without": 1.0,
+          "delta_nmi": 0.0
+        },
+        "ratio_030T": {
+          "nmi_without": 1.0,
+          "delta_nmi": 0.0
+        },
+        "Z_030T": {
+          "nmi_without": 1.0,
+          "delta_nmi": 0.0
+        },
+        "FFL_per_node": {
+          "nmi_without": 1.0,
+          "delta_nmi": 0.0
+        },
+        "FFL_per_edge": {
+          "nmi_without": 1.0,
+          "delta_nmi": 0.0
+        },
+        "density": {
+          "nmi_without": 0.9316,
+          "delta_nmi": -0.0684
+        },
+        "in_degree_std": {
+          "nmi_without": 1.0,
+          "delta_nmi": 0.0
+        },
+        "out_degree_std": {
+          "nmi_without": 1.0,
+          "delta_nmi": 0.0
+        },
+        "layer_span_mean": {
+          "nmi_without": 0.8631,
+          "delta_nmi": -0.1369
+        },
+        "transitivity": {
+          "nmi_without": 1.0,
+          "delta_nmi": 0.0
+        },
+        "ALL_GRAPH_STATS_REMOVED": {
+          "nmi_without": 0.9316,
+          "delta_nmi": -0.0684
+        },
+        "ALL_MOTIF_FEATURES_REMOVED": {
+          "nmi_without": 0.9316,
+          "delta_nmi": -0.0684
+        }
+      }
+    },
+    "overall_verdict": {
+      "nmi_is_significant": true,
+      "nmi_baseline_is_significant": true,
+      "nmi_improvement_is_significant": false,
+      "motif_features_add_value": false,
+      "ffl_overrepresentation_genuine": true,
+      "layer_confound_resolved": true,
+      "key_findings": [
+        "NMI our method p=0.0196 (significant)",
+        "NMI baseline p=0.0196 (significant)",
+        "NMI difference p=0.0784 (not significant)",
+        "Motif-only NMI=0.9316, p=0.1569",
+        "FFL genuine signal in 100% of graphs",
+        "Z retention ratio: 1.416",
+        "Seed stability: NMI std=0.0000"
+      ]
+    }
+  },
+  "metrics_agg": {
+    "nmi_our_method": 1.0,
+    "nmi_baseline": 0.9316,
+    "ari_our_method": 1.0,
+    "ari_baseline": 0.4767,
+    "nmi_our_p_value": 0.0196,
+    "nmi_baseline_p_value": 0.0196,
+    "nmi_difference_p_value": 0.0784,
+    "ari_our_p_value": 0.0196,
+    "nmi_motif_only": 0.9316,
+    "nmi_motif_only_p_value": 0.1569,
+    "z030t_grand_mean": 48.6076,
+    "z030t_eta_squared": 0.8533,
+    "wilcoxon_p_value_confound": 0.0488,
+    "z_retention_ratio_mean": 1.4157,
+    "ffl_frac_genuine": 1.0,
+    "cohens_d_nmi_improvement": 5.9549,
+    "count_ratio_grand_d_030t": 7.6246,
+    "loo_nmi_mean": 0.9698,
+    "loo_nmi_std": 0.0369,
+    "seed_nmi_mean": 1.0,
+    "seed_nmi_std": 0.0,
+    "ami_full": 1.0,
+    "v_measure_full": 1.0,
+    "n_graphs": 10,
+    "n_permutations": 50,
+    "n_bootstrap": 500,
+    "n_null_models": 10
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs",
+      "examples": [
+        {
+          "input": "The capital of Japan is",
+          "output": "{\"z_030T\": 52.2016, \"count_ratios\": {\"2\": 0.123535, \"4\": 0.073176, \"6\": 0.756868, \"7\": 0.046421}, \"ffl_raw_count\": 48793, \"z_degree_030T\": 37.6371502357585, \"z_layer_030T\": 66.04581167843871}",
+          "metadata_fold": "country_capital",
+          "metadata_graph_idx": 0,
+          "predict_our_method": "country_capital",
+          "predict_baseline": "country_capital",
+          "eval_z_030t": 52.2016,
+          "eval_z_degree_030t": 37.6372,
+          "eval_z_layer_030t": 66.0458
+        },
+        {
+          "input": "3 + 5 =",
+          "output": "{\"z_030T\": 46.9256, \"count_ratios\": {\"2\": 0.09358, \"4\": 0.056809, \"6\": 0.807664, \"7\": 0.041946}, \"ffl_raw_count\": 24418, \"z_degree_030T\": 40.5739240643379, \"z_layer_030T\": 34.90679283232063}",
+          "metadata_fold": "arithmetic",
+          "metadata_graph_idx": 1,
+          "predict_our_method": "arithmetic",
+          "predict_baseline": "arithmetic",
+          "eval_z_030t": 46.9256,
+          "eval_z_degree_030t": 40.5739,
+          "eval_z_layer_030t": 34.9068
+        },
+        {
+          "input": "The opposite of happy is",
+          "output": "{\"z_030T\": 36.478, \"count_ratios\": {\"2\": 0.138198, \"4\": 0.065999, \"6\": 0.755746, \"7\": 0.040057}, \"ffl_raw_count\": 48919, \"z_degree_030T\": 36.085895074167915, \"z_layer_030T\": 72.44403793597203}",
+          "metadata_fold": "antonym",
+          "metadata_graph_idx": 2,
+          "predict_our_method": "antonym",
+          "predict_baseline": "antonym",
+          "eval_z_030t": 36.478,
+          "eval_z_degree_030t": 36.0859,
+          "eval_z_layer_030t": 72.444
+        },
+        {
+          "input": "The French word for cat is",
+          "output": "{\"z_030T\": 46.8883, \"count_ratios\": {\"2\": 0.110253, \"4\": 0.098453, \"6\": 0.74302, \"7\": 0.048273}, \"ffl_raw_count\": 65124, \"z_degree_030T\": 51.85028892865762, \"z_layer_030T\": 60.859554939180285}",
+          "metadata_fold": "translation",
+          "metadata_graph_idx": 3,
+          "predict_our_method": "translation",
+          "predict_baseline": "translation",
+          "eval_z_030t": 46.8883,
+          "eval_z_degree_030t": 51.8503,
+          "eval_z_layer_030t": 60.8596
+        },
+        {
+          "input": "def add(a, b):\n    return",
+          "output": "{\"z_030T\": 48.9545, \"count_ratios\": {\"2\": 0.095423, \"4\": 0.048178, \"6\": 0.826377, \"7\": 0.030023}, \"ffl_raw_count\": 24718, \"z_degree_030T\": 48.65814344671132, \"z_layer_030T\": 57.188074014022234}",
+          "metadata_fold": "code_completion",
+          "metadata_graph_idx": 4,
+          "predict_our_method": "code_completion",
+          "predict_baseline": "code_completion",
+          "eval_z_030t": 48.9545,
+          "eval_z_degree_030t": 48.6581,
+          "eval_z_layer_030t": 57.1881
+        },
+        {
+          "input": "If Alice is taller than Bob and Bob is taller than Carol, then Alice is",
+          "output": "{\"z_030T\": 24.5879, \"count_ratios\": {\"2\": 0.12332, \"4\": 0.037401, \"6\": 0.81878, \"7\": 0.020499}, \"ffl_raw_count\": 21506, \"z_degree_030T\": 23.342125559862346, \"z_layer_030T\": 57.16181831004409}",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_graph_idx": 5,
+          "predict_our_method": "multi_hop_reasoning",
+          "predict_baseline": "multi_hop_reasoning",
+          "eval_z_030t": 24.5879,
+          "eval_z_degree_030t": 23.3421,
+          "eval_z_layer_030t": 57.1618
+        },
+        {
+          "input": "The cat in the hat sat on the",
+          "output": "{\"z_030T\": 45.95, \"count_ratios\": {\"2\": 0.113115, \"4\": 0.05627, \"6\": 0.798319, \"7\": 0.032296}, \"ffl_raw_count\": 89948, \"z_degree_030T\": 55.64274092132269, \"z_layer_030T\": 65.20046898588376}",
+          "metadata_fold": "rhyme",
+          "metadata_graph_idx": 6,
+          "predict_our_method": "rhyme",
+          "predict_baseline": "rhyme",
+          "eval_z_030t": 45.95,
+          "eval_z_degree_030t": 55.6427,
+          "eval_z_layer_030t": 65.2005
+        },
+        {
+          "input": "This movie was terrible. The sentiment is",
+          "output": "{\"z_030T\": 62.083, \"count_ratios\": {\"2\": 0.125681, \"4\": 0.090779, \"6\": 0.731966, \"7\": 0.051574}, \"ffl_raw_count\": 175258, \"z_degree_030T\": 55.547331427868826, \"z_layer_030T\": 42.20483532355988}",
+          "metadata_fold": "sentiment",
+          "metadata_graph_idx": 7,
+          "predict_our_method": "sentiment",
+          "predict_baseline": "sentiment",
+          "eval_z_030t": 62.083,
+          "eval_z_degree_030t": 55.5473,
+          "eval_z_layer_030t": 42.2048
+        },
+        {
+          "input": "The capital of Brazil is",
+          "output": "{\"z_030T\": 56.0165, \"count_ratios\": {\"2\": 0.12449, \"4\": 0.077015, \"6\": 0.750651, \"7\": 0.047844}, \"ffl_raw_count\": 57997, \"z_degree_030T\": 46.82123261175902, \"z_layer_030T\": 80.98993167427658}",
+          "metadata_fold": "country_capital",
+          "metadata_graph_idx": 8,
+          "predict_our_method": "country_capital",
+          "predict_baseline": "country_capital",
+          "eval_z_030t": 56.0165,
+          "eval_z_degree_030t": 46.8212,
+          "eval_z_layer_030t": 80.9899
+        },
+        {
+          "input": "15 + 28 =",
+          "output": "{\"z_030T\": 65.9902, \"count_ratios\": {\"2\": 0.103279, \"4\": 0.061319, \"6\": 0.795625, \"7\": 0.039777}, \"ffl_raw_count\": 33442, \"z_degree_030T\": 52.60246254300175, \"z_layer_030T\": 56.55863513244774}",
+          "metadata_fold": "arithmetic",
+          "metadata_graph_idx": 9,
+          "predict_our_method": "arithmetic",
+          "predict_baseline": "arithmetic",
+          "eval_z_030t": 65.9902,
+          "eval_z_degree_030t": 52.6025,
+          "eval_z_layer_030t": 56.5586
+        }
+      ]
+    }
+  ]
+}

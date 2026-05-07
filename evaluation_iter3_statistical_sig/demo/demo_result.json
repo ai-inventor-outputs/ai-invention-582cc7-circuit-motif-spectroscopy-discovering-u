@@ -1,0 +1,13 @@
+{
+  "id": "eval_id4_it3__opus",
+  "type": "code",
+  "title": "Statistical Significance Audit of Iter 2 Circuit Motif Spectroscopy Claims",
+  "summary": "Demonstrates a rigorous statistical audit of circuit motif spectroscopy claims across 6 phases: permutation tests for NMI/ARI significance, bootstrap confidence intervals for FFL Z-scores across 8 task domains, layer confound analysis with Wilcoxon signed-rank test and Z retention ratios, Cohen's d and eta-squared effect sizes, and robustness checks (leave-one-out, seed stability, feature ablation). Uses 10 attribution graphs from the neuronpedia dataset spanning 8 domains (antonym, arithmetic, code_completion, country_capital, multi_hop_reasoning, rhyme, sentiment, translation). Runs with full original parameters (1000 permutations, 10000 bootstrap samples) in ~5 seconds. Produces a 4-panel visualization showing Z-scores by domain, layer confound scatter, feature ablation impact, and permutation null distribution.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_3/gen_art/eval_id4_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id4_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id4_it3__opus/eval_code_demo.ipynb"
+}

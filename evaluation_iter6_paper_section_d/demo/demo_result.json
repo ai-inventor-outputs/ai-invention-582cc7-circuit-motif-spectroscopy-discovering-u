@@ -1,0 +1,13 @@
+{
+  "id": "eval_id5_it6__opus",
+  "type": "code",
+  "title": "Paper Section Drafting: LaTeX-Ready Content Synthesis from 5 Dependency Experiments",
+  "summary": "Demo notebook for the Paper Section Drafting evaluation pipeline. Loads pre-computed evaluation data from 5 dependency experiments synthesized into LaTeX paper sections. Re-computes quality metrics (word count validation, citation checking, section completeness) on 5 curated examples (abstract, results_h1, results_h5, conclusion, table_t3). Displays aggregate metrics (all 5 scores at 1.0: section completeness, numerical claim accuracy, table integrity, hypothesis mapping, internal consistency) and generates a 4-panel visualization showing word counts vs targets, aggregate metric scores, hypothesis mapping scores, and citations/references per section.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_6/gen_art/eval_id5_it6__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id5_it6__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id5_it6__opus/eval_code_demo.ipynb"
+}

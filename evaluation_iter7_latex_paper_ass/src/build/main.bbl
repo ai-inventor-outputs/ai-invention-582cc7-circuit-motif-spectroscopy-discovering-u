@@ -1,0 +1,262 @@
+\begin{thebibliography}{34}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Alon(2007)]{alon2007network}
+Uri Alon.
+\newblock Network motifs: Theory and experimental approaches.
+\newblock \emph{Nature Reviews Genetics}, 8\penalty0 (6):\penalty0 450--461,
+  2007.
+
+\bibitem[Benson et~al.(2016)Benson, Gleich, and Leskovec]{benson2016higher}
+Austin~R. Benson, David~F. Gleich, and Jure Leskovec.
+\newblock Higher-order organization of complex networks.
+\newblock In \emph{Science}, volume 353, pages 163--166, 2016.
+
+\bibitem[Bonacich(1987)]{bonacich1987power}
+Phillip Bonacich.
+\newblock Power and centrality: A family of measures.
+\newblock \emph{American Journal of Sociology}, 92\penalty0 (5):\penalty0
+  1170--1182, 1987.
+
+\bibitem[Bricken et~al.(2023)Bricken, Templeton, Batson, Chen, Jermyn, Conerly,
+  Turner, Anil, Denison, Askell, Lasenby, Wu, Kravec, Schiefer, Maxwell,
+  Joseph, Hatfield-Dodds, Tamkin, Nguyen, McLean, Burke, Hume, Carter,
+  Henighan, and Olah]{bricken2023monosemanticity}
+Trenton Bricken, Adly Templeton, Joshua Batson, Brian Chen, Adam Jermyn, Tom
+  Conerly, Nick Turner, Cem Anil, Carson Denison, Amanda Askell, Robert
+  Lasenby, Yifan Wu, Shauna Kravec, Nicholas Schiefer, Tim Maxwell, Nicholas
+  Joseph, Zac Hatfield-Dodds, Alex Tamkin, Karina Nguyen, Brayden McLean,
+  Josiah~E. Burke, Tristan Hume, Shan Carter, Tom Henighan, and Christopher
+  Olah.
+\newblock Towards monosemanticity: Decomposing language models with dictionary
+  learning.
+\newblock Transformer Circuits Thread, 2023.
+\newblock URL
+  \url{https://transformer-circuits.pub/2023/monosemantic-features}.
+
+\bibitem[Conmy et~al.(2023)Conmy, Mavor-Parker, Lynch, Heimersheim, and
+  Garriga-Alonso]{conmy2023automated}
+Arthur Conmy, Augustine~N. Mavor-Parker, Aidan Lynch, Stefan Heimersheim, and
+  Adri\`{a} Garriga-Alonso.
+\newblock Towards automated circuit discovery for mechanistic interpretability.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~36, 2023.
+
+\bibitem[Cunningham et~al.(2024)Cunningham, Ewart, Riggs, Huben, and
+  Sharkey]{cunningham2023sparse}
+Hoagy Cunningham, Aidan Ewart, Logan Riggs, Robert Huben, and Lee Sharkey.
+\newblock Sparse autoencoders find highly interpretable features in language
+  models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2024.
+
+\bibitem[Elhage et~al.(2021)Elhage, Nanda, Olsson, Henighan, Joseph, Mann,
+  Askell, Bai, Chen, Conerly, DasSarma, Drain, Ganguli, Hatfield-Dodds,
+  Hernandez, Jones, Kernion, Lovitt, Ndousse, Amodei, Brown, Clark, Kaplan,
+  McCandlish, and Olah]{elhage2021mathematical}
+Nelson Elhage, Neel Nanda, Catherine Olsson, Tom Henighan, Nicholas Joseph, Ben
+  Mann, Amanda Askell, Yuntao Bai, Anna Chen, Tom Conerly, Nova DasSarma, Dawn
+  Drain, Deep Ganguli, Zac Hatfield-Dodds, Danny Hernandez, Andy Jones, Jackson
+  Kernion, Liane Lovitt, Kamal Ndousse, Dario Amodei, Tom Brown, Jack Clark,
+  Jared Kaplan, Sam McCandlish, and Chris Olah.
+\newblock A mathematical framework for transformer circuits.
+\newblock Transformer Circuits Thread, 2021.
+\newblock URL \url{https://transformer-circuits.pub/2021/framework}.
+
+\bibitem[Fagiolo(2007)]{fagiolo2007clustering}
+Giorgio Fagiolo.
+\newblock Clustering in complex directed networks.
+\newblock \emph{Physical Review E}, 76\penalty0 (2):\penalty0 026107, 2007.
+
+\bibitem[Frankle and Carlin(2019)]{frankle2019lottery}
+Jonathan Frankle and Michael Carlin.
+\newblock The lottery ticket hypothesis: Finding sparse, trainable neural
+  networks.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2019.
+
+\bibitem[Freeman(1978)]{freeman1978centrality}
+Linton~C. Freeman.
+\newblock Centrality in social networks: Conceptual clarification.
+\newblock \emph{Social Networks}, 1\penalty0 (3):\penalty0 215--239, 1978.
+
+\bibitem[Hanna et~al.(2023)Hanna, Liu, and Variengien]{hanna2023how}
+Michael Hanna, Ollie Liu, and Alexandre Variengien.
+\newblock How does {GPT}-2 compute greater-than?: Interpreting mathematical
+  abilities in a pre-trained language model.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~36, 2023.
+
+\bibitem[Jiang et~al.(2020)Jiang, Xu, Araki, and Neubig]{jiang2019fantastic}
+Zhengbao Jiang, Frank~F. Xu, Jun Araki, and Graham Neubig.
+\newblock How can we know what language models know?
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  8:\penalty0 423--438, 2020.
+
+\bibitem[Leskovec et~al.(2010)Leskovec, Huttenlocher, and
+  Kleinberg]{leskovec2010signed}
+Jure Leskovec, Daniel Huttenlocher, and Jon Kleinberg.
+\newblock Predicting positive and negative links in online social networks.
+\newblock \emph{Proceedings of the 19th International Conference on World Wide
+  Web (WWW)}, pages 641--650, 2010.
+
+\bibitem[Mangan and Alon(2003)]{mangan2003structure}
+Shmoolik Mangan and Uri Alon.
+\newblock Structure and function of the feed-forward loop network motif.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 100\penalty0
+  (21):\penalty0 11980--11985, 2003.
+
+\bibitem[Marks et~al.(2025)Marks, Rager, Michaud, Belinkov, Bau, and
+  Mueller]{marks2024sparse}
+Samuel Marks, Can Rager, Eric~J. Michaud, Yonatan Belinkov, David Bau, and
+  Aaron Mueller.
+\newblock Sparse feature circuits: Discovering and editing interpretable causal
+  graphs in language models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2025.
+
+\bibitem[McFadden(1974)]{mcfadden1974conditional}
+Daniel McFadden.
+\newblock Conditional logit analysis of qualitative choice behavior.
+\newblock In Paul Zarembka, editor, \emph{Frontiers in Econometrics}, pages
+  105--142. Academic Press, 1974.
+
+\bibitem[Meng et~al.(2022)Meng, Bau, Andonian, and Belinkov]{meng2022locating}
+Kevin Meng, David Bau, Alex Andonian, and Yonatan Belinkov.
+\newblock Locating and editing factual associations in {GPT}.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~35, 2022.
+
+\bibitem[Michel et~al.(2019)Michel, Levy, and Neubig]{michel2019sixteen}
+Paul Michel, Omer Levy, and Graham Neubig.
+\newblock Are sixteen heads really better than one?
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~32, 2019.
+
+\bibitem[Milo et~al.(2002)Milo, Shen-Orr, Itzkovitz, Kashtan, Chklovskii, and
+  Alon]{milo2002network}
+R.~Milo, S.~Shen-Orr, S.~Itzkovitz, N.~Kashtan, D.~Chklovskii, and U.~Alon.
+\newblock Network motifs: Simple building blocks of complex networks.
+\newblock \emph{Science}, 298\penalty0 (5594):\penalty0 824--827, 2002.
+
+\bibitem[Milo et~al.(2004)Milo, Itzkovitz, Kashtan, Levitt, Shen-Orr,
+  Ayzenshtat, Sheffer, and Alon]{milo2004superfamilies}
+R.~Milo, S.~Itzkovitz, N.~Kashtan, R.~Levitt, S.~Shen-Orr, I.~Ayzenshtat,
+  M.~Sheffer, and U.~Alon.
+\newblock Superfamilies of evolved and designed networks.
+\newblock \emph{Science}, 303\penalty0 (5663):\penalty0 1538--1542, 2004.
+
+\bibitem[Morcos et~al.(2018)Morcos, Barrett, Rabinowitz, and
+  Botvinick]{morcos2018importance}
+Ari~S. Morcos, David G.~T. Barrett, Neil~C. Rabinowitz, and Matthew~M.
+  Botvinick.
+\newblock On the importance of single directions for generalization.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2018.
+
+\bibitem[{Neuronpedia}(2024)]{neuronpedia2024}
+{Neuronpedia}.
+\newblock Neuronpedia: Interactive platform for sae feature analysis.
+\newblock \url{https://www.neuronpedia.org}, 2024.
+\newblock URL \url{https://www.neuronpedia.org}.
+
+\bibitem[Ng et~al.(2002)Ng, Jordan, and Weiss]{ng2002spectral}
+Andrew~Y. Ng, Michael~I. Jordan, and Yair Weiss.
+\newblock On spectral clustering: Analysis and an algorithm.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~14, 2002.
+
+\bibitem[Olsson et~al.(2022)Olsson, Elhage, Nanda, Joseph, DasSarma, Henighan,
+  Mann, Askell, Bai, Chen, Conerly, Drain, Ganguli, Hatfield-Dodds, Hernandez,
+  Kernion, Lovitt, Ndousse, Amodei, Brown, Clark, Kaplan, McCandlish, and
+  Olah]{olsson2022context}
+Catherine Olsson, Nelson Elhage, Neel Nanda, Nicholas Joseph, Nova DasSarma,
+  Tom Henighan, Ben Mann, Amanda Askell, Yuntao Bai, Anna Chen, Tom Conerly,
+  Dawn Drain, Deep Ganguli, Zac Hatfield-Dodds, Danny Hernandez, Jackson
+  Kernion, Liane Lovitt, Kamal Ndousse, Dario Amodei, Tom Brown, Jack Clark,
+  Jared Kaplan, Sam McCandlish, and Chris Olah.
+\newblock In-context learning and induction heads.
+\newblock Transformer Circuits Thread, 2022.
+\newblock URL
+  \url{https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads}.
+
+\bibitem[Onnela et~al.(2005)Onnela, Saram{\"a}ki, Kert{\'e}sz, and
+  Kaski]{onnela2005intensity}
+J.-P. Onnela, J.~Saram{\"a}ki, J.~Kert{\'e}sz, and K.~Kaski.
+\newblock Intensity and coherence of motifs in weighted complex networks.
+\newblock \emph{Physical Review E}, 71:\penalty0 065103, 2005.
+
+\bibitem[Paranjape et~al.(2017)Paranjape, Benson, and
+  Leskovec]{paranjape2017motifs}
+Ashwin Paranjape, Austin~R. Benson, and Jure Leskovec.
+\newblock Motifs in temporal networks.
+\newblock In \emph{Proceedings of the Tenth ACM International Conference on Web
+  Search and Data Mining (WSDM)}, pages 601--610, 2017.
+
+\bibitem[Shen-Orr et~al.(2002)Shen-Orr, Milo, Mangan, and
+  Alon]{shenorr2002network}
+Shai~S. Shen-Orr, Ron Milo, Shmoolik Mangan, and Uri Alon.
+\newblock Network motifs in the transcriptional regulation network of
+  \emph{Escherichia coli}.
+\newblock \emph{Nature Genetics}, 31:\penalty0 64--68, 2002.
+
+\bibitem[Sporns and K{\"o}tter(2004)]{sporns2004motifs}
+Olaf Sporns and Rolf K{\"o}tter.
+\newblock Motifs in brain networks.
+\newblock \emph{PLoS Biology}, 2\penalty0 (11):\penalty0 e369, 2004.
+
+\bibitem[Stouffer et~al.(2007)Stouffer, Camacho, Jiang, and
+  Amaral]{stouffer2007evidence}
+Daniel~B. Stouffer, Juan Camacho, Wenxin Jiang, and Lu{\'\i}s A.~Nunes Amaral.
+\newblock Evidence for the existence of a robust pattern of prey selection in
+  food webs.
+\newblock \emph{Proceedings of the Royal Society B}, 274\penalty0
+  (1621):\penalty0 1931--1940, 2007.
+
+\bibitem[Syed et~al.(2023)Syed, Rager, and Conmy]{syed2023attribution}
+Aaquib Syed, Can Rager, and Arthur Conmy.
+\newblock Attribution patching outperforms automated circuit discovery, 2023.
+
+\bibitem[Templeton et~al.(2024)Templeton, Conerly, Marcus, Lindsey, Bricken,
+  Chen, Pearce, Citro, Ameisen, Jones, Cunningham, Turner, McDougall,
+  MacDiarmid, Freeman, Sumers, Rees, Batson, Jermyn, Carter, Olsson, and
+  Olah]{templeton2024scaling}
+Adly Templeton, Tom Conerly, Jonathan Marcus, Jack Lindsey, Trenton Bricken,
+  Brian Chen, Adam Pearce, Craig Citro, Emmanuel Ameisen, Andy Jones, Hoagy
+  Cunningham, Nicholas~L. Turner, Callum McDougall, Monte MacDiarmid, C.~Daniel
+  Freeman, Theodore~R. Sumers, Edward Rees, Joshua Batson, Adam Jermyn, Shan
+  Carter, Catherine Olsson, and Christopher Olah.
+\newblock Scaling monosemanticity: Extracting interpretable features from
+  claude 3 sonnet.
+\newblock Transformer Circuits Thread, 2024.
+\newblock URL
+  \url{https://transformer-circuits.pub/2024/scaling-monosemanticity}.
+
+\bibitem[Voita et~al.(2019)Voita, Talbot, Moiseev, Sennrich, and
+  Titov]{voita2019analyzing}
+Elena Voita, David Talbot, Fedor Moiseev, Rico Sennrich, and Ivan Titov.
+\newblock Analyzing multi-head self-attention: Specialized heads do the heavy
+  lifting, the rest can be pruned.
+\newblock In \emph{Proceedings of the 57th Annual Meeting of the Association
+  for Computational Linguistics (ACL)}, pages 5797--5808, 2019.
+
+\bibitem[Wang et~al.(2023)Wang, Variengien, Conmy, Shlegeris, and
+  Steinhardt]{wang2023interpretability}
+Kevin Wang, Alexandre Variengien, Arthur Conmy, Buck Shlegeris, and Jacob
+  Steinhardt.
+\newblock Interpretability in the wild: a circuit for indirect object
+  identification in {GPT}-2 small.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2023.
+
+\bibitem[You et~al.(2020)You, Ying, and Leskovec]{you2020design}
+Jiaxuan You, Zhitao Ying, and Jure Leskovec.
+\newblock Design space for graph neural networks.
+\newblock \emph{Advances in Neural Information Processing Systems},
+  33:\penalty0 17009--17021, 2020.
+
+\end{thebibliography}

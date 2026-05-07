@@ -1,0 +1,13 @@
+{
+  "id": "eval_id5_it4__opus",
+  "type": "code",
+  "title": "Hypothesis Evidence Scorecard: Synthesizing Iterations 1-3 Experimental Results",
+  "summary": "Demo notebook that evaluates 5 hypothesis claims (H1-H5) against 3 iteration-3 experiments from circuit motif spectroscopy research. Loads pre-extracted experiment metadata and examples from mini_demo_data.json (52KB, containing exp1 metadata, 17 exp2 examples, 10 exp3 examples). Scores each hypothesis on a 5-level scale, generates an overall verdict (Partially Confirmed, mean=0.41), paper narrative recommendations, and a prioritized gap list with 3 must-fix items. Produces a 3-panel visualization showing hypothesis scores, research gaps, and key metrics.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_4/gen_art/eval_id5_it4__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id5_it4__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id5_it4__opus/eval_code_demo.ipynb"
+}

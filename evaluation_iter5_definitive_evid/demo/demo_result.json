@@ -1,0 +1,13 @@
+{
+  "id": "eval_id4_it5__opus",
+  "type": "code",
+  "title": "Definitive Evidence Synthesis: Iterations 1-4 Hypothesis Scorecard & Paper Architecture",
+  "summary": "Demo notebook for the Definitive Evidence Synthesis evaluation. Loads pre-extracted metrics from 4 iter-4 experiments, runs hypothesis scoring (H1-H5) with the original scoring logic, builds a master evidence table (11 rows), computes aggregate metrics (mean score 0.72, paper readiness 0.44), and displays gap triage. Includes 4-panel visualization: hypothesis score comparison (iter-3 vs iter-4), clustering NMI by feature set, hub ablation ratios vs controls, and evidence criteria pie chart.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_5/gen_art/eval_id4_it5__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id4_it5__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/eval_id4_it5__opus/eval_code_demo.ipynb"
+}

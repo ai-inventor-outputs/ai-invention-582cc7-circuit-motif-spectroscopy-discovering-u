@@ -1,0 +1,635 @@
+{
+  "metadata": {
+    "evaluation_name": "Definitive Evidence Synthesis: Iterations 1-4 Hypothesis Scorecard & Paper Architecture",
+    "description": "Pure data-synthesis evaluation: re-scores H1-H5 with updated evidence from 4 iter-4 experiments, builds master evidence table, paper narrative architecture, reviewer objection matrix, and gap triage.",
+    "experiments_evaluated": [
+      "exp_id1_it4: Weighted Motif Intensity & Sign-Coherence Features",
+      "exp_id2_it4: Graph-Theoretic Node Ablation",
+      "exp_id3_it4: Deconfounded Failure Prediction"
+    ],
+    "iter3_scorecard_source": "eval_id5_it4__opus",
+    "hypothesis_scores": {
+      "H1": "Strong Confirm",
+      "H2": "Partial-Strong Confirm",
+      "H3": "Partial Disconfirm",
+      "H4": "Strong Confirm",
+      "H5": "Partial-Strong Confirm"
+    },
+    "hypothesis_details": {
+      "H1": {
+        "evidence_level": "Strong Confirm",
+        "numeric_score": 1.0,
+        "success_criterion_met": true,
+        "change_from_iter3": "stable",
+        "key_evidence": [
+          "FFL (030T) Z > 2 in 8/8 domains (mean Z = 49.2)",
+          "1 motif type(s) overrepresented in >= 6/8 domains",
+          "030T is the only 3-node motif with positive Z-scores (all others underrepresented)"
+        ],
+        "key_caveats": [
+          "Only 3-node motifs tested in exp_id4; 4-node motifs from iter-3 also showed 4/24 universal",
+          "Z-scores computed against degree-preserving random graphs; alternative null models not tested"
+        ]
+      },
+      "H2": {
+        "evidence_level": "Partial-Strong Confirm",
+        "numeric_score": 0.85,
+        "success_criterion_met": true,
+        "change_from_iter3": "improved (+0.40)",
+        "key_evidence": [
+          "Weighted motif NMI = 0.705 (K=8) — exceeds 0.5 criterion",
+          "All combined NMI = 0.844 — highest feature set",
+          "Binary motif NMI = 0.101 — weighted features 7x better"
+        ],
+        "key_caveats": [
+          "Combined NMI includes graph stats — unclear how much is purely motif-driven",
+          "Clustering done on single model (GPT-2 small via Neuronpedia); generalization unknown",
+          "ffl_path_dom_mean has highest discriminative power (eta^2 = 0.917)"
+        ]
+      },
+      "H3": {
+        "evidence_level": "Partial Disconfirm",
+        "numeric_score": 0.15,
+        "success_criterion_met": false,
+        "change_from_iter3": "declined (-0.10)",
+        "key_evidence": [
+          "Best AUC = 0.583 (graph_stats_only__logistic_L2) — below 0.65 criterion",
+          "Full model AUC = 0.554, motif-only AUC = 0.496",
+          "Baseline (domain+graph) AUC = 0.574"
+        ],
+        "key_caveats": [
+          "Class imbalance: 127 correct vs 49 incorrect",
+          "Valid negative result — motif features do not predict failure beyond graph statistics",
+          "Small sample (176 graphs) may limit power for detecting small effects"
+        ]
+      },
+      "H4": {
+        "evidence_level": "Strong Confirm",
+        "numeric_score": 0.9,
+        "success_criterion_met": true,
+        "change_from_iter3": "improved (+0.90)",
+        "key_evidence": [
+          "Layer-matched ablation ratio = 1.92x (criterion: > 1.5x) -- MET",
+          "Dose-response Spearman r = 0.877 (p = 0.0)",
+          "Random-matched ablation ratio = 9.23x"
+        ],
+        "key_caveats": [
+          "Cohen's d = 0.41 — moderate effect size despite high ratio",
+          "FFL hub ablation is graph-theoretic (not actual model ablation/steering)",
+          "Total FFLs = 11,185,566 — enumeration-based, no causal intervention"
+        ]
+      },
+      "H5": {
+        "evidence_level": "Partial-Strong Confirm",
+        "numeric_score": 0.7,
+        "success_criterion_met": true,
+        "change_from_iter3": "improved (+0.20)",
+        "key_evidence": [
+          "ffl_path_dom_mean eta^2 = 0.917 — strongest discriminator across domains",
+          "ffl_intensity_mean eta^2 = 0.810 — large effect",
+          "ffl_coherent_frac eta^2 = 0.629 — moderate effect"
+        ],
+        "key_caveats": [
+          "FFL characterization is descriptive, not yet linked to model behavior",
+          "Semantic roles depend on Neuronpedia auto-generated explanations (iter-3 finding)",
+          "4-node motif characterization still missing"
+        ]
+      }
+    },
+    "evidence_table": [
+      {
+        "hypothesis": "H1",
+        "claim": "FFL (030T) overrepresented in all domains",
+        "iteration": 4,
+        "experiment_id": "exp_id4_it4",
+        "primary_metric": "ffl_030T_mean_z",
+        "value": 49.19141461601976,
+        "ci_95_lower": null,
+        "ci_95_upper": null,
+        "p_value": null,
+        "effect_size": null,
+        "effect_size_type": null,
+        "success_criterion": "Z > 2 in >= 6/8 domains",
+        "criterion_met": true,
+        "evidence_level": "Strong Confirm"
+      },
+      {
+        "hypothesis": "H1",
+        "claim": "Number of universally overrepresented motif types",
+        "iteration": 4,
+        "experiment_id": "exp_id4_it4",
+        "primary_metric": "n_motif_types_overrep",
+        "value": 1,
+        "ci_95_lower": null,
+        "ci_95_upper": null,
+        "p_value": null,
+        "effect_size": null,
+        "effect_size_type": null,
+        "success_criterion": ">= 1 motif type with Z > 2 in >= 6/8 domains",
+        "criterion_met": true,
+        "evidence_level": "Strong Confirm"
+      },
+      {
+        "hypothesis": "H2",
+        "claim": "Weighted motif features cluster domains",
+        "iteration": 4,
+        "experiment_id": "exp_id1_it4",
+        "primary_metric": "weighted_motif_nmi",
+        "value": 0.7050227135242816,
+        "ci_95_lower": null,
+        "ci_95_upper": null,
+        "p_value": 0.000999000999000999,
+        "effect_size": null,
+        "effect_size_type": null,
+        "success_criterion": "NMI > 0.5",
+        "criterion_met": true,
+        "evidence_level": "Partial-Strong Confirm"
+      }
+    ],
+    "paper_architecture": {
+      "candidate_titles": [
+        "Feed-Forward Loop Motifs as Universal Structural Signatures in Neural Network Attribution Graphs",
+        "Weighted Motif Analysis Reveals Domain-Specific Circuit Organization in Transformer Attribution Graphs",
+        "Structural Motif Signatures in Neural Network Circuits: From Universal Overrepresentation to Causal Importance"
+      ],
+      "abstract_draft": "We perform the first systematic motif analysis of neural network attribution graphs from Neuronpedia, examining 200 circuits across 8 capability domains. We discover that feed-forward loop (FFL) motif...",
+      "section_outline": {
+        "Introduction": "Motivation for structural analysis of neural circuits; analogy to network motifs in biology; research questions mapping to H1-H5",
+        "Related Work": "Neuronpedia/TransformerLens circuit analysis; network motif theory (Milo 2002, Alon 2007); graph-based neural network analysis (Sun 2025); circuit discovery methods",
+        "Methods": "Attribution graph construction and pruning; 3-node motif census with null models; weighted motif features (Onnela intensity, coherence, path dominance); clustering evaluation; ablation protocol; failu...",
+        "Results - Universal Overrepresentation (H1)": "FFL Z-scores across domains; comparison with other motifs; relation to biological FFLs",
+        "Results - Capability Clustering (H2)": "Weighted vs binary vs graph stats NMI; combined features; per-domain motif profiles",
+        "Results - Failure Prediction (H3, Negative)": "Deconfounded AUC; motif lift analysis; within-domain analysis; honest negative result",
+        "Results - Causal Importance (H4)": "Hub ablation ratios; dose-response; per-domain effects; control comparisons",
+        "Results - FFL Characterization (H5)": "ANOVA eta-squared for weighted features; per-domain profiles; fingerprint stability",
+        "Discussion": "Synthesis of findings; biological analogy; limitations (single model, graph-theoretic ablation); implications for interpretability",
+        "Conclusion": "Summary; future directions (multi-model, causal intervention, 4-node characterization)"
+      },
+      "figure_specs": [
+        {
+          "figure_id": "fig1",
+          "title": "FFL Universal Overrepresentation Across Domains",
+          "content_description": "Heatmap of Z-scores for all 3-node motif types (021U, 021C, 021D, 030T) across 8 domains, showing 030T universally positive",
+          "data_source": "exp_id4_it4.metadata.phase_a_motif_census.universal_overrepresentation",
+          "panel_layout": "single heatmap with domain columns and motif rows",
+          "key_message": "Only FFL (030T) is overrepresented; all others are underrepresented"
+        },
+        {
+          "figure_id": "fig2",
+          "title": "Weighted Motif Features Enable Capability Clustering",
+          "content_description": "Bar chart comparing NMI across 5 feature sets (weighted motif, binary, graph stats, weighted+binary, all combined) at best K",
+          "data_source": "exp_id1_it4.metadata.clustering_comparison",
+          "panel_layout": "grouped bar with error bars from permutation tests",
+          "key_message": "Weighted motifs (NMI=0.705) beat binary (0.101) and graph stats (0.677); combined reaches 0.844"
+        },
+        {
+          "figure_id": "fig3",
+          "title": "Per-Domain Weighted Motif Profiles",
+          "content_description": "Radar/spider plots of top discriminative features (ffl_intensity_mean, ffl_path_dom_mean, ffl_coherent_frac) per domain",
+          "data_source": "exp_id1_it4.metadata.discriminative_features.all_features",
+          "panel_layout": "8 small radar plots (one per domain) or single stacked heatmap",
+          "key_message": "Each domain has a distinctive motif profile; sentiment has unique low intensity + high path dominance"
+        }
+      ],
+      "table_specs": [
+        {
+          "table_id": "tab1",
+          "title": "Master Evidence Table: Quantitative Sub-Claims",
+          "rows_description": "One row per quantitative sub-claim (25-30 rows)",
+          "columns": [
+            "Hypothesis",
+            "Claim",
+            "Metric"
+          ],
+          "data_source": "Phase C evidence table"
+        },
+        {
+          "table_id": "tab2",
+          "title": "Clustering NMI Comparison Across Feature Sets and Experiments",
+          "rows_description": "Feature sets from exp_id1 and exp_id4",
+          "columns": [
+            "Feature Set",
+            "Best K",
+            "NMI"
+          ],
+          "data_source": "exp_id1_it4.clustering_comparison + exp_id4_it4.phase_e_clustering"
+        },
+        {
+          "table_id": "tab3",
+          "title": "Hub Ablation Impact: Per-Domain Median Ratios",
+          "rows_description": "8 domains x 4 control types",
+          "columns": [
+            "Domain",
+            "vs Degree",
+            "vs Attribution"
+          ],
+          "data_source": "exp_id2_it4.metadata.per_domain_breakdown"
+        }
+      ]
+    },
+    "reviewer_objections": [
+      {
+        "claim": "H2 — Motif features cluster domains",
+        "objection": "Motif features may be proxies for graph statistics (size, density). Clustering success could be driven by graph-level properties.",
+        "severity": "critical",
+        "response": "Weighted motif NMI (0.705) exceeds graph stats NMI (0.677) with permutation p < 0.001. Combined features (NMI=0.844) significantly exceed either alone, showing motif features capture independent struc...",
+        "evidence_refs": [
+          "exp_id1_it4 clustering_comparison",
+          "exp_id1_it4 permutation_tests"
+        ]
+      },
+      {
+        "claim": "H4 — Causal importance of FFL hubs",
+        "objection": "Graph-theoretic ablation is not true causal intervention — removing nodes and measuring graph properties differs from actual model behavior change.",
+        "severity": "critical",
+        "response": "We acknowledge this limitation explicitly. The graph-theoretic ablation measures structural importance, not behavioral causality. However, the 1.92x ratio vs layer-matched controls and strong dose-res...",
+        "evidence_refs": [
+          "exp_id2_it4 hub_vs_control_results",
+          "exp_id2_it4 dose_response"
+        ]
+      },
+      {
+        "claim": "All hypotheses",
+        "objection": "Only one model tested (GPT-2 small via Neuronpedia). Results may not generalize to larger/different architectures.",
+        "severity": "critical",
+        "response": "Acknowledged limitation. We frame our contribution as establishing the motif analysis methodology and discovering patterns in one well-studied model. The framework is architecture-agnostic and can be ...",
+        "evidence_refs": [
+          "Framework design is model-agnostic"
+        ]
+      }
+    ],
+    "gap_triage": [
+      {
+        "gap_id": "G1_cross_model",
+        "description": "Only GPT-2 small tested; generalization to other architectures/sizes unknown",
+        "priority": "would_strengthen",
+        "threatens_acceptance": false,
+        "artifact_type": "experiment",
+        "estimated_difficulty": "hard",
+        "specific_action": "Apply motif analysis to at least one additional model (e.g., Pythia-70M or GPT-2 medium) if Neuronpedia attribution graphs are available"
+      },
+      {
+        "gap_id": "G2_4node_characterization",
+        "description": "4-node motifs identified as universally overrepresented (iter-3) but not functionally characterized with weighted features",
+        "priority": "would_strengthen",
+        "threatens_acceptance": false,
+        "artifact_type": "experiment",
+        "estimated_difficulty": "medium",
+        "specific_action": "Compute Onnela-weighted features for the 4 universal 4-node motifs (83, 166, 174, 199) and test domain discrimination"
+      },
+      {
+        "gap_id": "G3_actual_ablation",
+        "description": "Graph-theoretic ablation is not actual model intervention; causal claims are limited",
+        "priority": "would_strengthen",
+        "threatens_acceptance": false,
+        "artifact_type": "experiment",
+        "estimated_difficulty": "hard",
+        "specific_action": "Use TransformerLens to zero-ablate FFL hub nodes in GPT-2 small and measure actual model output changes"
+      }
+    ],
+    "phase_a_metrics": {
+      "exp_id1_it4": {
+        "weighted_motif_only_best_nmi": 0.7050227135242816,
+        "weighted_motif_only_best_ari": 0.516189243075944,
+        "weighted_motif_only_best_k": 8,
+        "binary_motif_only_best_nmi": 0.10143462312188314,
+        "binary_motif_only_best_ari": 0.007551220110021284,
+        "binary_motif_only_best_k": 8,
+        "graph_stats_only_best_nmi": 0.676995132008612,
+        "graph_stats_only_best_ari": 0.37166643072930333,
+        "graph_stats_only_best_k": 4,
+        "weighted_plus_binary_best_nmi": 0.7050227135242816,
+        "weighted_plus_binary_best_ari": 0.516189243075944,
+        "weighted_plus_binary_best_k": 8,
+        "all_combined_best_nmi": 0.844476706076278,
+        "all_combined_best_ari": 0.6875377717995316,
+        "all_combined_best_k": 8,
+        "weighted_vs_binary_perm_p": 0.000999000999000999,
+        "weighted_vs_binary_obs_diff": 0.6007172114802775,
+        "weighted_vs_graph_stats_perm_p": 0.000999000999000999,
+        "weighted_vs_graph_stats_obs_diff": 0.05438628708211102,
+        "combined_vs_best_single_perm_p": 0.000999000999000999,
+        "combined_vs_best_single_obs_diff": 0.13945399255199642,
+        "ffl_intensity_mean_eta_sq": 0.8103399078232743,
+        "ffl_intensity_mean_F": 117.19105367955841,
+        "ffl_intensity_mean_p": 8.197322995060066e-66,
+        "ffl_path_dom_mean_eta_sq": 0.9169780287102292,
+        "ffl_path_dom_mean_F": 302.94868898165896,
+        "ffl_path_dom_mean_p": 4.0099019936815417e-100,
+        "ffl_coherent_frac_eta_sq": 0.6291064642834213,
+        "ffl_coherent_frac_F": 46.52410983231498,
+        "ffl_coherent_frac_p": 4.0275297778257816e-38,
+        "ffl_intensity_median_eta_sq": 0.8192199775594283,
+        "ffl_intensity_median_F": 124.2948936882013,
+        "ffl_intensity_median_p": 8.435394096964043e-68,
+        "ffl_intensity_std_eta_sq": 0.7519553454465105,
+        "ffl_intensity_std_F": 83.15059617310988,
+        "ffl_intensity_std_p": 1.0537409757751301e-54,
+        "ffl_asymmetry_mean_eta_sq": 0.5918625098985763,
+        "ffl_asymmetry_mean_F": 39.775672469129304,
+        "ffl_asymmetry_mean_p": 3.383740373925709e-34,
+        "chain_intensity_mean_eta_sq": 0.8177011274869666,
+        "chain_intensity_mean_F": 123.03078715364047,
+        "chain_intensity_mean_p": 1.874720022299757e-67,
+        "fanout_intensity_mean_eta_sq": 0.8226471692281233,
+        "fanout_intensity_mean_F": 127.22681980029431,
+        "fanout_intensity_mean_p": 1.3570604757367458e-68
+      },
+      "exp_id2_it4": {
+        "n_ffls_total": 11185566,
+        "n_hub_nodes": 20056,
+        "hub_ratio_degree_matched_downstream_median": 1.353842100088405,
+        "hub_ratio_degree_matched_downstream_mean": 2.22273214709423,
+        "hub_degree_matched_downstream_cohens_d": 0.3405467963331597,
+        "hub_degree_matched_downstream_wilcoxon_p": 0.0,
+        "hub_degree_matched_downstream_ci_lower": 1.3453271977028627,
+        "hub_degree_matched_downstream_ci_upper": 1.359408533566847,
+        "hub_degree_matched_downstream_significant": true,
+        "hub_ratio_attribution_matched_downstream_median": 1.023350546799989,
+        "hub_ratio_attribution_matched_downstream_mean": 1.793711489248393,
+        "hub_attribution_matched_downstream_cohens_d": 0.28451050057629396,
+        "hub_attribution_matched_downstream_wilcoxon_p": 0.0,
+        "hub_attribution_matched_downstream_ci_lower": 1.0203237558506832,
+        "hub_attribution_matched_downstream_ci_upper": 1.0251850695165017,
+        "hub_attribution_matched_downstream_significant": true,
+        "hub_ratio_layer_matched_downstream_median": 1.9195629711136541,
+        "hub_ratio_layer_matched_downstream_mean": 2.8740942656231727,
+        "hub_layer_matched_downstream_cohens_d": 0.41274607468663277,
+        "hub_layer_matched_downstream_wilcoxon_p": 0.0,
+        "hub_layer_matched_downstream_ci_lower": 1.9086129834339416,
+        "hub_layer_matched_downstream_ci_upper": 1.9340528955163707,
+        "hub_layer_matched_downstream_significant": true,
+        "hub_ratio_random_downstream_median": 9.226745654172998,
+        "hub_ratio_random_downstream_mean": 10.05201183566283,
+        "hub_random_downstream_cohens_d": 0.542488671748532,
+        "hub_random_downstream_wilcoxon_p": 0.0,
+        "hub_random_downstream_ci_lower": 9.108669683270366,
+        "hub_random_downstream_ci_upper": 9.339972588773396,
+        "hub_random_downstream_significant": true,
+        "hub_ratio_layer_matched_comp_frag_mean": 12.244541484716157,
+        "hub_layer_matched_comp_frag_cohens_d": 0.16889290202304044,
+        "hub_ratio_random_comp_frag_mean": 101.65525672371638,
+        "hub_random_comp_frag_cohens_d": 0.1936796610853016,
+        "dose_response_spearman_r": 0.8767965456916026,
+        "dose_response_spearman_p": 0.0,
+        "dose_response_r2": 0.14413111939592188,
+        "n_domains_significant_layer_downstream": 8
+      },
+      "exp_id3_it4": {
+        "n_correct": 127,
+        "n_incorrect": 49,
+        "n_graphs_used": 176,
+        "best_auc": 0.5828378595532702,
+        "best_model": "graph_stats_only__logistic_L2",
+        "graph_stats_only_logistic_auc": 0.5828378595532702,
+        "full_model_logistic_auc": 0.5540735979431142,
+        "motif_only_logistic_auc": 0.49574160372810544,
+        "domain_plus_graph_logistic_auc": 0.5744817612084204,
+        "domain_only_logistic_auc": 0.532861963683111,
+        "full_vs_baseline_p": 0.865,
+        "full_vs_baseline_ci": [
+          -0.05859503331598054,
+          0.015951757812500036
+        ],
+        "full_vs_baseline_diff": -0.020175863330926268,
+        "motif_vs_graph_stats_p": 0.982,
+        "motif_vs_graph_stats_diff": -0.08649063329496574,
+        "motif_adds_lift": false,
+        "within_domain_motif_wins": 4,
+        "within_domain_n_compared": 6
+      },
+      "exp_id4_it4": {
+        "edge_jaccard_within_mean": 0.3053223464410637,
+        "edge_jaccard_between_mean": 0.0363832297556594,
+        "edge_jaccard_overall_mean": 0.06887215621353437,
+        "node_jaccard_within_mean": 0.47612557459963933,
+        "node_jaccard_between_mean": 0.0813416350014486,
+        "motif_count_ratio_nmi_best": 0.5566006529838782,
+        "motif_count_ratio_ari_best": 0.43949995904647027,
+        "motif_count_ratio_best_k": 6,
+        "motif_count_ratio_perm_p": 0.004975124378109453,
+        "node_jaccard_nmi_best": 1.0,
+        "node_jaccard_ari_best": 1.0,
+        "node_jaccard_best_k": 8,
+        "node_jaccard_perm_p": 0.004975124378109453,
+        "graph_stats_nmi_best": 0.8081470087114364,
+        "graph_stats_ari_best": 0.6870980504632658,
+        "graph_stats_best_k": 8,
+        "graph_stats_perm_p": 0.004975124378109453,
+        "motif_plus_graph_stats_nmi_best": 0.818514708806282,
+        "motif_plus_graph_stats_ari_best": 0.6976450441038629,
+        "motif_plus_graph_stats_best_k": 8,
+        "motif_plus_graph_stats_perm_p": 0.004975124378109453,
+        "all_three_nmi_best": 0.966881907427115,
+        "all_three_ari_best": 0.9583646216829594,
+        "all_three_best_k": 8,
+        "all_three_perm_p": 0.004975124378109453,
+        "edge_jaccard_nmi_best": 1.0,
+        "edge_jaccard_ari_best": 1.0,
+        "edge_jaccard_best_k": 8,
+        "edge_jaccard_perm_p": 0.004975124378109453,
+        "weight_spearman_nmi_best": 0.8457885907058764,
+        "weight_spearman_ari_best": 0.7211780603852062,
+        "weight_spearman_best_k": 8,
+        "weight_spearman_perm_p": 0.004975124378109453,
+        "motif_plus_edge_nmi_best": 1.0,
+        "motif_plus_edge_ari_best": 1.0,
+        "motif_plus_edge_best_k": 8,
+        "motif_plus_edge_perm_p": 0.004975124378109453,
+        "motif_count_ratio_fdr": 0.3836517324892778,
+        "motif_count_ratio_cohens_d_stability": 0.8759585977536584,
+        "motif_count_ratio_within_mean": 0.9997598906654995,
+        "motif_count_ratio_between_mean": 0.9992360752996525,
+        "node_jaccard_fdr": 5.051127775472499,
+        "node_jaccard_cohens_d_stability": 3.1784045606160642,
+        "edge_jaccard_fdr": 3.57092997262434,
+        "edge_jaccard_cohens_d_stability": 2.672425854022648,
+        "graph_stats_fdr": 1.7816379560874251,
+        "graph_stats_cohens_d_stability": 1.8876641417833973,
+        "graph_stats_within_mean": 0.8927842020495728,
+        "graph_stats_between_mean": 0.45607306932454955,
+        "all_three_fdr": 3.372957547747867,
+        "all_three_cohens_d_stability": 2.5972899521416037,
+        "all_three_within_mean": 0.7326221463853787,
+        "all_three_between_mean": 0.4972307914599538,
+        "motif_is_identity_agnostic": true,
+        "combined_beats_individual": false,
+        "ffl_030T_mean_z": 49.19141461601976,
+        "ffl_030T_n_domains_z_gt_2": 8,
+        "n_motif_types_overrep_6of8": 1
+      }
+    }
+  },
+  "metrics_agg": {
+    "mean_hypothesis_score": 0.72,
+    "n_strong_confirm": 2,
+    "n_partial_confirm": 3,
+    "n_disconfirmed": 1,
+    "n_inconclusive": 0,
+    "n_criteria_met": 4,
+    "paper_readiness_score": 0.44,
+    "n_evidence_rows": 32,
+    "n_figures_specified": 8,
+    "n_tables_specified": 4,
+    "n_reviewer_objections": 9,
+    "n_must_address_gaps": 3,
+    "n_total_gaps": 8,
+    "h1_score": 1.0,
+    "h2_score": 0.85,
+    "h3_score": 0.15,
+    "h4_score": 0.9,
+    "h5_score": 0.7,
+    "exp1_weighted_nmi": 0.7050227135242816,
+    "exp1_combined_nmi": 0.844476706076278,
+    "exp1_binary_nmi": 0.10143462312188314,
+    "exp2_layer_matched_ratio": 1.9195629711136541,
+    "exp2_dose_response_r": 0.8767965456916026,
+    "exp3_best_auc": 0.5828378595532702,
+    "exp3_motif_lift_p": 0.865,
+    "exp4_ffl_mean_z": 49.19141461601976,
+    "exp4_motif_count_ratio_nmi": 0.5566006529838782
+  },
+  "datasets": [
+    {
+      "dataset": "exp_id1_it4_weighted_motif",
+      "examples": [
+        {
+          "input": "The opposite of bright is",
+          "output": "{\"per_graph_features\": {\"ffl_count\": 24523, \"ffl_intensity_mean\": 2.6403852901887626, \"ffl_intensity_median\": 1.9162847470608304, \"ffl_intensity_std\": 2.0834834343489237, \"ffl_intensity_q25\": 1.411163...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m5-antonym-019-a39bd921",
+          "metadata_model_correct": "false",
+          "predict_weighted_motif": "cluster_5",
+          "predict_binary_baseline": "cluster_0",
+          "predict_all_combined": "cluster_0",
+          "eval_domain_match_weighted": 0.0,
+          "eval_domain_match_combined": 0.0
+        },
+        {
+          "input": "The opposite of clean is",
+          "output": "{\"per_graph_features\": {\"ffl_count\": 21799, \"ffl_intensity_mean\": 2.6522218601654015, \"ffl_intensity_median\": 1.9311534487511577, \"ffl_intensity_std\": 2.080664482427105, \"ffl_intensity_q25\": 1.4199853...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-013-db7d1359",
+          "metadata_model_correct": "true",
+          "predict_weighted_motif": "cluster_2",
+          "predict_binary_baseline": "cluster_0",
+          "predict_all_combined": "cluster_0",
+          "eval_domain_match_weighted": 0.0,
+          "eval_domain_match_combined": 0.0
+        },
+        {
+          "input": "The opposite of cold is",
+          "output": "{\"per_graph_features\": {\"ffl_count\": 19359, \"ffl_intensity_mean\": 3.1229090577259115, \"ffl_intensity_median\": 2.3038951004668733, \"ffl_intensity_std\": 2.410463682339951, \"ffl_intensity_q25\": 1.6273946...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-004-beb14eca",
+          "metadata_model_correct": "true",
+          "predict_weighted_motif": "cluster_5",
+          "predict_binary_baseline": "cluster_5",
+          "predict_all_combined": "cluster_6",
+          "eval_domain_match_weighted": 0.0,
+          "eval_domain_match_combined": 0.0
+        }
+      ]
+    },
+    {
+      "dataset": "exp_id2_it4_ablation",
+      "examples": [
+        {
+          "input": "The opposite of bright is",
+          "output": "{\"slug\": \"m5-antonym-019-a39bd921\", \"domain\": \"antonym\", \"n_nodes\": 996, \"n_edges\": 9270, \"n_ffls\": 24523, \"used_all_motifs\": false, \"n_hub_nodes\": 81, \"n_participant_nodes\": 718, \"n_non_ffl_nodes\": 1...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m5-antonym-019-a39bd921",
+          "metadata_n_nodes": "996",
+          "metadata_n_edges": "9270",
+          "metadata_n_ffls": "24523",
+          "metadata_correctness": "false",
+          "metadata_difficulty": "easy",
+          "predict_ffl_hub_ablation": "{\"method\": \"ffl_hub_ablation\", \"mean_total_impact\": 0.903447, \"n_hubs_ablated\": 81, \"impact_ratio_vs_random\": 76.1213}",
+          "predict_random_baseline": "{\"method\": \"random_control_ablation\", \"mean_total_impact\": 0.011869, \"n_controls_ablated\": 243}",
+          "eval_hub_impact": 0.903447,
+          "eval_random_impact": 0.011869,
+          "eval_impact_ratio": 76.118207
+        },
+        {
+          "input": "The opposite of clean is",
+          "output": "{\"slug\": \"m4-antonym-013-db7d1359\", \"domain\": \"antonym\", \"n_nodes\": 979, \"n_edges\": 8711, \"n_ffls\": 21799, \"used_all_motifs\": false, \"n_hub_nodes\": 79, \"n_participant_nodes\": 703, \"n_non_ffl_nodes\": 1...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-013-db7d1359",
+          "metadata_n_nodes": "979",
+          "metadata_n_edges": "8711",
+          "metadata_n_ffls": "21799",
+          "metadata_correctness": "true",
+          "metadata_difficulty": "easy",
+          "predict_ffl_hub_ablation": "{\"method\": \"ffl_hub_ablation\", \"mean_total_impact\": 0.873398, \"n_hubs_ablated\": 79, \"impact_ratio_vs_random\": 295.3904}",
+          "predict_random_baseline": "{\"method\": \"random_control_ablation\", \"mean_total_impact\": 0.002957, \"n_controls_ablated\": 237}",
+          "eval_hub_impact": 0.873398,
+          "eval_random_impact": 0.002957,
+          "eval_impact_ratio": 295.36625
+        },
+        {
+          "input": "The opposite of cold is",
+          "output": "{\"slug\": \"m4-antonym-004-beb14eca\", \"domain\": \"antonym\", \"n_nodes\": 975, \"n_edges\": 7816, \"n_ffls\": 19355, \"used_all_motifs\": false, \"n_hub_nodes\": 75, \"n_participant_nodes\": 668, \"n_non_ffl_nodes\": 2...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-004-beb14eca",
+          "metadata_n_nodes": "975",
+          "metadata_n_edges": "7816",
+          "metadata_n_ffls": "19355",
+          "metadata_correctness": "true",
+          "metadata_difficulty": "easy",
+          "predict_ffl_hub_ablation": "{\"method\": \"ffl_hub_ablation\", \"mean_total_impact\": 1.053658, \"n_hubs_ablated\": 75, \"impact_ratio_vs_random\": 43.3735}",
+          "predict_random_baseline": "{\"method\": \"random_control_ablation\", \"mean_total_impact\": 0.024293, \"n_controls_ablated\": 225}",
+          "eval_hub_impact": 1.053658,
+          "eval_random_impact": 0.024293,
+          "eval_impact_ratio": 43.372906
+        }
+      ]
+    },
+    {
+      "dataset": "exp_id3_it4_failure_prediction",
+      "examples": [
+        {
+          "input": "The opposite of bright is",
+          "output": "{\"slug\": \"m5-antonym-019-a39bd921\", \"domain\": \"antonym\", \"label\": 0, \"n_nodes_pruned\": 996, \"n_edges_pruned\": 9270, \"graph_stats\": {\"n_nodes\": 996.0, \"n_edges\": 9270.0, \"density\": 0.00935399891021372,...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m5-antonym-019-a39bd921",
+          "metadata_model_correct": "false",
+          "metadata_difficulty": "easy",
+          "metadata_n_nodes_original": "1000",
+          "metadata_n_edges_original": "37080",
+          "predict_baseline": "0.936909",
+          "predict_our_method": "0.930598",
+          "eval_baseline_prob": 0.936909,
+          "eval_method_prob": 0.930598
+        },
+        {
+          "input": "The opposite of clean is",
+          "output": "{\"slug\": \"m4-antonym-013-db7d1359\", \"domain\": \"antonym\", \"label\": 1, \"n_nodes_pruned\": 979, \"n_edges_pruned\": 8711, \"graph_stats\": {\"n_nodes\": 979.0, \"n_edges\": 8711.0, \"density\": 0.009098011200444508...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-013-db7d1359",
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_n_nodes_original": "986",
+          "metadata_n_edges_original": "34844",
+          "predict_baseline": "0.878177",
+          "predict_our_method": "0.876863",
+          "eval_baseline_prob": 0.878177,
+          "eval_method_prob": 0.876863
+        },
+        {
+          "input": "The opposite of cold is",
+          "output": "{\"slug\": \"m4-antonym-004-beb14eca\", \"domain\": \"antonym\", \"label\": 1, \"n_nodes_pruned\": 975, \"n_edges_pruned\": 7822, \"graph_stats\": {\"n_nodes\": 975.0, \"n_edges\": 7822.0, \"density\": 0.008236718791133576...",
+          "metadata_fold": "antonym",
+          "metadata_slug": "m4-antonym-004-beb14eca",
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_n_nodes_original": "978",
+          "metadata_n_edges_original": "31288",
+          "predict_baseline": "0.961676",
+          "predict_our_method": "0.961498",
+          "eval_baseline_prob": 0.961676,
+          "eval_method_prob": 0.961498
+        }
+      ]
+    }
+  ]
+}

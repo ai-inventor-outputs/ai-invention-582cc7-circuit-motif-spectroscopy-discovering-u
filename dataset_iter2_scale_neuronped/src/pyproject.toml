@@ -1,0 +1,10 @@
+[project]
+name = "neuronpedia-graph-collector-v4"
+version = "0.2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "requests==2.32.5",
+    "networkx==3.6.1",
+    "loguru==0.7.3",
+    "jsonschema==4.26.0",
+]

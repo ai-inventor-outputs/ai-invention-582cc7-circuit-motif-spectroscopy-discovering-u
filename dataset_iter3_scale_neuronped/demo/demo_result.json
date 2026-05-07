@@ -1,0 +1,13 @@
+{
+  "id": "data_id5_it3__opus",
+  "type": "code",
+  "title": "Scale Neuronpedia Attribution Graph Corpus to 250+ with Balanced Domains, Correctness Annotations, and Difficulty Stratification",
+  "summary": "Demo notebook for the Neuronpedia Attribution Graph Dataset (gemma-2-2b). Loads 8 mini attribution graphs (1 per domain: antonym, arithmetic, code_completion, country_capital, multi_hop_reasoning, rhyme, sentiment, translation) from GitHub URL with local fallback. Parses JSON-encoded DAGs into NetworkX DiGraphs, extracts structural metadata (node/edge counts, density, correctness, difficulty), validates DAG properties, and visualizes per-domain statistics with matplotlib bar charts plus an example graph layout colored by feature type.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_3/gen_art/data_id5_it3__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/data_id5_it3__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/data_id5_it3__opus/data_code_demo.ipynb"
+}

@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API (POST /api/graph/generate)",
+    "model": "gemma-2-2b",
+    "description": "Attribution graphs across 8 capability domains",
+    "collection_params": {
+      "nodeThreshold": 0.8,
+      "edgeThreshold": 0.85,
+      "maxFeatureNodes": 5000,
+      "maxNLogits": 10,
+      "desiredLogitProb": 0.95
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs",
+      "examples": [
+        {
+          "input": "The capital of Nigeria is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "country_capital",
+          "metadata_n_nodes": 1039,
+          "metadata_n_edges": 47800,
+          "metadata_density": 0.044322,
+          "metadata_is_dag": true,
+          "metadata_slug": "m3-country_capital-002-0e481295",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 16,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit",
+            "mlp reconstruction error"
+          ]
+        },
+        {
+          "input": "47 + 36 =",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "arithmetic",
+          "metadata_n_nodes": 995,
+          "metadata_n_edges": 37250,
+          "metadata_density": 0.037663,
+          "metadata_is_dag": true,
+          "metadata_slug": "m3-arithmetic-002-bfa01abe",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 17,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit",
+            "mlp reconstruction error"
+          ]
+        },
+        {
+          "input": "The opposite of fast is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_96_1\",\"feature\":4752,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_96-0...",
+          "metadata_fold": "antonym",
+          "metadata_n_nodes": 959,
+          "metadata_n_edges": 32025,
+          "metadata_density": 0.034858,
+          "metadata_is_dag": true,
+          "metadata_slug": "m3-antonym-002-f8dfd5c7",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 18,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit",
+            "mlp reconstruction error"
+          ]
+        }
+      ]
+    }
+  ]
+}

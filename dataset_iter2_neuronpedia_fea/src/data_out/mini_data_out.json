@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API GET /api/feature/gemma-2-2b/{layer}-gemmascope-transcoder-16k/{index}",
+    "model": "gemma-2-2b",
+    "description": "Feature semantic explanations for CLT nodes in attribution graphs",
+    "n_features_total": 6574,
+    "n_with_explanation": 6574,
+    "n_source_graphs": 8,
+    "source_domains": [
+      "antonym",
+      "arithmetic",
+      "code_completion",
+      "country_capital",
+      "multi_hop_reasoning",
+      "rhyme",
+      "sentiment",
+      "translation"
+    ],
+    "collection_date": "2026-03-19"
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_feature_explanations",
+      "examples": [
+        {
+          "input": "0_10004",
+          "output": "{\"layer_num\": 0, \"feature_index\": 10004, \"cantor_paired_value\": 50055014, \"explanation\": \" mentions of the word \\\"plastic\\\" and sometimes \\\"steel\\\"\", \"all_explanations\": [\" mentions of the word \\\"plastic\\\" and sometimes \\\"steel\\\"\", \"plastic\"], \"frac_nonzero\": 0.02251, \"max_activation\": 24.379, \"top_positive_logits\": [\"Continue\", \"\\u2581i\\u017ft\", \"\\u2581\\\"\", \"ctober\", \"intenance\", \"\\u2581l\\u00f3pez\", \"\\u017felf\", \"\\u2581potential\", \"\\u2581Federal\", \"\\u2581familiar\"], \"top_positive_values\": [0.594, 0.574, 0.539, 0.535, 0.527, 0.516, 0.516, 0.512, 0.508, 0.508], \"top_negative_logits\": [\"WebVitals\", \"IntoConstraints\", \"\\u2581firent\", \"]\\\")]\", \"endphp\", \"ValueStyle\", \"\\u2581color\\u00e9s\", \"aarrggbb\", \"\\u2581proposent\", \"\\u2581soient\"], \"top_negative_values\": [-1.086, -1.055, -0.891, -0.875, -0.863, -0.848, -0.844, -0.824, -0.824, -0.816], \"has_explanation\": true, \"api_status\": \"ok\", \"source_graphs\": [\"m3-sentiment-000-f0ba4998\"], \"source_domains\": [\"sentiment\"], \"node_count_in_graphs\": 1}",
+          "metadata_fold": "feature_explanation",
+          "metadata_layer": 0,
+          "metadata_feature_index": 10004,
+          "metadata_has_explanation": true,
+          "metadata_n_source_domains": 1,
+          "metadata_source_domains": "sentiment",
+          "metadata_frac_nonzero": 0.02251,
+          "metadata_max_activation": 24.379
+        },
+        {
+          "input": "0_10019",
+          "output": "{\"layer_num\": 0, \"feature_index\": 10019, \"cantor_paired_value\": 50205209, \"explanation\": \" units of measure\", \"all_explanations\": [\" units of measure\", \"degrees\"], \"frac_nonzero\": 0.01866, \"max_activation\": 22.186, \"top_positive_logits\": [\"\\u2581Efq\", \"\\u2581The\\u017fe\", \"\\u2581it\\u017felf\", \"\\u2581my\\u017felf\", \"\\u2581Monfieur\", \"\\u2581rai\\u017f\", \"\\u2581Re\\u017f\", \"\\u2581him\\u017felf\", \"\\u2581Majefty\", \"\\u017felf\"], \"top_positive_values\": [1.453, 1.422, 1.414, 1.414, 1.352, 1.344, 1.273, 1.242, 1.227, 1.219], \"top_negative_logits\": [\"\\u2581\", \"<eos>\", \"\\u2581[\", \"\\n\", \".\", \"\\u2581.\", \"\\u2581Be\", \"\\u2581\\\"\", \"\\u2581A\", \"\\u2581'\"], \"top_negative_values\": [-0.977, -0.746, -0.711, -0.703, -0.688, -0.656, -0.625, -0.621, -0.609, -0.598], \"has_explanation\": true, \"api_status\": \"ok\", \"source_graphs\": [\"m3-arithmetic-002-bfa01abe\"], \"source_domains\": [\"arithmetic\"], \"node_count_in_graphs\": 1}",
+          "metadata_fold": "feature_explanation",
+          "metadata_layer": 0,
+          "metadata_feature_index": 10019,
+          "metadata_has_explanation": true,
+          "metadata_n_source_domains": 1,
+          "metadata_source_domains": "arithmetic",
+          "metadata_frac_nonzero": 0.01866,
+          "metadata_max_activation": 22.186
+        },
+        {
+          "input": "0_10024",
+          "output": "{\"layer_num\": 0, \"feature_index\": 10024, \"cantor_paired_value\": 50255324, \"explanation\": \" the letter \\\"a\\\" but not in normal words\", \"all_explanations\": [\" the letter \\\"a\\\" but not in normal words\", \"a\"], \"frac_nonzero\": 0.01093, \"max_activation\": 29.944, \"top_positive_logits\": [\"\\u2581a\", \"\\u2581an\", \"\\u2581A\", \"\\u2581at\", \"\\u2581\", \"\\u2581or\", \"\\u2581An\", \"\\u2581(\", \"\\u2581AN\", \"\\u2581the\"], \"top_positive_values\": [1.164, 1.062, 0.98, 0.906, 0.812, 0.762, 0.762, 0.746, 0.723, 0.719], \"top_negative_logits\": [\"<bos>\", \"\\u2581Efq\", \"\\u2581it\\u017felf\", \"\\u2581my\\u017felf\", \"\\u2581Monfieur\", \"\\u2581rai\\u017f\", \"\\u2581Jefus\", \"\\u2581plea\\u017fure\", \"\\u2581them\\u017felves\", \"\\u2581hou\\u017fe\"], \"top_negative_values\": [-1.82, -1.773, -1.766, -1.758, -1.711, -1.695, -1.633, -1.617, -1.57, -1.562], \"has_explanation\": true, \"api_status\": \"ok\", \"source_graphs\": [\"m3-code_completion-000-7016315e\", \"m3-rhyme-001-6fd64fff\"], \"source_domains\": [\"code_completion\", \"rhyme\"], \"node_count_in_graphs\": 2}",
+          "metadata_fold": "feature_explanation",
+          "metadata_layer": 0,
+          "metadata_feature_index": 10024,
+          "metadata_has_explanation": true,
+          "metadata_n_source_domains": 2,
+          "metadata_source_domains": "code_completion,rhyme",
+          "metadata_frac_nonzero": 0.01093,
+          "metadata_max_activation": 29.944
+        }
+      ]
+    }
+  ]
+}

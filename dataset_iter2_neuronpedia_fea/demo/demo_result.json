@@ -1,0 +1,13 @@
+{
+  "id": "data_id4_it2__opus",
+  "type": "code",
+  "title": "Neuronpedia Feature Explanation Lookup Table from Attribution Graph Nodes",
+  "summary": "Demo notebook for the Neuronpedia Feature Explanation Lookup Table dataset. Loads 45 curated CLT feature records (from 8 capability domains: antonym, arithmetic, code_completion, country_capital, multi_hop_reasoning, rhyme, sentiment, translation) extracted from gemma-2-2b attribution graphs. Parses JSON feature records with semantic explanations, activation statistics, and graph provenance. Visualizes feature distribution across layers and domains, activation distributions, and sparsity-activation scatter plots using matplotlib.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_2/gen_art/data_id4_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/data_id4_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/data_id4_it2__opus/data_code_demo.ipynb"
+}

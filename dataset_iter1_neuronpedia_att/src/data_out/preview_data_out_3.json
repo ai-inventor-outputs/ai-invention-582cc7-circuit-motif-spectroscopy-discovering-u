@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API (POST /api/graph/generate)",
+    "model": "gemma-2-2b",
+    "description": "Attribution graphs across 8 capability domains",
+    "collection_params": {
+      "nodeThreshold": 0.8,
+      "edgeThreshold": 0.85,
+      "maxFeatureNodes": 5000,
+      "maxNLogits": 10,
+      "desiredLogitProb": 0.95
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs",
+      "examples": [
+        {
+          "input": "The capital of France is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "country_capital",
+          "metadata_n_nodes": 1088,
+          "metadata_n_edges": 54382,
+          "metadata_density": 0.045983,
+          "metadata_is_dag": true,
+          "metadata_slug": "m3-country_capital-004-1aacd3c0",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 32,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit",
+            "mlp reconstruction error"
+          ]
+        },
+        {
+          "input": "8 + 9 =",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "arithmetic",
+          "metadata_n_nodes": 886,
+          "metadata_n_edges": 33924,
+          "metadata_density": 0.043264,
+          "metadata_is_dag": true,
+          "metadata_slug": "m3-arithmetic-004-5b9d4ded",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 33,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit",
+            "mlp reconstruction error"
+          ]
+        }
+      ]
+    }
+  ]
+}

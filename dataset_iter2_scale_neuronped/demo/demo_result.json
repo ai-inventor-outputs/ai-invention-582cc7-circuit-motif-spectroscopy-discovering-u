@@ -1,0 +1,13 @@
+{
+  "id": "data_id3_it2__opus",
+  "type": "code",
+  "title": "Scale Neuronpedia Attribution Graph Corpus to 250+ Graphs with Correctness Annotations",
+  "summary": "Demo notebook for the Neuronpedia Attribution Graph Corpus dataset (140 graphs from gemma-2-2b across 8 capability domains). The notebook loads a curated 3-example mini dataset with truncated graph outputs (24.8KB), converts records using the original data.py pipeline logic, runs validation checks (domain distribution, DAG validation, node statistics, metadata completeness), and visualizes graph sizes, domain distribution, difficulty/correctness distributions, and a sample subgraph using networkx. Mini data preserves all 16 metadata fields while truncating graph nodes/links for file size.",
+  "original_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/3_invention_loop/iter_2/gen_art/data_id3_it2__opus",
+  "demo_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/data_id3_it2__opus",
+  "out_expected_files": {
+    "notebook": "code_demo.ipynb",
+    "mini_data_file": "mini_demo_data.json"
+  },
+  "notebook_path": "/ai-inventor/aii_pipeline/runs/neuronpedia-circuit-interpretability/4_gen_paper_repo/data_id3_it2__opus/data_code_demo.ipynb"
+}

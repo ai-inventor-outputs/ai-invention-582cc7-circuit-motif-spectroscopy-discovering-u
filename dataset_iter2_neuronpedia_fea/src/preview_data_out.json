@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API GET /api/feature/gemma-2-2b/{layer}-gemmascope-transcoder-16k/{index}",
+    "model": "gemma-2-2b",
+    "description": "Feature semantic explanations for CLT nodes in attribution graphs",
+    "n_features_total": 6574,
+    "n_with_explanation": 6574,
+    "n_source_graphs": 8,
+    "source_domains": [
+      "antonym",
+      "arithmetic",
+      "code_completion"
+    ],
+    "collection_date": "2026-03-19"
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_feature_explanations",
+      "examples": [
+        {
+          "input": "0_10004",
+          "output": "{\"layer_num\": 0, \"feature_index\": 10004, \"cantor_paired_value\": 50055014, \"explanation\": \" mentions of the word \\\"plastic\\\" and sometimes \\\"steel\\\"\", \"all_explanations\": [\" mentions of the word \\\"plas...",
+          "metadata_fold": "feature_explanation",
+          "metadata_layer": 0,
+          "metadata_feature_index": 10004,
+          "metadata_has_explanation": true,
+          "metadata_n_source_domains": 1,
+          "metadata_source_domains": "sentiment",
+          "metadata_frac_nonzero": 0.02251,
+          "metadata_max_activation": 24.379
+        },
+        {
+          "input": "0_10019",
+          "output": "{\"layer_num\": 0, \"feature_index\": 10019, \"cantor_paired_value\": 50205209, \"explanation\": \" units of measure\", \"all_explanations\": [\" units of measure\", \"degrees\"], \"frac_nonzero\": 0.01866, \"max_activa...",
+          "metadata_fold": "feature_explanation",
+          "metadata_layer": 0,
+          "metadata_feature_index": 10019,
+          "metadata_has_explanation": true,
+          "metadata_n_source_domains": 1,
+          "metadata_source_domains": "arithmetic",
+          "metadata_frac_nonzero": 0.01866,
+          "metadata_max_activation": 22.186
+        },
+        {
+          "input": "0_10024",
+          "output": "{\"layer_num\": 0, \"feature_index\": 10024, \"cantor_paired_value\": 50255324, \"explanation\": \" the letter \\\"a\\\" but not in normal words\", \"all_explanations\": [\" the letter \\\"a\\\" but not in normal words\", ...",
+          "metadata_fold": "feature_explanation",
+          "metadata_layer": 0,
+          "metadata_feature_index": 10024,
+          "metadata_has_explanation": true,
+          "metadata_n_source_domains": 2,
+          "metadata_source_domains": "code_completion,rhyme",
+          "metadata_frac_nonzero": 0.01093,
+          "metadata_max_activation": 29.944
+        }
+      ]
+    }
+  ]
+}

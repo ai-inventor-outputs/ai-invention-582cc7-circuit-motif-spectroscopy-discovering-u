@@ -1,0 +1,10 @@
+[project]
+name = "neuronpedia-attribution-graphs"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "Collect and process attribution graphs from Neuronpedia API across 8 capability domains"
+dependencies = [
+    "requests==2.32.5",
+    "networkx==3.6.1",
+    "loguru==0.7.3",
+]

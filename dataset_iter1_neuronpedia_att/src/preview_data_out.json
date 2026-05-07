@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API (POST /api/graph/generate)",
+    "model": "gemma-2-2b",
+    "description": "Attribution graphs across 8 capability domains",
+    "collection_params": {
+      "nodeThreshold": 0.8,
+      "edgeThreshold": 0.85,
+      "maxFeatureNodes": 5000,
+      "maxNLogits": 10,
+      "desiredLogitProb": 0.95
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs",
+      "examples": [
+        {
+          "input": "The capital of Japan is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "country_capital",
+          "metadata_n_nodes": 1048,
+          "metadata_n_edges": 48109,
+          "metadata_density": 0.043845,
+          "metadata_is_dag": true,
+          "metadata_slug": "m3-country_capital-000-385265ab",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 0,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit",
+            "mlp reconstruction error"
+          ]
+        },
+        {
+          "input": "3 + 5 =",
+          "output": "{\"nodes\":[{\"node_id\":\"0_35_1\",\"feature\":665,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_35-0\"...",
+          "metadata_fold": "arithmetic",
+          "metadata_n_nodes": 869,
+          "metadata_n_edges": 31722,
+          "metadata_density": 0.042055,
+          "metadata_is_dag": true,
+          "metadata_slug": "m3-arithmetic-000-f8f58d4d",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 1,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit",
+            "mlp reconstruction error"
+          ]
+        },
+        {
+          "input": "The opposite of happy is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_96_1\",\"feature\":4752,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_96-0...",
+          "metadata_fold": "antonym",
+          "metadata_n_nodes": 1088,
+          "metadata_n_edges": 51677,
+          "metadata_density": 0.043696,
+          "metadata_is_dag": true,
+          "metadata_slug": "m3-antonym-000-db6a045b",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 2,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit",
+            "mlp reconstruction error"
+          ]
+        }
+      ]
+    }
+  ]
+}

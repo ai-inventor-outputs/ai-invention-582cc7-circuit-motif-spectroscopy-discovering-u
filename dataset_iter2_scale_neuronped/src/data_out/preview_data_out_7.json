@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API (POST /api/graph/generate)",
+    "model": "gemma-2-2b",
+    "description": "Attribution graphs across 8 capability domains with correctness annotations",
+    "iter": 2,
+    "collection_params": {
+      "nodeThreshold": 0.8,
+      "edgeThreshold": 0.85,
+      "maxFeatureNodes": 5000,
+      "maxNLogits": 10,
+      "desiredLogitProb": 0.95
+    },
+    "compatible_with_iter1": true
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_v2",
+      "examples": [
+        {
+          "input": "def modulo(a, b):\n    return",
+          "output": "{\"nodes\":[{\"node_id\":\"0_203_1\",\"feature\":20909,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_20...",
+          "metadata_fold": "code_completion",
+          "metadata_n_nodes": 1418,
+          "metadata_n_edges": 54504,
+          "metadata_density": 0.027126,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-code_completion-013-93a5a3d1",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 108,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "medium",
+          "metadata_expected_answer": "a % b",
+          "metadata_iter": 2
+        },
+        {
+          "input": "If Mars is farther than Venus and Venus is farther than Mercury, Mars is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_96_1\",\"feature\":4752,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_96-0...",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_n_nodes": 1794,
+          "metadata_n_edges": 65448,
+          "metadata_density": 0.020347,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-multi_hop_reasoning-013-5feee89b",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 109,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "medium",
+          "metadata_expected_answer": "farther than Mercury",
+          "metadata_iter": 2
+        },
+        {
+          "input": "The bat in the hat found a",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "rhyme",
+          "metadata_n_nodes": 1385,
+          "metadata_n_edges": 54472,
+          "metadata_density": 0.028418,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-rhyme-013-d2bb30c1",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 110,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "unknown",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "multiple_valid",
+          "metadata_iter": 2
+        }
+      ]
+    }
+  ]
+}

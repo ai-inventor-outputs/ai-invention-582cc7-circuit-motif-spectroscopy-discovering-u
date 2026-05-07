@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API (POST /api/graph/generate)",
+    "model": "gemma-2-2b",
+    "description": "Attribution graphs across 8 capability domains with correctness annotations",
+    "iter": 2,
+    "collection_params": {
+      "nodeThreshold": 0.8,
+      "edgeThreshold": 0.85,
+      "maxFeatureNodes": 5000,
+      "maxNLogits": 10,
+      "desiredLogitProb": 0.95
+    },
+    "compatible_with_iter1": true
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_v2",
+      "examples": [
+        {
+          "input": "def is_even(n):\n    return",
+          "output": "{\"nodes\":[{\"node_id\":\"0_203_1\",\"feature\":20909,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_20...",
+          "metadata_fold": "code_completion",
+          "metadata_n_nodes": 1363,
+          "metadata_n_edges": 55542,
+          "metadata_density": 0.029919,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-code_completion-004-b0910530",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 36,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "n % 2 == 0",
+          "metadata_iter": 2
+        },
+        {
+          "input": "If A is faster than B and B is faster than C, then A is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_96_1\",\"feature\":4752,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_96-0...",
+          "metadata_fold": "multi_hop_reasoning",
+          "metadata_n_nodes": 1654,
+          "metadata_n_edges": 53173,
+          "metadata_density": 0.019448,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-multi_hop_reasoning-004-b01c4a9a",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 37,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "faster than C",
+          "metadata_iter": 2
+        },
+        {
+          "input": "The fish made a wish for a",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "rhyme",
+          "metadata_n_nodes": 1396,
+          "metadata_n_edges": 55606,
+          "metadata_density": 0.028554,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-rhyme-004-1f122d73",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 38,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "unknown",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "multiple_valid",
+          "metadata_iter": 2
+        }
+      ]
+    }
+  ]
+}

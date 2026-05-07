@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API (POST /api/graph/generate)",
+    "model": "gemma-2-2b",
+    "description": "Attribution graphs across 8 capability domains with correctness annotations",
+    "iter": 2,
+    "collection_params": {
+      "nodeThreshold": 0.8,
+      "edgeThreshold": 0.85,
+      "maxFeatureNodes": 5000,
+      "maxNLogits": 10,
+      "desiredLogitProb": 0.95
+    },
+    "compatible_with_iter1": true
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_v2",
+      "examples": [
+        {
+          "input": "The opposite of heavy is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_96_1\",\"feature\":4752,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_96-0...",
+          "metadata_fold": "antonym",
+          "metadata_n_nodes": 861,
+          "metadata_n_edges": 18954,
+          "metadata_density": 0.025598,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-antonym-011-9a7d4704",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 90,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "light",
+          "metadata_iter": 2
+        },
+        {
+          "input": "The French word for bird is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "translation",
+          "metadata_n_nodes": 1196,
+          "metadata_n_edges": 53912,
+          "metadata_density": 0.037721,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-translation-011-d32c1247",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 91,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "medium",
+          "metadata_expected_answer": "oiseau",
+          "metadata_iter": 2
+        },
+        {
+          "input": "def divide(a, b):\n    return",
+          "output": "{\"nodes\":[{\"node_id\":\"0_203_1\",\"feature\":20909,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_20...",
+          "metadata_fold": "code_completion",
+          "metadata_n_nodes": 1394,
+          "metadata_n_edges": 50841,
+          "metadata_density": 0.026182,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-code_completion-011-29148a92",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 92,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "a / b",
+          "metadata_iter": 2
+        }
+      ]
+    }
+  ]
+}

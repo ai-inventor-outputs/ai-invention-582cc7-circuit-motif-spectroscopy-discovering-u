@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API (POST /api/graph/generate)",
+    "model": "gemma-2-2b",
+    "description": "Attribution graphs across 8 capability domains with correctness annotations",
+    "iter": 2,
+    "collection_params": {
+      "nodeThreshold": 0.8,
+      "edgeThreshold": 0.85,
+      "maxFeatureNodes": 5000,
+      "maxNLogits": 10,
+      "desiredLogitProb": 0.95
+    },
+    "compatible_with_iter1": true
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_v2",
+      "examples": [
+        {
+          "input": "The opposite of fast is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_96_1\",\"feature\":4752,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_96-0...",
+          "metadata_fold": "antonym",
+          "metadata_n_nodes": 959,
+          "metadata_n_edges": 32025,
+          "metadata_density": 0.034858,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-antonym-002-f8dfd5c7",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 18,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "slow",
+          "metadata_iter": 2
+        },
+        {
+          "input": "The French word for water is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "translation",
+          "metadata_n_nodes": 1187,
+          "metadata_n_edges": 53202,
+          "metadata_density": 0.037791,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-translation-002-2b300606",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 19,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "eau",
+          "metadata_iter": 2
+        },
+        {
+          "input": "def square(n):\n    return",
+          "output": "{\"nodes\":[{\"node_id\":\"0_203_1\",\"feature\":20909,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_20...",
+          "metadata_fold": "code_completion",
+          "metadata_n_nodes": 1196,
+          "metadata_n_edges": 38523,
+          "metadata_density": 0.026954,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-code_completion-002-ed14b481",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 20,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "n * n",
+          "metadata_iter": 2
+        }
+      ]
+    }
+  ]
+}

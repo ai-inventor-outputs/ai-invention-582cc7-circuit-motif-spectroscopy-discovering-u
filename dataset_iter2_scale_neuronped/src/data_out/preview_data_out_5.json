@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API (POST /api/graph/generate)",
+    "model": "gemma-2-2b",
+    "description": "Attribution graphs across 8 capability domains with correctness annotations",
+    "iter": 2,
+    "collection_params": {
+      "nodeThreshold": 0.8,
+      "edgeThreshold": 0.85,
+      "maxFeatureNodes": 5000,
+      "maxNLogits": 10,
+      "desiredLogitProb": 0.95
+    },
+    "compatible_with_iter1": true
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_v2",
+      "examples": [
+        {
+          "input": "The capital of Mexico is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "country_capital",
+          "metadata_n_nodes": 1036,
+          "metadata_n_edges": 48231,
+          "metadata_density": 0.044981,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-country_capital-009-95d18d09",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 72,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "Mexico City",
+          "metadata_iter": 2
+        },
+        {
+          "input": "89 + 11 =",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "arithmetic",
+          "metadata_n_nodes": 1022,
+          "metadata_n_edges": 38819,
+          "metadata_density": 0.037202,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-arithmetic-009-c6b7545a",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 73,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "medium",
+          "metadata_expected_answer": "100",
+          "metadata_iter": 2
+        },
+        {
+          "input": "The opposite of hard is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_96_1\",\"feature\":4752,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_96-0...",
+          "metadata_fold": "antonym",
+          "metadata_n_nodes": 912,
+          "metadata_n_edges": 25021,
+          "metadata_density": 0.030116,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-antonym-009-8aa743e9",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 74,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "medium",
+          "metadata_expected_answer": "soft",
+          "metadata_iter": 2
+        }
+      ]
+    }
+  ]
+}

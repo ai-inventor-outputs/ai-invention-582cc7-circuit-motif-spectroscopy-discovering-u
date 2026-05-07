@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "source": "Neuronpedia API (POST /api/graph/generate)",
+    "model": "gemma-2-2b",
+    "description": "Attribution graphs across 8 capability domains with correctness annotations",
+    "iter": 2,
+    "collection_params": {
+      "nodeThreshold": 0.8,
+      "edgeThreshold": 0.85,
+      "maxFeatureNodes": 5000,
+      "maxNLogits": 10,
+      "desiredLogitProb": 0.95
+    },
+    "compatible_with_iter1": true
+  },
+  "datasets": [
+    {
+      "dataset": "neuronpedia_attribution_graphs_v2",
+      "examples": [
+        {
+          "input": "The bug on the rug ate a",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "rhyme",
+          "metadata_n_nodes": 1583,
+          "metadata_n_edges": 80634,
+          "metadata_density": 0.032198,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-rhyme-015-e73ccb6d",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 126,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "unknown",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "multiple_valid",
+          "metadata_iter": 2
+        },
+        {
+          "input": "This movie was outstanding. The sentiment is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_6_1\",\"feature\":27,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_6-0\",\"c...",
+          "metadata_fold": "sentiment",
+          "metadata_n_nodes": 1526,
+          "metadata_n_edges": 85974,
+          "metadata_density": 0.036944,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-sentiment-015-9e2a4c07",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 127,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "easy",
+          "metadata_expected_answer": "positive",
+          "metadata_iter": 2
+        },
+        {
+          "input": "The capital of Peru is",
+          "output": "{\"nodes\":[{\"node_id\":\"0_41_1\",\"feature\":902,\"layer\":\"0\",\"ctx_idx\":1,\"feature_type\":\"cross layer transcoder\",\"token_prob\":0.0,\"is_target_logit\":false,\"run_idx\":0,\"reverse_ctx_idx\":0,\"jsNodeId\":\"0_41-0\"...",
+          "metadata_fold": "country_capital",
+          "metadata_n_nodes": 1075,
+          "metadata_n_edges": 49575,
+          "metadata_density": 0.042939,
+          "metadata_is_dag": true,
+          "metadata_slug": "m4-country_capital-016-7c2634ba",
+          "metadata_task_type": "graph_generation",
+          "metadata_n_classes": 8,
+          "metadata_row_index": 128,
+          "metadata_feature_names": [
+            "cross layer transcoder",
+            "embedding",
+            "logit"
+          ],
+          "metadata_model_correct": "true",
+          "metadata_difficulty": "medium",
+          "metadata_expected_answer": "Lima",
+          "metadata_iter": 2
+        }
+      ]
+    }
+  ]
+}
